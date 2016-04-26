@@ -1,2 +1,2 @@
 # ga-website
-Drupal 8 modules &amp; theme for Gamers Assembly Website
+Drupal 8 modules &amp; themes for Gamers Assembly Website
