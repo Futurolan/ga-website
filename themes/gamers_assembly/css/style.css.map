@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACH,KAAK,EAAC,QAAQ",
+"sources": ["../sass/partials/layout/_layout.scss"],
+"names": [],
+"file": "style.css"
+}
