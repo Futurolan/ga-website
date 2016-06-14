@@ -1,0 +1,8 @@
+<?php
+
+function gamers_assembly_preprocess_block(array &$variables)
+{
+    // Load the site name out of configuration.
+    $config = \Drupal::config('system.site');
+    $variables['site_name'] = $config->get('name');
+}
