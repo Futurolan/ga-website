@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @return array
+ */
+function ga_stream_theme()
+{
+
+    return array(
+        'ga_stream' => array(
+            'variables' => array('test_var' => NULL),
+        ),
+    );
+}
+

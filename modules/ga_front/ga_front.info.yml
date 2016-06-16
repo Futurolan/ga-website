@@ -1,0 +1,11 @@
+name: Gamers Assembly front page
+description: Create a front page with Page Manager
+package: Gamers Assembly
+
+type: module
+core: 8.x
+
+dependencies:
+  - page_manager:page_manager
+  - page_manager_ui:page_manager_ui
+  - panels:panels
