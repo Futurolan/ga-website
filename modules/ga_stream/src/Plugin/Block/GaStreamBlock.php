@@ -7,18 +7,18 @@ use Drupal\Core\Block\BlockBase;
  * Provides a 'Stream' block.
  *
  * @Block(
- *   id = "stream_block",
+ *   id = "ga_stream_block",
  *   admin_label = @Translation("Stream block"),
  * )
  */
-class StreamBlock extends BlockBase
+class GaStreamBlock extends BlockBase
 {
     /**
      * {@inheritdoc}
      */
     public function build() {
         return array(
-            '#title' => 'This is an awesome title',
+            '#theme' => 'ga_stream_block',
             '#description' => 'Lorem ipsum dolar sum amet ..'
         );
     }
