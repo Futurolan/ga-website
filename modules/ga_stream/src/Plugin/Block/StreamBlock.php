@@ -33,6 +33,13 @@ class StreamBlock extends BlockBase
         return array(
             '#theme' => "ga_stream_block",
             '#streams' => $streams,
+            '#attached' => array(
+                'library' =>  array(
+                    'ga_stream/ga_stream.corescripts',
+                    'ga_stream/ga_stream.tmi',
+                    'ga_stream/ga_stream.chat'
+                ),
+            ),
         );
     }
 }
