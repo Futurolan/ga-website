@@ -5,12 +5,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9 stream-block-video">
-                        Live
-                        {{ dump(streams) }}
-
+                        <iframe
+                                src="http://player.twitch.tv/?channel={{ streams[0].key }}"
+                                height="405"
+                                width="720"
+                                frameborder="0"
+                                scrolling="no"
+                                allowfullscreen="true">
+                        </iframe>
                     </div>
-                    <div class="col-md-3 stream-block-chat">
-                        Chat
+                    <div class="col-md-3 stream-block-chat-video-list">
+                        <div class="stream-block-video-list">
+                            <h3>Streams</h3>
+                            {% for stream in streams %}
+                                <li id="stream-video-list-item-{{ stream.key }}" x-key="{{ stream.key }}"
+                                    class="stream-video-list-item">
+                                    {{ stream.name }}
+                                    <span class="stream-video-list-count"></span>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        <div class="stream-block-chat">
+
+                        </div>
+
+
                     </div>
                 </div>
             </div>

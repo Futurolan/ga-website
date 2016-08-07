@@ -3,43 +3,50 @@
 namespace Drupal\ga_stream;
 
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\EntityListBuilder;
-use Drupal\Core\Routing\LinkGeneratorTrait;
-use Drupal\Core\Url;
+use Drupal\Core\Config\Entity\DraggableListBuilder;
+use Drupal\Core\Form\FormStateInterface;
+
 
 /**
- * Defines a class to build a listing of Stream entities.
- *
- * @ingroup ga_stream
+ * Provides a listing of Stream entities.
  */
-class StreamListBuilder extends EntityListBuilder {
+class StreamListBuilder extends DraggableListBuilder
+{
 
-  use LinkGeneratorTrait;
+    /**
+     * {@inheritdoc}
+     */
+    public function getFormId()
+    {
+        return 'ga_stream_entity_stream_config';
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function buildHeader() {
-    $header['id'] = $this->t('Stream ID');
-    $header['name'] = $this->t('Name');
-    return $header + parent::buildHeader();
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function buildHeader()
+    {
+        $header['label'] = $this->t('Stream');
+        $header['id'] = $this->t('Machine name');
+        return $header + parent::buildHeader();
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\ga_stream\Entity\Stream */
-    $row['id'] = $entity->id();
-    $row['name'] = $this->l(
-      $entity->label(),
-      new Url(
-        'entity.stream.edit_form', array(
-          'stream' => $entity->id(),
-        )
-      )
-    );
-    return $row + parent::buildRow($entity);
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function buildRow(EntityInterface $entity)
+    {
+        $row['label'] = $entity->label();
+        // You probably want a few more properties here...
+        return $row + parent::buildRow($entity);
+    }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function submitForm(array &$form, FormStateInterface $form_state)
+    {
+        parent::submitForm($form, $form_state);
+        drupal_set_message(t('The ball settings have been updated.'));
+    }
 }

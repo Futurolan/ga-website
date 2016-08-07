@@ -19,11 +19,13 @@
     }
   }
   .stream-block-video {
-    height:300px;
     border:1px solid red;
+    margin:0;
+    padding:0;
   }
-  .stream-block-chat{
-    height:300px;
+  .stream-block-chat-videolist{
     border:1px solid red;
+    margin:0;
+    padding:0;
   }
 }

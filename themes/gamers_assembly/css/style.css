@@ -12,7 +12,7 @@ body {
 }
 
 .grey-area {
-  background: url("../images/bg-home-grey.jpg") center center no-repeat;
+  background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
   background-size: cover;
   color: #fff;
 }
@@ -47,12 +47,14 @@ body {
   right: 0;
 }
 .stream-block .stream-block-video {
-  height: 300px;
   border: 1px solid red;
+  margin: 0;
+  padding: 0;
 }
-.stream-block .stream-block-chat {
-  height: 300px;
+.stream-block .stream-block-chat-videolist {
   border: 1px solid red;
+  margin: 0;
+  padding: 0;
 }
 
 #block-mainnavigation {

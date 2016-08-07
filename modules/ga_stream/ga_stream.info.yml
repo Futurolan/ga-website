@@ -7,4 +7,5 @@ dependencies:
   - ga_stream
   - options
   - user
+  - weight
 package: 'Gamers Assembly'

@@ -1,0 +1,24 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.tournament.field_description
+    - node.type.tournament
+  module:
+    - text
+    - user
+id: node.tournament.default
+targetEntityType: node
+bundle: tournament
+mode: default
+content:
+  field_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 100
+hidden:
+  langcode: true
