@@ -21,8 +21,6 @@
                 {% set title_attributes = title_attributes.addClass('visually-hidden') %}
             {% endif %}
             <h2{{ title_attributes }}>{{ configuration.label }}</h2>
-
-
             {% block content %}
                 {{ content }}
             {% endblock %}

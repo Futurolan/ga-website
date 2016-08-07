@@ -9,3 +9,5 @@ dependencies:
   - page_manager:page_manager
   - page_manager_ui:page_manager_ui
   - panels:panels
+  - ga_slide:ga_slide
+  - ga_stream:ga_stream

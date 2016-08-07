@@ -1,0 +1,9 @@
+name: Gamers Assembly Baseinfo Block
+description: Provide the base info block
+package: Gamers Assembly
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:block

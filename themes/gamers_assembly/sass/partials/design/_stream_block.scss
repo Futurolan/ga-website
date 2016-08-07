@@ -1,0 +1,29 @@
+.stream-block{
+  padding:0 0 20px 0;
+  h2{
+    text-align:center;
+    &:before,&:after{
+      content:'';
+      background-color:$white;
+      height:1px;
+      top:37px;
+      width:40%;
+      position:absolute;
+      display:inline-block;
+    }
+    &:before{
+      left:0;
+    }
+    &:after{
+      right:0;
+    }
+  }
+  .stream-block-video {
+    height:300px;
+    border:1px solid red;
+  }
+  .stream-block-chat{
+    height:300px;
+    border:1px solid red;
+  }
+}

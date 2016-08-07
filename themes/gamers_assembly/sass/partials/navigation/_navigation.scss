@@ -1,7 +1,7 @@
 #block-mainnavigation {
   background-color: $blue;
   padding: 0;
-  z-index: 0;
+  border:none;
   .navbar-brand {
     margin-right: 35px;
     background: url('../images/logo.png') center center no-repeat;
@@ -21,6 +21,24 @@
         &:hover, &.is-active {
           background-color: $orange;
         }
+
+      }
+      &.nav-item--active-trail > a {
+        background-color: $orange;
+      }
+      &:hover ul {
+        display: block;
+      }
+      ul {
+        position: absolute;
+        display: none;
+        background-color: $blue;
+        li {
+          width: 100%;
+          a {
+            padding: 10px 22px;
+          }
+        }
       }
     }
   }
@@ -33,21 +51,21 @@ body {
       #block-mainnavigation {
         margin-top: 42px;
       }
-      &.toolbar-tray-open{
+      &.toolbar-tray-open {
         padding-top: 165px !important;
         #block-mainnavigation {
           margin-top: 85px;
         }
       }
     }
-    &.toolbar-vertical{
+    &.toolbar-vertical {
       padding-top: 122px !important;
       #block-mainnavigation {
         margin-top: 42px;
       }
-      &.toolbar-tray-open{
+      &.toolbar-tray-open {
         #block-mainnavigation {
-          padding-left:15rem;
+          padding-left: 15rem;
         }
       }
     }

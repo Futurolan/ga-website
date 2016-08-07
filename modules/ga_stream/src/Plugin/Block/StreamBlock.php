@@ -11,15 +11,14 @@ use Drupal\Core\Block\BlockBase;
  *   admin_label = @Translation("Stream block"),
  * )
  */
-class GaStreamBlock extends BlockBase
+class StreamBlock extends BlockBase
 {
     /**
      * {@inheritdoc}
      */
     public function build() {
         return array(
-            '#theme' => 'ga_stream_block',
-            '#description' => 'Lorem ipsum dolar sum amet ..'
+            '#theme' => "ga_stream_block"
         );
     }
 }

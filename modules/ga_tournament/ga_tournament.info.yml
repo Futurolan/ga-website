@@ -1,0 +1,9 @@
+name: Gamers Assembly Tournament
+description: Provide the Tournament features
+package: Gamers Assembly
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:views
