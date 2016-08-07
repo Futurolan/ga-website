@@ -1,0 +1,5 @@
+bundle: ga
+excluded:
+  - ga_stream.stream_entity2_type.tata
+  - ga_stream.stream_entity2_type.toto
+required: true

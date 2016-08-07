@@ -1,9 +1,10 @@
-name: Gamers Assembly Stream
-description: Provide the streaming block
-package: Gamers Assembly
-
+name: 'Gamers Assembly Stream'
+description: 'Provide the streaming block'
 type: module
 core: 8.x
-
 dependencies:
-  - drupal:block
+  - field
+  - ga_stream
+  - options
+  - user
+package: 'Gamers Assembly'

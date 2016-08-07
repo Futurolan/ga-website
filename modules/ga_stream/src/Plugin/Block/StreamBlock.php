@@ -16,9 +16,23 @@ class StreamBlock extends BlockBase
     /**
      * {@inheritdoc}
      */
-    public function build() {
+    public function build()
+    {
+
+        $streamNids = \Drupal::entityQuery('stream')->execute();
+        $streamEntities = \Drupal::entityTypeManager()->getStorage("stream")->loadMultiple($streamNids);
+
+        $streams = [];
+        foreach ($streamEntities as $streamEntity) {
+            $streams[] = array(
+                "type" => $streamEntity->get('field_stream_type')->value,
+                "id" => $streamEntity->get('field_stream_id')->value,
+            );
+        }
+
         return array(
-            '#theme' => "ga_stream_block"
+            '#theme' => "ga_stream_block",
+            '#streams' => $streams
         );
     }
 }

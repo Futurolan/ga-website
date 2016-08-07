@@ -1,9 +1,14 @@
-name: Gamers Assembly Tournament
-description: Provide the Tournament features
-package: Gamers Assembly
-
+name: 'Gamers Assembly Tournament'
+description: 'Provides Tournament content type and related configuration. '
 type: module
 core: 8.x
-
 dependencies:
-  - drupal:views
+  - content_translation
+  - field
+  - language
+  - menu_ui
+  - node
+  - text
+  - user
+  - views
+package: 'Gamers Assembly'
