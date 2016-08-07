@@ -1,0 +1,13 @@
+# Stream menu items definition
+entity.stream.collection:
+  title: 'Stream list'
+  route_name: entity.stream.collection
+  description: 'List Stream entities'
+  parent: system.admin_structure
+  weight: 100
+
+stream.admin.structure.settings:
+  title: Stream settings
+  description: 'Configure Stream entities'
+  route_name: stream.settings
+  parent: system.admin_structure
