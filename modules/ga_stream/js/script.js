@@ -1,4 +1,4 @@
-(function ($, Drupal) {
+(function ($) {
     'use strict';
 
     $(".stream-block-video-list .stream-video-list-item").each(function () {
@@ -37,4 +37,4 @@
         $(".stream-tab-chat").addClass("active");
     });
 
-})(jQuery, Drupal);
+})(jQuery);

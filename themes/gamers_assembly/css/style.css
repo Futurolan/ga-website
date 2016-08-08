@@ -14,7 +14,7 @@ body {
 .grey-area {
   background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
 }
 
 .blue-area {
@@ -25,15 +25,12 @@ body {
   background-color: whitesmoke;
 }
 
-.stream-block {
-  padding: 0 0 20px 0;
-}
 .stream-block h2 {
   text-align: center;
 }
 .stream-block h2:before, .stream-block h2:after {
   content: '';
-  background-color: #fff;
+  background-color: #ffffff;
   height: 1px;
   top: 37px;
   width: 40%;
@@ -47,20 +44,36 @@ body {
   right: 0;
 }
 .stream-block .stream-block-video {
-  border: 1px solid red;
   margin: 0;
   padding: 0;
 }
 .stream-block .stream-block-chat-video-list {
-  border: 1px solid red;
   margin: 0;
   padding: 0;
 }
-.stream-block .stream-block-chat-video-list .stream-tab-chat, .stream-block .stream-block-chat-video-list .stream-tab-video-list {
-  display: inline-block;
+.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6 {
+  cursor: pointer;
 }
-.stream-block .stream-block-chat-video-list .stream-tab-chat.active, .stream-block .stream-block-chat-video-list .stream-tab-video-list.active {
-  color: red;
+.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6:first-child {
+  padding-right: 0px;
+  border-right: 1px solid #000000;
+}
+.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6:last-child {
+  padding-left: 0px;
+}
+.stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-chat, .stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-video-list {
+  color: black;
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  padding: 0 0 0 10px;
+  line-height: 40px;
+  background-color: #bbbbbb;
+  transition: all 0.2s ease-in;
+}
+.stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-chat.active, .stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-video-list.active {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
 }
 .stream-block .stream-block-chat-video-list .stream-block-chat {
   display: none;
@@ -69,8 +82,42 @@ body {
   height: 354px;
   overflow-y: scroll;
 }
+.stream-block .stream-block-chat-video-list .stream-block-video-list {
+  border: 1px solid #ffffff;
+}
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item {
+  cursor: pointer;
+  line-height: 40px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
 .stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.active {
-  color: red;
+  background-color: white;
+  color: #000000;
+  font-weight: bold;
+}
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.active.online .stream-video-list-count {
+  background-position: left -15px;
+  font-weight: normal;
+}
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.online .stream-video-list-count {
+  background: url("../images/eye.png") left 1px no-repeat;
+  padding-left: 25px;
+  line-height: 15px;
+  margin-top: 12px;
+}
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item .stream-video-list-name:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #324520;
+  margin-right: 5px;
+}
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item .stream-video-list-name.online:before {
+  background-color: #7eff00;
 }
 
 .chat-line {
@@ -257,7 +304,7 @@ body {
   margin: 0;
 }
 #block-mainnavigation ul li a {
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   padding: 30px 22px;
   text-transform: uppercase;
