@@ -1,4 +1,5 @@
 .stream-block {
+  margin-bottom: 40px;
   .title {
     margin-top: 10px;
     margin-bottom: 40px;
@@ -73,6 +74,7 @@
           -ms-transition: all 1s ease-in;
           -o-transition: all 1s ease-in;
           transition: all 1s ease-in;
+          word-wrap: break-word;
         }
 
         .chat-line[data-faded] {
@@ -320,19 +322,17 @@
           line-height: 15px;
           margin-top: 12px;
         }
-        .stream-video-list-name {
-          &:before {
-            content: "";
-            display: inline-block;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: $dark-green;
-            margin-right: 5px;
-          }
-          &.online:before {
-            background-color: $light-green;
-          }
+        &.online .stream-video-list-name:before {
+          background-color: $light-green;
+        }
+        .stream-video-list-name:before {
+          content: "";
+          display: inline-block;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: $dark-green;
+          margin-right: 5px;
         }
 
       }

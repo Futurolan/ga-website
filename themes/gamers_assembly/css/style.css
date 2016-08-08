@@ -25,6 +25,9 @@ body {
   background-color: whitesmoke;
 }
 
+.stream-block {
+  margin-bottom: 40px;
+}
 .stream-block .title {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -97,6 +100,7 @@ body {
   -ms-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in;
+  word-wrap: break-word;
 }
 .stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line[data-faded] {
   opacity: .8;
@@ -251,6 +255,9 @@ body {
   line-height: 15px;
   margin-top: 12px;
 }
+.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.online .stream-video-list-name:before {
+  background-color: #7eff00;
+}
 .stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item .stream-video-list-name:before {
   content: "";
   display: inline-block;
@@ -260,8 +267,29 @@ body {
   background-color: #324520;
   margin-right: 5px;
 }
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item .stream-video-list-name.online:before {
-  background-color: #7eff00;
+
+.baseinfo-block {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.baseinfo-block .baseinfo-all-result {
+  background: url("../images/cup.png") center center no-repeat;
+  background-size: cover;
+}
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-text {
+  text-align: right;
+  padding: 48px 30px 48px 130px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta {
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta a {
+  font-weight: bold;
+  color: #000000;
 }
 
 #block-mainnavigation {
