@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @return array
+ */
+function ga_stream_theme($existing, $type, $theme, $path)
+{
+    $theme = [];
+    $theme['ga_stream_block'] = array(
+        'variables' => array(
+            'streams' => null,
+        ),
+        'template' => 'ga-stream-block',
+
+    );
+    return $theme;
+}

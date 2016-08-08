@@ -1,0 +1,18 @@
+ga_stream.corescripts:
+  version: 1.x
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - ga_stream/tmi
+ga_stream.tmi:
+  version: 1.x
+  js:
+    js/tmi.min.js: {}
+ga_stream.chat:
+  version: 1.x
+  js:
+    js/chat.js: {}
+  dependencies:
+    - core/jquery
+    - ga_stream/tmi

@@ -1,0 +1,20 @@
+gamers_assembly.corescripts:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+
+bootstrap:
+  remote: http://getbootstrap.com/
+  license:
+    name: MIT
+    gpl-compatible: false
+  js:
+    libraries/bootstrap/js/bootstrap.min.js: { minified: true }
+  css:
+    theme:
+      libraries/bootstrap/css/bootstrap.min.css: {}
+  dependencies:
+    - core/jquery

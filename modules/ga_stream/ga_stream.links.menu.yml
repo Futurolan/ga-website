@@ -1,0 +1,8 @@
+# Stream menu items definition
+entity.stream.collection:
+  title: 'Stream'
+  route_name: entity.stream.collection
+  description: 'List Stream (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

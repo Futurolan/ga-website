@@ -1,0 +1,56 @@
+<div class="stream-block">
+    <div class="row title">
+        <div class="line col-md-5"></div>
+        <div class=" col-md-2">
+            <h2>{{ "Livestream"|t }}</h2>
+        </div>
+        <div class="line col-md-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 stream-block-video">
+                        <iframe
+                                src="http://player.twitch.tv/?channel={{ streams[0].key }}"
+                                height="405"
+                                width="720"
+                                frameborder="0"
+                                scrolling="no"
+                                allowfullscreen="true">
+                        </iframe>
+                    </div>
+                    <div class="col-md-4 stream-block-chat-video-list">
+                        <div class="row stream-tabs">
+                            <div class="col-md-6"><h3 class="stream-tab-video-list active">{{ "Streams"|t }}</h3></div>
+                            <div class="col-md-6"><h3 class="stream-tab-chat">{{ "Chat room"|t }}</h3></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stream-block-video-list">
+                                    {% for stream in streams %}
+                                        <div id="stream-video-list-item-{{ stream.key }}" x-key="{{ stream.key }}"
+                                             class="stream-video-list-item {% if loop.first %}active{% endif %}">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="stream-video-list-name">{{ stream.name }}</div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span class="stream-eye"></span>
+                                                    <div class="stream-video-list-count"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-12 stream-block-chat">
+                                <div id="chat"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

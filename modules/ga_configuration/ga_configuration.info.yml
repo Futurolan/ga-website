@@ -1,0 +1,12 @@
+name: Gamers Assembly Configuration
+description: Activate minimal configuration for Gamers Assembly WebSite
+package: Gamers Assembly
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:toolbar
+  - drupal:menu_ui
+  - drupal:content_translation
+  - drupal:features_ui

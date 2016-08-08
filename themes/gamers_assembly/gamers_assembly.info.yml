@@ -3,7 +3,12 @@ type: theme
 description: A theme for the Gamers Assembly
 base theme: stable
 core: 8.x
+
+libraries:
+  - gamers_assembly/gamers_assembly.corescripts
+  - gamers_assembly/bootstrap
+
 regions:
   header: Header
-  content: Content  # the content region is required
+  content: Content
   footer: Footer

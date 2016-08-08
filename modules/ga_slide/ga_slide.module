@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @return array
+ */
+function ga_slide_theme()
+{
+    return array(
+        'ga_slide_block' => array(
+            'variables' => array(
+                'description' => null
+            ),
+            'template' => 'ga-slide-block'
+        )
+    );
+}
+
