@@ -1,5 +1,4 @@
 .stream-block {
-  padding: 0 0 20px 0;
   h2 {
     text-align: center;
     &:before, &:after {
@@ -19,39 +18,89 @@
     }
   }
   .stream-block-video {
-    border: 1px solid red;
     margin: 0;
     padding: 0;
   }
   .stream-block-chat-video-list {
-    border: 1px solid red;
     margin: 0;
     padding: 0;
 
-    .stream-tab-chat, .stream-tab-video-list {
-      display:inline-block;
-      &.active {
-        color: red;
+    .stream-tabs {
+      .col-md-6 {
+        cursor: pointer;
+        &:first-child {
+          padding-right: 0px;
+          border-right: 1px solid $black;
+        }
+        &:last-child {
+          padding-left: 0px;
+        }
+      }
+      .stream-tab-chat, .stream-tab-video-list {
+        color: black;
+        width: 100%;
+        margin: 0;
+        font-size: 18px;
+        padding: 0 0 0 10px;
+        line-height: 40px;
+        background-color: $light-grey;
+        transition: all 0.2s ease-in;
+        &.active {
+          background-color: $white;
+          transition: all 0.2s ease-in;
+        }
       }
     }
     .stream-block-chat {
       display: none;
-      #chat{
-        height:354px;
+      #chat {
+        height: 354px;
         overflow-y: scroll;
       }
     }
     .stream-block-video-list {
+      border: 1px solid $white;
       .stream-video-list-item {
-        &.active{
-          color:red;
+        cursor: pointer;
+        line-height: 40px;
+        padding-left: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: $white;
+        &.active {
+          background-color: rgba(255, 255, 255, 1);
+          color: $black;
+          font-weight: bold;
+          &.online .stream-video-list-count {
+            background-position: left -15px;
+            font-weight:normal;
+          }
         }
+        &.online .stream-video-list-count {
+          background: url('../images/eye.png') left 1px no-repeat;
+          padding-left: 25px;
+          line-height:15px;
+          margin-top:12px;
+        }
+        .stream-video-list-name {
+          &:before {
+            content: "";
+            display: inline-block;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: $dark-green;
+            margin-right: 5px;
+          }
+          &.online:before {
+            background-color: $light-green;
+          }
+        }
+
+
       }
     }
   }
 }
-
-
 
 .chat-line {
   -webkit-transition: all 1s ease-in;
@@ -60,51 +109,65 @@
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
+
 .chat-line[data-faded] {
   opacity: .8;
 }
+
 .chat-line.chat-action {
 }
+
 .chat-line.chat-notice {
   opacity: .7;
   font-weight: 300;
 }
+
 .chat-line.chat-notice[data-level] {
 }
+
 .chat-line.chat-notice[data-level="-4"] {
   color: hsla(250, 80%, 65%, 1);
   font-style: italic;
 }
+
 .chat-line.chat-notice[data-level="-3"] {
   color: hsla(200, 80%, 50%, 1);
   font-style: italic;
 }
+
 .chat-line.chat-notice[data-level="-2"] {
   color: hsla(160, 80%, 50%, 1);
   font-style: italic;
 }
+
 .chat-line.chat-notice[data-level="-1"] {
   color: hsla(100, 80%, 50%, 1);
   font-style: italic;
 }
+
 .chat-line.chat-notice[data-level="1"] {
   color: hsla(55, 100%, 50%, 1);
 }
+
 .chat-line.chat-notice[data-level="2"] {
   color: hsla(30, 100%, 50%, 1);
   font-weight: 400;
 }
+
 .chat-line.chat-notice[data-level="3"] {
   color: hsla(0, 100%, 50%, 1);
   font-weight: 400;
 }
+
 .chat-line.chat-notice[data-level="4"] {
   color: hsla(0, 100%, 50%, 1);
   font-weight: 700;
 }
+
 .chat-line.chat-notice[data-faded] {
   opacity: .3;
 }
+
 .chat-line.chat-timedout {
   opacity: .2;
   font-size: .75em;
@@ -114,6 +177,7 @@
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
+
 .chat-line.chat-cleared {
   opacity: .2;
   font-size: .33em;
@@ -123,24 +187,30 @@
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
+
 .chat-channel {
   margin-right: .375em;
   opacity: .6;
   font-weight: 300;
 }
+
 .chat-name {
   font-weight: 700;
 }
+
 .chat-colon {
   margin-right: .375em;
   opacity: .85;
 }
+
 .chat-line:not(.chat-action) .chat-colon:after {
   content: ':';
 }
+
 .chat-message {
   font-weight: 400;
 }
+
 .chat-line:not(.chat-action) .chat-message {
   color: inherit !important;
 }
@@ -157,6 +227,7 @@
 .chat-badges {
   margin-right: .125em;
 }
+
 .chat-badges > div {
   margin-bottom: 1px;
   border-radius: 2px;
@@ -173,67 +244,86 @@
   background-color: hsl(105, 89%, 36%);
   background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
 }
+
 .chat-badge-turbo {
   background-color: hsl(261, 43%, 45%);
   background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
 }
+
 .chat-badge-broadcaster {
   background-color: hsl(0, 81%, 50%);
   background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
 }
+
 .chat-badge-admin {
   background-color: hsl(40, 96%, 54%);
   background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
 }
+
 .chat-badge-staff {
   background-color: hsl(268, 55%, 13%);
   background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
 }
+
 .chat-badge-subscriber {
 }
+
 .chat-badge-bot {
   background-image: url(https://cdn.betterttv.net/tags/bot.png);
 }
 
-
 [class*="chat-delete"] {
 }
+
 .chat-delete-timeout {
 }
+
 .chat-delete-clear {
 }
 
 [class*="chat-hosting"] {
 }
+
 .chat-hosting-yes {
 }
+
 .chat-hosting-no {
 }
 
 [class*="chat-connection"] {
 }
+
 [class*="chat-connection-good"] {
 }
+
 [class*="chat-connection-bad"] {
 }
+
 .chat-connection-good-connecting {
 }
+
 .chat-connection-good-logon {
 }
+
 .chat-connection-good-connected {
 }
+
 .chat-connection-good-reconnect {
 }
+
 .chat-connection-bad-fail {
 }
+
 .chat-connection-bad-disconnected {
 }
 
 [class*="chat-room"] {
   font-size: .5em;
 }
+
 .chat-room-join {
 }
+
 .chat-room-part {
 }
 

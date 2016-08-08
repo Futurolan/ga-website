@@ -2,6 +2,9 @@ ga_stream.corescripts:
   version: 1.x
   js:
     js/script.js: {}
+  dependencies:
+    - core/jquery
+
 ga_stream.tmi:
   version: 1.x
   js:
