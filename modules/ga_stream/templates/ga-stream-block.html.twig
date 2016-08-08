@@ -4,11 +4,37 @@
             <h2>LiveStream</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 stream-block-video">
-                        Live
+                    <div class="col-md-8 stream-block-video">
+                        <iframe
+                                src="http://player.twitch.tv/?channel={{ streams[0].key }}"
+                                height="405"
+                                width="720"
+                                frameborder="0"
+                                scrolling="no"
+                                allowfullscreen="true">
+                        </iframe>
                     </div>
-                    <div class="col-md-3 stream-block-chat">
-                        Chat
+                    <div class="col-md-4 stream-block-chat-video-list">
+                        <div class="stream-tabs">
+                            <h3 class="stream-tab-video-list active">Streams</h3>
+                            <h3 class="stream-tab-chat">Chat</h3>
+                        </div>
+
+
+                        <div class="stream-block-video-list">
+                            {% for stream in streams %}
+                                <li id="stream-video-list-item-{{ stream.key }}" x-key="{{ stream.key }}"
+                                    class="stream-video-list-item {% if loop.first %}active{% endif %}">
+                                    {{ stream.name }}
+                                    <span class="stream-video-list-count"></span>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        <div class="stream-block-chat">
+                            <div id="chat"></div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

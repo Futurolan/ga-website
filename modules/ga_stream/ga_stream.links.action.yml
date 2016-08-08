@@ -1,5 +1,6 @@
 entity.stream.add_form:
-  route_name: entity.stream.add_form
+  route_name: 'entity.stream.add_form'
   title: 'Add Stream'
   appears_on:
     - entity.stream.collection
+
