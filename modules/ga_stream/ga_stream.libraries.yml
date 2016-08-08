@@ -4,7 +4,7 @@ ga_stream.corescripts:
     js/script.js: {}
   dependencies:
     - core/jquery
-
+    - ga_stream/tmi
 ga_stream.tmi:
   version: 1.x
   js:
@@ -14,4 +14,5 @@ ga_stream.chat:
   js:
     js/chat.js: {}
   dependencies:
+    - core/jquery
     - ga_stream/tmi

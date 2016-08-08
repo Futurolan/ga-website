@@ -14,6 +14,7 @@
     li {
       margin: 0;
       a {
+        transition: background-color 0.3s;
         color: $white;
         font-weight: bold;
         padding: 30px 22px;
@@ -21,17 +22,19 @@
         &:hover, &.is-active {
           background-color: $orange;
         }
-
       }
       &.nav-item--active-trail > a {
         background-color: $orange;
       }
       &:hover ul {
-        display: block;
+        height: auto;
+        opacity: 1;
       }
       ul {
         position: absolute;
-        display: none;
+        height: 0;
+        opacity:0;
+        transition: opacity 0.3s ease-out;
         background-color: $blue;
         li {
           width: 100%;

@@ -25,23 +25,30 @@ body {
   background-color: whitesmoke;
 }
 
-.stream-block h2 {
-  text-align: center;
+.stream-block .title {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
-.stream-block h2:before, .stream-block h2:after {
-  content: '';
+.stream-block .title .line {
   background-color: #ffffff;
-  height: 1px;
-  top: 37px;
-  width: 40%;
-  position: absolute;
+  margin-top: 30px;
+}
+.stream-block .title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+.stream-block .title h2:after {
+  background: url("../images/twitch.png") right center no-repeat;
+  content: '';
+  height: 28px;
+  width: 30px;
   display: inline-block;
-}
-.stream-block h2:before {
-  left: 0;
-}
-.stream-block h2:after {
-  right: 0;
+  vertical-align: middle;
+  margin-left: 15px;
 }
 .stream-block .stream-block-video {
   margin: 0;
@@ -50,6 +57,7 @@ body {
 .stream-block .stream-block-chat-video-list {
   margin: 0;
   padding: 0;
+  border: 1px solid #ffffff;
 }
 .stream-block .stream-block-chat-video-list .stream-tabs .col-md-6 {
   cursor: pointer;
@@ -79,11 +87,147 @@ body {
   display: none;
 }
 .stream-block .stream-block-chat-video-list .stream-block-chat #chat {
-  height: 354px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  height: 362px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line[data-faded] {
+  opacity: .8;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice {
+  opacity: .7;
+  font-weight: 300;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-4"] {
+  color: #765eed;
+  font-style: italic;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-3"] {
+  color: #1aa2e6;
+  font-style: italic;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-2"] {
+  color: #1ae6a2;
+  font-style: italic;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-1"] {
+  color: #5ee61a;
+  font-style: italic;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="1"] {
+  color: #ffea00;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="2"] {
+  color: #ff8000;
+  font-weight: 400;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="3"] {
+  color: red;
+  font-weight: 400;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="4"] {
+  color: red;
+  font-weight: 700;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-faded] {
+  opacity: .3;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-timedout {
+  opacity: .2;
+  font-size: .75em;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-cleared {
+  opacity: .2;
+  font-size: .33em;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-channel {
+  margin-right: .375em;
+  opacity: .6;
+  font-weight: 300;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-name {
+  font-weight: 700;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-colon {
+  margin-right: .375em;
+  opacity: .85;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line:not(.chat-action) .chat-colon:after {
+  content: ':';
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-message {
+  font-weight: 400;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line:not(.chat-action) .chat-message {
+  color: inherit !important;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .emoticon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: -5px 0;
+  display: inline-block;
+  vertical-align: middle !important;
+  height: 1.5em;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badges {
+  margin-right: .125em;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badges > div {
+  margin-bottom: 1px;
+  border-radius: 2px;
+  height: 1em;
+  min-width: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: .3em;
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-mod {
+  background-color: #33ae0a;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-turbo {
+  background-color: #6441a4;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-broadcaster {
+  background-color: #e71818;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-admin {
+  background-color: #faaf19;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-staff {
+  background-color: #200f33;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-bot {
+  background-image: url(https://cdn.betterttv.net/tags/bot.png);
+}
+.stream-block .stream-block-chat-video-list .stream-block-chat #chat [class*="chat-room"] {
+  font-size: .5em;
 }
 .stream-block .stream-block-chat-video-list .stream-block-video-list {
-  border: 1px solid #ffffff;
+  height: 362px;
 }
 .stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item {
   cursor: pointer;
@@ -120,171 +264,6 @@ body {
   background-color: #7eff00;
 }
 
-.chat-line {
-  -webkit-transition: all 1s ease-in;
-  -moz-transition: all 1s ease-in;
-  -ms-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-}
-
-.chat-line[data-faded] {
-  opacity: .8;
-}
-
-.chat-line.chat-notice {
-  opacity: .7;
-  font-weight: 300;
-}
-
-.chat-line.chat-notice[data-level="-4"] {
-  color: #765eed;
-  font-style: italic;
-}
-
-.chat-line.chat-notice[data-level="-3"] {
-  color: #1aa2e6;
-  font-style: italic;
-}
-
-.chat-line.chat-notice[data-level="-2"] {
-  color: #1ae6a2;
-  font-style: italic;
-}
-
-.chat-line.chat-notice[data-level="-1"] {
-  color: #5ee61a;
-  font-style: italic;
-}
-
-.chat-line.chat-notice[data-level="1"] {
-  color: #ffea00;
-}
-
-.chat-line.chat-notice[data-level="2"] {
-  color: #ff8000;
-  font-weight: 400;
-}
-
-.chat-line.chat-notice[data-level="3"] {
-  color: red;
-  font-weight: 400;
-}
-
-.chat-line.chat-notice[data-level="4"] {
-  color: red;
-  font-weight: 700;
-}
-
-.chat-line.chat-notice[data-faded] {
-  opacity: .3;
-}
-
-.chat-line.chat-timedout {
-  opacity: .2;
-  font-size: .75em;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -ms-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-
-.chat-line.chat-cleared {
-  opacity: .2;
-  font-size: .33em;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -ms-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-
-.chat-channel {
-  margin-right: .375em;
-  opacity: .6;
-  font-weight: 300;
-}
-
-.chat-name {
-  font-weight: 700;
-}
-
-.chat-colon {
-  margin-right: .375em;
-  opacity: .85;
-}
-
-.chat-line:not(.chat-action) .chat-colon:after {
-  content: ':';
-}
-
-.chat-message {
-  font-weight: 400;
-}
-
-.chat-line:not(.chat-action) .chat-message {
-  color: inherit !important;
-}
-
-.emoticon {
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin: -5px 0;
-  display: inline-block;
-  vertical-align: middle !important;
-  height: 1.5em;
-}
-
-.chat-badges {
-  margin-right: .125em;
-}
-
-.chat-badges > div {
-  margin-bottom: 1px;
-  border-radius: 2px;
-  height: 1em;
-  min-width: 1em;
-  display: inline-block;
-  vertical-align: middle;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: .3em;
-}
-
-.chat-badge-mod {
-  background-color: #33ae0a;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
-}
-
-.chat-badge-turbo {
-  background-color: #6441a4;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
-}
-
-.chat-badge-broadcaster {
-  background-color: #e71818;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
-}
-
-.chat-badge-admin {
-  background-color: #faaf19;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
-}
-
-.chat-badge-staff {
-  background-color: #200f33;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
-}
-
-.chat-badge-bot {
-  background-image: url(https://cdn.betterttv.net/tags/bot.png);
-}
-
-[class*="chat-room"] {
-  font-size: .5em;
-}
-
 #block-mainnavigation {
   background-color: #0058A2;
   padding: 0;
@@ -304,6 +283,7 @@ body {
   margin: 0;
 }
 #block-mainnavigation ul li a {
+  transition: background-color 0.3s;
   color: #ffffff;
   font-weight: bold;
   padding: 30px 22px;
@@ -316,11 +296,14 @@ body {
   background-color: #FC7E00;
 }
 #block-mainnavigation ul li:hover ul {
-  display: block;
+  height: auto;
+  opacity: 1;
 }
 #block-mainnavigation ul li ul {
   position: absolute;
-  display: none;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
   background-color: #0058A2;
 }
 #block-mainnavigation ul li ul li {
