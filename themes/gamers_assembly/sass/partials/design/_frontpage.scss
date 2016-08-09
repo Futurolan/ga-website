@@ -7,7 +7,9 @@
   color: $white;
 }
 .blue-area{
-  background-color:blue;
+  background: url('../images/bg-home-blue-area.jpg') center center no-repeat;
+  background-size: cover;
+  color: $white;
 }
 .white-area{
   background-color:whitesmoke;

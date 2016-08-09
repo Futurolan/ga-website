@@ -11,7 +11,7 @@ use Drupal\Core\Block\BlockBase;
  *   admin_label = @Translation("Base info block"),
  * )
  */
-class GaBaseinfoBlock extends BlockBase
+class BaseinfoBlock extends BlockBase
 {
     /**
      * {@inheritdoc}

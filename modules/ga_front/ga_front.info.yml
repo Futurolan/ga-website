@@ -5,6 +5,7 @@ dependencies:
   - ga_baseinfo_block
   - ga_slide
   - ga_stream
+  - ga_tournament
   - page_manager
   - panels
   - system

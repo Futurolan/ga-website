@@ -18,7 +18,9 @@ body {
 }
 
 .blue-area {
-  background-color: blue;
+  background: url("../images/bg-home-blue-area.jpg") center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
 }
 
 .white-area {
@@ -266,28 +268,60 @@ body {
   margin-right: 5px;
 }
 
-.baseinfo-block {
+.tournament-front-block {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.baseinfo-block .baseinfo-all-result {
+.tournament-front-block .all-result {
   background: url("../images/cup.png") center center no-repeat;
   background-size: cover;
 }
-.baseinfo-block .baseinfo-all-result .baseinfo-all-result-text {
+.tournament-front-block .all-result .text {
   text-align: right;
   padding: 48px 30px 48px 130px;
   font-weight: bold;
   letter-spacing: 1px;
 }
-.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta {
+.tournament-front-block .all-result .cta {
   padding: 10px;
   text-align: center;
   background-color: #ffffff;
 }
-.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta a {
+.tournament-front-block .all-result .cta a {
   font-weight: bold;
   color: #000000;
+}
+
+.news-twitter-block .title {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.news-twitter-block .title .line {
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+.news-twitter-block .title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.news-twitter-block .title h2:after {
+  content: '';
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.news-twitter-block .title h2.twitter:after {
+  background: url("../images/twitter.png") right center no-repeat;
+  height: 18px;
+  width: 22px;
+}
+.news-twitter-block .title h2.news:after {
+  background: url("../images/mushroom.png") right 0px no-repeat;
+  height: 27px;
+  width: 27px;
 }
 
 #block-mainnavigation {

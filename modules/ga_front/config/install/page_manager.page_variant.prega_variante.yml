@@ -21,16 +21,14 @@ variant_settings:
       weight: 0
       uuid: 34bc137f-197f-4b32-bc9a-c3b728d3eb9e
       context_mapping: {  }
-    f7e3b9fb-3a5b-4118-b7d3-87d1c7b4a7a2:
+    e7790e22-38f6-43a9-8e85-e36c13f3c232:
       id: ga_baseinfo_block
       label: 'Base info block'
       provider: ga_baseinfo_block
       label_display: '0'
       region: grey_row
-      weight: -10
-      uuid: f7e3b9fb-3a5b-4118-b7d3-87d1c7b4a7a2
+      uuid: e7790e22-38f6-43a9-8e85-e36c13f3c232
       context_mapping: {  }
-      name: Baptiste
   id: panels_variant
   uuid: 8000431e-6f90-478f-bbf1-bb431b6f3edb
   label: null

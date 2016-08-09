@@ -1,4 +1,4 @@
-name: Gamers Assembly Users
+name: 'Gamers Assembly Users'
 description: 'Provide User related configuration.'
 type: module
 core: 8.x

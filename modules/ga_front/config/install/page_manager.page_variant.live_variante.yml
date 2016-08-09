@@ -4,8 +4,8 @@ dependencies:
   config:
     - page_manager.page.front_page_view
   module:
-    - ga_baseinfo_block
     - ga_stream
+    - ga_tournament
     - panels
     - system
 id: live_variante
@@ -22,14 +22,14 @@ variant_settings:
       weight: -10
       uuid: f3168245-7c71-4b89-a3c0-2fdbb64b5976
       context_mapping: {  }
-    45ccf590-8a47-4acd-9c47-d728fb04f005:
-      id: ga_baseinfo_block
-      label: 'Base info block'
-      provider: ga_baseinfo_block
+    77f79bcb-6b58-40f8-87df-3ddf667e6d45:
+      id: ga_tournament_front_block
+      label: 'Tournament front blocks'
+      provider: ga_tournament
       label_display: '0'
       region: grey_row
-      weight: -9
-      uuid: 45ccf590-8a47-4acd-9c47-d728fb04f005
+      weight: 0
+      uuid: 77f79bcb-6b58-40f8-87df-3ddf667e6d45
       context_mapping: {  }
   id: panels_variant
   uuid: 9d76ba1c-4e2c-4594-bb56-68a4e1c6f864
