@@ -1,0 +1,4 @@
+bundle: ga
+excluded:
+  - ga_stream.stream._fr_lapi_from_scratch
+required: true
