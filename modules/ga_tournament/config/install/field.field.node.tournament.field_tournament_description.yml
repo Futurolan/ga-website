@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_description
+    - node.type.tournament
+  module:
+    - text
+id: node.tournament.field_tournament_description
+field_name: field_tournament_description
+entity_type: node
+bundle: tournament
+label: 'Tournament Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

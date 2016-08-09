@@ -1,0 +1,5 @@
+abs_urls: false
+roles_profiles:
+  authenticated:
+    public: member
+langcode: fr
