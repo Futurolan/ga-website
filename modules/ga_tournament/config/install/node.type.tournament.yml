@@ -5,8 +5,9 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:eec97bd9-3794-4b15-a590-d0dfaad45f63'
 name: Tournament
 type: tournament
 description: ''

@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:8c92d4c3-ff12-4f2c-82b3-53514dbfaac7'
+name: News
+type: news
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

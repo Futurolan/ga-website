@@ -2,9 +2,12 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.tournament.field_description
+    - field.field.node.tournament.field_tournament_description
+    - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_rules
     - node.type.tournament
   module:
+    - image
     - text
     - user
 id: node.tournament.default
@@ -12,8 +15,22 @@ targetEntityType: node
 bundle: tournament
 mode: default
 content:
-  field_description:
-    weight: 101
+  field_tournament_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_tournament_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_tournament_rules:
+    weight: 104
     label: above
     settings: {  }
     third_party_settings: {  }

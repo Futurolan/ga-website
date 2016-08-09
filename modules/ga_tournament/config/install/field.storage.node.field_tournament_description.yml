@@ -4,8 +4,8 @@ dependencies:
   module:
     - node
     - text
-id: node.field_description
-field_name: field_description
+id: node.field_tournament_description
+field_name: field_tournament_description
 entity_type: node
 type: text_long
 settings: {  }

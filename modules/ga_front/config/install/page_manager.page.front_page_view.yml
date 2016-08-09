@@ -1,0 +1,10 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: front_page_view
+label: 'Front page view'
+use_admin_theme: false
+path: '/front/{state}'
+access_logic: and
+access_conditions: {  }
+parameters: {  }
