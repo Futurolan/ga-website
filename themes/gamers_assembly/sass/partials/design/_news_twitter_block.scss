@@ -1,7 +1,7 @@
 .news-twitter-block {
   .title {
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     .line {
       background-color: $white;
       margin-top: 30px;
@@ -28,7 +28,49 @@
         background: url('../images/mushroom.png') right 0px no-repeat;
         height: 27px;
         width: 27px;
+      }
+    }
+  }
+  .new {
+    background-color: rgba(0, 0, 0, 0.5);;
+    width: 100%;
+    height: 185px;
+    margin-bottom:25px;
+    color:$white;
 
+    .col {
+      display: inline-block;
+      &.first {
+        width: 195px;
+        .tag{
+          text-align: center;
+          line-height:25px;
+          font-weight:bold;
+        }
+      }
+      &.second {
+        width: calc(100% - 220px);
+        padding: 10px;
+        vertical-align: top;
+        h3{
+          text-overflow:ellipsis;
+          white-space:nowrap;
+          overflow:hidden;
+          border-bottom:1px solid white;
+          padding-bottom:15px;
+          margin-top:10px;
+        }
+        .teaser{
+          display:block;
+          text-overflow:ellipsis;
+          word-wrap: break-word;
+          overflow: hidden;
+          display: -webkit-box;
+          height:80px;
+          margin: 0 auto;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        }
       }
     }
   }

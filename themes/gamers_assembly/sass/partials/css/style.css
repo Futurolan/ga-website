@@ -7,6 +7,32 @@ body {
   font-size: 14px;
 }
 
+.title {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.title .line {
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+.title h2:after {
+  background: url("../images/twitch.png") right center no-repeat;
+  content: '';
+  height: 28px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
 .slide-area {
   background-color: red;
 }
@@ -18,9 +44,7 @@ body {
 }
 
 .blue-area {
-  background: url("../images/bg-home-blue-area.jpg") center center no-repeat;
-  background-size: cover;
-  color: #ffffff;
+  background-color: blue;
 }
 
 .white-area {
@@ -29,31 +53,6 @@ body {
 
 .stream-block {
   margin-bottom: 40px;
-}
-.stream-block .title {
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-.stream-block .title .line {
-  background-color: #ffffff;
-  margin-top: 30px;
-}
-.stream-block .title h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 28px;
-}
-.stream-block .title h2:after {
-  background: url("../images/twitch.png") right center no-repeat;
-  content: '';
-  height: 28px;
-  width: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 15px;
 }
 .stream-block .stream-block-video {
   padding: 0;
@@ -91,7 +90,7 @@ body {
 }
 .stream-block .stream-block-chat-video-list .stream-block-chat #chat {
   overflow-y: auto;
-  height: 362px;
+  height: 381px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line {
@@ -231,7 +230,7 @@ body {
   font-size: .5em;
 }
 .stream-block .stream-block-chat-video-list .stream-block-video-list {
-  height: 362px;
+  height: 381px;
 }
 .stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item {
   cursor: pointer;
@@ -268,102 +267,28 @@ body {
   margin-right: 5px;
 }
 
-.tournament-front-block {
+.baseinfo-block {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.tournament-front-block .all-result {
+.baseinfo-block .baseinfo-all-result {
   background: url("../images/cup.png") center center no-repeat;
   background-size: cover;
 }
-.tournament-front-block .all-result .text {
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-text {
   text-align: right;
   padding: 48px 30px 48px 130px;
   font-weight: bold;
   letter-spacing: 1px;
 }
-.tournament-front-block .all-result .cta {
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta {
   padding: 10px;
   text-align: center;
   background-color: #ffffff;
 }
-.tournament-front-block .all-result .cta a {
+.baseinfo-block .baseinfo-all-result .baseinfo-all-result-cta a {
   font-weight: bold;
   color: #000000;
-}
-
-.news-twitter-block .title {
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-.news-twitter-block .title .line {
-  background-color: #ffffff;
-  margin-top: 30px;
-}
-.news-twitter-block .title h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.news-twitter-block .title h2:after {
-  content: '';
-  display: inline-block;
-  margin-left: 15px;
-  vertical-align: middle;
-}
-.news-twitter-block .title h2.twitter:after {
-  background: url("../images/twitter.png") right center no-repeat;
-  height: 18px;
-  width: 22px;
-}
-.news-twitter-block .title h2.news:after {
-  background: url("../images/mushroom.png") right 0px no-repeat;
-  height: 27px;
-  width: 27px;
-}
-.news-twitter-block .new {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 185px;
-  margin-bottom: 25px;
-  color: #ffffff;
-}
-.news-twitter-block .new .col {
-  display: inline-block;
-}
-.news-twitter-block .new .col.first {
-  width: 195px;
-}
-.news-twitter-block .new .col.first .tag {
-  text-align: center;
-  line-height: 25px;
-  font-weight: bold;
-}
-.news-twitter-block .new .col.second {
-  width: calc(100% - 220px);
-  padding: 10px;
-  vertical-align: top;
-}
-.news-twitter-block .new .col.second h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  border-bottom: 1px solid white;
-  padding-bottom: 15px;
-  margin-top: 10px;
-}
-.news-twitter-block .new .col.second .teaser {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  display: -webkit-box;
-  height: 80px;
-  margin: 0 auto;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
 #block-mainnavigation {
