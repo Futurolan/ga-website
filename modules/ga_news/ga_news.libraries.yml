@@ -1,0 +1,11 @@
+ga_news.corescript:
+  version: 1.x
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - ga_news/twitter
+ga_news.twitter:
+  version: 1.x
+  js:
+    js/widgets.js: {}

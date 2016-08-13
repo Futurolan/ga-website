@@ -51,6 +51,12 @@ class NewsTwitterBlock extends BlockBase
         return array(
             '#theme' => 'ga_news_twitter_block',
             '#news' => $news,
+            '#attached' => array(
+                'library' =>  array(
+                    'ga_news/ga_news.corescript',
+                    'ga_news/ga_news.twitter',
+                ),
+            ),
         );
     }
 }

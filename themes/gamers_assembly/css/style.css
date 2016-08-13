@@ -365,6 +365,11 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+.news-twitter-block .twitter-userline {
+  height: 605px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 #block-mainnavigation {
   background-color: #0058A2;
