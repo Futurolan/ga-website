@@ -4,6 +4,8 @@ dependencies:
   config:
     - page_manager.page.front_page_view
   module:
+    - ga_news
+    - ga_sponsor
     - ga_stream
     - ga_tournament
     - panels
@@ -30,6 +32,24 @@ variant_settings:
       region: grey_row
       weight: 0
       uuid: 77f79bcb-6b58-40f8-87df-3ddf667e6d45
+      context_mapping: {  }
+    ffb9f7ca-9a8f-4838-9426-9467c13ba2e9:
+      id: ga_news_twitter_block
+      label: 'News & Twitter Block'
+      provider: ga_news
+      label_display: '0'
+      region: blue_row
+      weight: -10
+      uuid: ffb9f7ca-9a8f-4838-9426-9467c13ba2e9
+      context_mapping: {  }
+    a00ad560-ca40-466f-9bdb-a608f4955ed0:
+      id: sponsor_front_block
+      label: 'Sponsor front block'
+      provider: ga_sponsor
+      label_display: '0'
+      region: white_row
+      weight: 0
+      uuid: a00ad560-ca40-466f-9bdb-a608f4955ed0
       context_mapping: {  }
   id: panels_variant
   uuid: 9d76ba1c-4e2c-4594-bb56-68a4e1c6f864

@@ -1,0 +1,11 @@
+<div class="sponsor-front-block">
+    <div class="row">
+        {% for sponsor in sponsors %}
+            <div class="col-md-2">
+                <div class="sponsor">
+                    <img src="{{ sponsor.image }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

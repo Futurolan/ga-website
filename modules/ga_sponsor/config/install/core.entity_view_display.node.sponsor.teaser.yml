@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.news.field_news_image
-    - node.type.news
+    - field.field.node.sponsor.field_sponsor_image
+    - node.type.sponsor
   module:
     - user
-id: node.news.teaser
+id: node.sponsor.teaser
 targetEntityType: node
-bundle: news
+bundle: sponsor
 mode: teaser
 content:
   links:
     weight: 100
 hidden:
-  field_news_image: true
+  field_sponsor_image: true
   langcode: true

@@ -1,19 +1,15 @@
-name: 'Gamers Assembly Configuration'
+name: 'Gamers Assembly Sponsor'
+description: 'Provides Sponsor content type and related configuration. '
 type: module
 core: 8.x
 dependencies:
-  - block
-  - ckeditor
   - content_translation
-  - editor
   - field
-  - filter
-  - imce
+  - file
+  - image
   - language
+  - menu_ui
   - node
-  - system
-  - taxonomy
-  - text
   - user
   - views
 package: 'Gamers Assembly'

@@ -5,10 +5,12 @@ dependencies:
   - content_translation
   - field
   - file
+  - ga_configuration
   - image
   - language
   - menu_ui
   - node
+  - taxonomy
   - text
   - user
   - views
