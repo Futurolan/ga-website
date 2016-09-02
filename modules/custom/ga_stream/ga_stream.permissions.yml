@@ -1,0 +1,4 @@
+administer streams:
+  title: 'Administer streams'
+  description: 'Create, update and delete all streams.'
+  restrict access: true

@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: millenium_tv
 label: 'Millenium TV'
-weight: -9
+weight: -10
 key: milleniumtvhots
 type: twitch

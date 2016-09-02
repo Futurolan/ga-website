@@ -27,7 +27,6 @@ class StreamListBuilder extends DraggableListBuilder
     public function buildHeader()
     {
         $header['label'] = $this->t('Stream');
-        $header['id'] = $this->t('Machine name');
         return $header + parent::buildHeader();
     }
 

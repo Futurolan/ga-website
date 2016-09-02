@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   config_prefix = "stream",
- *   admin_permission = "administer site configuration",
+ *   admin_permission = "administer streams",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",

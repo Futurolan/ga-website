@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: _fr_lapi_from_scratch
 label: '[FR] Lapi From Scratch'
-weight: -10
+weight: -9
 key: w_lapin
 type: twitch
