@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    $(".stream-block-video-list .stream-video-list-item").each(function () {
+    $(".stream-video-list .stream-video-list-item").each(function () {
         var key = $(this).attr("x-key");
         $.ajax({
             url: "https://api.twitch.tv/kraken/streams/" + key,
@@ -17,22 +17,22 @@
         });
     });
 
-    $(".stream-block-video-list .stream-video-list-item").click(function () {
+    $(".stream-video-list .stream-video-list-item").click(function () {
         var key = $(this).attr("x-key");
-        $(".stream-block-video iframe").attr('src', "http://player.twitch.tv/?channel=" + key);
+        $(".stream-video iframe").attr('src', "http://player.twitch.tv/?channel=" + key);
         $(".stream-video-list-item").removeClass('active');
         $("#stream-video-list-item-" + key).addClass('active');
     });
 
     $(".stream-tab-video-list").click(function(){
-        $(".stream-block-video-list").show();
-        $(".stream-block-chat").hide();
+        $(".stream-video-list").show();
+        $(".stream-chat").hide();
         $(".stream-tab-video-list").addClass("active");
         $(".stream-tab-chat").removeClass("active");
     });
     $(".stream-tab-chat").click(function(){
-        $(".stream-block-video-list").hide();
-        $(".stream-block-chat").show();
+        $(".stream-video-list").hide();
+        $(".stream-chat").show();
         $(".stream-tab-video-list").removeClass("active");
         $(".stream-tab-chat").addClass("active");
     });

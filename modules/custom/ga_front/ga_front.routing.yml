@@ -1,0 +1,7 @@
+ga_front.live:
+  path: '/front/live'
+  defaults:
+    _controller: '\Drupal\ga_front\Controller\FrontLiveController::render'
+    _title: 'Live front page'
+  requirements:
+    _permission: 'access content'

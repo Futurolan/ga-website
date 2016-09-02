@@ -7,6 +7,33 @@ body {
   font-size: 14px;
 }
 
+.title-line {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.title-line .line {
+  background-color: #ffffff;
+  margin-top: 30px;
+  height: 2px;
+}
+.title-line h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+.title-line h2.twitch:after {
+  background: url("../images/twitch.png") right center no-repeat;
+  content: '';
+  height: 28px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
 .slide-area {
   background-color: red;
 }
@@ -25,247 +52,6 @@ body {
 
 .white-area {
   background-color: whitesmoke;
-}
-
-.stream-block {
-  margin-bottom: 40px;
-}
-.stream-block .title {
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-.stream-block .title .line {
-  background-color: #ffffff;
-  margin-top: 30px;
-}
-.stream-block .title h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 28px;
-}
-.stream-block .title h2:after {
-  background: url("../images/twitch.png") right center no-repeat;
-  content: '';
-  height: 28px;
-  width: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-.stream-block .stream-block-video {
-  padding: 0;
-}
-.stream-block .stream-block-chat-video-list {
-  padding: 0;
-  border: 1px solid #ffffff;
-}
-.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6 {
-  cursor: pointer;
-}
-.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6:first-child {
-  padding-right: 0px;
-  border-right: 1px solid #000000;
-}
-.stream-block .stream-block-chat-video-list .stream-tabs .col-md-6:last-child {
-  padding-left: 0px;
-}
-.stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-chat, .stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-video-list {
-  color: black;
-  width: 100%;
-  margin: 0;
-  font-size: 18px;
-  padding: 0 0 0 10px;
-  line-height: 40px;
-  background-color: #bbbbbb;
-  transition: all 0.2s ease-in;
-}
-.stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-chat.active, .stream-block .stream-block-chat-video-list .stream-tabs .stream-tab-video-list.active {
-  background-color: #ffffff;
-  transition: all 0.2s ease-in;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat {
-  display: none;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat {
-  overflow-y: auto;
-  height: 362px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line {
-  -webkit-transition: all 1s ease-in;
-  -moz-transition: all 1s ease-in;
-  -ms-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-  word-wrap: break-word;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line[data-faded] {
-  opacity: .8;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice {
-  opacity: .7;
-  font-weight: 300;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-4"] {
-  color: #765eed;
-  font-style: italic;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-3"] {
-  color: #1aa2e6;
-  font-style: italic;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-2"] {
-  color: #1ae6a2;
-  font-style: italic;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="-1"] {
-  color: #5ee61a;
-  font-style: italic;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="1"] {
-  color: #ffea00;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="2"] {
-  color: #ff8000;
-  font-weight: 400;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="3"] {
-  color: red;
-  font-weight: 400;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-level="4"] {
-  color: red;
-  font-weight: 700;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-notice[data-faded] {
-  opacity: .3;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-timedout {
-  opacity: .2;
-  font-size: .75em;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -ms-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line.chat-cleared {
-  opacity: .2;
-  font-size: .33em;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -ms-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-channel {
-  margin-right: .375em;
-  opacity: .6;
-  font-weight: 300;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-name {
-  font-weight: 700;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-colon {
-  margin-right: .375em;
-  opacity: .85;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line:not(.chat-action) .chat-colon:after {
-  content: ':';
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-message {
-  font-weight: 400;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-line:not(.chat-action) .chat-message {
-  color: inherit !important;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .emoticon {
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin: -5px 0;
-  display: inline-block;
-  vertical-align: middle !important;
-  height: 1.5em;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badges {
-  margin-right: .125em;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badges > div {
-  margin-bottom: 1px;
-  border-radius: 2px;
-  height: 1em;
-  min-width: 1em;
-  display: inline-block;
-  vertical-align: middle;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: .3em;
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-mod {
-  background-color: #33ae0a;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-turbo {
-  background-color: #6441a4;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-broadcaster {
-  background-color: #e71818;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-admin {
-  background-color: #faaf19;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-staff {
-  background-color: #200f33;
-  background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat .chat-badge-bot {
-  background-image: url(https://cdn.betterttv.net/tags/bot.png);
-}
-.stream-block .stream-block-chat-video-list .stream-block-chat #chat [class*="chat-room"] {
-  font-size: .5em;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list {
-  height: 362px;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item {
-  cursor: pointer;
-  line-height: 40px;
-  padding-left: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.active {
-  background-color: white;
-  color: #000000;
-  font-weight: bold;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.active.online .stream-video-list-count {
-  background-position: left -15px;
-  font-weight: normal;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.online .stream-video-list-count {
-  background: url("../images/eye.png") left 1px no-repeat;
-  padding-left: 25px;
-  line-height: 15px;
-  margin-top: 12px;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item.online .stream-video-list-name:before {
-  background-color: #7eff00;
-}
-.stream-block .stream-block-chat-video-list .stream-block-video-list .stream-video-list-item .stream-video-list-name:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #324520;
-  margin-right: 5px;
 }
 
 .tournament-front-block {
@@ -456,6 +242,223 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
 
 body {
   font-family: 'Roboto', sans-serif !important;
+}
+
+.stream {
+  margin-bottom: 40px;
+}
+.stream .stream-video {
+  padding: 0;
+}
+.stream .stream-chat-video-list {
+  padding: 0;
+  border: 1px solid #ffffff;
+}
+.stream .stream-chat-video-list .stream-tabs .col-md-6 {
+  cursor: pointer;
+}
+.stream .stream-chat-video-list .stream-tabs .col-md-6:first-child {
+  padding-right: 0px;
+  border-right: 1px solid #000000;
+}
+.stream .stream-chat-video-list .stream-tabs .col-md-6:last-child {
+  padding-left: 0px;
+}
+.stream .stream-chat-video-list .stream-tabs .stream-tab-chat, .stream .stream-chat-video-list .stream-tabs .stream-tab-video-list {
+  color: black;
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  padding: 0 0 0 10px;
+  line-height: 40px;
+  background-color: #bbbbbb;
+  transition: all 0.2s ease-in;
+}
+.stream .stream-chat-video-list .stream-tabs .stream-tab-chat.active, .stream .stream-chat-video-list .stream-tabs .stream-tab-video-list.active {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+.stream .stream-chat-video-list .stream-chat {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+}
+.stream .stream-chat-video-list .stream-chat #chat {
+  overflow-y: auto;
+  height: 362px;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  word-wrap: break-word;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line[data-faded] {
+  opacity: .8;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice {
+  opacity: .7;
+  font-weight: 300;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-4"] {
+  color: #765eed;
+  font-style: italic;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-3"] {
+  color: #1aa2e6;
+  font-style: italic;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-2"] {
+  color: #1ae6a2;
+  font-style: italic;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-1"] {
+  color: #5ee61a;
+  font-style: italic;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="1"] {
+  color: #ffea00;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="2"] {
+  color: #ff8000;
+  font-weight: 400;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="3"] {
+  color: red;
+  font-weight: 400;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="4"] {
+  color: red;
+  font-weight: 700;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-faded] {
+  opacity: .3;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-timedout {
+  opacity: .2;
+  font-size: .75em;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-cleared {
+  opacity: .2;
+  font-size: .33em;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-channel {
+  margin-right: .375em;
+  opacity: .6;
+  font-weight: 300;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-name {
+  font-weight: 700;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-colon {
+  margin-right: .375em;
+  opacity: .85;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line:not(.chat-action) .chat-colon:after {
+  content: ':';
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-message {
+  font-weight: 400;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-line:not(.chat-action) .chat-message {
+  color: inherit !important;
+}
+.stream .stream-chat-video-list .stream-chat #chat .emoticon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: -5px 0;
+  display: inline-block;
+  vertical-align: middle !important;
+  height: 1.5em;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badges {
+  margin-right: .125em;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badges > div {
+  margin-bottom: 1px;
+  border-radius: 2px;
+  height: 1em;
+  min-width: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: .3em;
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-mod {
+  background-color: #33ae0a;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-turbo {
+  background-color: #6441a4;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-broadcaster {
+  background-color: #e71818;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-admin {
+  background-color: #faaf19;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-staff {
+  background-color: #200f33;
+  background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
+}
+.stream .stream-chat-video-list .stream-chat #chat .chat-badge-bot {
+  background-image: url(https://cdn.betterttv.net/tags/bot.png);
+}
+.stream .stream-chat-video-list .stream-chat #chat [class*="chat-room"] {
+  font-size: .5em;
+}
+.stream .stream-chat-video-list .stream-video-list {
+  height: 362px;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item {
+  cursor: pointer;
+  line-height: 40px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item.active {
+  background-color: white;
+  color: #000000;
+  font-weight: bold;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item.active.online .stream-video-list-count {
+  background-position: left -15px;
+  font-weight: normal;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item.online .stream-video-list-count {
+  background: url("../images/eye.png") left 1px no-repeat;
+  padding-left: 25px;
+  line-height: 15px;
+  margin-top: 12px;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item.online .stream-video-list-name:before {
+  background-color: #7eff00;
+}
+.stream .stream-chat-video-list .stream-video-list .stream-video-list-item .stream-video-list-name:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #324520;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

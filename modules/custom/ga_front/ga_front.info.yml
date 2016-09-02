@@ -1,15 +1,4 @@
 name: 'Gamers Assembly Front'
 type: module
 core: 8.x
-dependencies:
-  - ga_baseinfo_block
-  - ga_news
-  - ga_slide
-  - ga_sponsor
-  - ga_stream
-  - ga_tournament
-  - image
-  - page_manager
-  - panels
-  - system
 package: 'Gamers Assembly'

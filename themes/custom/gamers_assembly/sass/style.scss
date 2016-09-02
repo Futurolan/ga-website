@@ -3,10 +3,11 @@
 @import 'partials/design/design';
 @import 'partials/design/frontpage';
 @import 'partials/design/block';
-@import 'partials/design/stream_block';
 @import 'partials/design/tournament_front_block';
 @import 'partials/design/baseinfo_block';
 @import 'partials/design/news_twitter_block';
 @import 'partials/design/_sponsor_front_block';
 @import 'partials/navigation/navigation';
 @import 'partials/typography/typography';
+
+@import '../components/streams/streams';

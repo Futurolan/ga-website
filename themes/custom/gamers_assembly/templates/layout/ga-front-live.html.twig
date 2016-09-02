@@ -1,0 +1,31 @@
+<div class="row grey-area">
+    <!-- First row is Stream -->
+    <div class="col-md-12">
+        <div class="row title-line">
+            <div class="line col-md-5"></div>
+            <div class=" col-md-2">
+                <h2 class="twitch">{{ "Livestream"|t }}</h2>
+            </div>
+            <div class="line col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    {% include directory ~ '/components/streams/streams.html.twig' with streams %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row blue-area">
+    <div class="col-md-12">
+        {{ content.blue_row }}
+    </div>
+</div>
+
+<div class="row white-area">
+    <div class="col-md-12">
+        {{ content.white_row }}
+    </div>
+</div>
