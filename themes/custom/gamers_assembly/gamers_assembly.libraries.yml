@@ -6,6 +6,15 @@ gamers_assembly.corescripts:
   js:
     js/script.js: {}
 
+gamers_assembly.streams:
+  version: 1.x
+  js:
+    components/streams/streams.js: {}
+    libraries/chat/tmi.min.js: {minified: true}
+    libraries/chat/chat.js : {}
+  dependencies:
+    - core/jquery
+
 bootstrap:
   remote: http://getbootstrap.com/
   license:
