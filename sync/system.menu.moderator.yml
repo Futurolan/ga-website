@@ -1,0 +1,8 @@
+uuid: 320a54a0-e0bd-41c7-9b4f-23ef5ad40b2d
+langcode: fr
+status: true
+dependencies: {  }
+id: moderator
+label: Moderateur
+description: ''
+locked: false

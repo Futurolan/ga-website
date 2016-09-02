@@ -1,0 +1,13 @@
+uuid: 1171a2a3-d64b-4a40-b52d-7b97f4ff8515
+langcode: fr
+status: true
+dependencies: {  }
+id: moderator
+label: 'Utilisateur modérateur'
+weight: 2
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'view moderator in toolbar'
+  - 'administer streams'
+  - 'view the administration theme'
