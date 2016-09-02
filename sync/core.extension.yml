@@ -5,6 +5,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_readonly: 0
   config_translation: 0
   content_translation: 0
   ctools: 0
