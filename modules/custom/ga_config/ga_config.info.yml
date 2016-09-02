@@ -1,0 +1,4 @@
+name: 'Gamers Assembly Config'
+type: module
+core: 8.x
+package: 'Gamers Assembly'

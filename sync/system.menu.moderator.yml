@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: moderator
 label: Moderateur
-description: ''
+description: 'Moderator Menu'
 locked: false

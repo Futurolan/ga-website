@@ -6,9 +6,8 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:menu_link_content:156f03bd-cf56-4760-8868-795b1df159ac'
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: 2c6DKYbCgOGkZHz4CoFBbarfNT6i9UIqStXAzhD_ETY
 name: Sponsor

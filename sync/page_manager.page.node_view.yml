@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: 1rbdWeEeBjGARzFlodw9zcw3FlX6WQD83Rsckxl9_3o
 id: node_view
-label: 'Node view'
+label: 'Vue du nœud'
 use_admin_theme: false
 path: '/node/{node}'
 access_logic: and
@@ -14,4 +14,4 @@ parameters:
   node:
     machine_name: node
     type: 'entity:node'
-    label: Node
+    label: Nœud
