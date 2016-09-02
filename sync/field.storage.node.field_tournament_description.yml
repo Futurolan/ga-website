@@ -1,0 +1,19 @@
+uuid: de25aed6-4eb5-4d91-b925-c3d0c3e7720a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_tournament_description
+field_name: field_tournament_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

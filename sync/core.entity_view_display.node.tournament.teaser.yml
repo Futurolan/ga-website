@@ -1,0 +1,21 @@
+uuid: 3aaa82c6-5fb0-4cd9-b877-23f415b9396f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tournament.field_tournament_image
+    - node.type.tournament
+  module:
+    - user
+_core:
+  default_config_hash: hV90Dnuj9pdppObBV8Ceg0nOIcStqszo50sYrxESzHs
+id: node.tournament.teaser
+targetEntityType: node
+bundle: tournament
+mode: teaser
+content: {  }
+hidden:
+  field_tournament_image: true
+  langcode: true
+  links: true

@@ -1,0 +1,7 @@
+abs_urls: false
+roles_profiles:
+  authenticated:
+    public: member
+langcode: fr
+_core:
+  default_config_hash: n0Cx-87mju12voDCSRyFhWIERkevvQ4aVWRovAz0AuY

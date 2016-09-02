@@ -1,0 +1,14 @@
+uuid: 3f4c5fe8-90a8-44d8-8e6c-c827c8d8f9a6
+name: 'Gamers Assembly'
+mail: baptiste.routhieau+ga@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /front/live
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

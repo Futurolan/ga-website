@@ -1,0 +1,9 @@
+uuid: 37cb9fe5-3f5b-4542-bdec-afca71ff3893
+langcode: fr
+status: true
+dependencies: {  }
+id: mlg
+label: MLG
+weight: -8
+key: dota2ti_ru
+type: twitch

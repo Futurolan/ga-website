@@ -1,0 +1,29 @@
+uuid: fe47b7df-0b2b-4c2f-a48e-56b77fcf53b3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.sponsor.field_sponsor_image
+    - node.type.sponsor
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: Lqs7pwsXySqXV1mQNzzq1kUZHG3WCpDPa0sK9ODvV2E
+id: node.sponsor.default
+targetEntityType: node
+bundle: sponsor
+mode: default
+content:
+  field_sponsor_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden:
+  langcode: true

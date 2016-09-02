@@ -1,0 +1,25 @@
+uuid: 176fb5e5-bffd-462c-bef2-53ffc0bd068f
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gamers_assembly
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: gamers_assembly_branding
+theme: gamers_assembly
+region: '-1'
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

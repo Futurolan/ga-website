@@ -1,0 +1,20 @@
+uuid: d482ca07-d26f-4251-adc4-e09c31e16cc1
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gamers_assembly
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: gamers_assembly_page_title
+theme: gamers_assembly
+region: '-1'
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

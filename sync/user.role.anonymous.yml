@@ -1,0 +1,12 @@
+uuid: 19930179-5fa7-4062-ad00-cc3044406105
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7pqmYlE2VRF7s799rJhgrf5juI3Y-fJIITLPNRlB9yw
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'

@@ -1,0 +1,15 @@
+uuid: 7026ab3a-b8de-4c7c-b6ff-e9a4b87f516d
+langcode: fr
+status: true
+dependencies: {  }
+name: sponsor_front
+label: 'Sponsor Front'
+effects:
+  356ff140-104b-4ae9-90b9-cd6cc619e2c4:
+    uuid: 356ff140-104b-4ae9-90b9-cd6cc619e2c4
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      upscale: false

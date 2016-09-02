@@ -1,0 +1,22 @@
+uuid: 685b8ecc-3c2b-4be5-aa65-4a3611e18842
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_news_image
+    - node.type.news
+  module:
+    - user
+_core:
+  default_config_hash: _DkJJwptcg9lNZwYf23TsNmqw8wp0vhhl_djgBJ3zKw
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_news_image: true
+  langcode: true
