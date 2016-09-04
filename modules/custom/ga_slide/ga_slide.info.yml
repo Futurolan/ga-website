@@ -1,9 +1,0 @@
-name: Gamers Assembly Slide
-description: Provide the slide block
-package: Gamers Assembly
-
-type: module
-core: 8.x
-
-dependencies:
-  - drupal:block

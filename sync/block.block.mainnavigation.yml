@@ -13,7 +13,7 @@ _core:
 id: mainnavigation
 theme: gamers_assembly
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:

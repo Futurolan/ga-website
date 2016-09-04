@@ -1,0 +1,19 @@
+.tournaments-home-cta {
+  background: url('../images/cup.png') center center no-repeat;
+  background-size: cover;
+  .text {
+    text-align: right;
+    padding: 48px 30px 48px 130px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .cta {
+    padding: 10px;
+    text-align: center;
+    a {
+      font-weight: bold;
+      color: $black;
+    }
+    background-color: $white;
+  }
+}

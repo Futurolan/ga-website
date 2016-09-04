@@ -2,12 +2,13 @@
 @import 'partials/layout/layout';
 @import 'partials/design/design';
 @import 'partials/design/frontpage';
-@import 'partials/design/block';
-@import 'partials/design/tournament_front_block';
 @import 'partials/design/baseinfo_block';
-@import 'partials/design/news_twitter_block';
-@import 'partials/design/_sponsor_front_block';
 @import 'partials/navigation/navigation';
 @import 'partials/typography/typography';
-
 @import '../components/streams/streams';
+@import '../components/tournaments-home-cta/tournaments-home-cta';
+@import '../components/tournaments-home-last-results/tournaments-home-last-results';
+@import '../components/tournaments-home-next/tournaments-home-next';
+@import '../components/news-home/news-home';
+@import '../components/twitter-home/twitter-home';
+@import '../components/sponsor-banner/sponsor-banner';

@@ -1,11 +1,4 @@
 name: 'Gamers Assembly Stream'
-description: 'Provide the streaming block'
 type: module
 core: 8.x
-dependencies:
-  - field
-  - ga_stream
-  - options
-  - user
-  - weight
 package: 'Gamers Assembly'

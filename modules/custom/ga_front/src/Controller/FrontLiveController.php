@@ -8,29 +8,24 @@
 namespace Drupal\ga_front\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\ga_news\NewsUtils;
+use Drupal\ga_sponsor\SponsorUtils;
+use Drupal\ga_stream\StreamUtils;
 
 
 class FrontLiveController extends ControllerBase
 {
-
     public function render()
     {
+        $streams = StreamUtils::getStreams();
+        $news = NewsUtils::getLastNews();
+        $sponsors = SponsorUtils::getSponsors();
 
-
-        $streamNids = \Drupal::entityQuery('stream')->sort('weight', 'ASC')->execute();
-        $streamEntities = \Drupal::entityTypeManager()->getStorage("stream")->loadMultiple($streamNids);
-
-        $streams = [];
-        foreach ($streamEntities as $streamEntity) {
-            $streams[] = array(
-                "name" => $streamEntity->label(),
-                "type" => $streamEntity->getType(),
-                "key" => $streamEntity->getKey(),
-            );
-        }
         return array(
             '#theme' => "ga_front_live",
             '#streams' => $streams,
+            '#sponsors' => $sponsors,
+            '#news' => $news
         );
 
     }

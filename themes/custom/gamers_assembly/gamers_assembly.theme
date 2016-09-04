@@ -1,8 +1,12 @@
 <?php
 
-function gamers_assembly_preprocess_block(array &$variables)
-{
-    // Load the site name out of configuration.
-    $config = \Drupal::config('system.site');
-    $variables['site_name'] = $config->get('name');
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function gamers_assembly_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__'.$content_type;
+    }
 }

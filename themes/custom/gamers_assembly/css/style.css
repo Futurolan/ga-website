@@ -33,6 +33,15 @@ body {
   vertical-align: middle;
   margin-left: 15px;
 }
+.title-line h2.mushroom:after {
+  background: url("../images/mushroom.png") right center no-repeat;
+  content: '';
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
 
 .slide-area {
   background-color: red;
@@ -42,6 +51,7 @@ body {
   background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
   background-size: cover;
   color: #ffffff;
+  padding-bottom: 40px;
 }
 
 .blue-area {
@@ -52,120 +62,6 @@ body {
 
 .white-area {
   background-color: whitesmoke;
-}
-
-.tournament-front-block {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-.tournament-front-block .all-result {
-  background: url("../images/cup.png") center center no-repeat;
-  background-size: cover;
-}
-.tournament-front-block .all-result .text {
-  text-align: right;
-  padding: 48px 30px 48px 130px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.tournament-front-block .all-result .cta {
-  padding: 10px;
-  text-align: center;
-  background-color: #ffffff;
-}
-.tournament-front-block .all-result .cta a {
-  font-weight: bold;
-  color: #000000;
-}
-
-.news-twitter-block .title {
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-.news-twitter-block .title .line {
-  background-color: #ffffff;
-  margin-top: 30px;
-}
-.news-twitter-block .title h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.news-twitter-block .title h2:after {
-  content: '';
-  display: inline-block;
-  margin-left: 15px;
-  vertical-align: middle;
-}
-.news-twitter-block .title h2.twitter:after {
-  background: url("../images/twitter.png") right center no-repeat;
-  height: 18px;
-  width: 22px;
-}
-.news-twitter-block .title h2.news:after {
-  background: url("../images/mushroom.png") right 0px no-repeat;
-  height: 27px;
-  width: 27px;
-}
-.news-twitter-block .new {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 185px;
-  margin-bottom: 25px;
-  color: #ffffff;
-}
-.news-twitter-block .new .col {
-  display: inline-block;
-}
-.news-twitter-block .new .col.first {
-  width: 195px;
-}
-.news-twitter-block .new .col.first .tag {
-  text-align: center;
-  line-height: 25px;
-  font-weight: bold;
-}
-.news-twitter-block .new .col.second {
-  width: calc(100% - 220px);
-  padding: 10px;
-  vertical-align: top;
-}
-.news-twitter-block .new .col.second h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  border-bottom: 1px solid white;
-  padding-bottom: 15px;
-  margin-top: 10px;
-}
-.news-twitter-block .new .col.second .teaser {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  display: -webkit-box;
-  height: 80px;
-  margin: 0 auto;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-.news-twitter-block .twitter-userline {
-  height: 605px;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.sponsor-front-block {
-  padding: 30px;
-}
-.sponsor-front-block .sponsor {
-  text-align: center;
-  height: 150px;
-  width: 150px;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 #block-mainnavigation {
@@ -459,6 +355,86 @@ body {
   height: 10px;
   background-color: #324520;
   margin-right: 5px;
+}
+
+.tournaments-home-cta {
+  background: url("../images/cup.png") center center no-repeat;
+  background-size: cover;
+}
+.tournaments-home-cta .text {
+  text-align: right;
+  padding: 48px 30px 48px 130px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.tournaments-home-cta .cta {
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.tournaments-home-cta .cta a {
+  font-weight: bold;
+  color: #000000;
+}
+
+.news-home .new {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 185px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+.news-home .new .col {
+  display: inline-block;
+}
+.news-home .new .col.first {
+  width: 195px;
+}
+.news-home .new .col.first .tag {
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+.news-home .new .col.second {
+  width: calc(100% - 220px);
+  padding: 10px;
+  vertical-align: top;
+}
+.news-home .new .col.second h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  margin-top: 10px;
+}
+.news-home .new .col.second .teaser {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  height: 80px;
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.twitter-userline {
+  height: 605px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sponsors-banner {
+  padding: 30px;
+}
+.sponsors-banner .sponsor {
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,17 +1,4 @@
 name: 'Gamers Assembly News'
 type: module
 core: 8.x
-dependencies:
-  - content_translation
-  - field
-  - file
-  - image
-  - language
-  - menu_ui
-  - node
-  - taxonomy
-  - text
-  - user
-  - views
-  - views_infinite_scroll
 package: 'Gamers Assembly'

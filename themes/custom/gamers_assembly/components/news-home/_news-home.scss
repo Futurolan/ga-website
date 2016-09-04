@@ -1,36 +1,4 @@
-.news-twitter-block {
-  .title {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    .line {
-      background-color: $white;
-      margin-top: 30px;
-    }
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      &:after {
-        content: '';
-        display: inline-block;
-        margin-left: 15px;
-        vertical-align: middle;
-      }
-      &.twitter:after {
-        background: url('../images/twitter.png') right center no-repeat;
-        height: 18px;
-        width: 22px;
-
-      }
-      &.news:after {
-        background: url('../images/mushroom.png') right 0px no-repeat;
-        height: 27px;
-        width: 27px;
-      }
-    }
-  }
+.news-home {
   .new {
     background-color: rgba(0, 0, 0, 0.5);;
     width: 100%;
@@ -73,10 +41,5 @@
         }
       }
     }
-  }
-  .twitter-userline {
-    height: 605px;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);;
   }
 }

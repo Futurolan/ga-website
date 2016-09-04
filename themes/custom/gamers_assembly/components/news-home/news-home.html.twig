@@ -1,0 +1,26 @@
+<div class="news-home">
+    {% for new in news %}
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{{ new.url }}">
+                    <div class="new">
+                        <div class="first col">
+                            <div class="image">
+                                <img src="{{ new.image }}"/>
+                            </div>
+                            <div class="tag" style="background-color:{{ new.tagColor }}">
+                                {{ new.tag }}
+                            </div>
+                        </div>
+                        <div class="second col">
+                            <h3> {{ new.title }}</h3>
+                            <p class="teaser">
+                                {{ new.text|raw }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -8,10 +8,20 @@
             </div>
             <div class="line col-md-5"></div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="container">
-                    {% include directory ~ '/components/streams/streams.html.twig' with streams %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% include directory ~ '/components/streams/streams.html.twig'%}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    {% include directory ~ '/components/tournaments-home-last-results/tournaments-home-last-results.html.twig' %}
+                </div>
+                <div class="col-md-4">
+                    {% include directory ~ '/components/tournaments-home-cta/tournaments-home-cta.html.twig' %}
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
@@ -20,12 +30,30 @@
 
 <div class="row blue-area">
     <div class="col-md-12">
-        {{ content.blue_row }}
+        <div class="row title-line">
+            <div class="line col-md-5"></div>
+            <div class=" col-md-2">
+                <h2 class="mushroom">{{ "Actualités"|t }}</h2>
+            </div>
+            <div class="line col-md-5"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                {% include directory ~ '/components/news-home/news-home.html.twig' %}
+
+            </div>
+            <div class="col-md-5">
+                {% include directory ~ '/components/twitter-home/twitter-home.html.twig' %}
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="row white-area">
     <div class="col-md-12">
-        {{ content.white_row }}
+        {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
+
     </div>
 </div>

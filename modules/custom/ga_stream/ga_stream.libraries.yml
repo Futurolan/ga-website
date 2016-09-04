@@ -1,8 +1,0 @@
-corescripts:
-  version: 1.x
-  js:
-    js/script.js: {}
-    js/tmi.min.js: {}
-    js/chat.js: {}
-  dependencies:
-    - core/jquery

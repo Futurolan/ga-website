@@ -1,25 +1,13 @@
 <?php
-namespace Drupal\ga_sponsor\Plugin\Block;
+namespace Drupal\ga_sponsor;
 
-use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 
-/**
- * Provides a 'Slide' block.
- *
- * @Block(
- *   id = "sponsor_front_block",
- *   admin_label = @Translation("Sponsor front block"),
- * )
- */
-class SponsorFrontBlock extends BlockBase
+class SponsorUtils
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function build()
+    public static function getSponsors()
     {
         $sponsorNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
@@ -41,9 +29,6 @@ class SponsorFrontBlock extends BlockBase
         shuffle($sponsors);
         $sponsors = array_slice($sponsors,0,6);
 
-        return array(
-            '#theme' => 'sponsor_front_block',
-            '#sponsors' => $sponsors
-        );
+        return $sponsors;
     }
 }

@@ -10,10 +10,22 @@ gamers_assembly.streams:
   version: 1.x
   js:
     components/streams/streams.js: {}
+  dependencies:
+    - core/jquery
+    - gamers_assembly/tmi
+
+tmi:
+  version: 1.X
+  js:
     libraries/chat/tmi.min.js: {minified: true}
     libraries/chat/chat.js : {}
   dependencies:
     - core/jquery
+
+twitter:
+  version: 1.X
+  js:
+    libraries/twitter/widgets.js: {}
 
 bootstrap:
   remote: http://getbootstrap.com/

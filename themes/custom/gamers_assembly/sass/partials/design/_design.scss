@@ -26,5 +26,14 @@
       vertical-align: middle;
       margin-left: 15px;
     }
+    &.mushroom:after{
+      background: url('../images/mushroom.png') right center no-repeat;
+      content: '';
+      height: 27px;
+      width: 27px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 15px;
+    }
   }
 }
