@@ -18,10 +18,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  ga_baseinfo_block: 0
   ga_front: 0
   ga_news: 0
-  ga_slide: 0
   ga_sponsor: 0
   ga_stream: 0
   help: 0
@@ -32,13 +30,16 @@ module:
   link: 0
   locale: 0
   menu_link_content: 0
+  menu_trail_by_path: 0
   menu_ui: 0
   node: 0
   options: 0
   page_cache: 0
+  path: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   toolbar_menu: 0
   update: 0
@@ -46,6 +47,7 @@ module:
   views_infinite_scroll: 0
   views_ui: 0
   weight: 0
+  pathauto: 1
   views: 10
   minimal: 1000
 theme:

@@ -1,0 +1,40 @@
+<div class="node-news">
+    <div class="row grey-area">
+        <div class="col-md-12">
+            <div class="container">
+                <h1>{{ node.getTitle() }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row white-area">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="news-image"
+                             style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="news-content">{{ node.get('field_news_content').value | raw }}</div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row blue-area">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="news-link">
+                    <a href="{{ path('view.news.page_1') }}">{{ "Liste d'actualités"|t }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

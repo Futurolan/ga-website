@@ -1,0 +1,12 @@
+select,input{
+  height:30px;
+  background-color:$grey;
+  color:$white;
+  border:1px solid $white;
+  opacity:0.5;
+}
+
+
+.form-item,.form-actions{
+  display:inline-block;
+}

@@ -6,9 +6,8 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:menu_link_content:eec97bd9-3794-4b15-a590-d0dfaad45f63'
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: LCQUOhwsS7qMYzwp7Zq55ufJDaMxO_ZRXG_EbtGOwvY
 name: Tournament

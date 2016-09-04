@@ -10,3 +10,14 @@ function gamers_assembly_theme_suggestions_page_alter(array &$suggestions, array
         $suggestions[] = 'page__'.$content_type;
     }
 }
+
+function gamers_assembly_preprocess_node(&$variables){
+
+    if($variables['node']->getType() == "news"){
+        $tag = \Drupal\taxonomy\Entity\Term::load($variables['node']->get("field_news_tags")->getValue()[0]['target_id']);
+        $variables['tagName'] = $tag->getName();
+        $variables['tagColor'] = $tag->get("field_tags_color")->getValue()[0]['value'];
+    }
+
+    return $variables;
+}

@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_news_content
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_tags
     - node.type.news
   module:
     - user
@@ -15,8 +17,16 @@ targetEntityType: node
 bundle: news
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_news_tags:
+    type: entity_reference_entity_view
+    weight: 0
+    label: visually_hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
 hidden:
+  field_news_content: true
   field_news_image: true
   langcode: true
+  links: true

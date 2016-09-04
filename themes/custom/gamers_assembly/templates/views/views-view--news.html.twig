@@ -1,0 +1,30 @@
+{% set classes = [
+dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+<div class="views-news">
+    <div {{ attributes.addClass(classes) }}>
+        <div class="row grey-area">
+            <div class="col-md-12">
+                <div class="container">
+                    <h1>{{ "Dernières actualités"|t }}</h1>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="container">
+                    {{ exposed }}
+                </div>
+            </div>
+        </div>
+        <div class="row white-area">
+            <div class="col-md-12">
+                <div class="container">
+                    {{ attachment_before }}
+                    {{ rows }}
+                    {{ attachment_after }}
+                    {{ more }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
