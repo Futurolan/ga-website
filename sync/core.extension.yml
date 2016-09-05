@@ -9,11 +9,13 @@ module:
   config_translation: 0
   content_translation: 0
   ctools: 0
+  ctools_views: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
+  field_collection: 0
   field_group: 0
   field_ui: 0
   file: 0
@@ -44,6 +46,7 @@ module:
   toolbar_menu: 0
   update: 0
   user: 0
+  views_filter_autosubmit: 0
   views_infinite_scroll: 0
   views_ui: 0
   weight: 0

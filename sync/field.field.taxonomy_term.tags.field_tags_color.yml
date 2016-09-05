@@ -9,7 +9,7 @@ id: taxonomy_term.tags.field_tags_color
 field_name: field_tags_color
 entity_type: taxonomy_term
 bundle: tags
-label: Color
+label: Couleur
 description: 'Enter the hex color code for the tag with #'
 required: true
 translatable: false

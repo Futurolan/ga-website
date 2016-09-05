@@ -6,20 +6,30 @@ dependencies:
     - field.field.taxonomy_term.tags.field_tags_color
     - field.field.taxonomy_term.tags.field_tags_short_name
     - taxonomy.vocabulary.tags
+  module:
+    - path
+    - text
 id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
 bundle: tags
 mode: default
 content:
+  description:
+    type: text_textarea
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_tags_color:
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_tags_short_name:
-    weight: 3
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -27,16 +37,20 @@ content:
     type: string_textfield
   langcode:
     type: language_select
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  description: true
   translation: true

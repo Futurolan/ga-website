@@ -5,9 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.tournament
+    - taxonomy.vocabulary.tags
   module:
     - node
+    - options
+    - taxonomy
     - user
+    - views_filter_autosubmit
 id: tournaments
 label: Tournaments
 module: views
@@ -39,15 +43,16 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: autosubmit
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: 0
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: 1
           sort_asc_label: Asc
           sort_desc_label: Desc
+          autosubmit_hide: 1
       pager:
         type: none
         options:
@@ -168,6 +173,131 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        field_tournament_tag_target_id:
+          id: field_tournament_tag_target_id
+          table: node__field_tournament_tag
+          field: field_tournament_tag_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tournament_tag_target_id_op
+            label: 'Catégorie :'
+            description: ''
+            use_operator: false
+            operator: field_tournament_tag_target_id_op
+            identifier: field_tournament_tag_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              moderator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_tournament_type_value:
+          id: field_tournament_type_value
+          table: node__field_tournament_type
+          field: field_tournament_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tournament_type_value_op
+            label: 'Type :'
+            description: ''
+            use_operator: false
+            operator: field_tournament_type_value_op
+            identifier: field_tournament_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              moderator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_tournament_plateform_value:
+          id: field_tournament_plateform_value
+          table: node__field_tournament_plateform
+          field: field_tournament_plateform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tournament_plateform_value_op
+            label: Plateforme
+            description: ''
+            use_operator: false
+            operator: field_tournament_plateform_value_op
+            identifier: field_tournament_plateform_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              moderator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         title:
           id: title
@@ -190,11 +320,14 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -212,6 +345,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

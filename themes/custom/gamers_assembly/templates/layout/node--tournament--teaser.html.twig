@@ -1,0 +1,11 @@
+<div class="tournament">
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+        <div class="tournament-image"
+             style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+        <div class="tournament-tag" style="background-color:{{ tagColor }}">
+            <h2>
+                {{ node.getTitle() }}
+            </h2>
+        </div>
+    </a>
+</div>

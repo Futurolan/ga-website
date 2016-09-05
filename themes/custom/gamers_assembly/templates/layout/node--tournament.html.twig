@@ -1,0 +1,69 @@
+<div class="node-tournament">
+    <div class="row grey-area">
+        <div class="col-md-12">
+            <div class="container">
+                <h1>{{ node.getTitle() }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row white-area">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tournament-image"
+                             style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="tournament-description">
+                            {{ node.get('field_tournament_description').value | raw }}
+                        </div>
+                        <div class="tournament-planning">
+                            <h3>{{ "Planning "|t }}</h3>
+                            <div class="content">
+                                {{ node.get('field_tournament_planning').value | raw }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tournament-format">
+                            <h3>{{ "Format"|t }}</h3>
+                            {% for format in node.field_tournament_format %}
+                                <div class="line {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                    {{ format.value }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="tournament-cashprize">
+                            <h3>
+                                {{ node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_total.value }}
+                            </h3>
+                            {% for line in node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_lines %}
+                                <div class="line {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                    {{ line.value }}
+                                </div>
+                            {% endfor %}
+                            <div class="note">
+                                {{ node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_note.value }}
+                            </div>
+                        </div>
+                        <div class="tournament-rules">
+                            <h3>
+                                {{ "Règlements" |t }}
+                            </h3>
+                            {% for rule in node.field_tournament_rules %}
+                                <div class="rule {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                    <a target="_blank" href="{{ file_url(rule.entity.uri.value) }}">
+                                        {{ rule.description }} <i class="fa fa-download" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

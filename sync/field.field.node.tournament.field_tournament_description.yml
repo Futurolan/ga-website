@@ -11,7 +11,7 @@ id: node.tournament.field_tournament_description
 field_name: field_tournament_description
 entity_type: node
 bundle: tournament
-label: 'Tournament Description'
+label: Description
 description: ''
 required: true
 translatable: true

@@ -39,3 +39,9 @@ bootstrap:
       libraries/bootstrap/css/bootstrap.min.css: {}
   dependencies:
     - core/jquery
+
+font-awesome:
+  version: 4.6.3
+  css:
+    theme:
+      libraries/font-awesome/css/font-awesome.min.css: {minified:true}

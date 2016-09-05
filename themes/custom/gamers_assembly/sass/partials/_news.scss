@@ -1,4 +1,14 @@
 .views-news {
+  .form-item,.form-actions{
+    display:inline-block;
+  }
+  label{
+    width:100px;
+  }
+  select{
+    width:150px;
+  }
+
   .white-area {
     margin-top: 40px;
     .news {

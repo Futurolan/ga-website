@@ -1,0 +1,125 @@
+.views-tournaments {
+
+  label {
+    width: 100px;
+  }
+  select {
+    width: 150px;
+  }
+  .white-area {
+    padding-top: 40px;
+    .tournament {
+      margin-bottom: 30px;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+
+        .tournament-image {
+          height: 150px;
+          background-size: cover;
+          background-position: center center;
+        }
+        .tournament-tag {
+
+          text-align: center;
+          line-height: 25px;
+          font-weight: bold;
+          h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 5px;
+
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            color: $white;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.node-tournament {
+  .tournament-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .tournament-description {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 1px solid $light-grey;
+    margin-bottom: 30px;
+  }
+
+  .tournament-planning {
+    margin-bottom: 30px;
+    h3 {
+      background-color: $black;
+      color: $white;
+      padding: 10px 20px;
+      margin-bottom: 0px;
+    }
+    .content {
+      background-color: $grey;
+      padding: 10px 20px;
+    }
+  }
+  .tournament-cashprize {
+    h3 {
+      background-color: $blue;
+      color: $white;
+      padding: 10px 20px;
+      margin-bottom: 0px;
+    }
+    .line {
+      padding: 10px 20px;
+      background-color: $grey;
+      &.light-grey {
+        background-color: $light-grey;
+      }
+    }
+    .note {
+      font-size: 12px;
+      font-style: italic;
+      padding: 5px 0px;
+    }
+  }
+  .tournament-format {
+    h3 {
+      background-color: $light-green;
+      color: $white;
+      padding: 10px 20px;
+      margin-bottom: 0px;
+    }
+    .line {
+      padding: 10px 20px;
+      background-color: $grey;
+      &.light-grey {
+        background-color: $light-grey;
+      }
+    }
+  }
+  .tournament-rules {
+    margin-bottom:30px;
+    h3 {
+      background-color: orange;
+      color: $white;
+      padding: 10px 20px;
+      margin-bottom: 0px;
+    }
+    .rule {
+      padding: 10px 20px;
+      background-color: $grey;
+      &.light-grey {
+        background-color: $light-grey;
+      }
+    }
+  }
+}
