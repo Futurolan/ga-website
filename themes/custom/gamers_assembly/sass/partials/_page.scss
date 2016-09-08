@@ -1,0 +1,14 @@
+.node-page{
+  .page-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .page-content {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 1px solid $light-grey;
+    margin-bottom: 30px;
+  }
+}

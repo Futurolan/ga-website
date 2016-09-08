@@ -1,0 +1,20 @@
+uuid: cf0dbfa1-accc-48d9-bae4-1d0f98a62af8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_tournament_tag
+field_name: field_tournament_tag
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

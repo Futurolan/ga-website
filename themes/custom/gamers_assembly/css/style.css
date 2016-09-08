@@ -376,6 +376,18 @@ body {
   background-color: #bbbbbb;
 }
 
+.node-page .page-image {
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+}
+.node-page .page-content {
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 1px solid #bbbbbb;
+  margin-bottom: 30px;
+}
+
 select, input {
   height: 30px;
   background-color: #999999;

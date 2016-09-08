@@ -1,0 +1,30 @@
+<div class="node-page">
+    <div class="row grey-area">
+        <div class="col-md-12">
+            <div class="container">
+                <h1>{{ node.getTitle() }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row white-area">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-image"
+                             style="background-image:url('{{ file_url(node.get("field_page_image").entity.uri.value) }}')"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="page-content">{{ node.get('body').value | raw }}</div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+                        Facebook
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

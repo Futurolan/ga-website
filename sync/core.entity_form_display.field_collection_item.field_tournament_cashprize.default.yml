@@ -1,0 +1,36 @@
+uuid: 937713ff-1f4a-4b9f-9863-f587b2ec7841
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_tournament_cashprize.field_cashprize_lines
+    - field.field.field_collection_item.field_tournament_cashprize.field_cashprize_note
+    - field.field.field_collection_item.field_tournament_cashprize.field_cashprize_total
+    - field_collection.field_collection.field_tournament_cashprize
+id: field_collection_item.field_tournament_cashprize.default
+targetEntityType: field_collection_item
+bundle: field_tournament_cashprize
+mode: default
+content:
+  field_cashprize_lines:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_cashprize_note:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_cashprize_total:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden: {  }
