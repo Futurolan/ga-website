@@ -3,23 +3,36 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 ] %}
 <div class="views-news">
     <div {{ attributes.addClass(classes) }}>
-        <div class="row grey-area">
-            <div class="col-md-12">
-                <div class="container">
-                    <h1>{{ "Dernières actualités"|t }}</h1>
+        <div class="grey-area">
+            <div class="container-fluid">
+                <div class="row title-line">
+                    <div class="col-md-12 decorated">
+                        <h2><span>{{ "Filtres"|t }}</span></h2>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="container">
-                    {{ exposed }}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ exposed }}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row white-area">
-            <div class="col-md-12">
-                <div class="container">
-                    {{ rows }}
+        <div class="white-area">
+            <div class="container-fluid">
+                <div class="row title-line headline">
+                    <div class="col-md-12 decorated">
+                        <h2>                            
+                            <span>
+                                {{ "Dernier actualités"|t }} <span class="mushroom black"></span>
+                            </span>
+                        </h2>
+                    </div>
                 </div>
+            </div>
+            <div class="container">
+                {{ rows }}
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ function ga_front_theme($existing, $type, $theme, $path)
                 'news' => null,
                 'sponsors' => null
             ),
-            'template' => 'ga-front-live'
+            'template' => 'ga-front'
         )
     );
 }

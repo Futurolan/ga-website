@@ -44,4 +44,15 @@ font-awesome:
   version: 4.6.3
   css:
     theme:
-      libraries/font-awesome/css/font-awesome.min.css: {minified:true}
+      libraries/font-awesome/css/font-awesome.min.css: { minified: true }
+
+gamers_assembly.slideshow:
+  version: 1.X
+  js:
+    libraries/slideshow/jquery.loopslider.min.js: { minidfied: true }
+    components/sponsors-banner/sponsors-banner.js: {}
+  css:
+    theme:
+      libraries/slideshow/loopslider.css : {}
+  dependencies:
+    - core/jquery

@@ -1,11 +1,20 @@
 <div class="news">
-    <div class="news-image"
-         style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
-    <div class="news-tags" style="background-color:{{ tagColor }}">{{ tagName }}</div>
-    <h2><a
-                href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ node.getTitle() }}</a></h2>
-    <div class="news-date"> {{ node.getCreatedTime()|date("d/m/Y") }}</div>
-    <div class="news-content">{{ node.get('field_news_content').summary }}</div>
-    <div class="news-more"><a
-                href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "Lire la suite"|t }}</a></div>
+	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+    	<div class="news-image" style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+    </a>
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+    	<div class="news-tags" style="background-color:{{ tagColor }}">{{ tagName }}</div>
+    </a>
+    <h2>
+    	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+    		{{ node.getTitle() }}
+    	</a>
+    </h2>
+    <div class="news-date">{{ node.getCreatedTime()|date("d.m.Y") }}</div>
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+    	<div class="news-content">{{ node.get('field_news_content').summary }}</div>
+    </a>
+    <div class="news-more">
+    	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "Lire la suite"|t }}</a>
+    </div>
 </div>

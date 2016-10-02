@@ -1,11 +1,9 @@
-<div class="sponsors-banner">
-    <div class="row">
-        {% for sponsor in sponsors %}
-            <div class="col-md-2">
-                <div class="sponsor">
-                    <img src="{{ sponsor.image }}">
-                </div>
-            </div>
-        {% endfor %}
+<div class="slideshow">
+    <div class="footer-slider-container">
+    	{% for sponsor in sponsors %}
+	        <figure>
+	            <img src="{{ sponsor.image }}" alt="" class="img-responsive center-block">
+	        </figure>    	
+    	{% endfor %}
     </div>
 </div>

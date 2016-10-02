@@ -18,7 +18,8 @@
         transition: background-color 0.3s;
         color: $white;
         font-weight: bold;
-        padding: 30px 22px;
+        font-size: 18px;
+        padding: 25px 22px;
         text-transform: uppercase;
         &:hover, &.is-active {
           background-color: $orange;
@@ -51,12 +52,12 @@
 body {
   &.toolbar-fixed {
     &.toolbar-horizontal {
-      padding-top: 122px !important;
+      padding-top: 112px !important;
       #block-mainnavigation {
         margin-top: 42px;
       }
       &.toolbar-tray-open {
-        padding-top: 165px !important;
+        padding-top: 155px !important;
         #block-mainnavigation {
           margin-top: 85px;
         }
