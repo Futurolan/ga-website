@@ -9,7 +9,15 @@ function ga_front_theme($existing, $type, $theme, $path)
                 'news' => null,
                 'sponsors' => null
             ),
-            'template' => 'ga-front'
+            'template' => 'ga-front-live'
+        ),
+        'ga_front_prelive' => array(
+            'variables' => array(
+                'slides' => null,
+                'sponsors' => null,
+                'news' => null
+            ),
+            'template' => 'ga-front-prelive'
         )
     );
 }

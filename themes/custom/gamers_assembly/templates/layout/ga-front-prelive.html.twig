@@ -3,13 +3,13 @@
 <div class="slideshow">
     <div class="home-slider-container">
         <figure>
-            <img src="{{ base_path ~ directory }}/images/home.jpg" alt="" class="img-responsive">
+            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
         </figure>
         <figure>
-            <img src="{{ base_path ~ directory }}/images/home.jpg" alt="" class="img-responsive">
+            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
         </figure>
         <figure>
-            <img src="{{ base_path ~ directory }}/images/home.jpg" alt="" class="img-responsive">
+            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
         </figure>
     </div>
 </div>
@@ -49,77 +49,64 @@
                                 {{ "Dernier actualités"|t }} <span class="mushroom"></span>
                             </span>
                         </h2>
-                        <div class="row news-main">
-                            <div class="col-md-12">
-                                <div class="news-image league-of-legends">
-                                </div>
-                                <div class="news-type league-of-legends">
-                                    League of Legends
-                                </div>
-                                <div class="news-background">
-                                    <div class="news-title">
-                                        FuturoLAN organise la Breaking LAN 2016
-                                    </div>
-                                    <div class="news-date">09/08/2016</div>
-                                    <div class="news-content">Cette année a été une année exceptionnelle pour la Gamers Assembly ! Plus de 19 000 entrées et 1837 joueurs se sont réunis au Parc des Expositions de Poitiers du 26 au 28 mars 2016 à l'occasion de la plus grande LAN de France. Un peu plus d'une semaine après la fin de cet événement, (re)découvrez qui sont les grands vainqueurs de cette GA2016 !</div>
-                                    <div class="news-more">
-                                        <span>Lire la suite</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row news">
-                            <a href="#">
-                                <div class="col-md-6">
-                                    <div class="news-image league-of-legends">
-                                        <div class="news-overlay">
-                                            Titre de la news
+                        {% for new in news %}
+                            {% if (loop.first) %}
+                                <div class="row news-main">
+                                    <div class="col-md-12">
+                                        <div class="news-image league-of-legends">
+                                        </div>
+                                        <div class="news-type league-of-legends">
+                                            League of Legends
+                                        </div>
+                                        <div class="news-background">
+                                            <div class="news-title">
+                                                FuturoLAN organise la Breaking LAN 2016
+                                            </div>
+                                            <div class="news-date">09/08/2016</div>
+                                            <div class="news-content">Cette année a été une année exceptionnelle pour la
+                                                Gamers
+                                                Assembly ! Plus de 19 000 entrées et 1837 joueurs se sont réunis au Parc
+                                                des
+                                                Expositions de Poitiers du 26 au 28 mars 2016 à l'occasion de la plus
+                                                grande LAN
+                                                de France. Un peu plus d'une semaine après la fin de cet événement,
+                                                (re)découvrez qui sont les grands vainqueurs de cette GA2016 !
+                                            </div>
+                                            <div class="news-more">
+                                                <span>Lire la suite</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="news-type league-of-legends">
-                                        League of Legends
-                                    </div>
                                 </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-6">
-                                    <div class="news-image league-of-legends">
-                                        <div class="news-overlay">
-                                            Titre de la news
+                            {% else %}
+                                <div class="row news">
+                                    <a href="#">
+                                        <div class="col-md-6">
+                                            <div class="news-image league-of-legends">
+                                                <div class="news-overlay">
+                                                    Titre de la news
+                                                </div>
+                                            </div>
+                                            <div class="news-type league-of-legends">
+                                                League of Legends
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="news-type league-of-legends">
-                                        League of Legends
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row news"
-                            <a href="#">
-                                <div class="col-md-6">
-                                    <div class="news-image league-of-legends">
-                                        <div class="news-overlay">
-                                            Titre de la news
+                                    </a>
+                                    <a href="#">
+                                        <div class="col-md-6">
+                                            <div class="news-image league-of-legends">
+                                                <div class="news-overlay">
+                                                    Titre de la news
+                                                </div>
+                                            </div>
+                                            <div class="news-type league-of-legends">
+                                                League of Legends
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="news-type league-of-legends">
-                                        League of Legends
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-6">
-                                    <div class="news-image league-of-legends">
-                                        <div class="news-overlay">
-                                            Titre de la news
-                                        </div>
-                                    </div>
-                                    <div class="news-type league-of-legends">
-                                        League of Legends
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="col-md-4">
                         <h2 class="title-line decorated">
@@ -192,7 +179,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="#">Recrutement</a> | <a href="#">Espace Press</a> | <a href="#">Contact</a> | <a href="#">Mentions légales</a>
+                <a href="#">Recrutement</a> | <a href="#">Espace Press</a> | <a href="#">Contact</a> | <a href="#">Mentions
+                    légales</a>
                 <a href="#"><i class="fa fa-facebook-official"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-flickr"></i></a>

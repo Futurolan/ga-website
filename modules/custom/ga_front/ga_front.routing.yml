@@ -5,3 +5,11 @@ ga_front.live:
     _title: 'Live front page'
   requirements:
     _permission: 'access content'
+
+ga_front.prelive:
+  path: '/front/prelive'
+  defaults:
+    _controller: '\Drupal\ga_front\Controller\FrontPreLiveController::render'
+    _title: 'PreLive front page'
+  requirements:
+    _permission: 'access content'
