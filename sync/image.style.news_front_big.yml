@@ -1,0 +1,14 @@
+uuid: 3a27913d-4ac0-46c8-9346-4e11a8cddce6
+langcode: fr
+status: true
+dependencies: {  }
+name: news_front_big
+label: 'News Front Big'
+effects:
+  7a5a3f01-a263-4fe8-996b-56815b6f173c:
+    uuid: 7a5a3f01-a263-4fe8-996b-56815b6f173c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 555
+      height: 120
