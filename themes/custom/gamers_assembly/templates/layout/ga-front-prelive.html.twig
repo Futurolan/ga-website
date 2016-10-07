@@ -2,15 +2,13 @@
 
 <div class="slideshow">
     <div class="home-slider-container">
-        <figure>
-            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
-        </figure>
-        <figure>
-            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
-        </figure>
-        <figure>
-            <img src="/{{ directory }}/images/home.jpg" alt="" class="img-responsive">
-        </figure>
+        {% for slide in slides %}
+            <figure>
+                <a href="{{ slide.link }}">
+                    <img src="{{ slide.image }}" alt="{{ slide.name }}" class="img-responsive">
+                </a>
+            </figure>
+        {% endfor %}
     </div>
 </div>
 
@@ -49,61 +47,45 @@
                                 {{ "Dernier actualités"|t }} <span class="mushroom"></span>
                             </span>
                         </h2>
-                        {% for new in news %}
-                            {% if (loop.first) %}
-                                <div class="row news-main">
-                                    <div class="col-md-12">
-                                        <div class="news-image league-of-legends">
-                                        </div>
-                                        <div class="news-type league-of-legends">
-                                            League of Legends
-                                        </div>
-                                        <div class="news-background">
-                                            <div class="news-title">
-                                                FuturoLAN organise la Breaking LAN 2016
-                                            </div>
-                                            <div class="news-date">09/08/2016</div>
-                                            <div class="news-content">Cette année a été une année exceptionnelle pour la
-                                                Gamers
-                                                Assembly ! Plus de 19 000 entrées et 1837 joueurs se sont réunis au Parc
-                                                des
-                                                Expositions de Poitiers du 26 au 28 mars 2016 à l'occasion de la plus
-                                                grande LAN
-                                                de France. Un peu plus d'une semaine après la fin de cet événement,
-                                                (re)découvrez qui sont les grands vainqueurs de cette GA2016 !
-                                            </div>
-                                            <div class="news-more">
-                                                <span>Lire la suite</span>
-                                            </div>
-                                        </div>
+
+                        <div class="row news-main">
+                            <div class="col-md-12">
+                                <div class="news-image" style="background-image:url('{{ news[0].image }}')">
+                                </div>
+                                <div class="news-type league-of-legends">
+                                    {{ news[0].tag }}
+                                </div>
+                                <div class="news-background">
+                                    <div class="news-title">
+                                        {{ news[0].title }}
+                                    </div>
+                                    <div class="news-date">09/08/2016</div>
+                                    <div class="news-content">
+                                        {{ news[0].text|raw }}
+                                    </div>
+                                    <div class="news-more">
+                                        <span><a href="{{ news[0].url }}">{{ "Lire la suite" |t }}</a></span>
                                     </div>
                                 </div>
-                            {% else %}
+                            </div>
+                        </div>
+                        {% for new in news|slice(1) %}
+                            {% if(loop.index0%2==0) %}
                                 <div class="row news">
-                                    <a href="#">
-                                        <div class="col-md-6">
-                                            <div class="news-image league-of-legends">
-                                                <div class="news-overlay">
-                                                    Titre de la news
-                                                </div>
-                                            </div>
-                                            <div class="news-type league-of-legends">
-                                                League of Legends
-                                            </div>
+                            {% endif %}
+                            <a href="{{ new.url }}">
+                                <div class="col-md-6">
+                                    <div class="news-image" style="background-image:url('{{ new.image }}')">
+                                        <div class="news-overlay">
+                                            {{ new.title }}
                                         </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="col-md-6">
-                                            <div class="news-image league-of-legends">
-                                                <div class="news-overlay">
-                                                    Titre de la news
-                                                </div>
-                                            </div>
-                                            <div class="news-type league-of-legends">
-                                                League of Legends
-                                            </div>
-                                        </div>
-                                    </a>
+                                    </div>
+                                    <div class="news-type league-of-legends">
+                                        {{ new.tag }}
+                                    </div>
+                                </div>
+                            </a>
+                            {% if(loop.index0%2==1 or loop.last) %}
                                 </div>
                             {% endif %}
                         {% endfor %}

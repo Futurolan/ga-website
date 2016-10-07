@@ -1,0 +1,21 @@
+ga_slide.slide.*:
+  type: config_entity
+  label: 'Slide config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    image:
+      type: string
+      label: 'Image'
+    link:
+      type: string
+      label: 'Link'
+    weight:
+      type: integer
+      label: 'Weight'
+    uuid:
+      type: string

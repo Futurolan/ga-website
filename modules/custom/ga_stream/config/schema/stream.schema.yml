@@ -1,0 +1,21 @@
+ga_stream.stream.*:
+  type: config_entity
+  label: 'Stream config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    key:
+      type: string
+      label: 'Key'
+    type:
+      type: string
+      label: 'Image'
+    weight:
+      type: integer
+      label: 'Weight'
+    uuid:
+      type: string

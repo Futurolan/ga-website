@@ -26,7 +26,7 @@ class NewsUtils
             $news[] = array(
                 "nid" => $node->id(),
                 "title" => $node->getTitle(),
-                "image" => ImageStyle::load('news_front')->buildUrl($node->get("field_news_image")->entity->uri->value),
+                "image" => count($news)==0?ImageStyle::load('news_front_big')->buildUrl($node->get("field_news_image")->entity->uri->value):ImageStyle::load('news_front')->buildUrl($node->get("field_news_image")->entity->uri->value),
                 "text" => $node->get("field_news_content")->getValue()[0]['summary'],
                 "tag" => $tag->getName(),
                 "tagColor" => $tag->get("field_tags_color")->getValue()[0]['value'],

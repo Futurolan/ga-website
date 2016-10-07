@@ -1,0 +1,9 @@
+# Slide menu items definition
+entity.slide.collection:
+  title: 'Slide'
+  route_name: entity.slide.collection
+  description: 'List Slide (bundles)'
+  parent: system.admin_structure
+  weight: 99
+  requirements:
+    _permission: 'administer slides'

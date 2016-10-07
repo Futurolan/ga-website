@@ -504,6 +504,9 @@ body {
   text-align: center;
   font-size: 18px;
   font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .node-news-home .news .news-type, .node-news-home .news-main .news-type {
   text-align: center;

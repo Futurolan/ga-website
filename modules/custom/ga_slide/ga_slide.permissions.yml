@@ -1,0 +1,4 @@
+administer slides:
+  title: 'Administer slides'
+  description: 'Create, update and delete all slides.'
+  restrict access: true
