@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_image
+    - field.field.node.page.field_page_image
     - node.type.page
   module:
     - image
@@ -21,7 +21,7 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-  field_image:
+  field_page_image:
     weight: 102
     label: above
     settings:

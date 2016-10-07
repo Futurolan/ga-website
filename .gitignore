@@ -1,2 +1,5 @@
 .idea
 .sass-cache
+
+sync/ga_slide.slide.*
+sync/ga_stream.stream.*
