@@ -1,17 +1,14 @@
 <div class="node-tournament">
     <div class="grey-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="headline">{{ node.getTitle() }}</h1>
-                </div>
-            </div>
-        </div>
+        {% include directory ~ '/components/headline/headline.html.twig' with {
+        title:node.getTitle()
+        } %}
     </div>
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="tournament-image" style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+                <div class="tournament-image"
+                     style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
             </div>
             <div class="row">
                 <div class="col-md-8 tournament-tag-info">
@@ -23,7 +20,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="tournament-game-description">
-                        Dans League of Legends deux équipes s'affrontent sur une carte avec une grande variété de champions différents. Le but est de coopérer entre équipiers pour détruire la base de l'adversaire.
+                        Dans League of Legends deux équipes s'affrontent sur une carte avec une grande variété de
+                        champions différents. Le but est de coopérer entre équipiers pour détruire la base de
+                        l'adversaire.
                     </div>
                     <div class="tournament-description">
                         {{ node.get('field_tournament_description').value | raw }}

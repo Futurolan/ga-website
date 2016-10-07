@@ -6,7 +6,7 @@ html {
 
 body {
   padding-top: 70px;
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 * {
@@ -299,6 +299,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
 }
 .menu-footer ul {
   list-style-type: none;
+  display: inline-block;
   margin: 0;
 }
 .menu-footer ul li {
@@ -312,6 +313,18 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
 }
 .menu-footer ul li:last-child a {
   border-right: none;
+}
+.menu-footer a {
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu-footer a:hover, .menu-footer a:focus {
+  color: white;
+  text-decoration: underline;
+}
+.menu-footer i {
+  font-size: 16px;
 }
 
 body {
@@ -429,95 +442,6 @@ body {
   text-decoration: none;
 }
 
-.node-news-home .news-main .news-image {
-  height: 120px !important;
-}
-.node-news-home .news-main h2 {
-  margin-top: 0px;
-}
-.node-news-home .news-main .news-background {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-.node-news-home .news-main .news-background .news-title {
-  font-size: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-.node-news-home .news-main .news-background .news-date {
-  color: #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
-  margin-bottom: 10px;
-}
-.node-news-home .news-main .news-background .news-content {
-  color: white;
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  display: -webkit-box;
-  height: 80px;
-  margin: 0 auto;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-.node-news-home .news-main .news-background .news-more {
-  text-align: right;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.node-news-home .news-main .news-background .news-more span {
-  cursor: pointer;
-  padding: 10px;
-  border: 1px solid #ffffff;
-}
-.node-news-home .news, .node-news-home .news-main {
-  margin-bottom: 20px;
-}
-.node-news-home .news a, .node-news-home .news-main a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.node-news-home .news a:hover, .node-news-home .news a:focus, .node-news-home .news-main a:hover, .node-news-home .news-main a:focus {
-  color: #ffffff;
-}
-.node-news-home .news .news-image, .node-news-home .news-main .news-image {
-  position: relative;
-  height: 80px;
-  background-size: cover;
-  background-position: center center;
-}
-.node-news-home .news .news-image.league-of-legends, .node-news-home .news-main .news-image.league-of-legends {
-  background-image: url("../images/news-type/league-of-legends.jpg");
-}
-.node-news-home .news .news-image .news-overlay, .node-news-home .news-main .news-image .news-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.54);
-  height: 25px;
-  line-height: 25px;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 100;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.node-news-home .news .news-type, .node-news-home .news-main .news-type {
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 3px 10px;
-}
-.node-news-home .news .news-type.league-of-legends, .node-news-home .news-main .news-type.league-of-legends {
-  background-color: #0263ca;
-}
-
 .views-tournaments a:hover, .views-tournaments a:focus {
   text-decoration: none;
 }
@@ -605,12 +529,6 @@ body {
   border: 1px solid #999999;
 }
 
-.node-tournament .headline {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  font-size: 48px;
-  font-weight: bold;
-}
 .node-tournament .white-area {
   padding-top: 0px;
 }
@@ -716,72 +634,6 @@ body {
   background-color: #7a7878;
 }
 
-.signup .status {
-  background-color: #ffffff;
-  padding: 7px 10px;
-  color: #004278;
-  font-size: 18px;
-}
-.signup .tournaments {
-  border-bottom: 1px solid #ffffff;
-}
-.signup .tournaments .row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.signup .tournaments .row .tag {
-  padding: 5px;
-  font-weight: bold;
-  text-align: center;
-  border-left: 1px solid #ffffff;
-}
-.signup .tournaments .row .tag.league-of-legends {
-  background-color: #0263ca;
-}
-.signup .tournaments .row .name {
-  position: relative;
-  padding: 5px 10px;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-right: 1px solid #ffffff;
-  height: 30px;
-  z-index: 0;
-}
-.signup .tournaments .row .name .title {
-  position: absolute;
-  left: 15px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  height: 30px;
-  line-height: 30px;
-  vertical-align: middle;
-}
-.signup .tournaments .row .name .progress-current {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-.signup .tournaments .row .name .progress-current.low {
-  background-color: #27bf27;
-}
-.signup .tournaments .row .name .progress-current.medium {
-  background-color: #f0ad4e;
-}
-.signup .tournaments .row .name .progress-current.high {
-  background-color: #d9534f;
-}
-.signup .tournaments .separator {
-  height: 1px;
-  border-left: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  background-color: #004278;
-}
-
 .node-page .page-image {
   height: 350px;
   background-size: cover;
@@ -800,26 +652,6 @@ select, input {
   color: #ffffff;
   border: 1px solid #ffffff;
   opacity: 0.5;
-}
-
-.footer-bottom {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-.footer-bottom a {
-  color: #ffffff;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.footer-bottom a:hover, .footer-bottom a:focus {
-  color: white;
-  text-decoration: underline;
-}
-.footer-bottom i {
-  font-size: 16px;
 }
 
 .stream {
@@ -1059,6 +891,13 @@ select, input {
   color: #000000;
 }
 
+.headline {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
 .news-home .new {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -1102,6 +941,92 @@ select, input {
   -webkit-box-orient: vertical;
 }
 
+.news-home2 .news-main .news-image {
+  height: 120px !important;
+}
+.news-home2 .news-main h2 {
+  margin-top: 0px;
+}
+.news-home2 .news-main .news-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.news-home2 .news-main .news-background .news-title {
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.news-home2 .news-main .news-background .news-date {
+  color: #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px;
+}
+.news-home2 .news-main .news-background .news-content {
+  color: white;
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  height: 80px;
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.news-home2 .news-main .news-background .news-more {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.news-home2 .news-main .news-background .news-more span {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ffffff;
+}
+.news-home2 .news, .news-home2 .news-main {
+  margin-bottom: 20px;
+}
+.news-home2 .news a, .news-home2 .news-main a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.news-home2 .news a:hover, .news-home2 .news a:focus, .news-home2 .news-main a:hover, .news-home2 .news-main a:focus {
+  color: #ffffff;
+}
+.news-home2 .news .news-image, .news-home2 .news-main .news-image {
+  position: relative;
+  height: 80px;
+  background-size: cover;
+  background-position: center center;
+}
+.news-home2 .news .news-image.league-of-legends, .news-home2 .news-main .news-image.league-of-legends {
+  background-image: url("../images/news-type/league-of-legends.jpg");
+}
+.news-home2 .news .news-image .news-overlay, .news-home2 .news-main .news-image .news-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.news-home2 .news .news-type, .news-home2 .news-main .news-type {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px 10px;
+}
+
 .twitter-userline {
   height: 605px;
   overflow: auto;
@@ -1114,6 +1039,69 @@ select, input {
   width: 150px;
   display: table-cell;
   vertical-align: middle;
+}
+
+.signup .status {
+  background-color: #ffffff;
+  padding: 7px 10px;
+  color: #004278;
+  font-size: 18px;
+}
+.signup .tournaments {
+  border-bottom: 1px solid #ffffff;
+}
+.signup .tournaments .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.signup .tournaments .row .tag {
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid #ffffff;
+}
+.signup .tournaments .row .name {
+  position: relative;
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: 1px solid #ffffff;
+  height: 30px;
+  z-index: 0;
+}
+.signup .tournaments .row .name .title {
+  position: absolute;
+  left: 15px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+.signup .tournaments .row .name .progress-current {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.signup .tournaments .row .name .progress-current.low {
+  background-color: #27bf27;
+}
+.signup .tournaments .row .name .progress-current.medium {
+  background-color: #f0ad4e;
+}
+.signup .tournaments .row .name .progress-current.high {
+  background-color: #d9534f;
+}
+.signup .tournaments .separator {
+  height: 1px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  background-color: #004278;
 }
 
 /*# sourceMappingURL=style.css.map */

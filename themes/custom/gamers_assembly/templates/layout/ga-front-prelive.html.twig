@@ -41,100 +41,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-6 node-news-home">
-                        <h2 class="title-line decorated">
-                            <span>
-                                {{ "Dernier actualités"|t }} <span class="mushroom"></span>
-                            </span>
-                        </h2>
-
-                        <div class="row news-main">
-                            <div class="col-md-12">
-                                <div class="news-image" style="background-image:url('{{ news[0].image }}')">
-                                </div>
-                                <div class="news-type league-of-legends">
-                                    {{ news[0].tag }}
-                                </div>
-                                <div class="news-background">
-                                    <div class="news-title">
-                                        {{ news[0].title }}
-                                    </div>
-                                    <div class="news-date">09/08/2016</div>
-                                    <div class="news-content">
-                                        {{ news[0].text|raw }}
-                                    </div>
-                                    <div class="news-more">
-                                        <span><a href="{{ news[0].url }}">{{ "Lire la suite" |t }}</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% for new in news|slice(1) %}
-                            {% if(loop.index0%2==0) %}
-                                <div class="row news">
-                            {% endif %}
-                            <a href="{{ new.url }}">
-                                <div class="col-md-6">
-                                    <div class="news-image" style="background-image:url('{{ new.image }}')">
-                                        <div class="news-overlay">
-                                            {{ new.title }}
-                                        </div>
-                                    </div>
-                                    <div class="news-type league-of-legends">
-                                        {{ new.tag }}
-                                    </div>
-                                </div>
-                            </a>
-                            {% if(loop.index0%2==1 or loop.last) %}
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+                    <div class="col-md-8">
+                        {% include directory ~ '/components/news-home2/news-home2.html.twig' %}
                     </div>
                     <div class="col-md-4">
-                        <h2 class="title-line decorated">
-                            <span>
-                                {{ "Inscriptions"|t }}
-                            </span>
-                        </h2>
-                        <div class="row signup">
-                            <div class="col-md-12">
-                                <div class="status">
-                                    Status
-                                </div>
-                                <div class="tournaments">
-                                    <!-- TODO : WHILE -->
-                                    <div class="row">
-                                        <div class="col-md-2 tag league-of-legends">
-                                            LoL
-                                        </div>
-                                        <div class="col-md-10 name">
-                                            <div class="progress-current low" style="width: 15%;"></div>
-                                            <div class="title">League of Legends</div>
-                                        </div>
-                                    </div>
-                                    <div class="separator"></div>
-                                    <div class="row">
-                                        <div class="col-md-2 tag league-of-legends">
-                                            LoL
-                                        </div>
-                                        <div class="col-md-10 name">
-                                            <div class="progress-current medium" style="width: 50%"></div>
-                                            <div class="title">League of Legends</div>
-                                        </div>
-                                    </div>
-                                    <div class="separator"></div>
-                                    <div class="row">
-                                        <div class="col-md-2 tag league-of-legends">
-                                            LoL
-                                        </div>
-                                        <div class="col-md-10 name">
-                                            <div class="progress-current high" style="width: 75%"></div>
-                                            <div class="title">League of Legends</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% include directory ~ '/components/signup-home/signup-home.html.twig' %}
                     </div>
                 </div>
             </div>
@@ -156,19 +67,4 @@
         </div>
     </div>
     {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
-</div>
-<div class="black-area footer-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a href="#">Recrutement</a> | <a href="#">Espace Press</a> | <a href="#">Contact</a> | <a href="#">Mentions
-                    légales</a>
-                <a href="#"><i class="fa fa-facebook-official"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-flickr"></i></a>
-                <a href="#"><i class="fa fa-twitch"></i></a>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
-            </div>
-        </div>
-    </div>
 </div>

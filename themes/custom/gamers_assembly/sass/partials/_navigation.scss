@@ -93,6 +93,7 @@ body {
   text-align:center;
   ul {
     list-style-type: none;
+    display:inline-block;
     margin:0;
     li {
       display:inline-block;
@@ -107,5 +108,20 @@ body {
       }
     }
   }
+  a {
+    color: $white;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  a:hover, a:focus {
+    color: white;
+    text-decoration: underline;
+  }
+
+  i {
+    font-size: 16px;
+  }
+
 
 }
