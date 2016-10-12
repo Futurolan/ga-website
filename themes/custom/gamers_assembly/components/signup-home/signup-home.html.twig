@@ -1,9 +1,7 @@
 <div>
-    <h2 class="title-line decorated">
-    <span>
-        {{ "Inscriptions"|t }}
-    </span>
-    </h2>
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title:"Inscriptions"|t,
+    } only %}
     <div class="row signup">
         <div class="col-md-12">
             <div class="status">

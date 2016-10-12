@@ -1,6 +1,9 @@
 <?php
 namespace Drupal\ga_slide;
 
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
 class SlideUtils
 {
     public static function getSlides()
@@ -12,7 +15,7 @@ class SlideUtils
         foreach ($slideEntities as $slideEntity) {
             $slides[] = array(
                 "name" => $slideEntity->label(),
-                "image" => $slideEntity->getImage(),
+                "image" =>  ImageStyle::load('slide')->buildUrl(File::load($slideEntity->getImage()[0])->getFileUri()),
                 "link" => $slideEntity->getLink()
             );
         }

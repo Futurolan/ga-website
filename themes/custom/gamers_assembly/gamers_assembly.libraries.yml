@@ -14,6 +14,20 @@ gamers_assembly.streams:
     - core/jquery
     - gamers_assembly/tmi
 
+gamers_assembly.slideshow:
+  version: 1.X
+  js:
+    components/slideshow/slideshow.js: {}
+  dependencies:
+    - gamers_assembly/loopslider
+
+gamers_assembly.sponsors-banner:
+  version: 1.X
+  js:
+    components/sponsors-banner/sponsors-banner.js: {}
+  dependencies:
+    - gamers_assembly/loopslider
+
 tmi:
   version: 1.X
   js:
@@ -46,11 +60,11 @@ font-awesome:
     theme:
       libraries/font-awesome/css/font-awesome.min.css: { minified: true }
 
-gamers_assembly.slideshow:
-  version: 1.X
+
+loopslider:
+  version: 0.1
   js:
     libraries/slideshow/jquery.loopslider.min.js: { minidfied: true }
-    components/sponsors-banner/sponsors-banner.js: {}
   css:
     theme:
       libraries/slideshow/loopslider.css : {}

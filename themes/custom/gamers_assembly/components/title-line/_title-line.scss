@@ -1,0 +1,79 @@
+.title-line {
+    margin-bottom: 40px;
+    .line {
+        background-color: $white;
+        margin-top: 30px;
+        height:2px
+    }
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 28px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    /* headlines with lines */
+    .decorated {
+        overflow: hidden;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .mushroom {
+        background: url('../images/mushroom.png') right center no-repeat;
+        content: '';
+        height: 27px;
+        width: 27px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-top: -5px;
+    }
+
+    .mushroom.black {
+        background: url('../images/mushroom-black.png') right center no-repeat;
+    }
+
+    .space-invader {
+        background: url('../images/mushroom.png') right center no-repeat;
+        content: '';
+        height: 27px;
+        width: 27px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-top: -5px;
+    }
+
+    .decorated > span, .decorated > h2 > span  {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 28px
+    }
+
+    .decorated > span:before, .decorated > span:after, .decorated > h2 > span:before, .decorated > h2 > span:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 2px solid;
+        width: 1337%;
+        margin: 0 20px;
+    }
+
+    .decorated > span:before, .decorated > h2 > span:before {
+        right: 100%;
+    }
+
+    .decorated > span:after, .decorated > h2 > span:after {
+        left: 100%;
+    }
+}

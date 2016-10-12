@@ -13,3 +13,11 @@ ga_front.prelive:
     _title: 'PreLive front page'
   requirements:
     _permission: 'access content'
+
+ga_front.prelive.settings:
+  path: '/admin/ga/front/prelive/settings'
+  defaults:
+    _title: 'Front prelive settings form'
+    _form: '\Drupal\ga_front\Form\FrontPreliveSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

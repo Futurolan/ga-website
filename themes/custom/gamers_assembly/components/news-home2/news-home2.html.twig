@@ -1,9 +1,8 @@
 <div class="news-home2">
-    <h2 class="title-line decorated">
-        <span>
-            {{ "Dernières actualités"|t }} <span class="mushroom"></span>
-        </span>
-    </h2>
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title:"Last news"|t,
+    icon:"mushroom"
+    } only %}
 
     <div class="row news-main">
         <div class="col-md-12">

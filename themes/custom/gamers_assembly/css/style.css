@@ -17,166 +17,6 @@ a {
   cursor: pointer;
 }
 
-.title-line {
-  margin-bottom: 40px;
-}
-.title-line .line {
-  background-color: #ffffff;
-  margin-top: 30px;
-  height: 2px;
-}
-.title-line h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 28px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-.title-line h2.twitch:after {
-  background: url("../images/twitch.png") right center no-repeat;
-  content: '';
-  height: 28px;
-  width: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-
-/* headlines with lines */
-.decorated {
-  overflow: hidden;
-  text-align: center;
-  margin-top: 0px;
-}
-
-.mushroom {
-  background: url("../images/mushroom.png") right center no-repeat;
-  content: '';
-  height: 27px;
-  width: 27px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-top: -5px;
-}
-
-.mushroom.black {
-  background: url("../images/mushroom-black.png") right center no-repeat;
-}
-
-.space-invader {
-  background: url("../images/mushroom.png") right center no-repeat;
-  content: '';
-  height: 27px;
-  width: 27px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-top: -5px;
-}
-
-.decorated > span, .decorated > h2 > span {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 28px;
-}
-
-.decorated > span:before, .decorated > span:after, .decorated > h2 > span:before, .decorated > h2 > span:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  border-bottom: 2px solid;
-  width: 1337%;
-  margin: 0 20px;
-}
-
-.decorated > span:before, .decorated > h2 > span:before {
-  right: 100%;
-}
-
-.decorated > span:after, .decorated > h2 > span:after {
-  left: 100%;
-}
-
-.white-area {
-  background-color: whitesmoke;
-  color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: #000000;
-}
-
-.slide-area {
-  background-color: red;
-}
-
-.grey-area {
-  background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.grey-area .grey-block {
-  background-color: rgba(255, 255, 255, 0.1);
-  min-height: 205px;
-  position: relative;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
-}
-.grey-area .grey-block.tournament {
-  background: url("../images/cup.png") center center no-repeat;
-  background-size: cover;
-}
-.grey-area .grey-block .title {
-  background-color: white;
-  font-size: 18px;
-  color: #000000;
-  padding: 10px 15px;
-}
-.grey-area .grey-block .no-title {
-  padding: 40px 15px 20px 60px !important;
-}
-.grey-area .grey-block .text {
-  text-align: right;
-  padding: 20px 15px 20px 60px;
-  letter-spacing: 1px;
-}
-.grey-area .grey-block .btn-bottom {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-}
-.grey-area .grey-block a {
-  font-weight: bold;
-  color: #000000;
-  text-decoration: none;
-  display: block;
-  background-color: #ffffff;
-}
-.grey-area .grey-block a.ticketing {
-  background-color: #FC7E00;
-  color: #ffffff;
-}
-.grey-area .grey-block a .cta {
-  z-index: 0;
-  position: relative;
-  padding: 10px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
-}
-
 /* Button 1c */
 .btn-1c:after {
   width: 0%;
@@ -205,12 +45,32 @@ a {
   transition: all 0.3s;
 }
 
+.slide-area {
+  background-color: red;
+}
+
+.grey-area {
+  background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .blue-area {
   background: url("../images/bg-home-blue-area.jpg") center center no-repeat;
   background-size: cover;
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.white-area {
+  background-color: whitesmoke;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #000000;
 }
 
 #block-mainnavigation {
@@ -869,6 +729,126 @@ select, input {
   height: 10px;
   background-color: #324520;
   margin-right: 5px;
+}
+
+.home-block {
+  background-color: rgba(255, 255, 255, 0.1);
+  min-height: 205px;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.home-block .title {
+  background-color: white;
+  font-size: 18px;
+  color: #000000;
+  padding: 10px 15px;
+}
+.home-block .text {
+  text-align: right;
+  padding: 20px 15px 20px 60px;
+  letter-spacing: 1px;
+}
+.home-block .btn-bottom {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+.home-block a {
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  background-color: #ffffff;
+}
+.home-block a.reverse {
+  background-color: #FC7E00;
+  color: #ffffff;
+}
+.home-block a:hover {
+  text-decoration: none;
+}
+.home-block a .cta {
+  z-index: 0;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+}
+
+.title-line {
+  margin-bottom: 40px;
+  /* headlines with lines */
+}
+.title-line .line {
+  background-color: #ffffff;
+  margin-top: 30px;
+  height: 2px;
+}
+.title-line h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 28px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.title-line .decorated {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 0px;
+}
+.title-line .mushroom {
+  background: url("../images/mushroom.png") right center no-repeat;
+  content: '';
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+.title-line .mushroom.black {
+  background: url("../images/mushroom-black.png") right center no-repeat;
+}
+.title-line .space-invader {
+  background: url("../images/mushroom.png") right center no-repeat;
+  content: '';
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+.title-line .decorated > span, .title-line .decorated > h2 > span {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+.title-line .decorated > span:before, .title-line .decorated > span:after, .title-line .decorated > h2 > span:before, .title-line .decorated > h2 > span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 2px solid;
+  width: 1337%;
+  margin: 0 20px;
+}
+.title-line .decorated > span:before, .title-line .decorated > h2 > span:before {
+  right: 100%;
+}
+.title-line .decorated > span:after, .title-line .decorated > h2 > span:after {
+  left: 100%;
 }
 
 .tournaments-home-cta {

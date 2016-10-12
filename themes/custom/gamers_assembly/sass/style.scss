@@ -1,7 +1,6 @@
 @import 'partials/variables';
 @import 'partials/layout';
 @import 'partials/design';
-@import 'partials/frontpage';
 @import 'partials/navigation';
 @import 'partials/typography';
 @import 'partials/news';
@@ -9,6 +8,8 @@
 @import 'partials/page';
 @import 'partials/form';
 @import '../components/streams/streams';
+@import '../components/home-block/home-block';
+@import '../components/title-line/title-line';
 @import '../components/tournaments-home-cta/tournaments-home-cta';
 @import '../components/tournaments-home-last-results/tournaments-home-last-results';
 @import '../components/tournaments-home-next/tournaments-home-next';

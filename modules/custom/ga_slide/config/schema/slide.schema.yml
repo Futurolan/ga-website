@@ -9,7 +9,7 @@ ga_slide.slide.*:
       type: label
       label: 'Label'
     image:
-      type: string
+      type: image
       label: 'Image'
     link:
       type: string

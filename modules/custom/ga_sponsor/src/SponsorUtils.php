@@ -27,7 +27,6 @@ class SponsorUtils
         }
 
         shuffle($sponsors);
-        $sponsors = array_slice($sponsors,0,6);
 
         return $sponsors;
     }

@@ -1,36 +1,34 @@
-{{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}
-
-<div class="slideshow">
-    <div class="home-slider-container">
-        {% for slide in slides %}
-            <figure>
-                <a href="{{ slide.link }}">
-                    <img src="{{ slide.image }}" alt="{{ slide.name }}" class="img-responsive">
-                </a>
-            </figure>
-        {% endfor %}
-    </div>
-</div>
+{% include directory ~'/components/slideshow/slideshow.html.twig' %}
 
 
 <div class="grey-area">
-    <div class="container-fluid">
-        <div class="row title-line">
-            <div class="col-md-12 decorated">
-                <h2><span>{{ "Édition XXXX"|t }}</span></h2>
-            </div>
-        </div>
-    </div>
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title: config.edition_name
+    } only %}
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                {% include directory ~ '/components/event-home-cta/event-home-cta.html.twig' %}
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                title:config.event_title,
+                text:config.event_text,
+                cta:config.event_cta,
+                link:"#"
+                } only %}
             </div>
             <div class="col-md-4">
-                {% include directory ~ '/components/program-home-cta/program-home-cta.html.twig' %}
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                text:config.planning_text,
+                cta:config.planning_cta,
+                link:'#'
+                } only %}
             </div>
             <div class="col-md-4">
-                {% include directory ~ '/components/ticketing-home-cta/ticketing-home-cta.html.twig' %}
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                text:config.ticket_text,
+                cta:config.ticket_cta,
+                reverse:true,
+                link:'#'
+                } only %}
             </div>
         </div>
     </div>
@@ -55,16 +53,8 @@
 
 <!-- TODO: Move to footer -->
 <div class="white-area">
-    <div class="container-fluid">
-        <div class="row title-line">
-            <div class="col-md-12 decorated">
-                <h2 class="">
-                    <span>
-                        {{ "Partenaires"|t }} <span class="space-invader"></span>
-                    </span>
-                </h2>
-            </div>
-        </div>
-    </div>
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title:"Sponsors"|t
+    } only %}
     {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
 </div>

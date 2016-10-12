@@ -1,0 +1,13 @@
+{{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}
+
+<div class="slideshow">
+    <div class="home-slider-container">
+        {% for slide in slides %}
+            <figure>
+                <a href="{{ slide.link }}">
+                    <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                </a>
+            </figure>
+        {% endfor %}
+    </div>
+</div>

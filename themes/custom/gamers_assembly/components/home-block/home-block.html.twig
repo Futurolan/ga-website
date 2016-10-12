@@ -1,0 +1,27 @@
+<div class="home-block">
+    {% if(title and title!="") %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    {{ title }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text">
+                {{ text|raw }}
+            </div>
+        </div>
+    </div>
+    <div class="row btn-bottom">
+        <div class="col-md-7 col-md-offset-5">
+            <a href="{{ link }}" {% if(reverse) %} class="reverse" {% endif %} >
+                <div class="cta btn-motion btn-1c">
+                    {{ cta }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

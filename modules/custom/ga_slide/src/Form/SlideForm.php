@@ -26,25 +26,27 @@ class SlideForm extends EntityForm
             '#title' => $this->t('Label'),
             '#maxlength' => 255,
             '#default_value' => $slide->label(),
-            '#description' => $this->t("Label for the Slide."),
             '#required' => TRUE,
         ];
 
-        $form['image'] = [
-            '#type' => 'textfield', //TODO mettre un file manager ici
-            '#title' => $this->t('Image'),
-            '#maxlength' => 255,
-            '#default_value' => $slide->getImage(),
-            '#description' => $this->t("Image for the Slide."),
+        $form['image'] = array(
+            '#type' => 'managed_file',
+            '#title' => t('Image'),
             '#required' => TRUE,
-        ];
+            '#default_value' => $slide->getImage(),
+            '#description' => 'Best size : 1920x518',
+            '#upload_location' => file_default_scheme() . '://front/slide/',
+            '#upload_validators' => array(
+                'file_validate_extensions' => array('gif png jpg jpeg'),
+            ),
+        );
 
         $form['link'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Link'),
             '#maxlength' => 255,
             '#default_value' => $slide->getLink(),
-            '#description' => $this->t("Link for the Slide."),
+            '#description' => $this->t("Use relative link for internal url."),
             '#required' => TRUE,
         ];
 
@@ -56,6 +58,7 @@ class SlideForm extends EntityForm
             ],
             '#disabled' => !$slide->isNew(),
         ];
+
 
         return $form;
     }

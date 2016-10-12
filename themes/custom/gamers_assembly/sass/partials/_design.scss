@@ -6,93 +6,52 @@ a {
   cursor: pointer;
 }
 
-.title-line {
-  margin-bottom: 40px;
-  .line {
-    background-color: $white;
-    margin-top: 30px;
-    height:2px
-  }
-  h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    &.twitch:after {
-      background: url('../images/twitch.png') right center no-repeat;
-      content: '';
-      height: 28px;
-      width: 30px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 15px;
-    }
-  }
+/* Button 1c */
+.btn-1c:after {
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #27bf27;
 }
 
-/* headlines with lines */
-.decorated {
-     overflow: hidden;
-     text-align: center;
-     margin-top: 0px;
+.btn-1c:hover,
+.btn-1c:active {
+  color: white;
 }
 
-.mushroom {
-  background: url('../images/mushroom.png') right center no-repeat;
+.btn-1c:hover:after,
+.btn-1c:active:after {
+  width: 100%;
+}
+
+.btn-motion:after {
   content: '';
-  height: 27px;
-  width: 27px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-top: -5px;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.mushroom.black {
-  background: url('../images/mushroom-black.png') right center no-repeat;
+
+.slide-area {
+  background-color:red;
+}
+.grey-area {
+  background: url('../images/bg-home-grey-area.jpg') center center no-repeat;
+  background-size: cover;
+  color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.space-invader {
-  background: url('../images/mushroom.png') right center no-repeat;
-  content: '';
-  height: 27px;
-  width: 27px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-top: -5px;
-}
-
-.decorated > span, .decorated > h2 > span  {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 28px
-}
-
-.decorated > span:before, .decorated > span:after, .decorated > h2 > span:before, .decorated > h2 > span:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    border-bottom: 2px solid;
-    width: 1337%;
-    margin: 0 20px;
-}
-
-.decorated > span:before, .decorated > h2 > span:before {
-    right: 100%;
-}
-
-.decorated > span:after, .decorated > h2 > span:after {
-    left: 100%;
+.blue-area {
+  background: url('../images/bg-home-blue-area.jpg') center center no-repeat;
+  background-size: cover;
+  color: $white;
+  padding-top:50px;
+  padding-bottom:50px;
 }
 
 .white-area {
