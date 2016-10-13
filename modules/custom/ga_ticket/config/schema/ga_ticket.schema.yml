@@ -1,7 +1,6 @@
 ga_ticket.settings:
   type: config_object
   label: 'Ticket settings'
-  langcode: fr
   mapping:
     title:
       type: text

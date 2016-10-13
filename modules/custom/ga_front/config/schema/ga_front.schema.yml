@@ -1,0 +1,28 @@
+ga_front.prelive.settings:
+  type: config_object
+  label: 'Front prelive settings'
+  mapping:
+    edition_name:
+      type: text
+      label: 'Edition name'
+    event_title:
+      type: text
+      label: 'Event title'
+    event_text:
+      type: text
+      label: 'Event text'
+    event_cta:
+      type: text
+      label: 'Event cta'
+    planning_text:
+      type: text
+      label: 'Event text'
+    planning_cta:
+      type: text
+      label: 'Event cta'
+    ticket_text:
+      type: text
+      label: 'Event text'
+    ticket_cta:
+      type: text
+      label: 'Event cta'

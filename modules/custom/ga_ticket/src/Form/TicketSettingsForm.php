@@ -60,9 +60,13 @@ class TicketSettingsForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state, $plugin_id = NULL, $langcode = NULL)
     {
+
         $config = \Drupal::service('config.factory')->getEditable('ga_ticket.settings');
-        $config->set('title', $form_state->getValue('title'))->save();
-        $config->set('iframe_url', $form_state->getValue('iframe_url'))->save();
+
+        $config->set('title', $form_state->getValue('title'));
+        $config->set('iframe_url', $form_state->getValue('iframe_url'));
+        $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
+        $config->save();
 
         parent::submitForm($form, $form_state);
     }

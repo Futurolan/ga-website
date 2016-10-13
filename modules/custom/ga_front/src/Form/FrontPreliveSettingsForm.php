@@ -132,14 +132,16 @@ class FrontPreliveSettingsForm extends ConfigFormBase
     {
         $config = \Drupal::service('config.factory')->getEditable('ga_front.prelive.settings');
 
-        $config->set('edition_name', $form_state->getValue('edition_name'))->save();
-        $config->set('event_title', $form_state->getValue('event_title'))->save();
-        $config->set('event_text', $form_state->getValue('event_text')['value'])->save();
-        $config->set('event_cta', $form_state->getValue('event_cta'))->save();
-        $config->set('planning_text', $form_state->getValue('planning_text')['value'])->save();
-        $config->set('planning_cta', $form_state->getValue('planning_cta'))->save();
-        $config->set('ticket_text', $form_state->getValue('ticket_text')['value'])->save();
-        $config->set('ticket_cta', $form_state->getValue('ticket_cta'))->save();
+        $config->set('edition_name', $form_state->getValue('edition_name'));
+        $config->set('event_title', $form_state->getValue('event_title'));
+        $config->set('event_text', $form_state->getValue('event_text')['value']);
+        $config->set('event_cta', $form_state->getValue('event_cta'));
+        $config->set('planning_text', $form_state->getValue('planning_text')['value']);
+        $config->set('planning_cta', $form_state->getValue('planning_cta'));
+        $config->set('ticket_text', $form_state->getValue('ticket_text')['value']);
+        $config->set('ticket_cta', $form_state->getValue('ticket_cta'));
+        $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
+        $config->save();
 
         parent::submitForm($form, $form_state);
     }

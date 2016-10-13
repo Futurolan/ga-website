@@ -4,5 +4,6 @@ event_text: "<p>L'édition 2017 de la Gamer Assembly aura lieu du 26 au 28 Mars,
 event_cta: '+ d''infos'
 planning_text: "<p>Découvrez l'intégralité du programme, les conférences, les évènements de cette édition 2017 de la Gamer Assembly.</p>\r\n"
 planning_cta: Programme
-ticket_text: "<p>Commandez vos billets pour la Gamer Assembly 2014 dès à présent</p>\r\n"
-ticket_cta: Billeterie
+ticket_text: "<p>Découvrez l'intégralité du programme, les conférences, les évènements de cette édition 2017 de la Gamer Assembly.</p>\r\n"
+ticket_cta: Programme
+langcode: fr

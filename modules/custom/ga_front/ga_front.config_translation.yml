@@ -1,0 +1,5 @@
+ga_front.prelive.settings:
+  title: 'GA Front Prelive'
+  base_route_name: ga_front.prelive.settings
+  names:
+    - ga_front.prelive.settings

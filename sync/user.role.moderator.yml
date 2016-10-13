@@ -35,3 +35,7 @@ permissions:
   31: 'edit own tournament content'
   32: 'administer slides'
   33: 'translate configuration'
+  34: 'translate page node'
+  35: 'translate tournament node'
+  36: 'translate tags taxonomy_term'
+  37: 'use text format formatted_text'
