@@ -34,3 +34,4 @@ permissions:
   30: 'edit any tournament content'
   31: 'edit own tournament content'
   32: 'administer slides'
+  33: 'translate configuration'

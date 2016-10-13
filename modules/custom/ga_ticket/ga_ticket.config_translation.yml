@@ -1,0 +1,5 @@
+ga_ticket.settings:
+  title: 'GA Ticket'
+  base_route_name: ga_ticket.settings
+  names:
+    - ga_ticket.settings
