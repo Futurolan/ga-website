@@ -20,4 +20,4 @@ ga_front.prelive.settings:
     _title: 'Front prelive settings form'
     _form: '\Drupal\ga_front\Form\FrontPreliveSettingsForm'
   requirements:
-    _permission: 'administer site configuration'
+    _role: 'moderator'

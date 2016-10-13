@@ -12,4 +12,4 @@ ga_ticket.settings:
     _title: 'Ticket settings form'
     _form: '\Drupal\ga_ticket\Form\TicketSettingsForm'
   requirements:
-    _permission: 'administer site configuration'
+    _role: 'moderator'
