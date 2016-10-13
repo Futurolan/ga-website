@@ -7,7 +7,7 @@ class FrontUtils
 
     public static function getPreliveConfiguration()
     {
-        $config = \Drupal::config('ga_ticket.settings');
+        $config = \Drupal::config('ga_front.prelive.settings');
 
 
         $variables['edition_name'] = $config->get('edition_name');
