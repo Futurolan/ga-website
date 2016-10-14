@@ -1,9 +1,0 @@
-uuid: 02f2aca9-004c-431e-a7ca-1446ca026eb2
-langcode: fr
-status: true
-dependencies: {  }
-id: _fr_lapi_from_scratch
-label: '[FR] Lapi From Scratch'
-weight: -9
-key: w_lapin
-type: twitch
