@@ -1,0 +1,5 @@
+ga_planning.settings:
+  title: 'GA Planning'
+  base_route_name: ga_planning.settings
+  names:
+    - ga_planning.settings
