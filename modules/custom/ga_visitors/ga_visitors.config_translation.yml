@@ -1,0 +1,5 @@
+ga_visitors.settings:
+  title: 'GA Visitors'
+  base_route_name: ga_visitors.settings
+  names:
+    - ga_visitors.settings
