@@ -4,13 +4,9 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 <div class="views-tournaments">
     <div {{ attributes.addClass(classes) }}>
         <div class="grey-area">
-            <div class="container-fluid">
-                <div class="row title-line">
-                    <div class="col-md-12 decorated">
-                        <h2><span>{{ "Tous les tournois"|t }}</span></h2>
-                    </div>
-                </div>
-            </div>
+            {% include directory ~ "/components/title-line/title-line.html.twig" with {
+            title:"Tous les tournois"|t
+            } only %}
         </div>
         <div class="white-area">
             <div class="container">

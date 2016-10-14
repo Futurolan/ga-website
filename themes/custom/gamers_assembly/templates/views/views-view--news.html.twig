@@ -4,13 +4,9 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 <div class="views-news">
     <div {{ attributes.addClass(classes) }}>
         <div class="grey-area">
-            <div class="container-fluid">
-                <div class="row title-line">
-                    <div class="col-md-12 decorated">
-                        <h2><span>{{ "Filtres"|t }}</span></h2>
-                    </div>
-                </div>
-            </div>
+            {% include directory ~ "/components/title-line/title-line.html.twig" with {
+                title:"Filtres"|t
+            } only %}
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -20,17 +16,9 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
             </div>
         </div>
         <div class="white-area">
-            <div class="container-fluid">
-                <div class="row title-line headline">
-                    <div class="col-md-12 decorated">
-                        <h2>                            
-                            <span>
-                                {{ "Dernières actualités"|t }} <span class="mushroom black"></span>
-                            </span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+            {% include directory ~ "/components/title-line/title-line.html.twig" with {
+            title:"Dernières actualités"|t
+            } only %}
             <div class="container">
                 {{ rows }}
             </div>
