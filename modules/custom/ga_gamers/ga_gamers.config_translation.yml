@@ -1,0 +1,5 @@
+ga_gamers.settings:
+  title: 'GA Gamers'
+  base_route_name: ga_gamers.settings
+  names:
+    - ga_gamers.settings
