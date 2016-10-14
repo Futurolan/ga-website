@@ -35,4 +35,27 @@ class NewsUtils
         }
         return $news;
     }
+
+    public static function getNextPrevIds($created){
+
+        $nextId = \Drupal::entityQuery('node')
+            ->condition('status', 1)
+            ->condition('created', $created, '<')
+            ->condition('langcode',\Drupal::languageManager()->getCurrentLanguage()->getId())
+            ->condition('type', 'news')
+            ->sort('created', 'DESC')
+            ->range(0, 1)
+            ->execute();
+
+        $prevId = \Drupal::entityQuery('node')
+            ->condition('status', 1)
+            ->condition('created', $created, '>')
+            ->condition('langcode',\Drupal::languageManager()->getCurrentLanguage()->getId())
+            ->condition('type', 'news')
+            ->sort('created', 'ASC')
+            ->range(0, 1)
+            ->execute();
+
+        return array("prev"=>count($prevId)>0?key($prevId):null,"next"=>count($nextId)>0?key($nextId):null);
+    }
 }

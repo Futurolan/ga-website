@@ -27,12 +27,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
+                    {% if(nextPrevIds.prev) %}
                     <div class="news-link">
-                        <a href="{{ path('view.news.page_1') }}">
+                        <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.prev}) }}">
                             <i class="fa fa-caret-left" aria-hidden="true"></i> &nbsp;
                             {{ "Précédente"|t }}
                         </a>
                     </div>
+                    {% endif %}
                 </div>
                 <div class="col-md-4">
                     <div class="news-link">
@@ -40,11 +42,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                    {% if(nextPrevIds.next) %}
                     <div class="news-link">
-                        <a href="{{ path('view.news.page_1') }}">
+                        <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.next}) }}">
                             {{ "Suivante"|t }} &nbsp;
                             <i class="fa fa-caret-right" aria-hidden="true"></i>
                         </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
