@@ -39,14 +39,18 @@
     }
 
     .space-invader {
-        background: url('../images/mushroom.png') right center no-repeat;
+        background: url('../images/space-invader-black.png') right center no-repeat;
         content: '';
-        height: 27px;
-        width: 27px;
+        height: 24px;
+        width: 33px;
         display: inline-block;
         vertical-align: middle;
         margin-left: 5px;
         margin-top: -5px;
+    }
+
+    .space-invader.black {
+        background: url('../images/space-invader-black.png') right center no-repeat;
     }
 
     .decorated > span, .decorated > h2 > span  {

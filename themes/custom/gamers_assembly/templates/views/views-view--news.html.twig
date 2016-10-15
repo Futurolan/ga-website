@@ -17,7 +17,8 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
         </div>
         <div class="white-area">
             {% include directory ~ "/components/title-line/title-line.html.twig" with {
-            title:"Dernières actualités"|t
+            title:"Dernières actualités"|t,
+            icon: "mushroom black"
             } only %}
             <div class="container">
                 {{ rows }}
