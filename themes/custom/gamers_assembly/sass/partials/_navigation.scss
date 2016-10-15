@@ -22,11 +22,17 @@
         padding: 25px 22px;
         text-transform: uppercase;
         &:hover, &.is-active {
+          background-color: $blue-hover;
+        }
+        &.ticketing {
           background-color: $orange;
+          &:hover, &.is-active {
+            background-color: $orange-hover;
+          }
         }
       }
       &.nav-item--active-trail > a {
-        background-color: $orange;
+        background-color: $blue-hover;
       }
       &:hover ul {
         height: auto;
