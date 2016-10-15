@@ -39,3 +39,4 @@ permissions:
   35: 'translate tournament node'
   36: 'translate tags taxonomy_term'
   37: 'use text format formatted_text'
+  38: 'override news authored on option'
