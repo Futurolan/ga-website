@@ -36,12 +36,12 @@
       }
       &:hover ul {
         height: auto;
-        opacity: 1;
+        display: block;
       }
       ul {
+        display: none;
         position: absolute;
         height: 0;
-        opacity:0;
         transition: opacity 0.3s ease-out;
         background-color: $blue;
         li {
@@ -106,7 +106,6 @@ body {
       a {
         color:$white;
         border-right : 1px solid $white;
-        margin-right:10px;
         padding-right:10px;
       }
       &:last-child a {
