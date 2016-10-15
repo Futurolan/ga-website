@@ -90,11 +90,12 @@ a {
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
-/* line 70, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .white-area {
-  background-color: whitesmoke;
+  background-color: #ffffff;
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1290,20 +1291,38 @@ select option {
   -webkit-box-orient: vertical;
 }
 
-/* line 3, ../components/news-home2/_news-home2.scss */
+/* line 2, ../components/news-home2/_news-home2.scss */
+.news-home2 .hack-line-left {
+  position: absolute;
+  height: 2px;
+  width: 5014px;
+  background-color: white;
+  top: 14px;
+  left: -4999px;
+}
+/* line 10, ../components/news-home2/_news-home2.scss */
+.news-home2 .hack-line-right {
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  top: 14px;
+  right: -15px;
+}
+/* line 20, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-image {
   height: 130px !important;
 }
-/* line 7, ../components/news-home2/_news-home2.scss */
+/* line 24, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main h2 {
   margin-top: 0px;
 }
-/* line 11, ../components/news-home2/_news-home2.scss */
+/* line 28, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
-/* line 15, ../components/news-home2/_news-home2.scss */
+/* line 32, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-title {
   font-size: 18px;
   white-space: nowrap;
@@ -1311,13 +1330,13 @@ select option {
   text-overflow: ellipsis;
   display: block;
 }
-/* line 23, ../components/news-home2/_news-home2.scss */
+/* line 40, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-date {
   color: #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
-/* line 29, ../components/news-home2/_news-home2.scss */
+/* line 46, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-content {
   color: white;
   display: block;
@@ -1330,55 +1349,55 @@ select option {
   -webkit-box-orient: vertical;
   height: 40px;
 }
-/* line 42, ../components/news-home2/_news-home2.scss */
+/* line 59, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-more {
   margin-bottom: -10px;
   margin-right: -10px;
   text-align: right;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-/* line 47, ../components/news-home2/_news-home2.scss */
+/* line 64, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-more span {
   color: #000000;
   font-weight: bold;
   display: inline-block;
-  padding: 10px 30px;
+  padding: 5px 50px;
   cursor: pointer;
   background-color: #ffffff;
 }
-/* line 59, ../components/news-home2/_news-home2.scss */
+/* line 76, ../components/news-home2/_news-home2.scss */
 .news-home2 .news, .news-home2 .news-main {
   margin-bottom: 20px;
 }
-/* line 61, ../components/news-home2/_news-home2.scss */
+/* line 78, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-left, .news-home2 .news-main .news-left {
   padding-right: 0px;
 }
-/* line 64, ../components/news-home2/_news-home2.scss */
+/* line 81, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-right, .news-home2 .news-main .news-right {
   padding-left: 0px;
 }
-/* line 67, ../components/news-home2/_news-home2.scss */
+/* line 84, ../components/news-home2/_news-home2.scss */
 .news-home2 .news a, .news-home2 .news-main a {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 71, ../components/news-home2/_news-home2.scss */
+/* line 88, ../components/news-home2/_news-home2.scss */
 .news-home2 .news a:hover, .news-home2 .news a:focus, .news-home2 .news-main a:hover, .news-home2 .news-main a:focus {
   color: #ffffff;
 }
-/* line 74, ../components/news-home2/_news-home2.scss */
+/* line 91, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-image, .news-home2 .news-main .news-image {
   position: relative;
   height: 80px;
   background-size: cover;
   background-position: center center;
 }
-/* line 80, ../components/news-home2/_news-home2.scss */
+/* line 97, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-image.league-of-legends, .news-home2 .news-main .news-image.league-of-legends {
   background-image: url("../images/news-type/league-of-legends.jpg");
 }
-/* line 84, ../components/news-home2/_news-home2.scss */
+/* line 101, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-image .news-overlay, .news-home2 .news-main .news-image .news-overlay {
   position: absolute;
   bottom: 0;
@@ -1396,7 +1415,7 @@ select option {
   overflow: hidden;
   padding: 2px 5px;
 }
-/* line 102, ../components/news-home2/_news-home2.scss */
+/* line 119, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-type, .news-home2 .news-main .news-type {
   text-align: center;
   font-weight: bold;
@@ -1404,13 +1423,52 @@ select option {
   padding: 3px 10px;
 }
 
-/* line 1, ../components/twitter-home/_twitter-home.scss */
-.twitter-userline {
+@media (max-width: 992px) {
+  /* line 132, ../components/news-home2/_news-home2.scss */
+  .news-home2 .news .news-left, .news-home2 .news-main .news-left {
+    padding-right: 15px;
+  }
+  /* line 135, ../components/news-home2/_news-home2.scss */
+  .news-home2 .news .news-right, .news-home2 .news-main .news-right {
+    padding-left: 15px;
+  }
+  /* line 140, ../components/news-home2/_news-home2.scss */
+  .news-home2 .hack-line-right {
+    position: absolute;
+    height: 2px;
+    width: 150px;
+    background-color: white;
+    top: 14px;
+    right: -125px;
+  }
+}
+/* line 2, ../components/twitter-home/_twitter-home.scss */
+.twitter-home .twitter-userline {
   height: 605px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
+/* line 8, ../components/twitter-home/_twitter-home.scss */
+.twitter-home .hack-line-right {
+  position: absolute;
+  height: 2px;
+  width: 5014px;
+  background-color: white;
+  top: 14px;
+  right: -4999px;
+}
 
+@media (max-width: 992px) {
+  /* line 21, ../components/twitter-home/_twitter-home.scss */
+  .twitter-home .hack-line-left {
+    position: absolute;
+    height: 2px;
+    width: 150px;
+    background-color: white;
+    top: 14px;
+    left: -125px;
+  }
+}
 /* line 3, ../components/sponsors-banner/_sponsors-banner.scss */
 .sponsors-banner .sponsor {
   text-align: center;

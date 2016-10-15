@@ -1,5 +1,30 @@
-.twitter-userline {
-  height: 605px;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);;
+.twitter-home {
+	.twitter-userline {
+	  height: 605px;
+	  overflow: auto;
+	  background-color: rgba(0, 0, 0, 0.5);;
+	}
+
+	.hack-line-right {
+		position: absolute;
+		height: 2px;
+		width: 5014px;
+		background-color: white;
+		top: 14px;
+		right: -4999px;
+	}
+}
+
+@media (max-width: 992px) {
+	.twitter-home {
+
+	    .hack-line-left {
+	      position: absolute;
+	      height: 2px;
+	      width: 150px;
+	      background-color: white;
+	      top: 14px;
+	      left: -125px;
+	    }
+  	} 
 }

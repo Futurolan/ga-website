@@ -65,10 +65,11 @@ a {
   color: $white;
   padding-top:50px;
   padding-bottom:50px;
+  overflow: hidden;
 }
 
 .white-area {
-  background-color: whitesmoke;
+  background-color: $white;
   color: $white;
   padding-top: 50px;
   padding-bottom: 50px;
