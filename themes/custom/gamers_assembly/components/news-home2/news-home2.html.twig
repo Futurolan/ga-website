@@ -4,47 +4,31 @@
     icon:"mushroom"
     } only %}
 
-    <div class="row news-main">
-        <a href="{{ news[0].url }}">
-            <div class="col-md-12">
-                <div class="news-image" style="background-image:url('{{ news[0].image }}')">
-                </div>
-                <div class="news-type" style="background-color:{{ news[0].tagColor }}">
-                    {{ news[0].tag }}
-                </div>
-                <div class="news-background">
-                    <div class="news-title">
-                        {{ news[0].title }}
+    {% for new in news %}
+        <div class="row news-main">
+            <a href="{{ new.url }}">
+                <div class="col-md-4 news-left">
+                    <div class="news-image" style="background-image:url('{{ new.image }}')">
                     </div>
-                    <div class="news-date">09/08/2016</div>
-                    <div class="news-content">
-                        {{ news[0].text|raw }}
-                    </div>
-                    <!--div class="news-more">
-                        <span>{{ "Lire la suite" |t }}</span>
-                    </div-->
-                </div>
-            </div>
-        </a>
-    </div>
-    {% for new in news|slice(1) %}
-        {% if(loop.index0%2==0) %}
-            <div class="row news">
-        {% endif %}
-        <a href="{{ new.url }}">
-            <div class="col-md-6">
-                <div class="news-image" style="background-image:url('{{ new.image }}')">
-                    <div class="news-overlay">
-                        {{ new.title }}
+                    <div class="news-type" style="background-color:{{ new.tagColor }}">
+                        {{ new.tag }}
                     </div>
                 </div>
-                <div class="news-type" style="background-color:{{ new.tagColor }}">
-                    {{ new.tag }}
+                <div class="col-md-8 news-right">
+                    <div class="news-background">
+                        <div class="news-title">
+                            {{ new.title }}
+                        </div>
+                        <div class="news-date">09/08/2016</div>
+                        <div class="news-content">
+                            {{ new.text|raw }}
+                        </div>
+                        <div class="news-more">
+                            <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </a>
-        {% if(loop.index0%2==1 or loop.last) %}
-            </div>
-        {% endif %}
+            </a>
+        </div>
     {% endfor %}
 </div>
