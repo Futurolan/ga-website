@@ -5,25 +5,27 @@
     } only %}
 
     <div class="row news-main">
-        <div class="col-md-12">
-            <div class="news-image" style="background-image:url('{{ news[0].image }}')">
-            </div>
-            <div class="news-type" style="background-color:{{ news[0].tagColor }}">
-                {{ news[0].tag }}
-            </div>
-            <div class="news-background">
-                <div class="news-title">
-                    {{ news[0].title }}
+        <a href="{{ news[0].url }}">
+            <div class="col-md-12">
+                <div class="news-image" style="background-image:url('{{ news[0].image }}')">
                 </div>
-                <div class="news-date">09/08/2016</div>
-                <div class="news-content">
-                    {{ news[0].text|raw }}
+                <div class="news-type" style="background-color:{{ news[0].tagColor }}">
+                    {{ news[0].tag }}
                 </div>
-                <div class="news-more">
-                    <span><a href="{{ news[0].url }}">{{ "Lire la suite" |t }}</a></span>
+                <div class="news-background">
+                    <div class="news-title">
+                        {{ news[0].title }}
+                    </div>
+                    <div class="news-date">09/08/2016</div>
+                    <div class="news-content">
+                        {{ news[0].text|raw }}
+                    </div>
+                    <!--div class="news-more">
+                        <span>{{ "Lire la suite" |t }}</span>
+                    </div-->
                 </div>
             </div>
-        </div>
+        </a>
     </div>
     {% for new in news|slice(1) %}
         {% if(loop.index0%2==0) %}
