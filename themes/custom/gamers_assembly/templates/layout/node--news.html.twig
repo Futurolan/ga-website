@@ -11,14 +11,26 @@
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="news-image" style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+                <div class="news-image"
+                     style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
             </div>
             <div class="row">
                 <div class="col-md-8">
                     <div class="news-content">{{ node.get('field_news_content').value | raw }}</div>
                 </div>
-                <div class="col-md-2 col-md-offset-2">
+                <div class="col-md-4">
+                    <div>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}">
+                            <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=http://{{ host  ~ url }}">
+                            <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div>
+                        {{ node.getCreatedTime()|date("d/m/Y - H:i") }} {{ author_name }}
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -28,12 +40,12 @@
             <div class="row">
                 <div class="col-md-4">
                     {% if(nextPrevIds.prev) %}
-                    <div class="news-link">
-                        <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.prev}) }}">
-                            <i class="fa fa-caret-left" aria-hidden="true"></i> &nbsp;
-                            {{ "Précédente"|t }}
-                        </a>
-                    </div>
+                        <div class="news-link">
+                            <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.prev}) }}">
+                                <i class="fa fa-caret-left" aria-hidden="true"></i> &nbsp;
+                                {{ "Précédente"|t }}
+                            </a>
+                        </div>
                     {% endif %}
                 </div>
                 <div class="col-md-4">
