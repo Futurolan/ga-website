@@ -101,10 +101,16 @@ a {
   text-transform: uppercase;
 }
 #block-mainnavigation ul li a:hover, #block-mainnavigation ul li a.is-active {
+  background-color: #156AAD;
+}
+#block-mainnavigation ul li a.ticketing {
   background-color: #FC7E00;
 }
+#block-mainnavigation ul li a.ticketing:hover, #block-mainnavigation ul li a.ticketing.is-active {
+  background-color: #FF8D31;
+}
 #block-mainnavigation ul li.nav-item--active-trail > a {
-  background-color: #FC7E00;
+  background-color: #156AAD;
 }
 #block-mainnavigation ul li:hover ul {
   height: auto;
@@ -198,10 +204,11 @@ body {
   display: inline-block;
 }
 .views-news label {
-  width: 100px;
+  width: auto;
+  margin-right: 10px;
 }
 .views-news select {
-  width: 150px;
+  min-width: 150px;
 }
 .views-news .white-area .headline {
   margin-bottom: 50px;
@@ -511,7 +518,120 @@ select, input {
   background-color: #999999;
   color: #ffffff;
   border: 1px solid #ffffff;
-  opacity: 0.5;
+  opacity: 0.25;
+}
+
+select {
+  width: 100%;
+  opacity: 1;
+}
+select option {
+  color: #ffffff;
+}
+
+/**
+ * Select
+ */
+:root .css3-metro-dropdown option, :root .css3-metro-dropdown:after, :root .css3-metro-dropdown::after, :root .css3-metro-dropdown select {
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+:root .css3-metro-dropdown select, :root .css3-metro-dropdown:after, :root .css3-metro-dropdown::after {
+  display: block;
+  background: rgba(153, 153, 153, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+:root .css3-metro-dropdown select, :root .css3-metro-dropdown option {
+  padding: 6px 45px 6px 15px;
+}
+
+:root .css3-metro-dropdown {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  width: auto;
+}
+
+:root .css3-metro-dropdown::after {
+  content: "\25bc";
+  background-color: #ffffff;
+  color: #000000;
+  margin: 5px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: block;
+  width: 32px;
+  font-size: 12px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 10px;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+}
+
+:root .css3-metro-dropdown select {
+  height: 34px;
+  border: 0;
+  vertical-align: middle;
+  outline: 0;
+  border: 1px solid #999999;
+}
+
+:root .css3-metro-dropdown option {
+  background: #999999;
+  color: #fff;
+}
+
+:root .css3-metro-dropdown select:hover, :root .css3-metro-dropdown:after:hover, :root .css3-metro-dropdown::after:hover {
+  background: #0058A2;
+}
+
+.css3-metro-dropdown .caret {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  border: none;
+}
+.css3-metro-dropdown .caret::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+  position: absolute;
+  top: 14px;
+  left: 12px;
+}
+
+:root .css3-metro-dropdown-inverse select, :root .css3-metro-dropdown-inverse:after, :root .css3-metro-dropdown-inverse::after {
+  background: #000000;
+}
+
+:root .css3-metro-dropdown-inverse select {
+  border: 1px solid #000000;
+}
+
+:root .css3-metro-dropdown-inverse::after {
+  background-color: #999999;
+}
+
+:root .css3-metro-dropdown-inverse option {
+  background: #000000;
+  color: #fff;
+}
+
+.css3-metro-dropdown-inverse .caret {
+  background-color: #999999;
 }
 
 .stream {
@@ -817,14 +937,17 @@ select, input {
   background: url("../images/mushroom-black.png") right center no-repeat;
 }
 .title-line .space-invader {
-  background: url("../images/mushroom.png") right center no-repeat;
+  background: url("../images/space-invader-black.png") right center no-repeat;
   content: '';
-  height: 27px;
-  width: 27px;
+  height: 24px;
+  width: 33px;
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
   margin-top: -5px;
+}
+.title-line .space-invader.black {
+  background: url("../images/space-invader-black.png") right center no-repeat;
 }
 .title-line .decorated > span, .title-line .decorated > h2 > span {
   position: relative;

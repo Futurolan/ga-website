@@ -1,0 +1,5 @@
+ga_sponsor.settings:
+  title: 'GA Sponsor'
+  base_route_name: ga_sponsor.settings
+  names:
+    - ga_sponsor.settings

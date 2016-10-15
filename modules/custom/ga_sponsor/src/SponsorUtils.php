@@ -30,4 +30,13 @@ class SponsorUtils
 
         return $sponsors;
     }
+
+    public static function getConfiguration()
+    {
+        $config = \Drupal::config('ga_sponsor.settings');
+
+        $variables['title'] = $config->get('title');
+
+        return $variables;
+    }
 }
