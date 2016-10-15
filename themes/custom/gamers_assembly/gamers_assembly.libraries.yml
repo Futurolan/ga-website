@@ -3,6 +3,7 @@ gamers_assembly.corescripts:
   css:
     theme:
       css/style.css: {}
+      libraries/animatecss/animate.css: {}
   js:
     js/script.js: {}
 
