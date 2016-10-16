@@ -10,9 +10,11 @@ class SponsorController extends ControllerBase
     public function render()
     {
         $config = SponsorUtils::getConfiguration();
+        $sponsors = SponsorUtils::getSponsors();
         return array(
             '#theme' => "ga_sponsor",
-            '#config' => $config
+            '#config' => $config,
+            '#sponsors' => $sponsors
         );
     }
 

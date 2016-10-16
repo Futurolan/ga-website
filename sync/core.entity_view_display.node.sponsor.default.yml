@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.field_sponsor_image
+    - field.field.node.sponsor.field_sponsor_level
+    - field.field.node.sponsor.field_sponsor_url
     - node.type.sponsor
   module:
     - image
+    - options
     - user
 _core:
   default_config_hash: Lqs7pwsXySqXV1mQNzzq1kUZHG3WCpDPa0sK9ODvV2E
@@ -23,6 +26,19 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_sponsor_level:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_sponsor_url:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   links:
     weight: 100
 hidden:

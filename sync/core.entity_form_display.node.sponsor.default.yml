@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.field_sponsor_image
+    - field.field.node.sponsor.field_sponsor_level
+    - field.field.node.sponsor.field_sponsor_url
     - image.style.thumbnail
     - node.type.sponsor
   module:
     - image
+    - path
 _core:
   default_config_hash: VLBxJufUVnj3Du28xjXd_2aPWBbF-rnOhyJd_ZzcFzI
 id: node.sponsor.default
@@ -17,7 +20,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   field_sponsor_image:
@@ -27,22 +30,39 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_sponsor_level:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_sponsor_url:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 8
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 9
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -52,12 +72,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

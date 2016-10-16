@@ -19,7 +19,7 @@ class FrontPreLiveController extends ControllerBase
     public function render()
     {
         $slides = SlideUtils::getSlides();
-        $sponsors = SponsorUtils::getSponsors();
+        $sponsors = SponsorUtils::getFrontSponsors();
         $news = NewsUtils::getLastNews();
         $config = FrontUtils::getPreliveConfiguration();
 

@@ -10,7 +10,6 @@
     {% if items %}
         <ul{{ attributes }} class="nav navbar-nav">
             {% for item in items %}
-                {{ kpr(item.in_active_trail) }}
                 {% set classes = [
                 'nav-item',
                 item.in_active_trail ? 'nav-item--active-trail',

@@ -7,7 +7,7 @@ use Drupal\node\Entity\Node;
 
 class SponsorUtils
 {
-    public static function getSponsors()
+    public static function getFrontSponsors()
     {
         $sponsorNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
@@ -22,12 +22,34 @@ class SponsorUtils
 
             $sponsors[] = array(
                 "title" => $node->getTitle(),
-                "image" => ImageStyle::load('sponsor_front')->buildUrl($node->get("field_sponsor_image")->entity->uri->value),
+                "image" => ImageStyle::load('sponsor_front')->buildUrl($node->get("field_sponsor_image")->entity->uri->value)
             );
         }
 
         shuffle($sponsors);
 
+        return $sponsors;
+    }
+
+    public static function getSponsors()
+    {
+        $sponsorNids = \Drupal::entityQuery('node')
+            ->condition('status', 1)
+            ->condition('type', 'sponsor')
+            ->execute();
+
+        $sponsors = [];
+
+        $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+        foreach ($sponsorNids as $nid) {
+            $node = Node::load($nid)->getTranslation($langcode);
+
+            $sponsors[$node->field_sponsor_level->value][]= array(
+                "title" => $node->getTitle(),
+                "url" => $node->field_sponsor_url->value,
+                "image" => ImageStyle::load('sponsor_front')->buildUrl($node->get("field_sponsor_image")->entity->uri->value)
+            );
+        }
         return $sponsors;
     }
 
