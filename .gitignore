@@ -3,6 +3,7 @@
 
 sync/ga_slide.slide.*
 sync/ga_stream.stream.*
+sync/ga_game.game.*
 sync/ga_front.prelive.settings.yml
 sync/ga_ticket.settings.yml
 sync/ga_gamers.settings.yml

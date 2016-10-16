@@ -2,7 +2,7 @@ uuid: 6ffa38f1-30cc-4087-a4c7-361dfcc95f56
 langcode: fr
 status: true
 dependencies: {  }
-name: Catégories
+name: Tags
 vid: tags
 description: ''
 hierarchy: 0

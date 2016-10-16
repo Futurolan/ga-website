@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.news.field_news_content
+    - field.field.node.news.field_news_game
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_tags
     - image.style.thumbnail
     - node.type.news
   module:
     - image
+    - path
     - text
 _core:
   default_config_hash: UJKq6wziHc6tKBxUjrN4zVKFy_av2pUlwYaFNvHpkJA
@@ -31,6 +33,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+  field_news_game:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_news_image:
     weight: 3
     settings:
@@ -40,12 +50,20 @@ content:
     type: image_image
   field_news_tags:
     weight: 2
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete_tags
   langcode:
     type: language_select
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
     settings: {  }
     third_party_settings: {  }
   promote:
