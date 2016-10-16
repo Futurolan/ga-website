@@ -40,3 +40,4 @@ permissions:
   36: 'translate tags taxonomy_term'
   37: 'use text format formatted_text'
   38: 'override news authored on option'
+  39: 'override sponsor published option'
