@@ -109,7 +109,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase
         $form['ticket']['ticket_text'] = array(
             '#type' => 'text_format',
             '#title' => $this->t('Text'),
-            '#default_value' => $config->get('planning_text'),
+            '#default_value' => $config->get('ticket_text'),
             '#required' => TRUE,
             '#format' => 'formatted_text'
         );
@@ -117,7 +117,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase
         $form['ticket']['ticket_cta'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('CTA text'),
-            '#default_value' => $config->get('planning_cta'),
+            '#default_value' => $config->get('ticket_cta'),
             '#required' => TRUE,
         );
 
