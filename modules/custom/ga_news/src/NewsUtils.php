@@ -22,29 +22,27 @@ class NewsUtils
         foreach ($newsNids as $nid) {
             $node = Node::load($nid)->getTranslation($langcode);
 
-            //TODO Load all tags
-            $tags = \Drupal\taxonomy\Entity\Term::loadMultiple($node->field_news_tags->value);
 
             $tagsArray = array();
-            foreach($tags as $tag){
-                $tagsArray[] = $tag->getName();
+            foreach($node->field_news_tags as $tag){
+                $tagsArray[] = \Drupal\taxonomy\Entity\Term::load($tag->target_id)->getName();
             }
 
-            kpr($tagsArray);
-
-            $gameId = $node->field_news_game->target_id;
+            $gameId = $node->field_game->target_id;
             $color = null;
             if ($gameId) {
                 $game = \Drupal::entityTypeManager()->getStorage("game")->load($gameId);
                 $color =$game->getColor();
             }
 
+
+
             $news[] = array(
                 "nid" => $node->id(),
                 "title" => $node->getTitle(),
                 "image" => count($news) == 0 ? ImageStyle::load('news_front_big')->buildUrl($node->get("field_news_image")->entity->uri->value) : ImageStyle::load('news_front')->buildUrl($node->get("field_news_image")->entity->uri->value),
                 "text" => $node->get("field_news_content")->getValue()[0]['summary'],
-                "tags" => join(',',$tagsArray),
+                "tags" => $tagsArray,
                 "color" => $color,
                 "url" => $node->url()
             );

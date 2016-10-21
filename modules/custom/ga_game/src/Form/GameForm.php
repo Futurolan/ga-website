@@ -54,6 +54,16 @@ class GameForm extends EntityForm
             '#required' => TRUE,
         ];
 
+        $form['type'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Type'),
+            '#options' => [
+                'moba' => $this->t('MOBA'),
+                'fps' => $this->t('FPS'),
+            ],
+            '#required' => TRUE,
+        ];
+
         $form['description'] = array(
             '#type' => 'textarea',
             '#title' => $this->t('Description'),

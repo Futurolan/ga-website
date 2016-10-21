@@ -94,10 +94,6 @@
       background-size: cover;
       background-position: center center;
 
-      &.league-of-legends {
-        background-image: url("../images/news-type/league-of-legends.jpg");
-      }
-
       .news-overlay {
         position: absolute;
         bottom: 0;
@@ -121,7 +117,10 @@
       font-weight: bold;
       font-size: 14px;
       padding: 3px 10px;
-    
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color:$dark-blue;
     }
   }
 

@@ -20,5 +20,8 @@ ga_game.game.*:
     editor:
       type: string
       label: 'Description'
+    type:
+      type: string
+      label: 'Type'
     uuid:
       type: string

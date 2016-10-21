@@ -28,5 +28,9 @@ interface GameInterface extends ConfigEntityInterface
 
     public function setEditor($editor);
 
+    public function getType();
+
+    public function setType($type);
+
 
 }

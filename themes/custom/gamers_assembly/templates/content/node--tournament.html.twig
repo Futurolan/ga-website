@@ -12,20 +12,16 @@
             </div>
             <div class="row">
                 <div class="col-md-8 tournament-tag-info">
-                    <span class="tournament-tag">Editeur: Riot Games</span>
-                    <span class="tournament-tag">MOBA</span>
-                    <span class="tournament-tag">PC</span>
+                    <span class="tournament-tag">{{ node.field_game.entity.getEditor()}}</span>
+                    <span class="tournament-tag">{{ node.field_game.entity.getType()|upper}}</span>
+                    <span class="tournament-tag">{{ node.field_tournament_type.value }}</span>
+                    <span class="tournament-tag">{{ node.field_tournament_plateform.value }}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-8">
                     <div class="tournament-game-description">
-                        Dans League of Legends deux équipes s'affrontent sur une carte avec une grande variété de
-                        champions différents. Le but est de coopérer entre équipiers pour détruire la base de
-                        l'adversaire.
-                    </div>
-                    <div class="tournament-description">
-                        {{ node.get('field_tournament_description').value | raw }}
+                        {{ node.field_game.entity.getDescription()|raw }}
                     </div>
                     <div class="tournament-planning">
                         <h3>{{ "Planning "|t }}</h3>

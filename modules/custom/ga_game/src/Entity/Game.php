@@ -83,6 +83,13 @@ class Game extends ConfigEntityBase implements GameInterface
     protected $editor;
 
     /**
+     * The Game entity type.
+     *
+     * @var string
+     */
+    protected $type;
+
+    /**
      * {@inheritdoc}
      */
     public function getDescription()
@@ -117,6 +124,14 @@ class Game extends ConfigEntityBase implements GameInterface
     /**
      * {@inheritdoc}
      */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function setDescription($description)
     {
         $this->description = $description;
@@ -144,5 +159,13 @@ class Game extends ConfigEntityBase implements GameInterface
     public function setEditor($editor)
     {
         $this->editor = $editor;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 }
