@@ -24,17 +24,19 @@ class NewsUtils
 
 
             $tagsArray = array();
-            foreach($node->field_news_tags as $tag){
+            foreach ($node->field_news_tags as $tag) {
                 $tagsArray[] = \Drupal\taxonomy\Entity\Term::load($tag->target_id)->getName();
             }
 
             $gameId = $node->field_game->target_id;
             $color = null;
+            $gameShortName = null;
             if ($gameId) {
                 $game = \Drupal::entityTypeManager()->getStorage("game")->load($gameId);
-                $color =$game->getColor();
-            }
+                $color = $game->getColor();
+                $gameShortName = $game->getShortName();
 
+            }
 
 
             $news[] = array(
@@ -43,6 +45,7 @@ class NewsUtils
                 "image" => count($news) == 0 ? ImageStyle::load('news_front_big')->buildUrl($node->get("field_news_image")->entity->uri->value) : ImageStyle::load('news_front')->buildUrl($node->get("field_news_image")->entity->uri->value),
                 "text" => $node->get("field_news_content")->getValue()[0]['summary'],
                 "tags" => $tagsArray,
+                "gameShortName" => $gameShortName,
                 "color" => $color,
                 "url" => $node->url()
             );

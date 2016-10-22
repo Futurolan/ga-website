@@ -4,14 +4,7 @@ function gamers_assembly_preprocess_node(&$variables)
     $variables['host'] = \Drupal::request()->getHost();
 
     if ($variables['node']->getType() == "news") {
-        $tag = \Drupal\taxonomy\Entity\Term::load($variables['node']->get("field_news_tags")->getValue()[0]['target_id']);
-        $variables['tagName'] = $tag->getName();
         $variables['nextPrevIds'] = \Drupal\ga_news\NewsUtils::getNextPrevIds($variables['node']->getCreatedTime());
-    }
-
-    if ($variables['node']->getType() == "tournament") {
-        //$tag = \Drupal\taxonomy\Entity\Term::load($variables['node']->get("field_tournament_tag")->getValue()[0]['target_id']);
-        //$variables['tagColor'] = $tag->get("field_tags_color")->getValue()[0]['value'];
     }
     return $variables;
 }

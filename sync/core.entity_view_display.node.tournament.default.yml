@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.tournament.field_game
     - field.field.node.tournament.field_tournament_cashprize
-    - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_image
     - field.field.node.tournament.field_tournament_planning
@@ -40,12 +39,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: field_collection_list
-  field_tournament_description:
-    weight: 103
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
   field_tournament_format:
     weight: 109
     label: above

@@ -236,7 +236,7 @@ body {
   background-position: center center;
 }
 .views-news .white-area .news .news-tags {
-  background-color: red;
+  background-color: #004278;
   color: #ffffff;
   text-align: center;
   line-height: 25px;
@@ -349,12 +349,12 @@ body {
   background-size: cover;
   background-position: center center;
 }
-.views-tournaments .white-area .tournament a .tournament-tag {
+.views-tournaments .white-area .tournament a .tournament-game {
   text-align: center;
   line-height: 25px;
   font-weight: bold;
 }
-.views-tournaments .white-area .tournament a .tournament-tag h2 {
+.views-tournaments .white-area .tournament a .tournament-game h2 {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 5px;

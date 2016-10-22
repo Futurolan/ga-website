@@ -13,8 +13,8 @@
                 <div class="col-md-4 news-left">
                     <div class="news-image" style="background-image:url('{{ new.image }}')">
                     </div>
-                    <div class="news-type" {%  if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
-                        {{ new.tags|join(',') }}
+                    <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                        {% if(new.gameShortName) %}({{ new.gameShortName }}) {% endif %}{{ new.tags|join(', ') }}
                     </div>
                 </div>
                 <div class="col-md-8 news-right">
@@ -37,9 +37,9 @@
 
     <div class="row ">
         <div class="col-md-12 text-center">
-            <a href="#">
+            <a href="{{ path('view.news.page_1') }}">
                 <div class="more-news cta btn-motion btn-1c">
-                    + d'actualités
+                    {{ "+ d'actualités"|t }}
                 </div>
             </a>
         </div>

@@ -1,30 +1,31 @@
 <div class="tournament">
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
-        <div class="tournament-image" style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
-        <div class="tournament-tag" style="background-color:{{ tagColor }}">
+        <div class="tournament-image"
+             style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+        <div class="tournament-game" style="background-color:{{ node.field_game.entity.getColor() }}">
             <h2>
                 {{ node.getTitle() }}
             </h2>
         </div>
     </a>
-    <div class="tournament-status">Places restantes : <span class="high">0</span></div>
+    <div class="tournament-status">{{ "Places restantes :"|t }} <span class="high">0</span></div>
     <div class="tournament-bar">
-    	<div class="progress-current high" style="width: 100%"></div>
+        <div class="progress-current high" style="width: 100%"></div>
     </div>
     <div class="row">
-    	<div class="col-md-6 text-left">
-    		<div class="tournament-more">
-    			<a href="#">
-    				Liste des inscrits
-    			</a>
-    		</div>
-    	</div>
-    	<div class="col-md-6 text-right">
-    		<div class="tournament-more">
-    			<a href="#">
-    				S'inscrire
-    			</a>
-    		</div>
-    	</div>
+        <div class="col-md-6 text-left">
+            <div class="tournament-more">
+                <a href="#">
+                    {{ "Liste des inscrits"|t }}
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <div class="tournament-more">
+                <a href="#">
+                    {{ "S'inscrire"|t }}
+                </a>
+            </div>
+        </div>
     </div>
 </div>
