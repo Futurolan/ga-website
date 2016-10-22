@@ -12,6 +12,7 @@ class SponsorUtils
         $sponsorNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
             ->condition('type', 'sponsor')
+            ->sort('field_sponsor_weight')
             ->execute();
 
         $sponsors = [];
@@ -26,8 +27,6 @@ class SponsorUtils
             );
         }
 
-        shuffle($sponsors);
-
         return $sponsors;
     }
 
@@ -36,6 +35,7 @@ class SponsorUtils
         $sponsorNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
             ->condition('type', 'sponsor')
+            ->sort('field_sponsor_weight')
             ->execute();
 
         $sponsors = [];
@@ -58,7 +58,11 @@ class SponsorUtils
         $config = \Drupal::config('ga_sponsor.settings');
 
         $variables['title'] = $config->get('title');
-
+        $variables['lvl0'] = $config->get('lvl0');
+        $variables['lvl1'] = $config->get('lvl1');
+        $variables['lvl2'] = $config->get('lvl2');
+        $variables['lvl3'] = $config->get('lvl3');
+        $variables['lvl4'] = $config->get('lvl4');
         return $variables;
     }
 }

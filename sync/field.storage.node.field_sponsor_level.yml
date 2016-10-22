@@ -12,17 +12,20 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: main
-      label: 'Partenaire principal'
+      value: lvl0
+      label: 'Niveau 0'
     -
-      value: tech
-      label: 'Partenaires techniques'
+      value: lvl1
+      label: 'Niveau 1'
     -
-      value: orga
-      label: 'Partenaires de l''organisation'
+      value: lvl2
+      label: 'Niveau 2'
     -
-      value: support
-      label: 'Avec le soutien de'
+      value: lvl3
+      label: 'Niveau 3'
+    -
+      value: lvl4
+      label: 'Niveau 4'
   allowed_values_function: ''
 module: options
 locked: false

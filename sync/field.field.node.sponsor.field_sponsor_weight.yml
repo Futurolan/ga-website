@@ -1,0 +1,24 @@
+uuid: 53f6b537-6708-45da-af72-7717d8928099
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor_weight
+    - node.type.sponsor
+  module:
+    - weight
+id: node.sponsor.field_sponsor_weight
+field_name: field_sponsor_weight
+entity_type: node
+bundle: sponsor
+label: Poids
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

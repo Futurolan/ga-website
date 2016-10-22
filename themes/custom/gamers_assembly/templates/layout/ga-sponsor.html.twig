@@ -9,77 +9,25 @@
         </div>
     </div>
     <div class="white-area">
-        {% if(sponsors['main']|length > 0) %}
-            {% include directory ~ '/components/title-line/title-line.html.twig' with {
-            title:sponsors['main']|length ==1 ? "Partenaire principal"|t:"Partenaires principaux"|t,
-            } only %}
-            <div class="container sponsor-container">
-                <div class="row">
-                    {% for sponsor in sponsors['main'] %}
-                        <div class="col-md-2">
-                            <a href="{{ sponsor.url }}" target="_blank"
-                               class="logo-sponsor animated bounceInDown">
-                                <img class="img-responsive"
-                                     src="{{ sponsor.image }}"/>
-                            </a>
-                        </div>
-                    {% endfor %}
+        {% for i in 0..4 %}
+            {% if(sponsors['lvl'~i]|length > 0) %}
+                {% include directory ~ '/components/title-line/title-line.html.twig' with {
+                title:config['lvl'~i],
+                } only %}
+                <div class="container sponsor-container">
+                    <div class="row">
+                        {% for sponsor in sponsors['lvl'~i] %}
+                            <div class="col-md-2">
+                                <a href="{{ sponsor.url }}" target="_blank"
+                                   class="logo-sponsor animated bounceInDown">
+                                    <img class="img-responsive"
+                                         src="{{ sponsor.image }}"/>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-        {% endif %}
-        {% if(sponsors['tech']|length > 0) %}
-            {% include directory ~ '/components/title-line/title-line.html.twig' with {
-            title:sponsors['tech']|length ==1 ? "Partenaire technique"|t:"Partenaires techniques"|t,
-            } only %}
-            <div class="container">
-                <div class="row">
-                    {% for sponsor in sponsors['tech'] %}
-                        <div class="col-md-2">
-                            <a href="{{ sponsor.url }}" target="_blank"
-                               class="logo-sponsor animated bounceInDown">
-                                <img class="img-responsive"
-                                     src="{{ sponsor.image }}"/>
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-        {% if(sponsors['orga']|length > 0) %}
-            {% include directory ~ '/components/title-line/title-line.html.twig' with {
-            title:sponsors['orga']|length ==1 ? "Partenaire de l'organisation"|t:"Partenaires de l'organisation"|t,
-            } only %}
-            <div class="container">
-                <div class="row">
-                    {% for sponsor in sponsors['orga'] %}
-                        <div class="col-md-2">
-                            <a href="{{ sponsor.url }}" target="_blank"
-                               class="logo-sponsor animated bounceInDown">
-                                <img class="img-responsive"
-                                     src="{{ sponsor.image }}"/>
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-        {% if(sponsors['support']|length > 0) %}
-            {% include directory ~ '/components/title-line/title-line.html.twig' with {
-            title:"Avec le soutien de"|t,
-            } only %}
-            <div class="container">
-                <div class="row">
-                    {% for sponsor in sponsors['support'] %}
-                        <div class="col-md-2">
-                            <a href="{{ sponsor.url }}" target="_blank"
-                               class="logo-sponsor animated bounceInDown">
-                                <img class="img-responsive"
-                                     src="{{ sponsor.image }}"/>
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
+            {% endif %}
+        {% endfor %}
     </div>
 </div>

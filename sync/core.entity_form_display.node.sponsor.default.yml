@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_image
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_url
+    - field.field.node.sponsor.field_sponsor_weight
     - image.style.thumbnail
     - node.type.sponsor
   module:
@@ -83,4 +84,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_sponsor_weight: true
