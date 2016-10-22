@@ -1,16 +1,16 @@
-uuid: cf0dbfa1-accc-48d9-bae4-1d0f98a62af8
+uuid: 00fad92a-cb2c-451d-9de1-61510722f643
 langcode: fr
 status: true
 dependencies:
   module:
+    - ga_game
     - node
-    - taxonomy
-id: node.field_tournament_tag
-field_name: field_tournament_tag
+id: node.field_game
+field_name: field_game
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: game
 module: core
 locked: false
 cardinality: 1

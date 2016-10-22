@@ -1,0 +1,11 @@
+uuid: 8871c6fd-3976-4fb1-859f-0b62d206be3b
+langcode: fr
+status: true
+dependencies: {  }
+id: league_of_legend
+label: 'League of Legend'
+description: 'Un jeu ou tu t''insultes'
+shortName: LoL
+color: '#FF0000'
+editor: 'Lol Editor'
+type: moba

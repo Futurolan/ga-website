@@ -5,11 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.tournament
-    - taxonomy.vocabulary.tags
   module:
+    - ga_game
     - node
     - options
-    - taxonomy
     - user
     - views_filter_autosubmit
 id: tournaments
@@ -133,6 +132,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         langcode:
           id: langcode
           table: node_field_data
@@ -173,51 +173,6 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_tournament_tag_target_id:
-          id: field_tournament_tag_target_id
-          table: node__field_tournament_tag
-          field: field_tournament_tag_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_tournament_tag_target_id_op
-            label: 'Catégorie :'
-            description: ''
-            use_operator: false
-            operator: field_tournament_tag_target_id_op
-            identifier: field_tournament_tag_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              moderator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: tags
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_tournament_type_value:
           id: field_tournament_type_value
           table: node__field_tournament_type
@@ -283,6 +238,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               moderator: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -298,6 +254,47 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        related_games:
+          id: related_games
+          table: node__field_game
+          field: related_games
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: related_games_op
+            label: Jeu
+            description: ''
+            use_operator: false
+            operator: related_games_op
+            identifier: related_games
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              moderator: '0'
+              administrator: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: 0
+          plugin_id: ga_game_related_games
       sorts:
         title:
           id: title
@@ -321,13 +318,16 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -346,7 +346,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

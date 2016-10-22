@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.field.node.news.field_game
     - field.field.node.news.field_news_content
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_tags
@@ -10,6 +11,7 @@ dependencies:
     - node.type.news
   module:
     - image
+    - path
     - text
 _core:
   default_config_hash: UJKq6wziHc6tKBxUjrN4zVKFy_av2pUlwYaFNvHpkJA
@@ -20,11 +22,16 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
-  field_news_content:
+  field_game:
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_news_content:
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -40,25 +47,33 @@ content:
     type: image_image
   field_news_tags:
     weight: 2
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete_tags
   langcode:
     type: language_select
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -68,12 +83,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
