@@ -13,8 +13,8 @@
                 <div class="col-md-4 news-left">
                     <div class="news-image" style="background-image:url('{{ new.image }}')">
                     </div>
-                    <div class="news-type" style="background-color:{{ new.tagColor }}">
-                        {{ new.tag }}
+                    <div class="news-type" {%  if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                        {{ new.tags|join(',') }}
                     </div>
                 </div>
                 <div class="col-md-8 news-right">

@@ -1,0 +1,27 @@
+ga_game.game.*:
+  type: config_entity
+  label: 'Game config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: string
+      label: 'Description'
+    shortName:
+      type: string
+      label: 'Description'
+    color:
+      type: string
+      label: 'Description'
+    editor:
+      type: string
+      label: 'Description'
+    type:
+      type: string
+      label: 'Type'
+    uuid:
+      type: string

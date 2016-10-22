@@ -1,0 +1,14 @@
+name: Config Entity View
+description: 'Exposing Config Entities to the Views'
+type: module
+# core: 8.x
+package: Other
+dependencies:
+  - views
+configure: config_view.settings
+
+# Information added by Drupal.org packaging script on 2016-10-04
+version: '8.x-1.0-alpha1+5-dev'
+core: '8.x'
+project: 'config_view'
+datestamp: 1475617140
