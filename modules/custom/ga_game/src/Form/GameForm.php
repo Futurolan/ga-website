@@ -61,6 +61,7 @@ class GameForm extends EntityForm
             '#options' => [
                 'moba' => $this->t('MOBA'),
                 'fps' => $this->t('FPS'),
+                'card game' => $this->t('Card game'),
             ],
             '#required' => TRUE,
         ];
