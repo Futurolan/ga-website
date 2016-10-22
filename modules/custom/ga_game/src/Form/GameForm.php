@@ -57,6 +57,7 @@ class GameForm extends EntityForm
         $form['type'] = [
             '#type' => 'select',
             '#title' => $this->t('Type'),
+            '#default_value' => $game->getType(),
             '#options' => [
                 'moba' => $this->t('MOBA'),
                 'fps' => $this->t('FPS'),
