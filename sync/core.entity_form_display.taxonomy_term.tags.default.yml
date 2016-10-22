@@ -3,8 +3,6 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.tags.field_tags_color
-    - field.field.taxonomy_term.tags.field_tags_short_name
     - taxonomy.vocabulary.tags
   module:
     - path
@@ -21,20 +19,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_tags_color:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_tags_short_name:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   langcode:
     type: language_select
     weight: 0

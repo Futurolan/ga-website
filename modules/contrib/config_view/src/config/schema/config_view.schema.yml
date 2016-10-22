@@ -1,0 +1,6 @@
+config_view.settings:
+  type: sequence
+  label: 'Config Entity Include in the Views'
+  sequence:
+      type: string
+      label: 'Config entities that should be exposed to Views'

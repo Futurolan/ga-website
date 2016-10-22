@@ -1,0 +1,4 @@
+administer games:
+  title: 'Administer games'
+  description: 'Create, update and delete all games.'
+  restrict access: true
