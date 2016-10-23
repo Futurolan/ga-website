@@ -4,6 +4,7 @@ namespace Drupal\ga_slide\Form;
 
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Class SlidemForm.
@@ -68,6 +69,11 @@ class SlideForm extends EntityForm
      */
     public function save(array $form, FormStateInterface $form_state)
     {
+
+        $file = File::load($form_state->getValue('image')[0]);
+        $file_usage = \Drupal::service('file.usage');
+        $file_usage->add($file, "ga_slide", "config", 1);
+
         $slide = $this->entity;
         $status = $slide->save();
 
