@@ -1,0 +1,23 @@
+<?php
+
+function ga_weezevent_update_tournament_info_cron()
+{
+    $config = \Drupal::config('ga_weezevent.settings');
+    $weezevent = new \Drupal\ga_weezevent\WeezeventAPI($config->get('api_key'), $config->get('access_token'));
+
+    $tournamentNids = \Drupal::entityQuery('node')
+        ->condition('status', 1)
+        ->condition('type', 'tournament')
+        ->execute();
+
+    foreach ($tournamentNids as $nid) {
+        $node = \Drupal\node\Entity\Node::load($nid);
+        try {
+            $result = $weezevent->participants($config->get('id_event'), $node->field_tournament_weezevent_id->value);
+            //TODO Set tournament information with result (LOOP)
+
+        } catch (Exception $e) {
+            \Drupal::logger('ga_weezevent')->error($e->getMessage());
+        }
+    }
+}

@@ -1,0 +1,20 @@
+uuid: f0122b16-4991-4e3d-a15e-bc5145298477
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tournament_reserved_slot
+field_name: field_tournament_reserved_slot
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

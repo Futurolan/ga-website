@@ -9,8 +9,11 @@ dependencies:
     - field.field.node.tournament.field_tournament_image
     - field.field.node.tournament.field_tournament_planning
     - field.field.node.tournament.field_tournament_plateform
+    - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
+    - field.field.node.tournament.field_tournament_size
     - field.field.node.tournament.field_tournament_type
+    - field.field.node.tournament.field_tournament_weezevent_id
     - node.type.tournament
   module:
     - field_collection
@@ -66,18 +69,41 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+  field_tournament_reserved_slot:
+    weight: 115
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   field_tournament_rules:
     weight: 111
     label: above
     settings: {  }
     third_party_settings: {  }
     type: file_default
+  field_tournament_size:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   field_tournament_type:
     weight: 107
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+  field_tournament_weezevent_id:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   links:
     weight: 100
 hidden:

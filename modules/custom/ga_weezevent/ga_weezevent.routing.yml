@@ -1,0 +1,7 @@
+ga_weezevent.settings:
+  path: '/admin/ga/weezevent/settings'
+  defaults:
+    _title: 'Weezevent settings form'
+    _form: '\Drupal\ga_weezevent\Form\WeezeventSettingsForm'
+  requirements:
+    _role: 'moderator'

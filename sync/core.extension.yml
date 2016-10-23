@@ -28,6 +28,7 @@ module:
   ga_stream: 0
   ga_ticket: 0
   ga_visitors: 0
+  ga_weezevent: 0
   help: 0
   image: 0
   imce: 0
@@ -48,6 +49,7 @@ module:
   token: 0
   toolbar: 0
   toolbar_menu: 0
+  ultimate_cron: 0
   update: 0
   user: 0
   views_filter_autosubmit: 0
