@@ -9,25 +9,29 @@
         <div class="row">
             <div class="col-md-4">
                 {% include directory ~ '/components/home-block/home-block.html.twig' with {
-                title:config.event_title,
-                text:config.event_text,
-                cta:config.event_cta,
-                link:"#"
+                title:config.b1_title,
+                text:config.b1_text,
+                cta:config.b1_cta,
+                reverse:config.b1_reverse,
+                link:config.b1_link
                 } only %}
             </div>
             <div class="col-md-4">
                 {% include directory ~ '/components/home-block/home-block.html.twig' with {
-                text:config.planning_text,
-                cta:config.planning_cta,
-                link:'#'
+                title:config.b2_title,
+                text:config.b2_text,
+                cta:config.b2_cta,
+                reverse:config.b2_reverse,
+                link:config.b2_link
                 } only %}
             </div>
             <div class="col-md-4">
                 {% include directory ~ '/components/home-block/home-block.html.twig' with {
-                text:config.ticket_text,
-                cta:config.ticket_cta,
-                reverse:true,
-                link:'#'
+                title:config.b3_title,
+                text:config.b3_text,
+                cta:config.b3_cta,
+                reverse:config.b3_reverse,
+                link:config.b3_link
                 } only %}
             </div>
         </div>

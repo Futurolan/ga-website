@@ -9,15 +9,22 @@ class FrontUtils
     {
         $config = \Drupal::config('ga_front.prelive.settings');
 
-
         $variables['edition_name'] = $config->get('edition_name');
-        $variables['event_title'] = $config->get('event_title');
-        $variables['event_text'] = $config->get('event_text');
-        $variables['event_cta'] = $config->get('event_cta');
-        $variables['planning_text'] = $config->get('planning_text');
-        $variables['planning_cta'] = $config->get('planning_cta');
-        $variables['ticket_text'] = $config->get('ticket_text');
-        $variables['ticket_cta'] = $config->get('ticket_cta');
+        $variables['b1_reverse'] = $config->get('b1_reverse');
+        $variables['b1_title'] = $config->get('b1_title');
+        $variables['b1_text'] = $config->get('b1_text');
+        $variables['b1_cta'] = $config->get('b1_cta');
+        $variables['b1_link'] = $config->get('b1_link');
+        $variables['b2_reverse'] = $config->get('b2_reverse');
+        $variables['b2_title'] = $config->get('b2_title');
+        $variables['b2_text'] = $config->get('b2_text');
+        $variables['b2_cta'] = $config->get('b2_cta');
+        $variables['b2_link'] = $config->get('b2_link');
+        $variables['b3_reverse'] = $config->get('b3_reverse');
+        $variables['b3_title'] = $config->get('b3_title');
+        $variables['b3_text'] = $config->get('b3_text');
+        $variables['b3_cta'] = $config->get('b3_cta');
+        $variables['b3_link'] = $config->get('b3_link');
 
         return $variables;
     }

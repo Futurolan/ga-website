@@ -5,24 +5,30 @@ ga_front.prelive.settings:
     edition_name:
       type: text
       label: 'Edition name'
-    event_title:
+    b1_title:
       type: text
-      label: 'Event title'
-    event_text:
+      label: 'Box 1 title'
+    b1_text:
       type: text
-      label: 'Event text'
-    event_cta:
+      label: 'Box 1 text'
+    b1_cta:
       type: text
-      label: 'Event cta'
-    planning_text:
+      label: 'Box 1 cta'
+    b2_title:
       type: text
-      label: 'Event text'
-    planning_cta:
+      label: 'Box 2 title'
+    b2_text:
       type: text
-      label: 'Event cta'
-    ticket_text:
+      label: 'Box 2 text'
+    b2_cta:
       type: text
-      label: 'Event text'
-    ticket_cta:
+      label: 'Box 2 cta'
+    b3_title:
       type: text
-      label: 'Event cta'
+      label: 'Box 3 title'
+    b3_text:
+      type: text
+      label: 'Box 3 text'
+    b3_cta:
+      type: text
+      label: 'Box 3 cta'

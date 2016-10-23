@@ -44,81 +44,127 @@ class FrontPreliveSettingsForm extends ConfigFormBase
             '#required' => TRUE,
         );
 
-        //Event
-        $form['event'] = array(
+        //First Box
+        $form['b1'] = array(
             '#type' => 'details',
-            '#title' => t('Event'),
+            '#title' => t('First Box'),
             '#collapsible' => TRUE,
             '#collapsed' => TRUE,
         );
 
-        $form['event']['event_title'] = array(
+        $form['b1']['b1_reverse'] = array(
+            '#type' => 'checkbox',
+            '#title' => $this->t('Switch color'),
+            '#default_value' => $config->get('b1_reverse'),
+        );
+
+        $form['b1']['b1_title'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Title'),
-            '#default_value' => $config->get('event_title'),
-            '#required' => TRUE,
+            '#default_value' => $config->get('b1_title'),
         );
 
-        $form['event']['event_text'] = array(
+        $form['b1']['b1_text'] = array(
             '#type' => 'text_format',
             '#title' => $this->t('Text'),
-            '#default_value' => $config->get('event_text'),
+            '#default_value' => $config->get('b1_text'),
             '#required' => TRUE,
             '#format' => 'formatted_text'
         );
 
-        $form['event']['event_cta'] = array(
+        $form['b1']['b1_cta'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('CTA text'),
-            '#default_value' => $config->get('event_cta'),
-            '#required' => TRUE,
+            '#default_value' => $config->get('b1_cta'),
         );
 
+        $form['b1']['b1_link'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('CTA link'),
+            '#description' => t("Use relative path"),
+            '#default_value' => $config->get('b1_link'),
+        );
 
-        //Planning
-        $form['planning'] = array(
+        //Second Box
+        $form['b2'] = array(
             '#type' => 'details',
-            '#title' => t('Planning'),
+            '#title' => t('Second Box'),
             '#collapsible' => TRUE,
             '#collapsed' => TRUE,
         );
 
-        $form['planning']['planning_text'] = array(
+        $form['b2']['b2_reverse'] = array(
+            '#type' => 'checkbox',
+            '#title' => $this->t('Switch color'),
+            '#default_value' => $config->get('b2_reverse'),
+        );
+
+        $form['b2']['b2_title'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('Title'),
+            '#default_value' => $config->get('b2_title'),
+        );
+
+        $form['b2']['b2_text'] = array(
             '#type' => 'text_format',
             '#title' => $this->t('Text'),
-            '#default_value' => $config->get('planning_text'),
+            '#default_value' => $config->get('b2_text'),
             '#required' => TRUE,
             '#format' => 'formatted_text'
         );
 
-        $form['planning']['planning_cta'] = array(
+        $form['b2']['b2_cta'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('CTA text'),
-            '#default_value' => $config->get('planning_cta'),
-            '#required' => TRUE,
+            '#default_value' => $config->get('b2_cta'),
         );
 
-        //Ticket
-        $form['ticket'] = array(
+        $form['b2']['b2_link'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('CTA link'),
+            '#description' => t("Use relative path"),
+            '#default_value' => $config->get('b2_link'),
+        );
+
+        //Third Box
+        $form['b3'] = array(
             '#type' => 'details',
-            '#title' => t('Ticket'),
+            '#title' => t('Third Box'),
             '#collapsible' => TRUE,
             '#collapsed' => TRUE,
         );
 
-        $form['ticket']['ticket_text'] = array(
+        $form['b3']['b3_reverse'] = array(
+            '#type' => 'checkbox',
+            '#title' => $this->t('Switch color'),
+            '#default_value' => $config->get('b3_reverse'),
+        );
+
+        $form['b3']['b3_title'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('Title'),
+            '#default_value' => $config->get('b3_title'),
+        );
+
+        $form['b3']['b3_text'] = array(
             '#type' => 'text_format',
             '#title' => $this->t('Text'),
-            '#default_value' => $config->get('ticket_text'),
+            '#default_value' => $config->get('b3_text'),
             '#required' => TRUE,
             '#format' => 'formatted_text'
         );
 
-        $form['ticket']['ticket_cta'] = array(
+        $form['b3']['b3_cta'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('CTA text'),
-            '#default_value' => $config->get('ticket_cta'),
-            '#required' => TRUE,
+            '#default_value' => $config->get('b3_cta'),
+        );
+
+        $form['b3']['b3_link'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('CTA link'),
+            '#description' => t("Use relative path"),
+            '#default_value' => $config->get('b3_link')
         );
 
         return parent::buildForm($form, $form_state);
@@ -133,13 +179,21 @@ class FrontPreliveSettingsForm extends ConfigFormBase
         $config = \Drupal::service('config.factory')->getEditable('ga_front.prelive.settings');
 
         $config->set('edition_name', $form_state->getValue('edition_name'));
-        $config->set('event_title', $form_state->getValue('event_title'));
-        $config->set('event_text', $form_state->getValue('event_text')['value']);
-        $config->set('event_cta', $form_state->getValue('event_cta'));
-        $config->set('planning_text', $form_state->getValue('planning_text')['value']);
-        $config->set('planning_cta', $form_state->getValue('planning_cta'));
-        $config->set('ticket_text', $form_state->getValue('ticket_text')['value']);
-        $config->set('ticket_cta', $form_state->getValue('ticket_cta'));
+        $config->set('b1_reverse', $form_state->getValue('b1_reverse'));
+        $config->set('b1_title', $form_state->getValue('b1_title'));
+        $config->set('b1_text', $form_state->getValue('b1_text')['value']);
+        $config->set('b1_cta', $form_state->getValue('b1_cta'));
+        $config->set('b1_link', $form_state->getValue('b1_link'));
+        $config->set('b2_reverse', $form_state->getValue('b2_reverse'));
+        $config->set('b2_title', $form_state->getValue('b2_title'));
+        $config->set('b2_text', $form_state->getValue('b2_text')['value']);
+        $config->set('b2_cta', $form_state->getValue('b2_cta'));
+        $config->set('b2_link', $form_state->getValue('b2_link'));
+        $config->set('b3_reverse', $form_state->getValue('b3_reverse'));
+        $config->set('b3_title', $form_state->getValue('b3_title'));
+        $config->set('b3_text', $form_state->getValue('b3_text')['value']);
+        $config->set('b3_cta', $form_state->getValue('b3_cta'));
+        $config->set('b3_link', $form_state->getValue('b3_link'));
         $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
         $config->save();
 
