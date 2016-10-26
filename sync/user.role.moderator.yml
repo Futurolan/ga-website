@@ -44,3 +44,6 @@ permissions:
   40: 'schedule publishing of nodes'
   41: 'publish any node type news'
   42: 'unpublish any node type news'
+  43: 'create content translations'
+  44: 'delete content translations'
+  45: 'update content translations'
