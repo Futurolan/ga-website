@@ -42,3 +42,5 @@ permissions:
   38: 'override news authored on option'
   39: 'override sponsor published option'
   40: 'schedule publishing of nodes'
+  41: 'publish any node type news'
+  42: 'unpublish any node type news'
