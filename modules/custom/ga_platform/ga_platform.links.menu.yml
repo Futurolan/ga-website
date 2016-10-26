@@ -1,0 +1,7 @@
+# Platform menu items definition
+entity.platform.collection:
+  title: 'Platform'
+  route_name: entity.platform.collection
+  description: 'List Platform (bundles)'
+  parent: system.admin_structure
+  weight: 99

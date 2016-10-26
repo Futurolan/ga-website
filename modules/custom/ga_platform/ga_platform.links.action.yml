@@ -1,0 +1,6 @@
+entity.platform.add_form:
+  route_name: 'entity.platform.add_form'
+  title: 'Add Platform'
+  appears_on:
+    - entity.platform.collection
+

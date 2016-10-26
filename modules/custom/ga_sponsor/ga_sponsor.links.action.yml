@@ -1,0 +1,6 @@
+entity.sponsor_level.add_form:
+  route_name: 'entity.sponsor_level.add_form'
+  title: 'Add Sponsor level'
+  appears_on:
+    - entity.sponsor_level.collection
+

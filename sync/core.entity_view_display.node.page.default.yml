@@ -3,7 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_page_content
     - field.field.node.page.field_page_image
     - node.type.page
   module:
@@ -15,12 +15,12 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
+  field_page_content:
+    weight: 103
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
   field_page_image:
     weight: 102
     label: above

@@ -10,7 +10,6 @@ dependencies:
     - node.type.sponsor
   module:
     - image
-    - options
     - user
 _core:
   default_config_hash: Lqs7pwsXySqXV1mQNzzq1kUZHG3WCpDPa0sK9ODvV2E
@@ -28,11 +27,12 @@ content:
     third_party_settings: {  }
     type: image
   field_sponsor_level:
-    weight: 102
+    weight: 105
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_label
   field_sponsor_url:
     weight: 103
     label: above

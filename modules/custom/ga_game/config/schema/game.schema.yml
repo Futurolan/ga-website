@@ -13,13 +13,13 @@ ga_game.game.*:
       label: 'Description'
     shortName:
       type: string
-      label: 'Description'
+      label: 'Short name'
     color:
       type: string
-      label: 'Description'
+      label: 'Color'
     editor:
       type: string
-      label: 'Description'
+      label: 'Editor'
     type:
       type: string
       label: 'Type'

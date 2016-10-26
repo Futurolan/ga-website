@@ -9,18 +9,25 @@ class NewsUtils
 {
     public static function getLastNews()
     {
+
+        $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+
         $newsNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
             ->condition('type', 'news')
+            ->condition('langcode',$langcode)
             ->sort('created', 'DESC')
             ->range(0, 3)
             ->execute();
 
         $news = [];
 
-        $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
         foreach ($newsNids as $nid) {
-            $node = Node::load($nid)->getTranslation($langcode);
+
+
+            $node = Node::load($nid);
+
+            $node = \Drupal::entityManager()->getTranslationFromContext($node, $langcode);
 
 
             $tagsArray = array();

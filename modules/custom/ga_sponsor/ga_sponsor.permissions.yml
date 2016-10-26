@@ -1,0 +1,4 @@
+administer sponsor_levels:
+  title: 'Administer sponsor levels'
+  description: 'Create, update and delete all sponsor levels.'
+  restrict access: true

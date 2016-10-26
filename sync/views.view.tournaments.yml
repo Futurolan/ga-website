@@ -7,6 +7,7 @@ dependencies:
     - node.type.tournament
   module:
     - ga_game
+    - ga_platform
     - node
     - options
     - user
@@ -213,10 +214,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        field_tournament_plateform_value:
-          id: field_tournament_plateform_value
-          table: node__field_tournament_plateform
-          field: field_tournament_plateform_value
+        related_platforms:
+          id: related_platforms
+          table: node__field_platform
+          field: related_platforms
           relationship: none
           group_type: group
           admin_label: ''
@@ -225,12 +226,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_tournament_plateform_value_op
+            operator_id: related_platforms_op
             label: Plateforme
             description: ''
             use_operator: false
-            operator: field_tournament_plateform_value_op
-            identifier: field_tournament_plateform_value
+            operator: related_platforms_op
+            identifier: related_platforms
             required: false
             remember: false
             multiple: false
@@ -239,7 +240,7 @@ display:
               anonymous: '0'
               moderator: '0'
               administrator: '0'
-            reduce: false
+            reduce: 0
           is_grouped: false
           group_info:
             label: ''
@@ -252,8 +253,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
+          reduce_duplicates: 0
+          plugin_id: ga_platform_related_platforms
         related_games:
           id: related_games
           table: node__field_game

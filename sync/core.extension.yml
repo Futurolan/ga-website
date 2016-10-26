@@ -25,6 +25,7 @@ module:
   ga_gamers: 0
   ga_news: 0
   ga_planning: 0
+  ga_platform: 0
   ga_slide: 0
   ga_sponsor: 0
   ga_stream: 0

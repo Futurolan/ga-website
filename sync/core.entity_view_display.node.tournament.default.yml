@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.tournament.field_game
+    - field.field.node.tournament.field_platform
     - field.field.node.tournament.field_tournament_cashprize
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_image
     - field.field.node.tournament.field_tournament_planning
-    - field.field.node.tournament.field_tournament_plateform
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
     - field.field.node.tournament.field_tournament_size
@@ -31,6 +31,13 @@ mode: default
 content:
   field_game:
     weight: 113
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_platform:
+    weight: 117
     label: above
     settings:
       link: true
@@ -63,12 +70,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_tournament_plateform:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_tournament_reserved_slot:
     weight: 115
     label: above

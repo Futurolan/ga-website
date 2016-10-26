@@ -5,5 +5,3 @@ entity.stream.collection:
   description: 'List Stream (bundles)'
   parent: system.admin_structure
   weight: 99
-  requirements:
-    _permission: 'administer streams'

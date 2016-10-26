@@ -5,5 +5,3 @@ entity.game.collection:
   description: 'List Game (bundles)'
   parent: system.admin_structure
   weight: 99
-  requirements:
-    _permission: 'administer games'

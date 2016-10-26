@@ -9,6 +9,8 @@ class SponsorUtils
 {
     public static function getFrontSponsors()
     {
+        $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+
         $sponsorNids = \Drupal::entityQuery('node')
             ->condition('status', 1)
             ->condition('type', 'sponsor')
@@ -17,9 +19,10 @@ class SponsorUtils
 
         $sponsors = [];
 
-        $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
         foreach ($sponsorNids as $nid) {
-            $node = Node::load($nid)->getTranslation($langcode);
+
+            $node = Node::load($nid);
+            $node = \Drupal::entityManager()->getTranslationFromContext($node, $langcode);
 
             $sponsors[] = array(
                 "title" => $node->getTitle(),
@@ -42,14 +45,23 @@ class SponsorUtils
 
         $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
         foreach ($sponsorNids as $nid) {
-            $node = Node::load($nid)->getTranslation($langcode);
+            $node = Node::load($nid);
+            $node = \Drupal::entityManager()->getTranslationFromContext($node, $langcode);
 
-            $sponsors[$node->field_sponsor_level->value][]= array(
+            $sponsorLevelEntity = \Drupal::entityTypeManager()->getStorage("sponsor_level")->load($node->field_sponsor_level->target_id);
+            if (!isset($sponsors[$sponsorLevelEntity->weight])) {
+                $sponsors[$sponsorLevelEntity->weight] = array(
+                    "title" => $sponsorLevelEntity->label(),
+                    "sponsors" => []
+                );
+            }
+            $sponsors[$sponsorLevelEntity->weight]["sponsors"][] = array(
                 "title" => $node->getTitle(),
                 "url" => $node->field_sponsor_url->value,
                 "image" => ImageStyle::load('sponsor_front')->buildUrl($node->get("field_sponsor_image")->entity->uri->value)
             );
         }
+        ksort($sponsors);
         return $sponsors;
     }
 
@@ -58,11 +70,6 @@ class SponsorUtils
         $config = \Drupal::config('ga_sponsor.settings');
 
         $variables['title'] = $config->get('title');
-        $variables['lvl0'] = $config->get('lvl0');
-        $variables['lvl1'] = $config->get('lvl1');
-        $variables['lvl2'] = $config->get('lvl2');
-        $variables['lvl3'] = $config->get('lvl3');
-        $variables['lvl4'] = $config->get('lvl4');
         return $variables;
     }
 }

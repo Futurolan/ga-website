@@ -47,3 +47,7 @@ permissions:
   43: 'create content translations'
   44: 'delete content translations'
   45: 'update content translations'
+  46: 'translate any entity'
+  47: 'administer platforms'
+  48: 'administer games'
+  49: 'administer sponsor_levels'

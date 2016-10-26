@@ -1,33 +1,17 @@
-uuid: 10404f1f-79f6-42af-8421-c5004641bb92
+uuid: c9badb8e-38a7-4232-9a3f-0c440aa8173d
 langcode: fr
 status: true
 dependencies:
   module:
+    - ga_sponsor
     - node
-    - options
 id: node.field_sponsor_level
 field_name: field_sponsor_level
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: lvl0
-      label: 'Niveau 0'
-    -
-      value: lvl1
-      label: 'Niveau 1'
-    -
-      value: lvl2
-      label: 'Niveau 2'
-    -
-      value: lvl3
-      label: 'Niveau 3'
-    -
-      value: lvl4
-      label: 'Niveau 4'
-  allowed_values_function: ''
-module: options
+  target_type: sponsor_level
+module: core
 locked: false
 cardinality: 1
 translatable: true

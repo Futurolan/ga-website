@@ -1,0 +1,15 @@
+ga_sponsor.sponsor_level.*:
+  type: config_entity
+  label: 'Sponsor level config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    weight:
+      type: integer
+      label: 'Weight'
+    uuid:
+      type: string

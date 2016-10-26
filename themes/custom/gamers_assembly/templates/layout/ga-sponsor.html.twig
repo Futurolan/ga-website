@@ -9,25 +9,23 @@
         </div>
     </div>
     <div class="white-area">
-        {% for i in 0..4 %}
-            {% if(sponsors['lvl'~i]|length > 0) %}
-                {% include directory ~ '/components/title-line/title-line.html.twig' with {
-                title:config['lvl'~i],
-                } only %}
-                <div class="container sponsor-container">
-                    <div class="row">
-                        {% for sponsor in sponsors['lvl'~i] %}
-                            <div class="col-md-2">
-                                <a href="{{ sponsor.url }}" target="_blank"
-                                   class="logo-sponsor animated bounceInDown">
-                                    <img class="img-responsive"
-                                         src="{{ sponsor.image }}"/>
-                                </a>
-                            </div>
-                        {% endfor %}
-                    </div>
+        {% for sponsorList in sponsors %}
+            {% include directory ~ '/components/title-line/title-line.html.twig' with {
+            title:sponsorList.title,
+            } only %}
+            <div class="container sponsor-container">
+                <div class="row">
+                    {% for sponsor in sponsorList.sponsors %}
+                        <div class="col-md-2">
+                            <a href="{{ sponsor.url }}" target="_blank"
+                               class="logo-sponsor animated bounceInDown">
+                                <img class="img-responsive"
+                                     src="{{ sponsor.image }}"/>
+                            </a>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endif %}
+            </div>
         {% endfor %}
     </div>
 </div>

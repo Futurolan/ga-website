@@ -1,0 +1,4 @@
+administer platforms:
+  title: 'Administer platforms'
+  description: 'Create, update and delete all platforms.'
+  restrict access: true

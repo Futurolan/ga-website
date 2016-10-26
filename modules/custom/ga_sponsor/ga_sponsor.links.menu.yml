@@ -1,0 +1,9 @@
+# Sponsor level menu items definition
+entity.sponsor_level.collection:
+  title: 'Sponsor level'
+  route_name: entity.sponsor_level.collection
+  description: 'List Sponsor level (bundles)'
+  parent: system.admin_structure
+  weight: 99
+  requirements:
+    _permission: 'administer sponsor_levels'
