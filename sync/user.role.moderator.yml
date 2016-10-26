@@ -41,3 +41,5 @@ permissions:
   37: 'use text format formatted_text'
   38: 'override news authored on option'
   39: 'override sponsor published option'
+  40: 'schedule publishing of nodes'
+  41: 'view scheduled content'

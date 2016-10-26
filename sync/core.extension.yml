@@ -1,4 +1,5 @@
 module:
+  action: 0
   admin_toolbar: 0
   adminimal_admin_toolbar: 0
   block: 0
@@ -8,6 +9,7 @@ module:
   config_translation: 0
   content_translation: 0
   ctools: 0
+  datetime: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
@@ -43,6 +45,7 @@ module:
   override_node_options: 0
   page_cache: 0
   path: 0
+  scheduler: 0
   system: 0
   taxonomy: 0
   text: 0
