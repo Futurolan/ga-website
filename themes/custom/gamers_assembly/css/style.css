@@ -662,6 +662,117 @@ body {
   display: inline-block;
 }
 
+/* line 2, ../sass/partials/_information.scss */
+.information-page .white-area {
+  padding-top: 0px;
+}
+/* line 6, ../sass/partials/_information.scss */
+.information-page .google-map {
+  margin-bottom: 50px;
+}
+/* line 7, ../sass/partials/_information.scss */
+.information-page .google-map .content-left {
+  background: url(../images/bg-home-blue-area.jpg) center center no-repeat;
+  color: white;
+  padding-top: 50px;
+}
+/* line 12, ../sass/partials/_information.scss */
+.information-page .google-map .content-right {
+  background-color: #ddd;
+}
+/* line 19, ../sass/partials/_information.scss */
+.information-page .info-header {
+  padding-left: 20px;
+  border-left: 1px solid #bbbbbb;
+  margin-bottom: 30px;
+}
+/* line 25, ../sass/partials/_information.scss */
+.information-page .info-block-head {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
+  font-size: 18px;
+  color: #ffffff;
+}
+/* line 32, ../sass/partials/_information.scss */
+.information-page .info-block-head .fa {
+  font-size: 22px;
+}
+/* line 37, ../sass/partials/_information.scss */
+.information-page .info-block-body {
+  background-color: #7a7878;
+  margin-bottom: 30px;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 45, ../sass/partials/_information.scss */
+.information-page .info-collapse {
+  margin-bottom: 30px;
+}
+/* line 48, ../sass/partials/_information.scss */
+.information-page .info-collapse .info-block-body {
+  margin-bottom: 0px;
+}
+/* line 52, ../sass/partials/_information.scss */
+.information-page .info-collapse .info-icon {
+  width: 25px;
+  display: inline-block;
+  margin-right: 5px;
+  text-align: center;
+}
+/* line 59, ../sass/partials/_information.scss */
+.information-page .info-collapse .info-carret {
+  text-align: center;
+  border-left: 2px solid #ffffff;
+}
+/* line 65, ../sass/partials/_information.scss */
+.information-page .info-collapse [aria-expanded="true"] .fa-caret-up {
+  display: none;
+}
+/* line 68, ../sass/partials/_information.scss */
+.information-page .info-collapse [aria-expanded="true"] .fa-caret-down {
+  display: inline-block;
+}
+/* line 74, ../sass/partials/_information.scss */
+.information-page .info-collapse [aria-expanded="false"] .fa-caret-up {
+  display: inline-block;
+}
+/* line 77, ../sass/partials/_information.scss */
+.information-page .info-collapse [aria-expanded="false"] .fa-caret-down {
+  display: none;
+}
+/* line 83, ../sass/partials/_information.scss */
+.information-page .info-ticketing {
+  background-color: #FC7E00;
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* line 89, ../sass/partials/_information.scss */
+.information-page .info-equipment {
+  background-color: #000000;
+}
+/* line 93, ../sass/partials/_information.scss */
+.information-page .info-restoration {
+  background-color: #46679e;
+}
+/* line 97, ../sass/partials/_information.scss */
+.information-page .info-schedule {
+  background-color: #0058a2;
+}
+/* line 101, ../sass/partials/_information.scss */
+.information-page .info-access {
+  background-color: #4589c6;
+}
+/* line 105, ../sass/partials/_information.scss */
+.information-page .info-pricing {
+  background-color: #005a7c;
+}
+/* line 109, ../sass/partials/_information.scss */
+.information-page .info-accommodation {
+  background-color: #00356f;
+}
+
 /* line 2, ../sass/partials/_page.scss */
 .node-page .page-image {
   height: 350px;
@@ -1082,50 +1193,53 @@ select option {
 /* line 1, ../components/home-block/_home-block.scss */
 .home-block {
   background-color: rgba(255, 255, 255, 0.1);
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 205px;
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 20px;
 }
-/* line 9, ../components/home-block/_home-block.scss */
+/* line 12, ../components/home-block/_home-block.scss */
 .home-block .title {
   background-color: white;
   font-size: 18px;
   color: #000000;
   padding: 10px 15px;
 }
-/* line 15, ../components/home-block/_home-block.scss */
+/* line 18, ../components/home-block/_home-block.scss */
 .home-block .text {
   text-align: right;
   padding: 20px 15px 20px 60px;
   letter-spacing: 1px;
 }
-/* line 20, ../components/home-block/_home-block.scss */
+/* line 23, ../components/home-block/_home-block.scss */
 .home-block .btn-bottom {
   position: absolute;
   bottom: 0px;
   right: 0px;
   left: 0px;
 }
-/* line 26, ../components/home-block/_home-block.scss */
-.home-block a {
+/* line 30, ../components/home-block/_home-block.scss */
+.home-block a.reverse {
+  background-color: #FC7E00;
+  color: #ffffff;
+}
+/* line 34, ../components/home-block/_home-block.scss */
+.home-block a:hover {
+  text-decoration: none;
+}
+/* line 37, ../components/home-block/_home-block.scss */
+.home-block a.btn-progress {
   font-weight: bold;
   color: #000000;
   text-decoration: none;
   display: block;
   background-color: #ffffff;
 }
-/* line 27, ../components/home-block/_home-block.scss */
-.home-block a.reverse {
-  background-color: #FC7E00;
-  color: #ffffff;
-}
-/* line 31, ../components/home-block/_home-block.scss */
-.home-block a:hover {
-  text-decoration: none;
-}
-/* line 39, ../components/home-block/_home-block.scss */
-.home-block a .cta {
+/* line 43, ../components/home-block/_home-block.scss */
+.home-block a.btn-progress .cta {
   z-index: 0;
   position: relative;
   padding: 10px;
