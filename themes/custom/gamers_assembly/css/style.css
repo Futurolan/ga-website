@@ -728,19 +728,19 @@ body {
 }
 /* line 65, ../sass/partials/_information.scss */
 .information-page .info-collapse [aria-expanded="true"] .fa-caret-up {
-  display: none;
+  display: inline-block;
 }
 /* line 68, ../sass/partials/_information.scss */
 .information-page .info-collapse [aria-expanded="true"] .fa-caret-down {
-  display: inline-block;
+  display: none;
 }
 /* line 74, ../sass/partials/_information.scss */
 .information-page .info-collapse [aria-expanded="false"] .fa-caret-up {
-  display: inline-block;
+  display: none;
 }
 /* line 77, ../sass/partials/_information.scss */
 .information-page .info-collapse [aria-expanded="false"] .fa-caret-down {
-  display: none;
+  display: inline-block;
 }
 /* line 83, ../sass/partials/_information.scss */
 .information-page .info-ticketing {

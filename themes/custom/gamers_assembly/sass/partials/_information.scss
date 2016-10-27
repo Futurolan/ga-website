@@ -63,19 +63,19 @@
 
 		[aria-expanded="true"] {
 			.fa-caret-up {
-				display: none;
+				display: inline-block;
 			}
 			.fa-caret-down {
-				display: inline-block;
+				display: none;
 			}
 		}
 
 		[aria-expanded="false"] {
 			.fa-caret-up {
-				display: inline-block;
+				display: none;
 			}
 			.fa-caret-down {
-				display: none;
+				display: inline-block;
 			}
 		}
 	}
