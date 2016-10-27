@@ -5,6 +5,12 @@
 #}
 {{ menus.menu_links(items, attributes, 0) }}
 
+<ul class="nav navbar-nav pull-right">
+    <li>
+        <a href="#" class="main-sponsor"><img src="http://ga.dev.com/sites/default/files/images/logo.png" class="img-responsive" /></a>
+    </li>
+</ul>
+
 {% macro menu_links(items, attributes, menu_level) %}
     {% import _self as menus %}
     {% if items %}

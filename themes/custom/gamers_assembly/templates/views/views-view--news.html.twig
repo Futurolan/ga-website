@@ -5,21 +5,11 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
     <div {{ attributes.addClass(classes) }}>
         <div class="grey-area">
             {% include directory ~ "/components/title-line/title-line.html.twig" with {
-                title:"Filtres"|t
+            title:"Dernières actualités"|t,
+            icon: "mushroom"
             } only %}
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        {{ exposed }}
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="white-area">
-            {% include directory ~ "/components/title-line/title-line.html.twig" with {
-            title:"Dernières actualités"|t,
-            icon: "mushroom black"
-            } only %}
             <div class="container">
                 {{ rows }}
             </div>

@@ -30,6 +30,14 @@
             background-color: $orange-hover;
           }
         }
+        &.main-sponsor {
+          padding-top: 0px;
+          padding-bottom: 0px;
+
+          img {
+            height: 70px;
+          }
+        }
       }
       &.nav-item--active-trail > a {
         background-color: $blue-hover;

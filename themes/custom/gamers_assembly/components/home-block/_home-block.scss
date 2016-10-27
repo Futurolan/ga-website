@@ -1,5 +1,8 @@
 .home-block {
   background-color: rgba(255, 255, 255, 0.1);
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   min-height: 205px;
   position: relative;
@@ -31,18 +34,20 @@
     &:hover {
       text-decoration: none;
     }
-    font-weight: bold;
-    color: $black;
-    text-decoration: none;
-    display: block;
-    background-color: $white;
-    .cta {
-      z-index: 0;
-      position: relative;
-      padding: 10px;
-      text-align: center;
-      -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
+    &.btn-progress {
+      font-weight: bold;
+      color: $black;
+      text-decoration: none;
+      display: block;
+      background-color: $white;
+      .cta {
+        z-index: 0;
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-<div class="home-block">
+<div class="home-block" style="background-image: url();">
     {% if(title and title!="") %}
         <div class="row">
             <div class="col-md-12">
@@ -18,7 +18,7 @@
     {% if(cta and cta!="" and link and link!="") %}
         <div class="row btn-bottom">
             <div class="col-md-7 col-md-offset-5">
-                <a href="{{ link }}" {% if(reverse) %} class="reverse" {% endif %} >
+                <a href="{{ link }}" class="btn-progress {% if(reverse) %}reverse{% endif %}" >
                     <div class="cta btn-motion btn-1c">
                         {{ cta }}
                     </div>
