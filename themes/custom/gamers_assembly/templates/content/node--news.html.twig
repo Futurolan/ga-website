@@ -1,66 +1,114 @@
 <div class="node-news">
     <div class="grey-area">
-        <div class="container">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:"Actualités"|t,
+        icon:"mushroom      "
+        } only %}
+        <!--<div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="headline">{{ node.getTitle() }}</h1>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="news-image"
-                     style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="news-content">{{ node.get('field_news_content').value | raw }}</div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}"  target="_blank">
-                            <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://twitter.com/home?status=http://{{ host  ~ url }}"  target="_blank">
-                            <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div>
-                        {{ node.getCreatedTime()|date("d/m/Y - H:i") }} {{ author_name }}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="blue-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    {% if(nextPrevIds.prev) %}
-                        <div class="news-link">
-                            <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.prev}) }}">
-                                <i class="fa fa-caret-left" aria-hidden="true"></i> &nbsp;
-                                {{ "Précédente"|t }}
+                <div class="col-md-8 content-left">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-10">
+                            <div class="news-title">{{ node.getTitle() }}</div>
+                            <div class="news-info"><strong>{{ "Par"|t }}</strong> <a href="#" class="news-author">{{ author_name }}</a> <span class="news-date">{{ "le"|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span></div>
+                        </div>
+                        <div class="col-md-3 col-lg-2 news-share">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}"  target="_blank" class="news-facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/home?status=http://{{ host  ~ url }}"  target="_blank" class="news-twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                         </div>
-                    {% endif %}
-                </div>
-                <div class="col-md-4">
-                    <div class="news-link">
-                        <a href="{{ path('view.news.page_1') }}">{{ "Liste d'actualités"|t }}</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="news-image" style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="news-content">{{ node.get('field_news_content').value | raw }}</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    {% if(nextPrevIds.next) %}
-                    <div class="news-link">
-                        <a href="{{ path('entity.node.canonical', {'node': nextPrevIds.next}) }}">
-                            {{ "Suivante"|t }} &nbsp;
-                            <i class="fa fa-caret-right" aria-hidden="true"></i>
-                        </a>
-                        {% endif %}
+                <div class="col-md-4 content-right blue-area">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% include directory ~ '/components/title-line/title-line.html.twig' with {
+                            title:"Dernières Actualités"|t,
+                            } only %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 news-main">
+                            <a href="{{ new.url }}">
+                                <div class="row">
+                                    <div class="col-xs-4 news-left">
+                                        <div class="news-image" style="background-image:url('http://ga.dev.com/sites/default/files/styles/news_front_big/public/images/news/181827annoncehearthstone.png?itok=NvKA8312')">
+                                        </div>
+                                        <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                                            Gamer Assembly
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 news-right">
+                                        <div class="news-background">
+                                            <div class="news-title">
+                                                Augmentation des slots tournoi Hearthstone
+                                            </div>
+                                            <div class="news-date">09/08/2016</div>
+                                            <div class="news-more">
+                                                <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 news-main">
+                            <a href="{{ new.url }}">
+                                <div class="row">
+                                    <div class="col-xs-4 news-left">
+                                        <div class="news-image" style="background-image:url('http://ga.dev.com/sites/default/files/styles/news_front_big/public/images/news/181827annoncehearthstone.png?itok=NvKA8312')">
+                                        </div>
+                                        <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                                            Gamer Assembly
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 news-right">
+                                        <div class="news-background">
+                                            <div class="news-title">
+                                                Augmentation des slots tournoi Hearthstone
+                                            </div>
+                                            <div class="news-date">09/08/2016</div>
+                                            <div class="news-more">
+                                                <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-12 text-center">
+                            <a href="{{ path('view.news.page_1') }}">
+                                <div class="more-news cta btn-motion btn-1c">
+                                    {{ "+ d'actualités"|t }}
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

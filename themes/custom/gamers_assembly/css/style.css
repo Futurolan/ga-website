@@ -372,43 +372,218 @@ body {
   font-weight: bold;
 }
 /* line 94, ../sass/partials/_news.scss */
-.node-news .white-area {
-  padding-top: 0px;
+.node-news .title-line {
+  margin-bottom: 0px;
 }
 /* line 98, ../sass/partials/_news.scss */
 .node-news .blue-area {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-/* line 103, ../sass/partials/_news.scss */
-.node-news .news-image {
+/* line 104, ../sass/partials/_news.scss */
+.node-news .content-left .news-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+/* line 110, ../sass/partials/_news.scss */
+.node-news .content-left .news-info {
+  margin-bottom: 20px;
+}
+/* line 113, ../sass/partials/_news.scss */
+.node-news .content-left .news-info .news-author {
+  font-weight: bold;
+}
+/* line 117, ../sass/partials/_news.scss */
+.node-news .content-left .news-info .news-date {
+  color: #999999;
+}
+/* line 122, ../sass/partials/_news.scss */
+.node-news .content-left .news-share {
+  margin-bottom: 20px;
+  text-align: right;
+}
+/* line 127, ../sass/partials/_news.scss */
+.node-news .content-left .news-facebook {
+  background-color: #3B5998;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 5px 14px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 136, ../sass/partials/_news.scss */
+.node-news .content-left .news-twitter {
+  background-color: #00aced;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 145, ../sass/partials/_news.scss */
+.node-news .content-left .news-image {
   height: 350px;
   background-size: cover;
   background-position: center center;
 }
-/* line 109, ../sass/partials/_news.scss */
-.node-news .news-content {
+/* line 151, ../sass/partials/_news.scss */
+.node-news .content-left .news-content {
   margin-top: 30px;
   padding-left: 20px;
   border-left: 1px solid #bbbbbb;
   margin-bottom: 30px;
 }
-/* line 115, ../sass/partials/_news.scss */
-.node-news .news-link {
+/* line 157, ../sass/partials/_news.scss */
+.node-news .content-left .news-link {
   text-align: center;
 }
-/* line 117, ../sass/partials/_news.scss */
-.node-news .news-link a {
+/* line 159, ../sass/partials/_news.scss */
+.node-news .content-left .news-link a {
   cursor: pointer;
   color: #ffffff;
   padding: 5px 20px;
   border: 1px solid white;
 }
-/* line 123, ../sass/partials/_news.scss */
-.node-news .news-link a:focus, .node-news .news-link a:hover {
+/* line 165, ../sass/partials/_news.scss */
+.node-news .content-left .news-link a:focus, .node-news .content-left .news-link a:hover {
   text-decoration: none;
 }
+/* line 172, ../sass/partials/_news.scss */
+.node-news .content-right .title-line {
+  margin-bottom: 20px;
+}
+/* line 177, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-image {
+  height: 72px !important;
+}
+/* line 181, ../sass/partials/_news.scss */
+.node-news .content-right .news-main h2 {
+  margin-top: 0px;
+}
+/* line 185, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+/* line 189, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background .news-title {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+/* line 197, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background .news-date {
+  color: #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+/* line 204, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background .news-content {
+  color: white;
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 40px;
+}
+/* line 217, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background .news-more {
+  margin-bottom: -10px;
+  margin-right: -10px;
+  text-align: right;
+  margin-top: 15px;
+}
+/* line 222, ../sass/partials/_news.scss */
+.node-news .content-right .news-main .news-background .news-more span {
+  color: #000000;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 25px;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+/* line 235, ../sass/partials/_news.scss */
+.node-news .content-right .news, .node-news .content-right .news-main {
+  margin-bottom: 20px;
+}
+/* line 237, ../sass/partials/_news.scss */
+.node-news .content-right .news .news-left, .node-news .content-right .news-main .news-left {
+  padding-right: 0px;
+}
+/* line 240, ../sass/partials/_news.scss */
+.node-news .content-right .news .news-right, .node-news .content-right .news-main .news-right {
+  padding-left: 0px;
+}
+/* line 243, ../sass/partials/_news.scss */
+.node-news .content-right .news a, .node-news .content-right .news-main a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 247, ../sass/partials/_news.scss */
+.node-news .content-right .news a:hover, .node-news .content-right .news a:focus, .node-news .content-right .news-main a:hover, .node-news .content-right .news-main a:focus {
+  color: #ffffff;
+}
+/* line 250, ../sass/partials/_news.scss */
+.node-news .content-right .news .news-image, .node-news .content-right .news-main .news-image {
+  position: relative;
+  height: 80px;
+  background-size: cover;
+  background-position: center center;
+}
+/* line 256, ../sass/partials/_news.scss */
+.node-news .content-right .news .news-image .news-overlay, .node-news .content-right .news-main .news-image .news-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+  height: 29px;
+  line-height: 29px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px 5px;
+}
+/* line 274, ../sass/partials/_news.scss */
+.node-news .content-right .news .news-type, .node-news .content-right .news-main .news-type {
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 3px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #004278;
+}
+/* line 286, ../sass/partials/_news.scss */
+.node-news .content-right .more-news {
+  margin-top: 20px;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 15px 50px;
+  color: #000000;
+  font-weight: bold;
+}
 
+@media (max-width: 992px) {
+  /* line 299, ../sass/partials/_news.scss */
+  .node-news .news-share {
+    text-align: left !important;
+  }
+}
 /* line 2, ../sass/partials/_tournament.scss */
 .views-tournaments a:hover, .views-tournaments a:focus {
   text-decoration: none;
