@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-md-9 col-lg-10">
                             <div class="news-title">{{ node.getTitle() }}</div>
-                            <div class="news-info"><strong>{{ "Par"|t }}</strong> <a href="#" class="news-author">{{ author_name }}</a> <span class="news-date">{{ "le"|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span></div>
+                            <div class="news-info"><strong>{{ "Par"|t }}</strong> <span class="news-author">{{ author_name }}</span> <span class="news-date">{{ "le"|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span></div>
                         </div>
                         <div class="col-md-3 col-lg-2 news-share">
                             <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}"  target="_blank" class="news-facebook">
