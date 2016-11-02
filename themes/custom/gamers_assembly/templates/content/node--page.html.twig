@@ -1,29 +1,31 @@
-<div class="node-page">
-    <div class="row grey-area">
-        <div class="col-md-12">
-            <div class="container">
-                <h1>{{ node.getTitle() }}</h1>
+<div class="ticket-page">
+    <div class="grey-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="headline">{{ node.getTitle() }}</h1>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row white-area">
-        <div class="col-md-12">
-            <div class="container">
-                {% if (node.get("field_page_image").entity.uri.value)%}
+    <div class="white-area">
+        <div class="container">
+            {% if (node.get("field_page_image").entity.uri.value)%}
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-image"
                              style="background-image:url('{{ file_url(node.get("field_page_image").entity.uri.value) }}')"></div>
                     </div>
                 </div>
-                {% endif %}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page-content">{{ node.get('field_page_content').value | raw }}</div>
-                    </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-12">
+                    {{ node.get('field_page_content').value | raw }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
