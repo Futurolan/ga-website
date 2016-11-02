@@ -1,17 +1,16 @@
-uuid: 4e9e2485-175f-4907-ba16-0c9d89f1cf7f
+uuid: 85beec1f-b5fc-4888-9160-2ae65c55daec
 langcode: fr
 status: true
 dependencies:
   module:
-    - ga_game
     - node
-id: node.field_news_game
-field_name: field_news_game
+    - text
+id: node.field_tournament_description
+field_name: field_tournament_description
 entity_type: node
-type: entity_reference
-settings:
-  target_type: game
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
