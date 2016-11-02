@@ -11,8 +11,13 @@
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="news-image"
-                     style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+                {% if(node.get("field_news_image").entity.uri.value) %}
+                    <div class="news-image"
+                         style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+                {% else %}
+                    <div class="news-image"
+                         style="background-image:url('/{{ directory }}/images/default-news.png')"></div>
+                {% endif %}
             </div>
             <div class="row">
                 <div class="col-md-8">
@@ -20,10 +25,10 @@
                 </div>
                 <div class="col-md-4">
                     <div>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}"  target="_blank">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}" target="_blank">
                             <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
                         </a>
-                        <a href="https://twitter.com/home?status=http://{{ host  ~ url }}"  target="_blank">
+                        <a href="https://twitter.com/home?status=http://{{ host  ~ url }}" target="_blank">
                             <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
                         </a>
                     </div>
