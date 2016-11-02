@@ -4,6 +4,7 @@ namespace Drupal\ga_game\Form;
 
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Class GameForm.
@@ -73,6 +74,18 @@ class GameForm extends EntityForm
             '#required' => TRUE,
         );
 
+        $form['image'] = array(
+            '#type' => 'managed_file',
+            '#title' => t('Image'),
+            '#required' => TRUE,
+            '#default_value' => $game->getImage(),
+            '#upload_location' => file_default_scheme() . '://game/',
+            '#upload_validators' => array(
+                'file_validate_extensions' => array('gif png jpg jpeg'),
+            ),
+        );
+
+
         $form['id'] = [
             '#type' => 'machine_name',
             '#default_value' => $game->id(),
@@ -92,6 +105,11 @@ class GameForm extends EntityForm
      */
     public function save(array $form, FormStateInterface $form_state)
     {
+
+        $file = File::load($form_state->getValue('image')[0]);
+        $file_usage = \Drupal::service('file.usage');
+        $file_usage->add($file, "ga_game", "config", 1);
+
         $game = $this->entity;
         $status = $game->save();
 

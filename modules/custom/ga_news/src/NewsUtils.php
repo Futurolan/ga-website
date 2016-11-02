@@ -2,6 +2,7 @@
 namespace Drupal\ga_news;
 
 use Drupal\Core\Language\LanguageInterface;
+use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 
@@ -38,19 +39,29 @@ class NewsUtils
             $gameId = $node->field_game->target_id;
             $color = null;
             $gameShortName = null;
+            $gameImage = null;
             if ($gameId) {
                 $game = \Drupal::entityTypeManager()->getStorage("game")->load($gameId);
                 $color = $game->getColor();
                 $gameShortName = $game->getShortName();
-
+                $gameImageUri =  $game->getImageUri();
             }
 
+
+            if ($node->field_news_image->entity){
+                $imageUri = $node->field_news_image->entity->getFileUri();
+            }else if($gameImageUri){
+                $imageUri = $gameImageUri;
+            }else {
+                $imageUri = NewsUtils::getImageUri($node,"field_news_image");
+            }
 
             $news[] = array(
                 "nid" => $node->id(),
                 "title" => $node->getTitle(),
-                "image" => count($news) == 0 ? ImageStyle::load('news_front_big')->buildUrl($node->get("field_news_image")->entity->uri->value) : ImageStyle::load('news_front')->buildUrl($node->get("field_news_image")->entity->uri->value),
+                "image" => ImageStyle::load('news_front')->buildUrl($imageUri),
                 "text" => $node->get("field_news_content")->getValue()[0]['summary'],
+                "date" => $node->getCreatedTime(),
                 "tags" => $tagsArray,
                 "gameShortName" => $gameShortName,
                 "color" => $color,
@@ -82,5 +93,48 @@ class NewsUtils
             ->execute();
 
         return array("prev" => count($prevId) > 0 ? key($prevId) : null, "next" => count($nextId) > 0 ? key($nextId) : null);
+    }
+
+    public static function getImageUri($entity, $fieldName) {
+        $image_uri = NULL;
+        if( $entity->hasField($fieldName) ) {
+            try {
+                $field = $entity->{$fieldName}; //Try loading from field values first.
+                if ($field && $field->target_id) {
+                    $file = File::load($field->target_id);
+                    if ($file) {
+                        $image_uri = $file->getFileUri();
+                    }
+                }
+            } catch (\Exception $e) {
+                \Drupal::logger('get_image_uri')->notice($e->getMessage(), []);
+            }
+
+            // If a set value above wasn't found, try the default image.
+            if (is_null($image_uri)) {
+                try {
+                    $field = $entity->get($fieldName); // Loading from field definition
+                    if ($field) {
+                        // From the image module /core/modules/image/ImageFormatterBase.php
+                        // $default_image = $test->fieldDefinition->getFieldStorageDefinition()->getSetting('default_image');
+                        $default_image = $field->getSetting('default_image');
+                        if ($default_image && $default_image['uuid']) {
+                            // $defaultImageFile = \Drupal::entityManager()->loadEntityByUuid('file', $default_image['uuid']));
+                            // See https://www.drupal.org/node/2549139  entityManager is deprecated.
+                            // Use entity.repository instead.
+                            $entityrepository = \Drupal::service('entity.repository');
+                            $defaultImageFile = $entityrepository->loadEntityByUuid('file', $default_image['uuid']);
+                            if($defaultImageFile) {
+                                $image_uri = $defaultImageFile->getFileUri();
+                            }
+                        }
+                    }
+                } catch (\Exception $e) {
+                    \Drupal::logger('NewsUtils')->notice($e->getMessage(), []);
+                }
+            }
+        }
+
+        return $image_uri;
     }
 }

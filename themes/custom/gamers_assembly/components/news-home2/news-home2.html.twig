@@ -22,7 +22,7 @@
                         <div class="news-title">
                             {{ new.title }}
                         </div>
-                        <div class="news-date">09/08/2016</div>
+                        <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
                         <div class="news-content">
                             {{ new.text|raw }}
                         </div>

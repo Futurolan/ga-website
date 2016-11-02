@@ -1,6 +1,14 @@
 <div class="news">
 	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
-    	<div class="news-image" style="background-image:url('{{ file_url(node.get("field_news_image").entity.uri.value) }}')"></div>
+
+        {% if (node.field_news_image.entity.uri.value) %}
+            <div class="news-image" style="background-image:url('{{ file_url(node.field_news_image.entity.uri.value) }}')"></div>
+        {% elseif(node.field_game.entity.getImageUri()) %}
+            <div class="news-image" style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+        {% else %}
+            <div class="news-image" style="background-image:url('{{ file_url(nodeImage) }}')"></div>
+        {% endif %}
+
     </a>
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
     	<div class="news-tags" {% if (node.field_game.entity.getColor()) %}style="background-color:{{ node.field_game.entity.getColor()}}"{% endif %}>

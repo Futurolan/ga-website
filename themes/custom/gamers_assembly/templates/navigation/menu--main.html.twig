@@ -7,7 +7,7 @@
 
 <ul class="nav navbar-nav pull-right">
     <li>
-        <a href="#" class="main-sponsor"><img src="http://ga.dev.com/sites/default/files/images/logo.png" class="img-responsive" /></a>
+        <a href="#" class="main-sponsor"><img src="http://i.imgur.com/Ax5UbLq.png" class="img-responsive" /></a>
     </li>
 </ul>
 
@@ -22,6 +22,7 @@
                 ] %}
                 <li{{ item.attributes.addClass(classes) }}>
                     {{ link(item.title, item.url,{ 'class':["nav-link"]}) }}
+                    {% if menu_level == 0 %}<span class="active-mesh"></span>{% endif %}
                     {% if item.below %}
                         {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                     {% endif %}

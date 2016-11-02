@@ -32,5 +32,8 @@ interface GameInterface extends ConfigEntityInterface
 
     public function setType($type);
 
+    public function getImage();
+    public function getImageUri();
 
+    public function setImage($image);
 }

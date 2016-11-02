@@ -3,6 +3,7 @@
 namespace Drupal\ga_game\Entity;
 
 use Drupal\Core\Config\Entity\ConfigEntityBase;
+use Drupal\file\Entity\File;
 
 /**
  * Defines the Game entity.
@@ -90,6 +91,13 @@ class Game extends ConfigEntityBase implements GameInterface
     protected $type;
 
     /**
+     * The Game entity image.
+     *
+     * @var string
+     */
+    protected $image;
+
+    /**
      * {@inheritdoc}
      */
     public function getDescription()
@@ -132,6 +140,27 @@ class Game extends ConfigEntityBase implements GameInterface
     /**
      * {@inheritdoc}
      */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getImageUri()
+    {
+        $test = File::load($this->image[0]);
+        if ($test)
+            return $test->getFileUri();
+        else
+            return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function setDescription($description)
     {
         $this->description = $description;
@@ -167,5 +196,13 @@ class Game extends ConfigEntityBase implements GameInterface
     public function setType($type)
     {
         $this->type = $type;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 }

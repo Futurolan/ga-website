@@ -15,7 +15,7 @@ entity_type: node
 bundle: news
 label: Image
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -30,11 +30,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: 48d1285c-2dc6-49c3-8062-261f1cb2f876
     alt: ''
     title: ''
-    width: null
-    height: null
+    width: 1170
+    height: 350
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

@@ -23,5 +23,8 @@ ga_game.game.*:
     type:
       type: string
       label: 'Type'
+    image:
+      type: image
+      label: 'Image'
     uuid:
       type: string

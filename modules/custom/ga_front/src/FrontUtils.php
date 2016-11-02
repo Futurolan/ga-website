@@ -2,6 +2,8 @@
 
 namespace Drupal\ga_front;
 
+use Drupal\file\Entity\File;
+
 class FrontUtils
 {
 
@@ -15,16 +17,19 @@ class FrontUtils
         $variables['b1_text'] = $config->get('b1_text');
         $variables['b1_cta'] = $config->get('b1_cta');
         $variables['b1_link'] = $config->get('b1_link');
+        $variables['b1_image'] = isset($config->get('b1_image')[0]) ? File::load($config->get('b1_image')[0])->getFileUri() : null;
         $variables['b2_reverse'] = $config->get('b2_reverse');
         $variables['b2_title'] = $config->get('b2_title');
         $variables['b2_text'] = $config->get('b2_text');
         $variables['b2_cta'] = $config->get('b2_cta');
         $variables['b2_link'] = $config->get('b2_link');
+        $variables['b2_image'] = isset($config->get('b2_image')[0]) ? File::load($config->get('b2_image')[0])->getFileUri() : null;
         $variables['b3_reverse'] = $config->get('b3_reverse');
         $variables['b3_title'] = $config->get('b3_title');
         $variables['b3_text'] = $config->get('b3_text');
         $variables['b3_cta'] = $config->get('b3_cta');
         $variables['b3_link'] = $config->get('b3_link');
+        $variables['b3_image'] = isset($config->get('b3_image')[0]) ? File::load($config->get('b3_image')[0])->getFileUri() : null;
 
         return $variables;
     }

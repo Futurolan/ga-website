@@ -5,10 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.news
-    - taxonomy.vocabulary.tags
   module:
     - node
-    - taxonomy
     - user
     - views_filter_autosubmit
     - views_infinite_scroll
@@ -149,6 +147,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         langcode:
           id: langcode
           table: node_field_data
@@ -189,51 +188,6 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_news_tags_target_id:
-          id: field_news_tags_target_id
-          table: node__field_news_tags
-          field: field_news_tags_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_news_tags_target_id_op
-            label: 'Catégorie :'
-            description: ''
-            use_operator: false
-            operator: field_news_tags_target_id_op
-            identifier: field_news_tags_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              moderator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: tags
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -258,14 +212,16 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -291,9 +247,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

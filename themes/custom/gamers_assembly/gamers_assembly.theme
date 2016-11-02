@@ -4,7 +4,8 @@ function gamers_assembly_preprocess_node(&$variables)
     $variables['host'] = \Drupal::request()->getHost();
 
     if ($variables['node']->getType() == "news") {
-        $variables['nextPrevIds'] = \Drupal\ga_news\NewsUtils::getNextPrevIds($variables['node']->getCreatedTime());
+        $variables['lastNews'] = \Drupal\ga_news\NewsUtils::getLastNews();
+        $variables['nodeImage'] = \Drupal\ga_news\NewsUtils::getImageUri($variables['node'],"field_news_image");
     }
     return $variables;
 }

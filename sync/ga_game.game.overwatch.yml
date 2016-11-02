@@ -9,3 +9,5 @@ shortName: OW
 color: '#0000FF'
 editor: Blizzard
 type: fps
+image:
+  - '35'

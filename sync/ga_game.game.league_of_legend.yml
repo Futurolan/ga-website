@@ -9,3 +9,5 @@ shortName: LoL
 color: '#FF0000'
 editor: 'Lol Editor'
 type: moba
+image:
+  - '36'

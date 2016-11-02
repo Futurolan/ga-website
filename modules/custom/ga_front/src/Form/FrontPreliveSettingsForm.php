@@ -4,6 +4,7 @@ namespace Drupal\ga_front\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 class FrontPreliveSettingsForm extends ConfigFormBase
 {
@@ -85,6 +86,17 @@ class FrontPreliveSettingsForm extends ConfigFormBase
             '#default_value' => $config->get('b1_link'),
         );
 
+        $form['b1']['b1_image'] = array(
+            '#type' => 'managed_file',
+            '#title' => t('Image'),
+            '#default_value' => $config->get('b1_image'),
+            '#upload_location' => file_default_scheme() . '://front/box/',
+            '#upload_validators' => array(
+                'file_validate_extensions' => array('gif png jpg jpeg'),
+            ),
+        );
+
+
         //Second Box
         $form['b2'] = array(
             '#type' => 'details',
@@ -125,6 +137,17 @@ class FrontPreliveSettingsForm extends ConfigFormBase
             '#description' => t("Use relative path"),
             '#default_value' => $config->get('b2_link'),
         );
+
+        $form['b2']['b2_image'] = array(
+            '#type' => 'managed_file',
+            '#title' => t('Image'),
+            '#default_value' => $config->get('b2_image'),
+            '#upload_location' => file_default_scheme() . '://front/box/',
+            '#upload_validators' => array(
+                'file_validate_extensions' => array('gif png jpg jpeg'),
+            ),
+        );
+
 
         //Third Box
         $form['b3'] = array(
@@ -167,6 +190,16 @@ class FrontPreliveSettingsForm extends ConfigFormBase
             '#default_value' => $config->get('b3_link')
         );
 
+        $form['b3']['b3_image'] = array(
+            '#type' => 'managed_file',
+            '#title' => t('Image'),
+            '#default_value' => $config->get('b3_image'),
+            '#upload_location' => file_default_scheme() . '://front/box/',
+            '#upload_validators' => array(
+                'file_validate_extensions' => array('gif png jpg jpeg'),
+            ),
+        );
+
         return parent::buildForm($form, $form_state);
     }
 
@@ -184,17 +217,37 @@ class FrontPreliveSettingsForm extends ConfigFormBase
         $config->set('b1_text', $form_state->getValue('b1_text')['value']);
         $config->set('b1_cta', $form_state->getValue('b1_cta'));
         $config->set('b1_link', $form_state->getValue('b1_link'));
+        $config->set('b1_image', $form_state->getValue('b1_image'));
         $config->set('b2_reverse', $form_state->getValue('b2_reverse'));
         $config->set('b2_title', $form_state->getValue('b2_title'));
         $config->set('b2_text', $form_state->getValue('b2_text')['value']);
         $config->set('b2_cta', $form_state->getValue('b2_cta'));
         $config->set('b2_link', $form_state->getValue('b2_link'));
+        $config->set('b2_image', $form_state->getValue('b2_image'));
         $config->set('b3_reverse', $form_state->getValue('b3_reverse'));
         $config->set('b3_title', $form_state->getValue('b3_title'));
         $config->set('b3_text', $form_state->getValue('b3_text')['value']);
         $config->set('b3_cta', $form_state->getValue('b3_cta'));
         $config->set('b3_link', $form_state->getValue('b3_link'));
+        $config->set('b3_image', $form_state->getValue('b3_image'));
         $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
+
+        $file_usage = \Drupal::service('file.usage');
+
+
+        if ($form_state->getValue('b1_image')) {
+            $file = File::load($form_state->getValue('b1_image')[0]);
+            $file_usage->add($file, "ga_front", "config", 1);
+        }
+        if ($form_state->getValue('b2_image')) {
+            $file = File::load($form_state->getValue('b2_image')[0]);
+            $file_usage->add($file, "ga_front", "config", 1);
+        }
+        if ($form_state->getValue('b3_image')) {
+            $file = File::load($form_state->getValue('b3_image')[0]);
+            $file_usage->add($file, "ga_front", "config", 1);
+        }
+
         $config->save();
 
         parent::submitForm($form, $form_state);
