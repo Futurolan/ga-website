@@ -5,3 +5,30 @@ ga_visitors.settings:
     title:
       type: text
       label: 'Title'
+    description:
+      type: text
+      label: 'Description'
+    map_api_key:
+      type: text
+      label: 'Map Api Key'
+    map_place_id:
+      type: text
+      label: 'Map Place id'
+    planning_text:
+      type: text
+      label: 'Planning'
+    price_text:
+      type: text
+      label: 'Price'
+    access_text:
+      type: text
+      label: 'Access'
+    accommodation_text:
+      type: text
+      label: 'Accommodation'
+    equipment_text:
+      type: text
+      label: 'Equiment'
+    food_service_text:
+      type: text
+      label: 'Food service'
