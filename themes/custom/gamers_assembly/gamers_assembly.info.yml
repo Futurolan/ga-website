@@ -5,9 +5,9 @@ base theme: stable
 core: 8.x
 
 libraries:
-  - gamers_assembly/gamers_assembly.corescripts
   - gamers_assembly/bootstrap
   - gamers_assembly/font-awesome
+  - gamers_assembly/gamers_assembly.corescripts
 
 regions:
   header: Header

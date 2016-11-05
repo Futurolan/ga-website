@@ -1,8 +1,8 @@
 <div class="node-tournament">
-    <div class="grey-area">
-        {% include directory ~ '/components/headline/headline.html.twig' with {
-        title:node.getTitle()
-        } %}
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:node.getTitle()|t
+        } only %}
     </div>
     <div class="white-area">
         <div class="container">

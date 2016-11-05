@@ -51,6 +51,7 @@ a {
 .slide-area {
   background-color:red;
 }
+
 .grey-area {
   background: url('../images/bg-home-grey-area.jpg') center center no-repeat;
   background-size: cover;
@@ -58,6 +59,19 @@ a {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.grey-area-title {
+  background: url('../images/bg-home-grey-area.jpg') center center no-repeat;
+  background-size: cover;
+  color: $white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  .title-line {
+    margin-bottom: 0px;
+  }
+}
+
 
 .blue-area {
   background: url('../images/bg-home-blue-area.jpg') center center no-repeat;

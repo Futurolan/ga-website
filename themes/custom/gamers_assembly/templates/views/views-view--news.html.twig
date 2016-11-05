@@ -3,10 +3,9 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 ] %}
 <div class="views-news">
     <div {{ attributes.addClass(classes) }}>
-        <div class="grey-area">
+        <div class="grey-area-title">
             {% include directory ~ "/components/title-line/title-line.html.twig" with {
             title:"Dernières actualités"|t,
-            icon: "mushroom"
             } only %}
         </div>
         <div class="white-area">
