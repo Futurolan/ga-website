@@ -1,14 +1,45 @@
-<div class="gamers-page">
+<div class="medias-page">
     <div class="grey-area-title">
         {% include directory ~ "/components/title-line/title-line.html.twig" with {
-        title:"Gamers"|t
+        title:"Éditions précédentes"|t
         } only %}
     </div>
     <div class="white-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    //TODO CREATE GAMERS INFO PAGE (themes/custom/gamers_assembly/templates/layout/ga-gamers.html.twig)
+                    <div class="info-collapse">
+                        <div class="row">
+                            <a role="button" data-toggle="collapse" href="#info-shcedule-content" aria-expanded="true" aria-controls="info-shcedule-content">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 info-block-head" style="background-color: #0058A2">
+                                        <div class="info-block-padding">
+                                            <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Gamers Assembly 2016"|t }}
+                                        </div>
+                                        <div class="info-carret info-block-head">
+                                            <div class="info-block-table">
+                                                <div class="info-block-cell">
+                                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-xs-2 info-carret  info-block-head" style="background-color: #0058A2;">
+
+                                    </div>-->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div id="info-shcedule-content" class="col-md-12 collapse in"
+                                 aria-expanded="true">
+                                <div class="info-block-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

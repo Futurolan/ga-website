@@ -27,17 +27,23 @@
                     {% if(config.planning_text) %}
                         <div class="info-collapse">
                             <div class="row">
-                                <a role="button" data-toggle="collapse" href="#info-shcedule-content" aria-expanded="true" aria-controls="info-shcedule-content">
-                                    <div class="col-md-12">
-                                        <div class="col-xs-10 info-block-head info-schedule">
-                                            <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Planning"|t }}
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-shcedule-content" aria-expanded="true" aria-controls="info-shcedule-content">
+                                        <div class="col-md-12 info-block-head info-schedule">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Planning"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 info-carret  info-block-head info-schedule">
-                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                             <div class="row">
                                 <div id="info-shcedule-content" class="col-md-12 collapse in"
@@ -52,17 +58,23 @@
                     {% if(config.price_text) %}
                         <div class="info-collapse">
                             <div class="row">
-                                <a role="button" data-toggle="collapse" href="#info-pricing-content" aria-expanded="false" aria-controls="info-pricing-content">
-                                    <div class="col-md-12">
-                                        <div class="col-xs-10 info-block-head info-pricing">
-                                            <span class="info-icon"><i class="fa fa-usd" aria-hidden="true"></i></span> {{ "Tarifs"|t }}
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-pricing-content" aria-expanded="false" aria-controls="info-pricing-content">
+                                        <div class="col-md-12 info-block-head info-pricing">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Tarifs"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 info-carret info-block-head info-pricing">
-                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                             <div class="row">
                                 <div id="info-pricing-content" class="col-md-12 collapse"
@@ -77,17 +89,23 @@
                     {% if(config.access_text) %}
                         <div class="info-collapse">
                             <div class="row">
-                                <a role="button" data-toggle="collapse" href="#info-access-content" aria-expanded="false" aria-controls="info-access-content">
-                                    <div class="col-md-12">
-                                        <div class="col-xs-10 info-block-head info-access">
-                                            <span class="info-icon"><i class="fa fa-car" aria-hidden="true"></i></span> {{ "Accès"|t }}
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-access-content" aria-expanded="false" aria-controls="info-access-content">
+                                        <div class="col-md-12 info-block-head info-access">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Accès"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 info-carret  info-block-head info-access">
-                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                             <div class="row">
                                 <div id="info-access-content" class="col-md-12 collapse" aria-expanded="false">
@@ -101,18 +119,23 @@
                     {% if(config.accommodation_text) %}
                         <div class="info-collapse">
                             <div class="row">
-                                <a role="button" data-toggle="collapse" href="#info-accommodation-content" aria-expanded="false" aria-controls="info-accommodation-content">
-                                    <div class="col-md-12">
-                                        <div class="col-xs-10 info-block-head info-accommodation">
-                                            <span class="info-icon"><i class="fa fa-bed" aria-hidden="true"></i></span>
-                                            {{ "Hébergement"|t }}
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-accommodation-content" aria-expanded="false" aria-controls="info-accommodation-content">
+                                        <div class="col-md-12 info-block-head info-accommodation">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Hébergement"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 info-carret  info-block-head info-accommodation">
-                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                             <div class="row">
                                 <div id="info-accommodation-content" class="col-md-12 collapse" aria-expanded="false">
@@ -130,7 +153,9 @@
                         <a href="{{ path("ga_ticket") }}">
                             <div class="col-md-12">
                                 <div class="info-block-head info-ticketing">
-                                    {{ "Billetterie"|t }}
+                                    <div class="info-block-padding">
+                                        {{ "Billetterie"|t }}
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -139,7 +164,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="info-block-head info-equipment">
-                                    <i class="fa fa-headphones" aria-hidden="true"></i> &nbsp;{{ "Materiel à amener"|t }}
+                                    <div class="info-block-padding">
+                                        <i class="fa fa-headphones" aria-hidden="true"></i> &nbsp;{{ "Materiel à amener"|t }}
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -153,7 +180,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="info-block-head info-restoration">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i> &nbsp;{{ "Restauration"|t }}
+                                    <div class="info-block-padding">
+                                        <i class="fa fa-cutlery" aria-hidden="true"></i> &nbsp;{{ "Restauration"|t }}
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12"> 

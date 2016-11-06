@@ -6,8 +6,7 @@
 	}
 
 	.info-block-head {
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-right: 85px;
 		text-align: left;
 		font-size: 18px;
 		color: $white;
@@ -15,6 +14,23 @@
 		.fa {
 			font-size: 22px;
 		}
+	}
+
+	.info-block-padding {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		font-size: 18px;
+	}
+
+	.info-block-table {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.info-block-cell {
+		display: table-cell;
+		vertical-align: middle;
 	}
 
 	.info-block-body {
@@ -45,6 +61,16 @@
 		.info-carret {
 			text-align: center;
 			border-left: 2px solid $white;
+		    width: 78px;
+		    padding: 0px;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 100%;
+
+		    .fa {
+		    	font-size: 32px;
+		    }
 		}
 
 		[aria-expanded="true"] {

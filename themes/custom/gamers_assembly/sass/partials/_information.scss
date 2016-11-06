@@ -23,14 +23,40 @@
 	}
 
 	.info-block-head {
-		padding-top: 25px;
-		padding-bottom: 25px;
 		text-align: left;
 		font-size: 18px;
 		color: $white;
 
 		.fa {
 			font-size: 22px;
+		}
+	}
+
+	.info-block-padding {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		font-size: 18px;
+	}
+
+	.info-block-table {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.info-block-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.info-block-body {
+		background-color: #7a7878;
+		margin-bottom: 30px;
+		color: $white;
+		padding: 15px;
+
+		p:last-child {
+			margin-bottom: 0px;
 		}
 	}
 
@@ -62,6 +88,16 @@
 		.info-carret {
 			text-align: center;
 			border-left: 2px solid $white;
+		    width: 78px;
+		    padding: 0px;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 100%;
+
+		    .fa {
+		    	font-size: 32px;
+		    }
 		}
 
 		[aria-expanded="true"] {
@@ -87,6 +123,8 @@
 		background-color: $orange;
 		margin-bottom: 50px;
 		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	.info-equipment {
@@ -103,17 +141,21 @@
 
 	.info-schedule {
 		background-color: #0058a2;
+		padding-right: 85px;
 	}
 
 	.info-access {
 		background-color: #4589c6;
+		padding-right: 85px;
 	}
 
 	.info-pricing {
 		background-color: #005a7c;
+		padding-right: 85px;
 	}
 
 	.info-accommodation {
 		background-color: #00356f;
+		padding-right: 85px;
 	}
 }
