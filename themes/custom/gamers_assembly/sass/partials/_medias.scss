@@ -1,21 +1,4 @@
-.information-page {
-	.white-area {
-		padding-top: 0px;
-	}
-
-	.google-map {
-		.content-left {
-			background: url(../images/bg-home-blue-area.jpg) center center no-repeat;
-			color: white;
-			padding-top: 50px;
-		}
-		.content-right {
-			background-color: #ddd;
-		}
-
-		margin-bottom: 50px;
-	}
-
+.medias-page {
 	.info-header {
 	    padding-left: 20px;
 	    border-left: 1px solid #bbbbbb;
@@ -81,39 +64,5 @@
 				display: inline-block;
 			}
 		}
-	}
-
-	.info-ticketing {
-		background-color: $orange;
-		margin-bottom: 50px;
-		text-align: center;
-	}
-
-	.info-equipment {
-		background-color: $black;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.info-restoration {
-		background-color: #46679e;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.info-schedule {
-		background-color: #0058a2;
-	}
-
-	.info-access {
-		background-color: #4589c6;
-	}
-
-	.info-pricing {
-		background-color: #005a7c;
-	}
-
-	.info-accommodation {
-		background-color: #00356f;
 	}
 }
