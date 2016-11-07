@@ -62,10 +62,12 @@
 </div>
 
 <!-- TODO: Move to footer -->
-<div class="white-area">
-    {% include directory ~ '/components/title-line/title-line.html.twig' with {
-    title:"Partenaires"|t,
-    icon:"space-invader black"
-    } only %}
-    {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
-</div>
+{% if(config.show_sponsors) %}
+    <div class="white-area">
+        {% include directory ~ '/components/title-line/title-line.html.twig' with {
+        title:"Partenaires"|t,
+        icon:"space-invader black"
+        } only %}
+        {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
+    </div>
+{% endif %}
