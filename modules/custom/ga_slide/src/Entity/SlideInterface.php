@@ -10,12 +10,16 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
 interface SlideInterface extends ConfigEntityInterface
 {
 
-    public function getImage();
+  public function getImage();
 
-    public function setImage($image);
+  public function setImage($image);
 
-    public function getLink();
+  public function getLink();
 
-    public function setLink($link);
+  public function setLink($link);
+
+  public function getVideo();
+
+  public function setVideo($image);
 
 }

@@ -41,64 +41,88 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
 class Slide extends ConfigEntityBase implements SlideInterface
 {
 
-    /**
-     * The Slide ID.
-     *
-     * @var string
-     */
-    protected $id;
+  /**
+   * The Slide ID.
+   *
+   * @var string
+   */
+  protected $id;
 
-    /**
-     * The Slide label.
-     *
-     * @var string
-     */
-    protected $label;
+  /**
+   * The Slide label.
+   *
+   * @var string
+   */
+  protected $label;
 
-    /**
-     * The Slide image.
-     *
-     * @var string
-     */
-    protected $image;
+  /**
+   * The Slide image.
+   *
+   * @var string
+   */
+  protected $image;
 
-    /**
-     * The Slide link.
-     *
-     * @var string
-     */
-    protected $link;
+  /**
+   * The Slide video.
+   *
+   * @var string
+   */
+  protected $video;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getLink()
-    {
-        return $this->link;
-    }
+  /**
+   * The Slide link.
+   *
+   * @var string
+   */
+  protected $link;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getImage()
+  {
+    return $this->image;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setLink($link)
-    {
-        $this->link = $link;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getLink()
+  {
+    return $this->link;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getVideo()
+  {
+    return $this->video;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setImage($image)
+  {
+    $this->image = $image;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setLink($link)
+  {
+    $this->link = $link;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setVideo($video)
+  {
+    $this->video = $video;
+  }
 
 }

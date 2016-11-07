@@ -5,7 +5,11 @@
         {% for slide in slides %}
             <figure>
                 <a href="{{ slide.link }}">
-                    <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                    {% if(slide.video) %} %}
+                        <video src="{{ file_url(slide.video) }}" poster=" {{ file_url(slide.image) }}"></video>
+                    {% else %}
+                        <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                    {% endif %}
                 </a>
             </figure>
         {% endfor %}
