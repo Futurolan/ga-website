@@ -37,10 +37,40 @@
 		background-color: #7a7878;
 		margin-bottom: 30px;
 		color: $white;
-		padding: 15px;
+		overflow: hidden; 
+
 
 		p:last-child {
 			margin-bottom: 0px;
+		}
+
+		.hack-height {
+		    margin-bottom: -99999px;
+		    padding-bottom: 99999px;
+		}
+
+		.border-style {
+			border-right: 2px solid white;
+		}
+
+		.info-block-left, .info-block-right {
+			padding: 15px;
+
+			a:hover, a:focus {
+				text-decoration: none;
+			}
+		}
+
+		.info-block-left {
+			padding-right: 0px;
+		}
+
+		.info-block-right {
+			padding-left: 0px;
+		}
+
+		.flickr-img {
+			margin-bottom: 15px;
 		}
 	}
 
