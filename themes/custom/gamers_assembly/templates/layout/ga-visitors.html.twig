@@ -10,8 +10,8 @@
                 <div class="col-md-12">
                     <div class="content-right">
                         <iframe width="100%" height="250" frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ config.map_place_id }}&key={{ config.map_api_key }}"
-                            allowfullscreen></iframe>
+                                src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ config.map_place_id }}&key={{ config.map_api_key }}"
+                                allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -28,10 +28,12 @@
                         <div class="info-collapse">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a role="button" data-toggle="collapse" href="#info-shcedule-content" aria-expanded="true" aria-controls="info-shcedule-content">
+                                    <a role="button" data-toggle="collapse" href="#info-shcedule-content"
+                                       aria-expanded="true" aria-controls="info-shcedule-content">
                                         <div class="col-md-12 info-block-head info-schedule">
                                             <div class="info-block-padding">
-                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Planning"|t }}
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ "Planning"|t }}
                                             </div>
                                             <div class="info-carret info-block-head">
                                                 <div class="info-block-table">
@@ -59,10 +61,12 @@
                         <div class="info-collapse">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a role="button" data-toggle="collapse" href="#info-pricing-content" aria-expanded="false" aria-controls="info-pricing-content">
+                                    <a role="button" data-toggle="collapse" href="#info-pricing-content"
+                                       aria-expanded="false" aria-controls="info-pricing-content">
                                         <div class="col-md-12 info-block-head info-pricing">
                                             <div class="info-block-padding">
-                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Tarifs"|t }}
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ "Tarifs"|t }}
                                             </div>
                                             <div class="info-carret info-block-head">
                                                 <div class="info-block-table">
@@ -90,10 +94,12 @@
                         <div class="info-collapse">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a role="button" data-toggle="collapse" href="#info-access-content" aria-expanded="false" aria-controls="info-access-content">
+                                    <a role="button" data-toggle="collapse" href="#info-access-content"
+                                       aria-expanded="false" aria-controls="info-access-content">
                                         <div class="col-md-12 info-block-head info-access">
                                             <div class="info-block-padding">
-                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Accès"|t }}
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ "Accès"|t }}
                                             </div>
                                             <div class="info-carret info-block-head">
                                                 <div class="info-block-table">
@@ -120,10 +126,12 @@
                         <div class="info-collapse">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a role="button" data-toggle="collapse" href="#info-accommodation-content" aria-expanded="false" aria-controls="info-accommodation-content">
+                                    <a role="button" data-toggle="collapse" href="#info-accommodation-content"
+                                       aria-expanded="false" aria-controls="info-accommodation-content">
                                         <div class="col-md-12 info-block-head info-accommodation">
                                             <div class="info-block-padding">
-                                                <span class="info-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span> {{ "Hébergement"|t }}
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ "Hébergement"|t }}
                                             </div>
                                             <div class="info-carret info-block-head">
                                                 <div class="info-block-table">
@@ -148,23 +156,26 @@
                     {% endif %}
                 </div>
                 <div class="col-md-4">
-                    <div class="row">
-                        <a href="{{ path("ga_ticket") }}">
-                            <div class="col-md-12">
-                                <div class="info-block-head info-ticketing">
-                                    <div class="info-block-padding">
-                                        {{ "Billetterie"|t }}
+                    {% if(config.ticketing) %}
+                        <div class="row">
+                            <a href="{{ path("ga_ticket") }}">
+                                <div class="col-md-12">
+                                    <div class="info-block-head info-ticketing">
+                                        <div class="info-block-padding">
+                                            {{ "Billetterie"|t }}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    {% endif %}
                     {% if(config.equipment_text) %}
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="info-block-head info-equipment">
                                     <div class="info-block-padding">
-                                        <i class="fa fa-headphones" aria-hidden="true"></i> &nbsp;{{ "Materiel à amener"|t }}
+                                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                                        &nbsp;{{ "Materiel à amener"|t }}
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +195,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12"> 
+                            <div class="col-md-12">
                                 <div class="info-block-body">
                                     {{ config.food_service_text|raw }}
                                 </div>
