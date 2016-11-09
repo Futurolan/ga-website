@@ -51,3 +51,6 @@ permissions:
   47: 'administer platforms'
   48: 'administer games'
   49: 'administer sponsor_levels'
+  50: 'create page content'
+  51: 'delete any page content'
+  52: 'delete own page content'
