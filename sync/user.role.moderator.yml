@@ -54,3 +54,5 @@ permissions:
   50: 'create page content'
   51: 'delete any page content'
   52: 'delete own page content'
+  53: 'administer main menu items'
+  54: 'administer footer menu items'
