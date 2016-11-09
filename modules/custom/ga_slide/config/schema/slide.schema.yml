@@ -11,6 +11,9 @@ ga_slide.slide.*:
     image:
       type: image
       label: 'Image'
+    video:
+      type: file
+      label: 'Video'
     link:
       type: string
       label: 'Link'

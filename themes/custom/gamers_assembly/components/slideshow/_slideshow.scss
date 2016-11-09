@@ -1,0 +1,15 @@
+.slideshow{
+
+  .video-container{
+    height:404px;
+    position: relative;
+    video{
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}

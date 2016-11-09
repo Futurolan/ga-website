@@ -5,8 +5,12 @@
         {% for slide in slides %}
             <figure>
                 <a href="{{ slide.link }}">
-                    {% if(slide.video) %} %}
-                        <video src="{{ file_url(slide.video) }}" poster=" {{ file_url(slide.image) }}"></video>
+                    {% if(slide.video) %}
+                        <div class="video-container">
+                            <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                            <video muted autoplay loop controls src="{{ file_url(slide.video) }}"></video>
+
+                        </div>
                     {% else %}
                         <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
                     {% endif %}
