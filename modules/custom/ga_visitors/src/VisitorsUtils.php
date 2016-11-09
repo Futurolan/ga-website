@@ -10,7 +10,7 @@ class VisitorsUtils
     $config = \Drupal::config('ga_visitors.settings');
 
 
-    $variables['ticketing'] = $config->get('ticketing');
+    $variables['show_ticketing'] = $config->get('show_ticketing');
     $variables['title'] = $config->get('title');
     $variables['description'] = $config->get('description');
     $variables['map_api_key'] = $config->get('map_api_key');

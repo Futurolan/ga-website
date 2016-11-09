@@ -36,10 +36,10 @@ class VisitorsSettingsForm extends ConfigFormBase
   {
     $config = $this->config('ga_visitors.settings');
 
-    $form['ticketing'] = array(
-      '#type' => 'checkboxes',
+    $form['show_ticketing'] = array(
+      '#type' => 'checkbox',
       '#title' => $this->t('Show ticketing CTA'),
-      '#default_value' => $config->get('ticketing'),
+      '#default_value' => $config->get('show_ticketing'),
     );
 
     $form['general'] = array(
@@ -186,7 +186,7 @@ class VisitorsSettingsForm extends ConfigFormBase
 
     $config = \Drupal::service('config.factory')->getEditable('ga_visitors.settings');
 
-    $config->set('ticketing', $form_state->getValue('ticketing'));
+    $config->set('show_ticketing', $form_state->getValue('show_ticketing'));
     $config->set('title', $form_state->getValue('title'));
     $config->set('description', $form_state->getValue('description')['value']);
     $config->set('map_api_key', $form_state->getValue('map_api_key'));

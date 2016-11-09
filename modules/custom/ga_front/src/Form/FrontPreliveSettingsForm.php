@@ -201,7 +201,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase
     );
 
     $form['show_sponsors'] = array(
-      '#type' => 'checkboxes',
+      '#type' => 'checkbox',
       '#title' => $this->t('Show sponsors'),
       '#default_value' => $config->get('show_sponsors'),
     );
