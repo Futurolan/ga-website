@@ -127,7 +127,7 @@ class UltimateCronQueueTest extends CronQueueTest {
     $this->assertEqual(3, $queue->numberOfItems());
 
     // Run the job, this should process them.
-    $job->run();
+    $job->run(t('Test launch'));
     $this->assertEqual(0, $queue->numberOfItems());
 
     // Check item delay feature.
@@ -143,7 +143,7 @@ class UltimateCronQueueTest extends CronQueueTest {
     // There are 3 items, the implementation doesn't wait for the first, that
     // means this should between 1 and 1.5 seconds.
     $before = microtime(TRUE);
-    $job->run();
+    $job->run(t('Test launch'));
     $after = microtime(TRUE);
 
     $this->assertEqual(0, $queue->numberOfItems());

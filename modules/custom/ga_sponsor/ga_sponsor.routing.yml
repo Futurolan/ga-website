@@ -1,5 +1,5 @@
 ga_sponsor:
-  path: '/sponsors'
+  path: '/partenaires'
   defaults:
     _controller: '\Drupal\ga_sponsor\Controller\SponsorController::render'
     _title: 'Sponsors page'
@@ -7,7 +7,7 @@ ga_sponsor:
     _permission: 'access content'
 
 ga_sponsor.settings:
-  path: '/admin/ga/sponsor/settings'
+  path: '/admin/ga/partenaires/settings'
   defaults:
     _title: 'Sponsors settings form'
     _form: '\Drupal\ga_sponsor\Form\SponsorSettingsForm'

@@ -6,6 +6,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Logger\RfcLogLevel;
 use Drupal\Core\Session\AnonymousUserSession;
+use Drupal\Core\Utility\Error;
 use Drupal\ultimate_cron\CronJobInterface;
 
 /**
@@ -430,32 +431,61 @@ class CronJob extends ConfigEntityBase implements CronJobInterface {
   }
 
   /**
-   * Run job.
+   * {@inheritdoc}
    */
-  public function run() {
-    $this->clearSignals();
-    $this->initializeProgress();
-    \Drupal::moduleHandler()->invokeAll('cron_pre_run', array($this));
+  public function run($init_message = NULL) {
+    if (!$init_message) {
+      $init_message = t('Launched manually');
+    }
 
-    // Force the current user to anonymous to ensure consistent permissions
-    // on cron runs.
+    $lock_id = $this->lock();
+    if (!$lock_id) {
+      return FALSE;
+    }
+    $log_entry = $this->startLog($lock_id, $init_message);
+
     $accountSwitcher = \Drupal::service('account_switcher');
-    $accountSwitcher->switchTo(new AnonymousUserSession());
-
-    self::$currentJob = $this;
 
     try {
-      return $this->invokeCallback();
+      $this->clearSignals();
+      $this->initializeProgress();
+      \Drupal::moduleHandler()->invokeAll('cron_pre_run', array($this));
+
+      // Force the current user to anonymous to ensure consistent permissions
+      // on cron runs.
+      $accountSwitcher->switchTo(new AnonymousUserSession());
+
+      self::$currentJob = $this;
+      $this->invokeCallback();
+    }
+    catch (\Error $e) {
+      // PHP 7 throws Error objects in case of a fatal error. It will also call
+      // the finally block below and close the log entry. Because of that,
+      // the global fatal error catching will not work and we have to log it
+      // explicitly here instead. The advantage is that this will not
+      // interrupt the process.
+      $variables = Error::decodeException($e);
+      unset($variables['backtrace']);
+      $log_entry->log('%type: @message in %function (line %line of %file).', $variables, RfcLogLevel::ERROR);
+      return FALSE;
+    }
+    catch (\Exception $e) {
+      $variables = Error::decodeException($e);
+      unset($variables['backtrace']);
+      $log_entry->log('%type: @message in %function (line %line of %file).', $variables, RfcLogLevel::ERROR);
+      return FALSE;
     }
     finally {
-
       self::$currentJob = NULL;
       \Drupal::moduleHandler()->invokeAll('cron_post_run', array($this));
       $this->finishProgress();
 
       // Restore original user account.
       $accountSwitcher->switchBack();
+      $log_entry->finish();
+      $this->unlock($lock_id);
     }
+    return TRUE;
   }
 
   /**

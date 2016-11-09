@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * Contains \Drupal\ultimate_cron\Tests\CronJobInstallTest
- */
 
 namespace Drupal\ultimate_cron\Tests;
 

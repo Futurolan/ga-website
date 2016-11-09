@@ -330,7 +330,7 @@ function drush_ultimate_cron_cron_run($name = NULL) {
     /** @var CronJob $job */
     foreach($jobs as $job) {
       if ($force || $job->isScheduled()) {
-        $job->run();
+        $job->run(t('Launched by drush'));
       }
 
     }
@@ -344,7 +344,7 @@ function drush_ultimate_cron_cron_run($name = NULL) {
     }
 
     if ($force || $job->isScheduled()) {
-      $job->run();
+      $job->run(t('Launched by drush'));
     }
   }
 }
