@@ -8,8 +8,9 @@
                     {% if(slide.video) %}
                         <div class="video-container">
                             <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
-                            <video muted autoplay loop controls src="{{ file_url(slide.video) }}"></video>
-
+                            <video muted autoplay loop>
+                                <source src="{{ file_url(slide.video) }}" type="video/mp4" />
+                            </video>
                         </div>
                     {% else %}
                         <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">

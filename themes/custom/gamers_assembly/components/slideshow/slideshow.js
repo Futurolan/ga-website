@@ -13,9 +13,8 @@
         prevButton: '#home-slideshow-prev', // CSS selector for element used to populate the "Prev" control
         nextButton: '#home-slideshow-next', // CSS selector for element used to populate the "Next" control
         onMove:startVideo,
-        onPlay:startVideo
     });
-
+    startVideo();
     function startVideo(){
         if ($('video').length > 0) {
             $('video').each(function () {

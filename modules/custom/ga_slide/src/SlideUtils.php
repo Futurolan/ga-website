@@ -18,8 +18,8 @@ class SlideUtils
     foreach ($slideEntities as $slideEntity) {
       $slides[] = array(
         "name" => $slideEntity->label(),
-        "image" => File::load($slideEntity->getImage()[0]) ? ImageStyle::load('slide')->buildUrl(File::load($slideEntity->getImage()[0])->getFileUri()) : null,
-        "video" => File::load($slideEntity->getVideo()[0]) ? File::load($slideEntity->getVideo()[0])->getFileUri() : null,
+        "image" => isset($slideEntity->getImage()[0]) && File::load($slideEntity->getImage()[0]) ? ImageStyle::load('slide')->buildUrl(File::load($slideEntity->getImage()[0])->getFileUri()) : null,
+        "video" => isset($slideEntity->getVideo()[0]) && File::load($slideEntity->getVideo()[0]) ? File::load($slideEntity->getVideo()[0])->getFileUri() : null,
         "link" => $slideEntity->getLink()
       );
     }
