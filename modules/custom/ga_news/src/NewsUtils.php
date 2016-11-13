@@ -50,18 +50,19 @@ class NewsUtils {
         $gameImageUri = $game->getImageUri();
       }
 
-
       if ($node->field_news_image->entity) {
         $imageUri = $node->field_news_image->entity->getFileUri();
       }
-      else {
-        if ($gameImageUri) {
-          $imageUri = $gameImageUri;
-        }
-        else {
-          $imageUri = NewsUtils::getImageUri($node, "field_news_image");
-        }
+      elseif ($gameImageUri) {
+        $imageUri = $gameImageUri;
       }
+      elseif ($node->field_news_tournament->entity) {
+        $imageUri =$node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
+      }
+      else {
+        $imageUri = NewsUtils::getImageUri($node, "field_news_image");
+      }
+
 
       $news[] = array(
         "nid" => $node->id(),
