@@ -4,11 +4,4 @@ status: true
 dependencies: {  }
 name: news_front
 label: 'News Front'
-effects:
-  b976463a-fa1c-4485-8c10-f73a83129a32:
-    uuid: b976463a-fa1c-4485-8c10-f73a83129a32
-    id: image_scale_and_crop
-    weight: 1
-    data:
-      width: 263
-      height: 80
+effects: {  }

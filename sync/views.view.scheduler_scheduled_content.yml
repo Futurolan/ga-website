@@ -40,10 +40,10 @@ display:
         options:
           items_per_page: 50
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: "‹\_précédent"
+            next: "suivant\_›"
+            first: "«\_premier"
+            last: "dernier\_»"
       style:
         type: table
         options:
@@ -167,7 +167,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Content Type'
+          label: 'Type de contenu'
           exclude: false
           alter:
             alter_text: false
@@ -273,7 +273,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Publish on'
+          label: 'Publier le'
           exclude: false
           alter:
             alter_text: false
@@ -327,7 +327,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Unpublish on'
+          label: 'Dépublier le'
           exclude: false
           alter:
             alter_text: false
@@ -529,7 +529,7 @@ display:
           exposed: false
           expose:
             operator_id: publish_on_op
-            label: 'Publish on'
+            label: 'Publier le'
             description: ''
             use_operator: true
             operator: publish_on_op
@@ -543,7 +543,7 @@ display:
               administrator: '0'
           is_grouped: false
           group_info:
-            label: 'Publish on'
+            label: 'Publier le'
             description: null
             identifier: publish_on
             optional: true
@@ -576,7 +576,7 @@ display:
           exposed: false
           expose:
             operator_id: unpublish_on_op
-            label: 'Unpublish on'
+            label: 'Dépublier le'
             description: ''
             use_operator: false
             operator: unpublish_on_op
@@ -653,7 +653,7 @@ display:
       path: admin/content/scheduled
       menu:
         type: tab
-        title: Scheduled
+        title: Planifié
         description: ''
         parent: system.admin_content
         weight: -10
@@ -687,7 +687,7 @@ display:
       path: user/%user/scheduled
       menu:
         type: tab
-        title: Scheduled
+        title: Planifié
         description: ''
         parent: system.admin_content
         weight: -10

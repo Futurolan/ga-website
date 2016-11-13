@@ -5,13 +5,11 @@ namespace Drupal\ga_visitors\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class VisitorsSettingsForm extends ConfigFormBase
-{
+class VisitorsSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'ga_visitors_settings';
   }
 
@@ -22,8 +20,7 @@ class VisitorsSettingsForm extends ConfigFormBase
    *   An array of configuration object names that are editable if called in
    *   conjunction with the trait's config() method.
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return [
       'ga_visitors.settings',
     ];
@@ -32,8 +29,7 @@ class VisitorsSettingsForm extends ConfigFormBase
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('ga_visitors.settings');
 
     $form['show_ticketing'] = array(
@@ -181,10 +177,10 @@ class VisitorsSettingsForm extends ConfigFormBase
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state, $plugin_id = NULL, $langcode = NULL)
-  {
+  public function submitForm(array &$form, FormStateInterface $form_state, $plugin_id = NULL, $langcode = NULL) {
 
-    $config = \Drupal::service('config.factory')->getEditable('ga_visitors.settings');
+    $config = \Drupal::service('config.factory')
+      ->getEditable('ga_visitors.settings');
 
     $config->set('show_ticketing', $form_state->getValue('show_ticketing'));
     $config->set('title', $form_state->getValue('title'));
@@ -197,10 +193,14 @@ class VisitorsSettingsForm extends ConfigFormBase
     $config->set('accommodation_text', $form_state->getValue('accommodation_text')['value']);
     $config->set('equipment_text', $form_state->getValue('equipment_text')['value']);
     $config->set('food_service_text', $form_state->getValue('food_service_text')['value']);
-    $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
+    $config->set('langcode', \Drupal::languageManager()
+      ->getDefaultLanguage()
+      ->getId());
     $config->save();
 
     parent::submitForm($form, $form_state);
+    drupal_flush_all_caches();
+
   }
 
 }

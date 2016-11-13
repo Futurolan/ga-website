@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Maître
+    display_title: Master
     position: 0
     display_options:
       access:
@@ -38,10 +38,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filtrer
+          submit_button: Filter
           reset_button: true
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -251,7 +251,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Statut
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -470,7 +470,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Actions
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -727,7 +727,7 @@ display:
               administrator: '0'
           is_grouped: true
           group_info:
-            label: Statut
+            label: Status
             description: ''
             identifier: status
             optional: true

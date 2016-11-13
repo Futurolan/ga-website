@@ -16,6 +16,17 @@ bundle: tournament
 mode: teaser
 content: {  }
 hidden:
+  field_game: true
+  field_platform: true
+  field_tournament_cashprize: true
+  field_tournament_description: true
+  field_tournament_format: true
   field_tournament_image: true
+  field_tournament_planning: true
+  field_tournament_reserved_slot: true
+  field_tournament_rules: true
+  field_tournament_size: true
+  field_tournament_type: true
+  field_tournament_weezevent_id: true
   langcode: true
   links: true

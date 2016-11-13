@@ -30,10 +30,10 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: 48d1285c-2dc6-49c3-8062-261f1cb2f876
+    uuid: 9e11bfed-c50f-4fc2-bbc8-7063d53e7539
     alt: ''
     title: ''
-    width: 1170
+    width: 620
     height: 350
   handler: 'default:file'
   handler_settings: {  }

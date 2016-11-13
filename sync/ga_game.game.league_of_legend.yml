@@ -6,8 +6,8 @@ id: league_of_legend
 label: 'League of Legend'
 description: 'Un jeu ou tu t''insultes'
 shortName: LoL
-color: '#FF0000'
-editor: 'Lol Editor'
+color: '#000000'
+editor: Lol
 type: moba
 image:
-  - '36'
+  - '60'

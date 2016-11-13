@@ -3,11 +3,11 @@ langcode: fr
 status: true
 dependencies: {  }
 id: overwatch
-label: 'Overwatch 2'
+label: Overwatch
 description: 'Paf paf paf '
 shortName: OW
-color: '#0000FF'
+color: '#000000'
 editor: Blizzard
 type: fps
 image:
-  - '35'
+  - '37'
