@@ -7,8 +7,13 @@
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="tournament-image"
-                     style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+                {% if(node.field_tournament_image.entity.uri.value) %}
+                    <div class="tournament-image"
+                         style="background-image:url('{{ file_url(node.field_tournament_image.entity.uri.value) }}')"></div>
+                {% else %}
+                    <div class="tournament-image"
+                         style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+                {% endif %}
             </div>
             <div class="row">
                 <div class="col-md-8 tournament-tag-info">

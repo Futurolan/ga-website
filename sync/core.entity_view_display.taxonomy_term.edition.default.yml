@@ -1,0 +1,21 @@
+uuid: c3d1cc41-121d-4c52-91c5-0cc34719b8df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edition
+  module:
+    - text
+id: taxonomy_term.edition.default
+targetEntityType: taxonomy_term
+bundle: edition
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

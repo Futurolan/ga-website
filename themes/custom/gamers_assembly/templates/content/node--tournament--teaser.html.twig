@@ -1,12 +1,18 @@
 <div class="tournament">
     <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-        <div class="tournament-image"
-             style="background-image:url('{{ file_url(node.get("field_tournament_image").entity.uri.value) }}')"></div>
+        {% if(node.field_tournament_image.entity.uri.value) %}
+            <div class="tournament-image"
+                 style="background-image:url('{{ file_url(node.field_tournament_image.entity.uri.value) }}')"></div>
+        {% else %}
+            <div class="tournament-image"
+                 style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+        {% endif %}
         <div class="tournament-game" style="background-color:{{ node.field_game.entity.getColor() }}">
             <h2>
                 {{ node.getTitle() }}
             </h2>
         </div>
+
     </a>
     {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value %}
     {% set free_slot_percent = (node.field_tournament_reserved_slot.value)/node.field_tournament_size.value*100 %}
@@ -18,7 +24,8 @@
     {% else %}
         {% set free_slot_class="low" %}
     {% endif %}
-    <div class="tournament-status">{{ "Places restantes :"|t }} <span class="{{ free_slot_class }}">{{ free_slot }}</span></div>
+    <div class="tournament-status">{{ "Places restantes :"|t }} <span
+                class="{{ free_slot_class }}">{{ free_slot }}</span></div>
     <div class="tournament-bar">
         <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
     </div>
