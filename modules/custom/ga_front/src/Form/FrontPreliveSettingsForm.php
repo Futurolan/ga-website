@@ -6,13 +6,11 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
-class FrontPreliveSettingsForm extends ConfigFormBase
-{
+class FrontPreliveSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'ga_front_prelive_settings';
   }
 
@@ -23,8 +21,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase
    *   An array of configuration object names that are editable if called in
    *   conjunction with the trait's config() method.
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return [
       'ga_front.prelive.settings',
     ];
@@ -33,8 +30,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('ga_front.prelive.settings');
 
 
@@ -213,9 +209,9 @@ class FrontPreliveSettingsForm extends ConfigFormBase
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state, $plugin_id = NULL, $langcode = NULL)
-  {
-    $config = \Drupal::service('config.factory')->getEditable('ga_front.prelive.settings');
+  public function submitForm(array &$form, FormStateInterface $form_state, $plugin_id = NULL, $langcode = NULL) {
+    $config = \Drupal::service('config.factory')
+      ->getEditable('ga_front.prelive.settings');
 
     $config->set('edition_name', $form_state->getValue('edition_name'));
     $config->set('b1_reverse', $form_state->getValue('b1_reverse'));
@@ -237,7 +233,9 @@ class FrontPreliveSettingsForm extends ConfigFormBase
     $config->set('b3_link', $form_state->getValue('b3_link'));
     $config->set('b3_image', $form_state->getValue('b3_image'));
     $config->set('show_sponsors', $form_state->getValue('show_sponsors'));
-    $config->set('langcode', \Drupal::languageManager()->getDefaultLanguage()->getId());
+    $config->set('langcode', \Drupal::languageManager()
+      ->getDefaultLanguage()
+      ->getId());
 
     $file_usage = \Drupal::service('file.usage');
 

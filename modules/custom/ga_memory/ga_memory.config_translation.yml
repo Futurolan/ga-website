@@ -1,0 +1,5 @@
+ga_memory.settings:
+  title: 'GA Memory'
+  base_route_name: ga_memory.settings
+  names:
+    - ga_memory.settings

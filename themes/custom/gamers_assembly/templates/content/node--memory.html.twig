@@ -1,0 +1,34 @@
+<div>
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:node.getTitle()|t
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            {% if (node.field_memory_image.entity.uri.value) %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="memory-image"
+                             style="background-image:url('{{ file_url(node.field_memory_image.entity.uri.value) }}')"></div>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-12">
+                    {{ node.field_memory_description.value | raw }}
+                </div>
+            </div>
+            {% if(node.field_memory_external_url.value ) %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="{{ node.field_memory_external_url.value }}">Lien externe</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+

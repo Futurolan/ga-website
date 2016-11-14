@@ -1,38 +1,44 @@
 <div class="news">
-	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
 
         {% if (node.field_news_image.entity.uri.value) %}
-            <div class="news-image" style="background-image:url('{{ file_url(node.field_news_image.entity.uri.value) }}')"></div>
-        {% elseif(node.field_game.entity.getImageUri()) %}
-            <div class="news-image" style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+            <div class="news-image"
+                 style="background-image:url('{{ file_url(node.field_news_image.entity.uri.value) }}')"></div>
         {% elseif(node.field_news_tournament.target_id) %}
             <div class="news-image"
                  style="background-image:url('{{ file_url(node.field_news_tournament.entity.field_tournament_image.entity.uri.value) }}')"></div>
+        {% elseif(node.field_game.entity.getImageUri()) %}
+            <div class="news-image"
+                 style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+        {% elseif(node.field_news_edition.target_id) %}
+            <div class="news-image"
+                 style="background-image:url('{{ file_url(node.field_news_edition.entity.field_edition_image.entity.uri.value) }}')"></div>
         {% else %}
             <div class="news-image" style="background-image:url('{{ file_url(nodeImage) }}')"></div>
         {% endif %}
 
     </a>
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
-    	<div class="news-tags" {% if (node.field_game.entity.getColor()) %}style="background-color:{{ node.field_game.entity.getColor()}}"{% endif %}>
+        <div class="news-tags"
+             {% if (node.field_game.entity.getColor()) %}style="background-color:{{ node.field_game.entity.getColor() }}"{% endif %}>
             {% if (node.field_game.entity.getShortName()) %}
                 ({{ node.field_game.entity.getShortName() }})
             {% endif %}
             {% for tag in node.field_news_tags %}
-                {{ tag.entity.getName()}}{% if not(loop.last)%}, {% endif %}
+                {{ tag.entity.getName() }}{% if not(loop.last) %}, {% endif %}
             {% endfor %}
         </div>
     </a>
     <h2>
-    	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
-    		{{ node.getTitle() }}
-    	</a>
+        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+            {{ node.getTitle() }}
+        </a>
     </h2>
     <div class="news-date">{{ node.getCreatedTime()|date("d.m.Y") }}</div>
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
-    	<div class="news-content">{{ node.get('field_news_content').summary }}</div>
+        <div class="news-content">{{ node.get('field_news_content').summary }}</div>
     </a>
     <div class="news-more">
-    	<a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "Lire la suite"|t }}</a>
+        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "Lire la suite"|t }}</a>
     </div>
 </div>

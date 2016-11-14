@@ -38,68 +38,63 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   }
  * )
  */
-class Stream extends ConfigEntityBase implements StreamInterface
-{
+class Stream extends ConfigEntityBase implements StreamInterface {
 
-    /**
-     * The Stream ID.
-     *
-     * @var string
-     */
-    protected $id;
+  /**
+   * The Stream ID.
+   *
+   * @var string
+   */
+  protected $id;
 
-    /**
-     * The Stream label.
-     *
-     * @var string
-     */
-    protected $label;
+  /**
+   * The Stream label.
+   *
+   * @var string
+   */
+  protected $label;
 
-    /**
-     * The Stream key.
-     *
-     * @var string
-     */
-    protected $key;
+  /**
+   * The Stream key.
+   *
+   * @var string
+   */
+  protected $key;
 
-    /**
-     * The Stream type.
-     *
-     * @var string
-     */
-    protected $type;
+  /**
+   * The Stream type.
+   *
+   * @var string
+   */
+  protected $type;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getKey()
-    {
-        return $this->key;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getKey() {
+    return $this->key;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getType() {
+    return $this->type;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setKey($key)
-    {
-        $this->key = $key;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setKey($key) {
+    $this->key = $key;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setType($type) {
+    $this->type = $type;
+  }
 
 
 }

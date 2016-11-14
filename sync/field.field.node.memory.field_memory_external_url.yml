@@ -1,0 +1,19 @@
+uuid: 2551f485-9a93-4438-b83d-834ce4d7500e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_memory_external_url
+    - node.type.memory
+id: node.memory.field_memory_external_url
+field_name: field_memory_external_url
+entity_type: node
+bundle: memory
+label: 'Url externe'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

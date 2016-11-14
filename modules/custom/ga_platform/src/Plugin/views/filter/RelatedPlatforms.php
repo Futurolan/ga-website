@@ -13,32 +13,33 @@ use Drupal\views\ViewExecutable;
  *
  * @ViewsFilter("ga_platform_related_platforms")
  */
-class RelatedPlatforms extends ManyToOne
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL)
-    {
-        parent::init($view, $display, $options);
-        $this->valueTitle = t('Allowed platforms');
-        $this->definition['options callback'] = array($this, 'generateOptions');
+class RelatedPlatforms extends ManyToOne {
+  /**
+   * {@inheritdoc}
+   */
+  public function init(ViewExecutable $view, DisplayPluginBase $display, array &$options = NULL) {
+    parent::init($view, $display, $options);
+    $this->valueTitle = t('Allowed platforms');
+    $this->definition['options callback'] = array($this, 'generateOptions');
+  }
+
+  /**
+   * Helper function that generates the options.
+   * @return array
+   */
+  public function generateOptions() {
+    $platformNids = \Drupal::entityQuery('platform')
+      ->sort('label', 'ASC')
+      ->execute();
+    $platformEntities = \Drupal::entityTypeManager()
+      ->getStorage("platform")
+      ->loadMultiple($platformNids);
+
+    $res = array();
+    foreach ($platformEntities as $plateformEntity) {
+      $res[$plateformEntity->id()] = $plateformEntity->label();
     }
 
-    /**
-     * Helper function that generates the options.
-     * @return array
-     */
-    public function generateOptions()
-    {
-        $platformNids = \Drupal::entityQuery('platform')->sort('label', 'ASC')->execute();
-        $platformEntities = \Drupal::entityTypeManager()->getStorage("platform")->loadMultiple($platformNids);
-
-        $res = array();
-        foreach ($platformEntities as $plateformEntity) {
-            $res[$plateformEntity->id()] = $plateformEntity->label();
-        }
-
-        return $res;
-    }
+    return $res;
+  }
 }

@@ -11,14 +11,12 @@ use Drupal\file\Entity\File;
  *
  * @package Drupal\ga_slide\Form
  */
-class SlideForm extends EntityForm
-{
+class SlideForm extends EntityForm {
 
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state)
-  {
+  public function form(array $form, FormStateInterface $form_state) {
     $form = parent::form($form, $form_state);
 
     $slide = $this->entity;
@@ -78,8 +76,7 @@ class SlideForm extends EntityForm
   /**
    * {@inheritdoc}
    */
-  public function save(array $form, FormStateInterface $form_state)
-  {
+  public function save(array $form, FormStateInterface $form_state) {
 
     $file = File::load($form_state->getValue('image')[0]);
     $file_usage = \Drupal::service('file.usage');
@@ -106,8 +103,7 @@ class SlideForm extends EntityForm
   /**
    * {@inheritdoc}
    */
-  protected function actions(array $form, FormStateInterface $form_state)
-  {
+  protected function actions(array $form, FormStateInterface $form_state) {
     $actions = parent::actions($form, $form_state);
     $actions['submit']['#value'] = ($this->entity->isNew()) ? $this->t('Add Slide') : $this->t('Update Slide');
     return $actions;

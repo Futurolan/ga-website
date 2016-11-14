@@ -9,7 +9,7 @@
 
     stickyFooter();
 
-	$( window ).resize(function() {
-		stickyFooter();
-	});
+    $(window).resize(function () {
+        stickyFooter();
+    });
 })(jQuery);

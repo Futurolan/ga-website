@@ -14,23 +14,21 @@ use Drupal\ga_slide\SlideUtils;
 use Drupal\ga_sponsor\SponsorUtils;
 
 
-class FrontPreLiveController extends ControllerBase
-{
-    public function render()
-    {
-        $slides = SlideUtils::getSlides();
-        $sponsors = SponsorUtils::getFrontSponsors();
-        $news = NewsUtils::getLastNews();
-        $config = FrontUtils::getPreliveConfiguration();
+class FrontPreLiveController extends ControllerBase {
+  public function render() {
+    $slides = SlideUtils::getSlides();
+    $sponsors = SponsorUtils::getFrontSponsors();
+    $news = NewsUtils::getLastNews();
+    $config = FrontUtils::getPreliveConfiguration();
 
-        return array(
-            '#theme' => "ga_front_prelive",
-            '#config' => $config,
-            '#slides' => $slides,
-            '#sponsors' => $sponsors,
-            '#news' => $news
-        );
+    return array(
+      '#theme' => "ga_front_prelive",
+      '#config' => $config,
+      '#slides' => $slides,
+      '#sponsors' => $sponsors,
+      '#news' => $news
+    );
 
-    }
+  }
 
 }

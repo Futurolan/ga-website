@@ -32,16 +32,17 @@
                             {% if (node.field_news_image.entity.uri.value) %}
                                 <div class="news-image"
                                      style="background-image:url('{{ file_url(node.field_news_image.entity.uri.value) }}')"></div>
-
-                            {% elseif(node.field_game.entity.getImageUri()) %}
-                                <div class="news-image"
-                                     style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
                             {% elseif(node.field_news_tournament.target_id) %}
                                 <div class="news-image"
                                      style="background-image:url('{{ file_url(node.field_news_tournament.entity.field_tournament_image.entity.uri.value) }}')"></div>
+                            {% elseif(node.field_game.entity.getImageUri()) %}
+                                <div class="news-image"
+                                     style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+                            {% elseif(node.field_news_edition.target_id) %}
+                                <div class="news-image"
+                                     style="background-image:url('{{ file_url(node.field_news_edition.entity.field_edition_image.entity.uri.value) }}')"></div>
                             {% else %}
                                 <div class="news-image" style="background-image:url('{{ file_url(nodeImage) }}')"></div>
-
                             {% endif %}
                         </div>
                         <div class="col-md-12">

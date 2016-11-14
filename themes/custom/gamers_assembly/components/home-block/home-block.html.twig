@@ -1,4 +1,5 @@
-<div class="home-block" style="background-image: url({% if(image) %}{{ file_url(image) }}{% else %}{{ directory }}/images/tampon-GA.png{% endif %});">
+<div class="home-block"
+     style="background-image: url({% if(image) %}{{ file_url(image) }}{% else %}{{ directory }}/images/tampon-GA.png{% endif %});">
     {% if(title and title!="") %}
         <div class="row">
             <div class="col-md-12">

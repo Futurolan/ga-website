@@ -6,9 +6,18 @@
             <figure {% if(slide.video) %}class="video-container"{% endif %}>
                 <a href="{{ slide.link }}">
                     {% if(slide.video) %}
+<<<<<<< HEAD
                         <video muted autoplay loop>
                             <source src="{{ file_url(slide.video) }}" type="video/mp4" />
                         </video>
+=======
+                        <div class="video-container">
+                            <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                            <video muted autoplay loop>
+                                <source src="{{ file_url(slide.video) }}" type="video/mp4"/>
+                            </video>
+                        </div>
+>>>>>>> origin/master
                     {% else %}
                         <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
                     {% endif %}

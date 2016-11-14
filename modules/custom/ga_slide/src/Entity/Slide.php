@@ -38,8 +38,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   }
  * )
  */
-class Slide extends ConfigEntityBase implements SlideInterface
-{
+class Slide extends ConfigEntityBase implements SlideInterface {
 
   /**
    * The Slide ID.
@@ -80,48 +79,42 @@ class Slide extends ConfigEntityBase implements SlideInterface
   /**
    * {@inheritdoc}
    */
-  public function getImage()
-  {
+  public function getImage() {
     return $this->image;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getLink()
-  {
+  public function getLink() {
     return $this->link;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getVideo()
-  {
+  public function getVideo() {
     return $this->video;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setImage($image)
-  {
+  public function setImage($image) {
     $this->image = $image;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setLink($link)
-  {
+  public function setLink($link) {
     $this->link = $link;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setVideo($video)
-  {
+  public function setVideo($video) {
     $this->video = $video;
   }
 

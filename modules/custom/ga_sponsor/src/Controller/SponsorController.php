@@ -5,17 +5,15 @@ namespace Drupal\ga_sponsor\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\ga_sponsor\SponsorUtils;
 
-class SponsorController extends ControllerBase
-{
-    public function render()
-    {
-        $config = SponsorUtils::getConfiguration();
-        $sponsors = SponsorUtils::getSponsors();
-        return array(
-            '#theme' => "ga_sponsor",
-            '#config' => $config,
-            '#sponsors' => $sponsors
-        );
-    }
+class SponsorController extends ControllerBase {
+  public function render() {
+    $config = SponsorUtils::getConfiguration();
+    $sponsors = SponsorUtils::getSponsors();
+    return array(
+      '#theme' => "ga_sponsor",
+      '#config' => $config,
+      '#sponsors' => $sponsors
+    );
+  }
 
 }

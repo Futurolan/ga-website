@@ -1,14 +1,13 @@
 <?php
 
-function ga_sponsor_theme($existing, $type, $theme, $path)
-{
-    return array(
-        'ga_sponsor' => array(
-            'variables' => array(
-                'config' => null,
-                'sponsors' => null
-            ),
-            'template' => 'ga-sponsor'
-        )
-    );
+function ga_sponsor_theme($existing, $type, $theme, $path) {
+  return array(
+    'ga_sponsor' => array(
+      'variables' => array(
+        'config' => NULL,
+        'sponsors' => NULL
+      ),
+      'template' => 'ga-sponsor'
+    )
+  );
 }

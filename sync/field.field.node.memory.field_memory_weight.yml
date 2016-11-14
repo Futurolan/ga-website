@@ -1,0 +1,24 @@
+uuid: c591b543-9c1b-437f-b2b4-2f1a2904b190
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_memory_weight
+    - node.type.memory
+  module:
+    - weight
+id: node.memory.field_memory_weight
+field_name: field_memory_weight
+entity_type: node
+bundle: memory
+label: Poids
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

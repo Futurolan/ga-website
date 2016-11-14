@@ -53,9 +53,8 @@ a {
   transition: all 0.3s;
 }
 
-
 .slide-area {
-  background-color:red;
+  background-color: red;
 }
 
 .grey-area {
@@ -78,13 +77,12 @@ a {
   }
 }
 
-
 .blue-area {
   background: url('../images/bg-home-blue-area.jpg') center center no-repeat;
   background-size: cover;
   color: $white;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 

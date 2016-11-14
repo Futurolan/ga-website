@@ -1,0 +1,75 @@
+uuid: bb79c2ce-cf08-4ac2-a29f-25073cc5b393
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.memory.field_memory_description
+    - field.field.node.memory.field_memory_external_url
+    - field.field.node.memory.field_memory_image
+    - field.field.node.memory.field_memory_short_description
+    - field.field.node.memory.field_memory_weight
+    - image.style.thumbnail
+    - node.type.memory
+  module:
+    - image
+    - path
+    - text
+id: node.memory.default
+targetEntityType: node
+bundle: memory
+mode: default
+content:
+  field_memory_description:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_memory_external_url:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_memory_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_memory_short_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_memory_weight: true
+  promote: true
+  publish_on: true
+  sticky: true
+  translation: true
+  uid: true
+  unpublish_on: true
