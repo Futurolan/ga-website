@@ -3,15 +3,12 @@
 <div class="slideshow">
     <div class="home-slider-container">
         {% for slide in slides %}
-            <figure>
+            <figure {% if(slide.video) %}class="video-container"{% endif %}>
                 <a href="{{ slide.link }}">
                     {% if(slide.video) %}
-                        <div class="video-container">
-                            <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
-                            <video muted autoplay loop>
-                                <source src="{{ file_url(slide.video) }}" type="video/mp4" />
-                            </video>
-                        </div>
+                        <video muted autoplay loop>
+                            <source src="{{ file_url(slide.video) }}" type="video/mp4" />
+                        </video>
                     {% else %}
                         <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
                     {% endif %}
