@@ -1,14 +1,23 @@
 .slideshow{
-
-  .video-container{
+  .video-container {
     position: relative;
-    video{
+    overflow: hidden;
+    height: 513px;
+
+    video {
+      width: 100%;
       position: absolute;
       top: -50%;
-      left: 0;
-      width: 100%;
-      height: auto;
     }
   }
+}
 
+@media (max-width: 1250px) {
+.slideshow{
+  .video-container {
+    video {
+      top: -25%;
+    }
+  }
+}
 }
