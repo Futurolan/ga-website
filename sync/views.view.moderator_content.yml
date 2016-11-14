@@ -1943,7 +1943,7 @@ display:
         operator: AND
         groups:
           1: AND
-      path: admin/moderator-content/souvenirs
+      path: admin/moderator-content/memories
       fields:
         title:
           id: title
