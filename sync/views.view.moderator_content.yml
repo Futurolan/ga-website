@@ -1939,6 +1939,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
+        sorts: false
       filter_groups:
         operator: AND
         groups:
@@ -2160,6 +2161,19 @@ display:
           hide_alter_empty: true
           range: '20'
           plugin_id: weight_selector
+      sorts:
+        field_memory_weight_value:
+          id: field_memory_weight_value
+          table: node__field_memory_weight
+          field: field_memory_weight_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: 0
       contexts:
