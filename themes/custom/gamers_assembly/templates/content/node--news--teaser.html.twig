@@ -10,7 +10,7 @@
         {% elseif(node.field_game.entity.getImageUri()) %}
             <div class="news-image"
                  style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
-        {% elseif(node.field_news_edition.entity.target_id) %}
+        {% elseif(node.field_news_edition.target_id) %}
             <div class="news-image"
                  style="background-image:url('{{ file_url(node.field_news_edition.entity.field_edition_image.entity.uri.value) }}')"></div>
         {% else %}
