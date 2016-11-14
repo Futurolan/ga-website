@@ -23,6 +23,7 @@ module:
   ga_front: 0
   ga_game: 0
   ga_gamers: 0
+  ga_memory: 0
   ga_news: 0
   ga_planning: 0
   ga_platform: 0

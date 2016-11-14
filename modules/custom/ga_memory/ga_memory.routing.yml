@@ -1,0 +1,15 @@
+ga_memory:
+  path: '/medias'
+  defaults:
+    _controller: '\Drupal\ga_memory\Controller\MemoryController::render'
+    _title: 'Memory Info page'
+  requirements:
+    _permission: 'access content'
+
+ga_memory.settings:
+  path: '/admin/ga/medias/settings'
+  defaults:
+    _title: 'Memory Info settings form'
+    _form: '\Drupal\ga_memory\Form\MemorySettingsForm'
+  requirements:
+    _role: 'moderator'

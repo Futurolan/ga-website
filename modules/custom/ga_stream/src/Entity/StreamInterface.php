@@ -9,8 +9,11 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
  */
 interface StreamInterface extends ConfigEntityInterface {
 
-    public function getKey();
-    public function getType();
-    public function setKey($key);
-    public function setType($type);
+  public function getKey();
+
+  public function getType();
+
+  public function setKey($key);
+
+  public function setType($type);
 }

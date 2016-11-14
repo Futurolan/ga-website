@@ -38,171 +38,159 @@ use Drupal\file\Entity\File;
  *   }
  * )
  */
-class Game extends ConfigEntityBase implements GameInterface
-{
+class Game extends ConfigEntityBase implements GameInterface {
 
-    /**
-     * The Game ID.
-     *
-     * @var string
-     */
-    protected $id;
+  /**
+   * The Game ID.
+   *
+   * @var string
+   */
+  protected $id;
 
-    /**
-     * The Game label.
-     *
-     * @var string
-     */
-    protected $label;
+  /**
+   * The Game label.
+   *
+   * @var string
+   */
+  protected $label;
 
-    /**
-     * The Game entity description.
-     *
-     * @var string
-     */
-    protected $description;
+  /**
+   * The Game entity description.
+   *
+   * @var string
+   */
+  protected $description;
 
-    /**
-     * The Game entity color.
-     *
-     * @var string
-     */
-    protected $color;
+  /**
+   * The Game entity color.
+   *
+   * @var string
+   */
+  protected $color;
 
-    /**
-     * The Game entity short name.
-     *
-     * @var string
-     */
-    protected $shortName;
+  /**
+   * The Game entity short name.
+   *
+   * @var string
+   */
+  protected $shortName;
 
-    /**
-     * The Game entity short name.
-     *
-     * @var string
-     */
-    protected $editor;
+  /**
+   * The Game entity short name.
+   *
+   * @var string
+   */
+  protected $editor;
 
-    /**
-     * The Game entity type.
-     *
-     * @var string
-     */
-    protected $type;
+  /**
+   * The Game entity type.
+   *
+   * @var string
+   */
+  protected $type;
 
-    /**
-     * The Game entity image.
-     *
-     * @var string
-     */
-    protected $image;
+  /**
+   * The Game entity image.
+   *
+   * @var string
+   */
+  protected $image;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getDescription()
-    {
-        return $this->description;
+  /**
+   * {@inheritdoc}
+   */
+  public function getDescription() {
+    return $this->description;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getColor() {
+    return $this->color;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getShortName() {
+    return $this->shortName;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getEditor() {
+    return $this->editor;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getType() {
+    return $this->type;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getImage() {
+    return $this->image;
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getImageUri() {
+    $test = File::load($this->image[0]);
+    if ($test) {
+      return $test->getFileUri();
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getColor()
-    {
-        return $this->color;
+    else {
+      return NULL;
     }
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getShortName()
-    {
-        return $this->shortName;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setDescription($description) {
+    $this->description = $description;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getEditor()
-    {
-        return $this->editor;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setColor($color) {
+    $this->color = $color;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setShortName($shortName) {
+    $this->shortName = $shortName;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setEditor($editor) {
+    $this->editor = $editor;
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function setType($type) {
+    $this->type = $type;
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getImageUri()
-    {
-        $test = File::load($this->image[0]);
-        if ($test)
-            return $test->getFileUri();
-        else
-            return null;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setShortName($shortName)
-    {
-        $this->shortName = $shortName;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setEditor($editor)
-    {
-        $this->editor = $editor;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function setImage($image) {
+    $this->image = $image;
+  }
 }

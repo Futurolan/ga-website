@@ -1,0 +1,20 @@
+uuid: b07a20be-a31d-49b4-bdfd-2428577c9120
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - weight
+id: node.field_memory_weight
+field_name: field_memory_weight
+entity_type: node
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

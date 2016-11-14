@@ -24,13 +24,13 @@
         $("#stream-video-list-item-" + key).addClass('active');
     });
 
-    $(".stream-tab-video-list").click(function(){
+    $(".stream-tab-video-list").click(function () {
         $(".stream-video-list").show();
         $(".stream-chat").hide();
         $(".stream-tab-video-list").addClass("active");
         $(".stream-tab-chat").removeClass("active");
     });
-    $(".stream-tab-chat").click(function(){
+    $(".stream-tab-chat").click(function () {
         $(".stream-video-list").hide();
         $(".stream-chat").show();
         $(".stream-tab-video-list").removeClass("active");

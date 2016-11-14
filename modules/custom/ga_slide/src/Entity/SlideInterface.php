@@ -7,8 +7,7 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
 /**
  * Provides an interface for defining Slide entities.
  */
-interface SlideInterface extends ConfigEntityInterface
-{
+interface SlideInterface extends ConfigEntityInterface {
 
   public function getImage();
 

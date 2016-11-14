@@ -9,19 +9,18 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Provides a listing of Sponsor level entities.
  */
-class SponsorLevelListBuilder extends DraggableListBuilder  {
+class SponsorLevelListBuilder extends DraggableListBuilder {
 
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getFormId()
-    {
-        return 'ga_sponsor_entity_sponsor_level_config';
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'ga_sponsor_entity_sponsor_level_config';
+  }
 
 
-    /**
+  /**
    * {@inheritdoc}
    */
   public function buildHeader() {
@@ -39,12 +38,11 @@ class SponsorLevelListBuilder extends DraggableListBuilder  {
   }
 
 
-    /**
-     * {@inheritdoc}
-     */
-    public function submitForm(array &$form, FormStateInterface $form_state)
-    {
-        parent::submitForm($form, $form_state);
-        drupal_set_message(t('The sponsor levels settings have been updated.'));
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    parent::submitForm($form, $form_state);
+    drupal_set_message(t('The sponsor levels settings have been updated.'));
+  }
 }

@@ -57,7 +57,7 @@ class NewsUtils {
         $imageUri = $gameImageUri;
       }
       elseif ($node->field_news_tournament->entity) {
-        $imageUri =$node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
+        $imageUri = $node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
       }
       else {
         $imageUri = NewsUtils::getImageUri($node, "field_news_image");

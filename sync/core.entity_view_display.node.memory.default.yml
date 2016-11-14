@@ -1,0 +1,59 @@
+uuid: 6d42b34e-87a5-4951-bedf-85d47eb26f7e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.memory.field_memory_description
+    - field.field.node.memory.field_memory_external_url
+    - field.field.node.memory.field_memory_image
+    - field.field.node.memory.field_memory_short_description
+    - field.field.node.memory.field_memory_weight
+    - node.type.memory
+  module:
+    - image
+    - text
+    - user
+id: node.memory.default
+targetEntityType: node
+bundle: memory
+mode: default
+content:
+  field_memory_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_memory_external_url:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_memory_image:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_memory_short_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_memory_weight:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  links:
+    weight: 100
+hidden:
+  langcode: true

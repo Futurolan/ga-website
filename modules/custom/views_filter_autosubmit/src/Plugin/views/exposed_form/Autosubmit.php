@@ -53,7 +53,7 @@ class Autosubmit extends ExposedFormPluginBase {
    */
   public function exposedFormAlter(&$form, FormStateInterface $form_state) {
     parent::exposedFormAlter($form, $form_state);
-    
+
     // Apply autosubmit values.
     $form = array_merge_recursive($form, array('#attributes' => array('class' => array('views-auto-submit-full-form'))));
     $form['actions']['submit']['#attributes']['class'][] = 'views-use-ajax';

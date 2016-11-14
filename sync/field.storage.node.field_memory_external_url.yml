@@ -1,0 +1,21 @@
+uuid: 674c7f33-5d47-4ea7-ab6c-ce1e1498713b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_memory_external_url
+field_name: field_memory_external_url
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
