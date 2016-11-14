@@ -32,6 +32,7 @@ module:
   ga_ticket: 0
   ga_visitors: 0
   ga_weezevent: 0
+  google_analytics: 0
   help: 0
   image: 0
   imce: 0
