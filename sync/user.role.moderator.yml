@@ -56,3 +56,4 @@ permissions:
   52: 'delete own page content'
   53: 'administer main menu items'
   54: 'administer footer menu items'
+  55: 'administer google analytics'
