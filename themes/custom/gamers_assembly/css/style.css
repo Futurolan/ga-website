@@ -1404,20 +1404,25 @@ select option {
   background-color: #999999;
 }
 
-/* line 3, ../components/slideshow/_slideshow.scss */
+/* line 2, ../components/slideshow/_slideshow.scss */
 .slideshow .video-container {
-  height: 404px;
   position: relative;
+  overflow: hidden;
+  height: 513px;
 }
-/* line 6, ../components/slideshow/_slideshow.scss */
+/* line 7, ../components/slideshow/_slideshow.scss */
 .slideshow .video-container video {
+  width: 100%;
   position: absolute;
   top: -50%;
-  left: 0;
-  width: 100%;
-  height: auto;
 }
 
+@media (max-width: 1250px) {
+  /* line 18, ../components/slideshow/_slideshow.scss */
+  .slideshow .video-container video {
+    top: -25%;
+  }
+}
 /* line 1, ../components/streams/_streams.scss */
 .stream {
   margin-bottom: 40px;
