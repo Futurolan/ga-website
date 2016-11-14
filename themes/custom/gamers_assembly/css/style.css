@@ -1170,7 +1170,6 @@ select option {
 }
 
 .slideshow .video-container {
-  height: 404px;
   position: relative;
 }
 .slideshow .video-container video {
