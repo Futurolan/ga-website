@@ -8,7 +8,7 @@ html {
 /* line 6, ../sass/partials/_layout.scss */
 body {
   padding-top: 70px;
-  margin-bottom: 60px !important;
+  margin-bottom: 60px;
 }
 
 /* line 1, ../sass/partials/_design.scss */
@@ -259,128 +259,134 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
   vertical-align: middle;
+  padding-top: 25px;
+  padding-bottom: 10px;
   text-align: center;
 }
 /* line 128, ../sass/partials/_navigation.scss */
 .menu-footer ul {
+  padding-left: 0px;
   list-style-type: none;
   display: inline-block;
   margin: 0;
 }
-/* line 132, ../sass/partials/_navigation.scss */
+/* line 133, ../sass/partials/_navigation.scss */
 .menu-footer ul li {
+  margin-bottom: 15px;
   display: inline-block;
 }
-/* line 134, ../sass/partials/_navigation.scss */
+/* line 136, ../sass/partials/_navigation.scss */
 .menu-footer ul li a {
   color: #ffffff;
   border-right: 1px solid #ffffff;
   padding-right: 10px;
 }
-/* line 139, ../sass/partials/_navigation.scss */
+/* line 141, ../sass/partials/_navigation.scss */
 .menu-footer ul li:last-child a {
   border-right: none;
 }
-/* line 144, ../sass/partials/_navigation.scss */
+/* line 146, ../sass/partials/_navigation.scss */
 .menu-footer a {
   color: #ffffff;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 150, ../sass/partials/_navigation.scss */
+/* line 151, ../sass/partials/_navigation.scss */
+.menu-footer a i {
+  margin-bottom: 15px;
+}
+/* line 156, ../sass/partials/_navigation.scss */
 .menu-footer a:hover, .menu-footer a:focus {
   color: white;
   text-decoration: underline;
 }
-/* line 155, ../sass/partials/_navigation.scss */
+/* line 161, ../sass/partials/_navigation.scss */
 .menu-footer i {
   font-size: 16px;
 }
 
 @media (max-width: 1200px) {
-  /* line 163, ../sass/partials/_navigation.scss */
+  /* line 169, ../sass/partials/_navigation.scss */
   .navbar-header {
     float: none;
   }
 
-  /* line 166, ../sass/partials/_navigation.scss */
+  /* line 172, ../sass/partials/_navigation.scss */
   .navbar-left, .navbar-right {
     float: none !important;
   }
 
-  /* line 169, ../sass/partials/_navigation.scss */
+  /* line 175, ../sass/partials/_navigation.scss */
   .navbar-toggle {
     display: block;
   }
 
-  /* line 172, ../sass/partials/_navigation.scss */
+  /* line 178, ../sass/partials/_navigation.scss */
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  /* line 176, ../sass/partials/_navigation.scss */
+  /* line 182, ../sass/partials/_navigation.scss */
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
   }
 
-  /* line 180, ../sass/partials/_navigation.scss */
+  /* line 186, ../sass/partials/_navigation.scss */
   .navbar-collapse.collapse {
     display: none !important;
   }
 
-  /* line 183, ../sass/partials/_navigation.scss */
+  /* line 189, ../sass/partials/_navigation.scss */
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px;
   }
 
-  /* line 187, ../sass/partials/_navigation.scss */
+  /* line 193, ../sass/partials/_navigation.scss */
   .navbar-nav > li {
     float: none;
   }
 
-  /* line 190, ../sass/partials/_navigation.scss */
+  /* line 196, ../sass/partials/_navigation.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  /* line 194, ../sass/partials/_navigation.scss */
+  /* line 200, ../sass/partials/_navigation.scss */
   .collapse.in {
     display: block !important;
     overflow-y: auto !important;
   }
 
-  /* line 199, ../sass/partials/_navigation.scss */
+  /* line 205, ../sass/partials/_navigation.scss */
   .main-sponsor {
     display: none !important;
   }
 
-  /* line 203, ../sass/partials/_navigation.scss */
+  /* line 209, ../sass/partials/_navigation.scss */
   .nav-item .navbar-nav {
     display: block !important;
     position: relative !important;
     height: auto !important;
     margin-top: 0px !important;
   }
-  /* line 209, ../sass/partials/_navigation.scss */
+  /* line 215, ../sass/partials/_navigation.scss */
   .nav-item .navbar-nav li a {
     padding: 25px 15px 25px 50px !important;
   }
 }
 @media (max-width: 768px) {
-  /* line 216, ../sass/partials/_navigation.scss */
+  /* line 222, ../sass/partials/_navigation.scss */
   .navbar-brand {
     margin-left: 15px;
   }
 }
 @media (min-width: 768px) {
-  /* line 222, ../sass/partials/_navigation.scss */
+  /* line 228, ../sass/partials/_navigation.scss */
   .navbar-brand {
     margin-left: 0px !important;
   }
@@ -2037,6 +2043,7 @@ select option {
 /* line 127, ../components/news-home2/_news-home2.scss */
 .news-home2 .more-news {
   margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #ffffff;
   display: inline-block;
   padding: 15px 50px;
@@ -2045,15 +2052,15 @@ select option {
 }
 
 @media (max-width: 992px) {
-  /* line 140, ../components/news-home2/_news-home2.scss */
+  /* line 141, ../components/news-home2/_news-home2.scss */
   .news-home2 .news .news-left, .news-home2 .news-main .news-left {
     padding-right: 15px;
   }
-  /* line 143, ../components/news-home2/_news-home2.scss */
+  /* line 144, ../components/news-home2/_news-home2.scss */
   .news-home2 .news .news-right, .news-home2 .news-main .news-right {
     padding-left: 15px;
   }
-  /* line 148, ../components/news-home2/_news-home2.scss */
+  /* line 149, ../components/news-home2/_news-home2.scss */
   .news-home2 .hack-line-right {
     position: absolute;
     height: 2px;
