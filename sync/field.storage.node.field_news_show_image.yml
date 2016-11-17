@@ -1,16 +1,15 @@
-uuid: c8bb3101-5809-46f6-b4d9-44f481a4da6a
+uuid: 60c33024-6cd1-4057-86ff-2a3ae6de351b
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.field_tournament_planning
-field_name: field_tournament_planning
+id: node.field_news_show_image
+field_name: field_news_show_image
 entity_type: node
-type: text_long
+type: boolean
 settings: {  }
-module: text
+module: core
 locked: false
 cardinality: 1
 translatable: true

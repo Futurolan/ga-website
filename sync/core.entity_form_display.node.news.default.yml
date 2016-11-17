@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.news.field_news_content
     - field.field.node.news.field_news_edition
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
     - field.field.node.news.field_news_tournament
     - image.style.thumbnail
@@ -25,16 +26,16 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   field_game:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_news_content:
-    weight: 7
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -42,7 +43,7 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
   field_news_edition:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -53,8 +54,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_news_tags:
+  field_news_show_image:
     weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_news_tags:
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -62,7 +69,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
   field_news_tournament:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -73,29 +80,29 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -105,12 +112,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -118,7 +125,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

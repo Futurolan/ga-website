@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.news.field_news_content
     - field.field.node.news.field_news_edition
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
     - field.field.node.news.field_news_tournament
     - node.type.news
@@ -49,6 +50,15 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_news_show_image:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_news_tags:
     weight: 103
     label: above
