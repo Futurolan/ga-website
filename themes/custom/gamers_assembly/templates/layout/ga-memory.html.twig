@@ -44,10 +44,15 @@
                                             <div class="col-md-3 hack-height">
                                                 <div class="info-block-right">
                                                     <div class="flickr-img">
-                                                        <a href="#">
+                                                        {% if(memory.field_memory_external_url.value ) %}
+                                                        <a target="_blank"
+                                                           href="{{ memory.field_memory_external_url.value }}">
+                                                            {% endif %}
                                                             <img src="{{ file_url(memory.field_memory_image.entity.uri.value) }}"
                                                                  class="img-responsive center-block"/>
+                                                            {% if(memory.field_memory_external_url.value ) %}
                                                         </a>
+                                                        {% endif %}
                                                     </div>
                                                     <a href="{{ path('entity.node.canonical', {'node': memory.id()}) }}">
                                                         <div class="btn-white cta btn-motion btn-1c">
