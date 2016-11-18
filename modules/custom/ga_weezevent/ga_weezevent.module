@@ -13,7 +13,7 @@ function ga_weezevent_update_tournament_info_cron() {
     $node = \Drupal\node\Entity\Node::load($nid);
     try {
       $result = $weezevent->participants($config->get('id_event'), $node->field_tournament_weezevent_id->value);
-      \Drupal::logger('ga_weezevent')->error($result);
+      //\Drupal::logger('ga_weezevent')->error(Jsonencojson_encode($result));
 
     } catch (Exception $e) {
       \Drupal::logger('ga_weezevent')->error($e->getMessage());
