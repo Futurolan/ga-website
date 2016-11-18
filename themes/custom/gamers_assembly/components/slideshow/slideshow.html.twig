@@ -1,4 +1,4 @@
-{{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}
+{% if slides|length > 1 %}{{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}{% endif %}
 
 <div class="slideshow">
     <div class="home-slider-container">
