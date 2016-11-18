@@ -1,23 +1,10 @@
-.slideshow{
-  .video-container {
-    position: relative;
-    overflow: hidden;
-    height: 513px;
-
-    video {
-      width: 100%;
-      position: absolute;
-      top: -50%;
-    }
+.slideshow {
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
 @media (max-width: 1250px) {
-  .slideshow {
-    .video-container {
-      video {
-        top: -25%;
-      }
-    }
-  }
 }
