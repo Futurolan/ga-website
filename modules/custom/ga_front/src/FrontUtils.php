@@ -10,6 +10,7 @@ class FrontUtils {
     $config = \Drupal::config('ga_front.prelive.settings');
 
     $variables['edition_name'] = $config->get('edition_name');
+    $variables['slide_time'] = $config->get('slide_time');
     $variables['b1_reverse'] = $config->get('b1_reverse');
     $variables['b1_title'] = $config->get('b1_title');
     $variables['b1_text'] = $config->get('b1_text');

@@ -41,6 +41,17 @@ class FrontPreliveSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form ['slide_time'] = array(
+      '#type' => 'number',
+      '#title' => $this->t('Slide Time'),
+      '#default_value' => $config->get('slide_time'),
+      '#description' => 'Slide time in ms',
+      '#min' => 1000,
+      '#step' => 500,
+      '#required' => TRUE,
+    );
+
+
     //First Box
     $form['b1'] = array(
       '#type' => 'details',
@@ -214,6 +225,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase {
       ->getEditable('ga_front.prelive.settings');
 
     $config->set('edition_name', $form_state->getValue('edition_name'));
+    $config->set('slide_time', $form_state->getValue('slide_time'));
     $config->set('b1_reverse', $form_state->getValue('b1_reverse'));
     $config->set('b1_title', $form_state->getValue('b1_title'));
     $config->set('b1_text', $form_state->getValue('b1_text')['value']);

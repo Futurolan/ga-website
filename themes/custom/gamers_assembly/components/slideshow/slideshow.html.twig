@@ -1,4 +1,11 @@
-{% if slides|length > 1 %}{{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}{% endif %}
+
+{% if slides|length > 1 %}
+    {{ config.slide_time  }}
+    <script type="application/javascript">
+        var slideTime = {{ config.slide_time}};
+    </script>
+    {{ attach_library('gamers_assembly/gamers_assembly.slideshow') }}
+{% endif %}
 
 <div class="slideshow">
     <div class="home-slider-container">

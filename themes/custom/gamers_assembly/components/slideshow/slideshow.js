@@ -6,7 +6,7 @@
         visibleItems: 1,
         step: 1,
         slideDuration: 500, // Slide transition duration (in ms)
-        autoplayInterval: 5000, // Delay between slides
+        autoplayInterval: slideTime, // Delay between slides
         stopOnHover: true, // Stop slideshow on mouse over
         navigation: true, // prev and next buttons
         pagination: false,
