@@ -1,4 +1,10 @@
 <?php
+
+
+function gamers_assembly_preprocess_block(&$variables) {
+  $variables['config'] = \Drupal\ga_config\ConfigUtils::getConfiguration();
+}
+
 function gamers_assembly_preprocess_node(&$variables) {
   $variables['host'] = \Drupal::request()->getHost();
 

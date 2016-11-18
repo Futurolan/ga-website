@@ -3,11 +3,21 @@
         <div class="row">
             <div class="col-md-12">
                 {{ content }}
-                <a href="#"><i class="fa fa-facebook-official"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-flickr"></i></a>
-                <a href="#"><i class="fa fa-twitch"></i></a>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                {% if(config.facebook_url) %}
+                    <a href="{{ config.facebook_url }}"><i class="fa fa-facebook-official"></i></a>
+                {% endif %}
+                {% if(config.twitter_url) %}
+                    <a href="{{ config.twitter_url }}"><i class="fa fa-twitter"></i></a>
+                {% endif %}
+                {% if(config.flickr_url) %}
+                    <a href="{{ config.flickr_url }}"><i class="fa fa-flickr"></i></a>
+                {% endif %}
+                {% if(config.twitch_url) %}
+                    <a href="{{ config.twitch_url }}"><i class="fa fa-twitch"></i></a>
+                {% endif %}
+                {% if(config.youtube_url) %}
+                    <a href="{{ config.youtube_url }}"><i class="fa fa-youtube-play"></i></a>
+                {% endif %}
             </div>
         </div>
     </div>

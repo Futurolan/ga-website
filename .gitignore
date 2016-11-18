@@ -15,6 +15,7 @@ sync/ga_planning.settings.yml
 sync/ga_sponsor.settings.yml
 sync/ga_weezevent.settings.yml
 sync/ga_memory.settings.yml
+sync/ga_config.settings.yml
 sync/google_analytics.settings.yml
 sync/language
 

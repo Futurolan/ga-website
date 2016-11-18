@@ -23,8 +23,17 @@
             <h2{{ title_attributes }}>{{ configuration.label }}</h2>
             {% block content %}
                 {{ content }}
+                {% if(config.main_sponsor_image) %}
+                    <ul class="nav navbar-nav pull-right">
+                        <li>
+                            <a href="{{ config.main_sponsor_url}}" class="main-sponsor"><img src="{{ file_url(config.main_sponsor_image) }}"
+                                                                  class="img-responsive"/></a>
+                        </li>
+                    </ul>
+                {% endif %}
             {% endblock %}
         </div>
 
     </div>
+
 </nav>

@@ -1,0 +1,7 @@
+ga_config.settings:
+  path: '/admin/ga/config/settings'
+  defaults:
+    _title: 'Config settings form'
+    _form: '\Drupal\ga_config\Form\ConfigSettingsForm'
+  requirements:
+    _role: 'moderator'
