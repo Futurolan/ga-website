@@ -82,6 +82,9 @@ class SlideForm extends EntityForm {
     $file_usage = \Drupal::service('file.usage');
     $file_usage->add($file, "ga_slide", "config", 1);
 
+    $file = File::load($form_state->getValue('video')[0]);
+    $file_usage->add($file, "ga_slide", "config", 1);
+
     $slide = $this->entity;
     $status = $slide->save();
 
