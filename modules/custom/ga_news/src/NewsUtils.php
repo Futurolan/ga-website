@@ -70,7 +70,7 @@ class NewsUtils {
       $news[] = array(
         "nid" => $node->id(),
         "title" => $node->getTitle(),
-        "image" => ImageStyle::load('news_front')->buildUrl($imageUri),
+        "image" => ImageStyle::load('news_front')->buildUri($imageUri),
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
         "tags" => $tagsArray,

@@ -47,7 +47,7 @@ class SlideForm extends EntityForm {
       '#description' => 'Best size : 1920x518',
       '#upload_location' => file_default_scheme() . '://front/slide/',
       '#upload_validators' => array(
-        'file_validate_extensions' => array('mp4'),
+        'file_validate_extensions' => array('mp4 webm'),
       ),
     );
 

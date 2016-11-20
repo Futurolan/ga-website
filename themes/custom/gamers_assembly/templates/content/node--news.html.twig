@@ -68,7 +68,7 @@
                                     <div class="row">
                                         <div class="col-xs-4 news-left">
                                             <div class="news-image"
-                                                 style="background-image:url('{{ new.image }}')">
+                                                 style="background-image:url('{{ file_url(new.image) }}')">
                                             </div>
                                             <div class="news-type"
                                                  {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
