@@ -18,5 +18,6 @@ sync/ga_memory.settings.yml
 sync/ga_config.settings.yml
 sync/google_analytics.settings.yml
 sync/language
+sync/metatag.metatag_defaults.*
 
 modules/contrib/config_readonly/

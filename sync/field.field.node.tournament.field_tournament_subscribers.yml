@@ -1,0 +1,22 @@
+uuid: 2dd54c15-dd8c-4b70-a0fb-981f193b89eb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_subscribers
+    - node.type.tournament
+  module:
+    - field_collection
+id: node.tournament.field_tournament_subscribers
+field_name: field_tournament_subscribers
+entity_type: node
+bundle: tournament
+label: Inscrits
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

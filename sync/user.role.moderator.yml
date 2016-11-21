@@ -63,3 +63,4 @@ permissions:
   59: 'delete memory revisions'
   60: 'edit any memory content'
   61: 'edit own memory content'
+  62: 'administer meta tags'

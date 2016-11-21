@@ -1,0 +1,28 @@
+uuid: 656f46a7-8954-46f0-a65b-e39473469566
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_tournament_subscribers.field_subscribers_name
+    - field.field.field_collection_item.field_tournament_subscribers.field_subscribers_team
+    - field_collection.field_collection.field_tournament_subscribers
+id: field_collection_item.field_tournament_subscribers.default
+targetEntityType: field_collection_item
+bundle: field_tournament_subscribers
+mode: default
+content:
+  field_subscribers_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_subscribers_team:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

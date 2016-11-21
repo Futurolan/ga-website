@@ -1,0 +1,21 @@
+uuid: 2c6beb8d-1279-45bc-a6d7-5b337d0c1c93
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.field_subscribers_team
+field_name: field_subscribers_team
+entity_type: field_collection_item
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
     - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_subscribers
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
     - image.style.thumbnail
@@ -145,6 +146,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_tournament_subscribers: true
   path: true
   promote: true
   sticky: true

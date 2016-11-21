@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
     - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_subscribers
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
     - node.type.tournament
@@ -99,6 +100,12 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+  field_tournament_subscribers:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
   field_tournament_type:
     weight: 107
     label: above

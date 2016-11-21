@@ -1,0 +1,21 @@
+uuid: 5960e608-c6a6-4299-b53c-0a5339a3b773
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.field_subscribers_name
+field_name: field_subscribers_name
+entity_type: field_collection_item
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
