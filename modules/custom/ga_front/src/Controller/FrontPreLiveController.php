@@ -31,4 +31,9 @@ class FrontPreLiveController extends ControllerBase {
 
   }
 
+  public function getTitle() {
+    $config = \Drupal::config('ga_front.prelive.settings');
+    return $config->get('title');
+  }
+
 }

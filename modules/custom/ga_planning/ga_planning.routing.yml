@@ -2,7 +2,7 @@ ga_planning:
   path: '/planning'
   defaults:
     _controller: '\Drupal\ga_planning\Controller\PlanningController::render'
-    _title: 'Planning Info page'
+    _title_callback: '\Drupal\ga_planning\Controller\PlanningController::getTitle'
   requirements:
     _permission: 'access content'
 

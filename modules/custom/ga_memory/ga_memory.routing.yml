@@ -2,7 +2,7 @@ ga_memory:
   path: '/medias'
   defaults:
     _controller: '\Drupal\ga_memory\Controller\MemoryController::render'
-    _title: 'Memory Info page'
+    _title_callback: '\Drupal\ga_memory\Controller\MemoryController::getTitle'
   requirements:
     _permission: 'access content'
 

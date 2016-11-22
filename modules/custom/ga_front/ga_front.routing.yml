@@ -10,7 +10,7 @@ ga_front.prelive:
   path: '/front/prelive'
   defaults:
     _controller: '\Drupal\ga_front\Controller\FrontPreLiveController::render'
-    _title: 'PreLive front page'
+    _title_callback: '\Drupal\ga_front\Controller\FrontPreLiveController::getTitle'
   requirements:
     _permission: 'access content'
 

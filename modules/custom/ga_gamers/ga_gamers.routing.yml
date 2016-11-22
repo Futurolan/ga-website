@@ -2,7 +2,7 @@ ga_gamers:
   path: '/gamers'
   defaults:
     _controller: '\Drupal\ga_gamers\Controller\GamersController::render'
-    _title: 'Gamers Info page'
+    _title_callback: '\Drupal\ga_gamers\Controller\GamersController::getTitle'
   requirements:
     _permission: 'access content'
 

@@ -33,6 +33,12 @@ class FrontPreliveSettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('ga_front.prelive.settings');
 
+    $form ['title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $config->get('title'),
+      '#required' => TRUE,
+    );
 
     $form ['edition_name'] = array(
       '#type' => 'textfield',
@@ -224,6 +230,7 @@ class FrontPreliveSettingsForm extends ConfigFormBase {
     $config = \Drupal::service('config.factory')
       ->getEditable('ga_front.prelive.settings');
 
+    $config->set('title', $form_state->getValue('title'));
     $config->set('edition_name', $form_state->getValue('edition_name'));
     $config->set('slide_time', $form_state->getValue('slide_time'));
     $config->set('b1_reverse', $form_state->getValue('b1_reverse'));

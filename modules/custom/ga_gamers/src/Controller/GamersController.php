@@ -14,4 +14,9 @@ class GamersController extends ControllerBase {
     );
   }
 
+  public function getTitle() {
+    $config = \Drupal::config('ga_gamers.settings');
+    return $config->get('title');
+  }
+
 }

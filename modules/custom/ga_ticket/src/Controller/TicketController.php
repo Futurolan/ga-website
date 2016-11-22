@@ -14,4 +14,9 @@ class TicketController extends ControllerBase {
     );
   }
 
+  public function getTitle() {
+    $config = \Drupal::config('ga_ticket.settings');
+    return $config->get('title');
+  }
+
 }

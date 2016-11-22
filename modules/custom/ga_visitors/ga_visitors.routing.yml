@@ -2,7 +2,7 @@ ga_visitors:
   path: '/visitors'
   defaults:
     _controller: '\Drupal\ga_visitors\Controller\VisitorsController::render'
-    _title: 'Visitors Info page'
+    _title_callback: '\Drupal\ga_visitors\Controller\VisitorsController::getTitle'
   requirements:
     _permission: 'access content'
 

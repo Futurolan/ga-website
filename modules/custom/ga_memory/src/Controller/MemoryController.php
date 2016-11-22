@@ -16,4 +16,8 @@ class MemoryController extends ControllerBase {
     );
   }
 
+  public function getTitle() {
+    $config = \Drupal::config('ga_memory.settings');
+    return $config->get('title');
+  }
 }

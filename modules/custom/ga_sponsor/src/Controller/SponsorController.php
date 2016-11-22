@@ -15,5 +15,10 @@ class SponsorController extends ControllerBase {
       '#sponsors' => $sponsors
     );
   }
+  public function getTitle() {
+    $config = \Drupal::config('ga_sponsor.settings');
+    return $config->get('title');
+  }
+
 
 }

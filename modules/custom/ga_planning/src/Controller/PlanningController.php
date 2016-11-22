@@ -13,5 +13,9 @@ class PlanningController extends ControllerBase {
       '#config' => $config
     );
   }
+  public function getTitle() {
+    $config = \Drupal::config('ga_planning.settings');
+    return $config->get('title');
+  }
 
 }

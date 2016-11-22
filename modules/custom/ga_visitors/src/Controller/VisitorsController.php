@@ -14,4 +14,9 @@ class VisitorsController extends ControllerBase {
     );
   }
 
+  public function getTitle() {
+    $config = \Drupal::config('ga_visitors.settings');
+    return $config->get('title');
+  }
+
 }
