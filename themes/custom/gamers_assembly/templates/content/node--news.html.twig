@@ -73,15 +73,7 @@
                                             </div>
                                             <div class="news-type"
                                                  {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
-                                                {% if(new.field_news_tournament.target_id) %}
-                                                    {{ new.field_news_tournament.entity.getTitle() }}
-                                                {% elseif(new.field_game.entity.getImageUri()) %}
-                                                    {{ new.field_game.entity.label() }}
-                                                {% elseif(new.field_news_edition.target_id) %}
-                                                    {{ new.field_news_edition.entity.getName()}}
-                                                {% else %}
-                                                    Futurolan
-                                                {% endif %}
+                                                {{ new.subtitle }}
                                             </div>
                                         </div>
                                         <div class="col-xs-8 news-right">
