@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.news
-    - system.menu.main
   module:
     - node
     - user
@@ -205,7 +204,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: ''
+      title: News
       header: {  }
       footer: {  }
       empty: {  }
@@ -235,7 +234,7 @@ display:
       display_extenders: {  }
       path: news
       menu:
-        type: normal
+        type: none
         title: Coucou
         description: ''
         expanded: false
@@ -243,7 +242,6 @@ display:
         weight: 0
         context: '0'
         menu_name: main
-        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
