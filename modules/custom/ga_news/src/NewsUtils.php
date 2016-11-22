@@ -62,12 +62,9 @@ class NewsUtils {
       }
       elseif ($node->field_news_edition->entity) {
         $imageUri = $node->field_news_edition->entity->field_edition_image->entity->getFileUri();
-        $subtitle = $node->field_news_edition->entity->getTitle();
-
       }
       else {
         $imageUri = NewsUtils::getImageUri($node, "field_news_image");
-        $subtitle = "Futurolan";
       }
 
       //Set Subtitle
