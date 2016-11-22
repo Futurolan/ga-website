@@ -14,7 +14,7 @@
                     <div class="news-image" style="background-image:url('{{ file_url(new.image) }}')">
                     </div>
                     <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
-                        {% if(new.gameShortName) %}({{ new.gameShortName }}) {% endif %}{{ new.tags|join(', ') }}
+                        {{ new.subtitle}}
                     </div>
                 </div>
                 <div class="col-md-8 news-right">

@@ -21,12 +21,15 @@
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
         <div class="news-tags"
              {% if (node.field_game.entity.getColor()) %}style="background-color:{{ node.field_game.entity.getColor() }}"{% endif %}>
-            {% if (node.field_game.entity.getShortName()) %}
-                ({{ node.field_game.entity.getShortName() }})
+            {% if(node.field_news_tournament.target_id) %}
+                {{ node.field_news_tournament.entity.getTitle() }}
+            {% elseif(node.field_game.entity.getImageUri()) %}
+                {{ node.field_game.entity.label() }}
+            {% elseif(node.field_news_edition.target_id) %}
+                {{ node.field_news_edition.entity.getName()}}
+            {% else %}
+                Futurolan
             {% endif %}
-            {% for tag in node.field_news_tags %}
-                {{ tag.entity.getName() }}{% if not(loop.last) %}, {% endif %}
-            {% endfor %}
         </div>
     </a>
     <h2>

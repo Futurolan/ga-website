@@ -46,10 +46,11 @@ class NewsUtils {
       if ($gameId) {
         $game = \Drupal::entityTypeManager()->getStorage("game")->load($gameId);
         $color = $game->getColor();
-        $gameShortName = $game->getShortName();
+        $gameName = $game->label();
         $gameImageUri = $game->getImageUri();
       }
 
+      //Set Image
       if ($node->field_news_image->entity) {
         $imageUri = $node->field_news_image->entity->getFileUri();
       }
@@ -61,11 +62,27 @@ class NewsUtils {
       }
       elseif ($node->field_news_edition->entity) {
         $imageUri = $node->field_news_edition->entity->field_edition_image->entity->getFileUri();
+        $subtitle = $node->field_news_edition->entity->getTitle();
+
       }
       else {
         $imageUri = NewsUtils::getImageUri($node, "field_news_image");
+        $subtitle = "Futurolan";
       }
 
+      //Set Subtitle
+      if ($node->field_news_tournament->entity) {
+        $subtitle = $node->field_news_tournament->entity->getTitle();
+      }
+      elseif ($gameImageUri) {
+        $subtitle = $gameName;
+      }
+      elseif ($node->field_news_edition->entity) {
+        $subtitle = $node->field_news_edition->entity->getName();
+      }
+      else {
+        $subtitle = "Futurolan";
+      }
 
       $news[] = array(
         "nid" => $node->id(),
@@ -73,8 +90,7 @@ class NewsUtils {
         "image" => ImageStyle::load('news_front')->buildUri($imageUri),
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
-        "tags" => $tagsArray,
-        "gameShortName" => $gameShortName,
+        "subtitle" => $subtitle,
         "color" => $color,
         "url" => $node->url()
       );
