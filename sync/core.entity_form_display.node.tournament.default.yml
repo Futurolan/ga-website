@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
     - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_sub_count
     - field.field.node.tournament.field_tournament_subscribers
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
@@ -110,11 +111,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-  field_tournament_subscribers:
-    type: field_collection_embed
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
   field_tournament_type:
     weight: 5
     settings: {  }
@@ -151,6 +147,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_tournament_sub_count: true
+  field_tournament_subscribers: true
   path: true
   promote: true
   sticky: true

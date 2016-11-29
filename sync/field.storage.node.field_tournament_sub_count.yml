@@ -1,15 +1,16 @@
-uuid: 03744c85-a892-49b4-97d8-26e862bae33d
+uuid: 479f32fb-1c41-44ab-ae43-3a38df21cdbc
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-id: node.field_tournament_subscribers
-field_name: field_tournament_subscribers
+id: node.field_tournament_sub_count
+field_name: field_tournament_sub_count
 entity_type: node
-type: string_long
+type: integer
 settings:
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

@@ -1,0 +1,25 @@
+uuid: 3e83fdd1-78d0-4169-a5b4-d7eb48d16081
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_sub_count
+    - node.type.tournament
+id: node.tournament.field_tournament_sub_count
+field_name: field_tournament_sub_count
+entity_type: node
+bundle: tournament
+label: 'Subscribers Count'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
