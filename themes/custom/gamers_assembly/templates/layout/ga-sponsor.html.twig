@@ -1,9 +1,16 @@
 <div class="sponsor-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:config.title
+        } only %}
+    </div>
     <div class="white-area">
         {% for sponsorList in sponsors %}
-            {% include directory ~ '/components/title-line/title-line.html.twig' with {
-            title:sponsorList.title,
-            } only %}
+            {% if (loop.first == false) %}
+                {% include directory ~ '/components/title-line/title-line.html.twig' with {
+                title:sponsorList.title,
+                } only %}
+            {% endif %}
             <div class="container sponsor-container">
                 <div class="row">
                     {% for sponsor in sponsorList.sponsors %}
