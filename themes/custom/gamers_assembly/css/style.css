@@ -19,6 +19,11 @@ html, body {
 
 a {
   cursor: pointer;
+  color: #4589c6;
+}
+
+a:hover {
+  color: #70b0e9;
 }
 
 .cta {
@@ -847,16 +852,7 @@ body {
   vertical-align: middle;
 }
 .information-page .info-block-body {
-  background-color: #7a7878;
-  margin-bottom: 30px;
-  color: #ffffff;
-  padding: 15px;
-}
-.information-page .info-block-body p:last-child {
-  margin-bottom: 0px;
-}
-.information-page .info-block-body {
-  background-color: #7a7878;
+  background-color: #474747;
   margin-bottom: 30px;
   color: #ffffff;
   padding: 15px;
