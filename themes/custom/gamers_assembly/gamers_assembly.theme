@@ -12,6 +12,9 @@ function gamers_assembly_preprocess_node(&$variables) {
     $variables['lastNews'] = \Drupal\ga_news\NewsUtils::getLastNews();
     $variables['nodeImage'] = \Drupal\ga_news\NewsUtils::getImageUri($variables['node'], "field_news_image");
   }
+  if ($variables['node']->getType() == "tournament") {
+    $variables['subscribers'] = json_decode($variables['node']->field_tournament_subscribers->value,true);
+  }
   return $variables;
 }
 

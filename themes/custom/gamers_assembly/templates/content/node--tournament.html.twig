@@ -37,6 +37,28 @@
                             {{ node.get('field_tournament_planning').value | raw }}
                         </div>
                     </div>
+                    <div class="tournament-subscribers">
+                        <h3>{{ "Inscrits" |t }}</h3>
+                        <ul>
+                            <li>{{ node.field_tournament_sub_count.value }} slots validés sur weezevent</li>
+                            <li>{{ node.field_tournament_reserved_slot.value }} slots réservés</li>
+                            <li>{{ node.field_tournament_size.value }} slot totaux</li>
+                        </ul>
+                        <div class="content">
+
+
+                            {% for team,players in subscribers %}
+
+                                <h4>{{ team }}</h4>
+                                {% for player in players %}
+                                    {{ player }}
+                                {% endfor %}
+
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="tournament-format">

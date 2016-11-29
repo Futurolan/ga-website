@@ -12,7 +12,7 @@ class WeezeventAPI {
     $this->access_token = $access_token;
   }
 
-  public function participants($id_event, $id_ticket) {
+  public function participants($id_ticket) {
     $client = \Drupal::httpClient();
 
     try {
@@ -22,8 +22,8 @@ class WeezeventAPI {
           'query' => array(
             'api_key' => $this->api_key,
             'access_token' => $this->access_token,
-            'id_event[]' => $id_event,
-            'id_ticket[]' => $id_ticket
+            'id_ticket[]' => $id_ticket,
+            'full'=> 1
           )
         )
       );

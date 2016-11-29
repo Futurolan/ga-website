@@ -12,13 +12,31 @@ function ga_weezevent_update_tournament_info_cron() {
   foreach ($tournamentNids as $nid) {
     $node = \Drupal\node\Entity\Node::load($nid);
     try {
-      $result = $weezevent->participants($config->get('id_event'), $node->field_tournament_weezevent_id->value);
+      $result = $weezevent->participants($node->field_tournament_weezevent_id->value);
 
-      foreach($result->participants as $participant){
-
-
-        \Drupal::logger('ga_weezevent')->info($participant->owner->first_name);
-
+      $tickets = array();
+      $count = 0;
+      if (isset($result)) {
+        foreach ($result->participants as $participant) {
+          $team = NULL;
+          $pseudo = NULL;
+          foreach ($participant->answers as $answer) {
+            if ($answer->label === "Equipe") {
+              $team = $answer->value;
+            }
+            if ($answer->label === "Pseudo") {
+              $pseudo = $answer->value;
+            }
+          }
+          $tickets[$team][] = $pseudo;
+          $count++;
+        }
+        if ($node->field_tournament_type->value == "Equipe") {
+          $count = count($tickets);
+        }
+        $node->field_tournament_subscribers->setValue(json_encode($tickets));
+        $node->field_tournament_sub_count->setValue($count);
+        $node->save();
       }
 
     } catch (Exception $e) {
