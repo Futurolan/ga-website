@@ -7,13 +7,14 @@
     height: 130px;
     line-height: 130px;
     text-align: center;
-    opacity: 0.8;
+
+    opacity: 1;
     transition: 0.2s;
     display: block;
     margin-bottom: 10px;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
       transition: 0.2s;
     }
 
