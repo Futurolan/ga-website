@@ -128,6 +128,104 @@ a:hover {
   color: #000000;
 }
 
+/* Collapse */
+/* line 102, ../sass/partials/_design.scss */
+.info-header {
+  padding-left: 20px;
+  border-left: 1px solid #bbbbbb;
+  margin-bottom: 30px;
+}
+
+/* line 108, ../sass/partials/_design.scss */
+.info-block-head {
+  text-align: left;
+  font-size: 18px;
+  color: #ffffff;
+}
+/* line 113, ../sass/partials/_design.scss */
+.info-block-head .fa {
+  font-size: 22px;
+}
+
+/* line 118, ../sass/partials/_design.scss */
+.info-block-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 18px;
+}
+
+/* line 124, ../sass/partials/_design.scss */
+.info-block-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 130, ../sass/partials/_design.scss */
+.info-block-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 135, ../sass/partials/_design.scss */
+.info-block-body {
+  background-color: #474747;
+  margin-bottom: 30px;
+  color: #ffffff;
+  padding: 15px;
+}
+/* line 141, ../sass/partials/_design.scss */
+.info-block-body p:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 146, ../sass/partials/_design.scss */
+.info-collapse {
+  margin-bottom: 30px;
+}
+/* line 149, ../sass/partials/_design.scss */
+.info-collapse .info-block-body {
+  margin-bottom: 0px;
+}
+/* line 153, ../sass/partials/_design.scss */
+.info-collapse .info-icon {
+  width: 25px;
+  display: inline-block;
+  margin-right: 5px;
+  text-align: center;
+}
+/* line 160, ../sass/partials/_design.scss */
+.info-collapse .info-carret {
+  text-align: center;
+  border-left: 2px solid #ffffff;
+  width: 78px;
+  padding: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+/* line 170, ../sass/partials/_design.scss */
+.info-collapse .info-carret .fa {
+  font-size: 32px;
+}
+/* line 176, ../sass/partials/_design.scss */
+.info-collapse [aria-expanded="true"] .fa-caret-up {
+  display: inline-block;
+}
+/* line 179, ../sass/partials/_design.scss */
+.info-collapse [aria-expanded="true"] .fa-caret-down {
+  display: none;
+}
+/* line 185, ../sass/partials/_design.scss */
+.info-collapse [aria-expanded="false"] .fa-caret-up {
+  display: none;
+}
+/* line 188, ../sass/partials/_design.scss */
+.info-collapse [aria-expanded="false"] .fa-caret-down {
+  display: inline-block;
+}
+
 /* line 1, ../sass/partials/_navigation.scss */
 #block-mainnavigation {
   background-color: #0058A2;
@@ -882,72 +980,78 @@ body {
 .node-tournament .tournament-planning .content p:last-child {
   margin-bottom: 0px;
 }
-/* line 166, ../sass/partials/_tournament.scss */
+/* line 167, ../sass/partials/_tournament.scss */
+.node-tournament .tournament-team {
+  background-color: #000000;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 177, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize {
   color: #ffffff;
 }
-/* line 168, ../sass/partials/_tournament.scss */
+/* line 179, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize h3 {
   background-color: #829e00;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
-/* line 174, ../sass/partials/_tournament.scss */
+/* line 185, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .line {
   padding: 10px 15px;
   background-color: #474747;
 }
-/* line 177, ../sass/partials/_tournament.scss */
+/* line 188, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .line.light-grey {
   background-color: #7a7878;
 }
-/* line 181, ../sass/partials/_tournament.scss */
+/* line 192, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .note {
   font-size: 12px;
   font-style: italic;
   padding: 5px 0px;
   color: #829e00;
 }
-/* line 188, ../sass/partials/_tournament.scss */
+/* line 199, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format {
   margin-top: -20px;
   color: #ffffff;
 }
-/* line 191, ../sass/partials/_tournament.scss */
+/* line 202, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format h3 {
   background-color: #00579e;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
-/* line 197, ../sass/partials/_tournament.scss */
+/* line 208, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format .line {
   padding: 10px 15px;
   background-color: #474747;
 }
-/* line 200, ../sass/partials/_tournament.scss */
+/* line 211, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format .line.light-grey {
   background-color: #7a7878;
 }
-/* line 205, ../sass/partials/_tournament.scss */
+/* line 216, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules {
   margin-bottom: 30px;
   color: #ffffff;
 }
-/* line 208, ../sass/partials/_tournament.scss */
+/* line 219, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules h3 {
   background-color: #9e3000;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
-/* line 214, ../sass/partials/_tournament.scss */
+/* line 225, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules .rule {
   padding: 10px 15px;
   background-color: #474747;
 }
-/* line 217, ../sass/partials/_tournament.scss */
+/* line 228, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules .rule.light-grey {
   background-color: #7a7878;
 }
@@ -995,96 +1099,6 @@ body {
   background-color: #ddd;
 }
 /* line 19, ../sass/partials/_information.scss */
-.information-page .info-header {
-  padding-left: 20px;
-  border-left: 1px solid #bbbbbb;
-  margin-bottom: 30px;
-}
-/* line 25, ../sass/partials/_information.scss */
-.information-page .info-block-head {
-  text-align: left;
-  font-size: 18px;
-  color: #ffffff;
-}
-/* line 30, ../sass/partials/_information.scss */
-.information-page .info-block-head .fa {
-  font-size: 22px;
-}
-/* line 35, ../sass/partials/_information.scss */
-.information-page .info-block-padding {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  font-size: 18px;
-}
-/* line 41, ../sass/partials/_information.scss */
-.information-page .info-block-table {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-/* line 47, ../sass/partials/_information.scss */
-.information-page .info-block-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-/* line 52, ../sass/partials/_information.scss */
-.information-page .info-block-body {
-  background-color: #474747;
-  margin-bottom: 30px;
-  color: #ffffff;
-  padding: 15px;
-}
-/* line 58, ../sass/partials/_information.scss */
-.information-page .info-block-body p:last-child {
-  margin-bottom: 0px;
-}
-/* line 63, ../sass/partials/_information.scss */
-.information-page .info-collapse {
-  margin-bottom: 30px;
-}
-/* line 66, ../sass/partials/_information.scss */
-.information-page .info-collapse .info-block-body {
-  margin-bottom: 0px;
-}
-/* line 70, ../sass/partials/_information.scss */
-.information-page .info-collapse .info-icon {
-  width: 25px;
-  display: inline-block;
-  margin-right: 5px;
-  text-align: center;
-}
-/* line 77, ../sass/partials/_information.scss */
-.information-page .info-collapse .info-carret {
-  text-align: center;
-  border-left: 2px solid #ffffff;
-  width: 78px;
-  padding: 0px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-}
-/* line 87, ../sass/partials/_information.scss */
-.information-page .info-collapse .info-carret .fa {
-  font-size: 32px;
-}
-/* line 93, ../sass/partials/_information.scss */
-.information-page .info-collapse [aria-expanded="true"] .fa-caret-up {
-  display: inline-block;
-}
-/* line 96, ../sass/partials/_information.scss */
-.information-page .info-collapse [aria-expanded="true"] .fa-caret-down {
-  display: none;
-}
-/* line 102, ../sass/partials/_information.scss */
-.information-page .info-collapse [aria-expanded="false"] .fa-caret-up {
-  display: none;
-}
-/* line 105, ../sass/partials/_information.scss */
-.information-page .info-collapse [aria-expanded="false"] .fa-caret-down {
-  display: inline-block;
-}
-/* line 111, ../sass/partials/_information.scss */
 .information-page .info-ticketing {
   background-color: #FC7E00;
   margin-bottom: 50px;
@@ -1092,34 +1106,34 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 119, ../sass/partials/_information.scss */
+/* line 27, ../sass/partials/_information.scss */
 .information-page .info-equipment {
   background-color: #000000;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 125, ../sass/partials/_information.scss */
+/* line 33, ../sass/partials/_information.scss */
 .information-page .info-restoration {
   background-color: #46679e;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 131, ../sass/partials/_information.scss */
+/* line 39, ../sass/partials/_information.scss */
 .information-page .info-schedule {
   background-color: #0058a2;
   padding-right: 85px;
 }
-/* line 136, ../sass/partials/_information.scss */
+/* line 44, ../sass/partials/_information.scss */
 .information-page .info-access {
   background-color: #4589c6;
   padding-right: 85px;
 }
-/* line 141, ../sass/partials/_information.scss */
+/* line 49, ../sass/partials/_information.scss */
 .information-page .info-pricing {
   background-color: #005a7c;
   padding-right: 85px;
 }
-/* line 146, ../sass/partials/_information.scss */
+/* line 54, ../sass/partials/_information.scss */
 .information-page .info-accommodation {
   background-color: #00356f;
   padding-right: 85px;
@@ -1263,7 +1277,10 @@ body {
 /* line 1, ../sass/partials/_memory.scss */
 .memory-image {
   height: 350px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
 }
 
 /* line 1, ../sass/partials/_form.scss */

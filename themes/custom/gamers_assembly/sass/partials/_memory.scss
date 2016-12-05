@@ -1,4 +1,7 @@
 .memory-image {
   height: 350px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
 }

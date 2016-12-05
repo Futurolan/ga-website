@@ -44,19 +44,50 @@
                             <li>{{ node.field_tournament_reserved_slot.value }} slots réservés</li>
                             <li>{{ node.field_tournament_size.value }} slot totaux</li>
                         </ul>
-                        <div class="content">
 
-
-                            {% for team,players in subscribers %}
-
-                                <h4>{{ team }}</h4>
-                                {% for player in players %}
-                                    {{ player }}
-                                {% endfor %}
-
-                            {% endfor %}
-
-
+                        <div class="info-collapse">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#tournament-team-content"
+                                       aria-expanded="true" aria-controls="tournament-team-content">
+                                        <div class="col-md-12 info-block-head tournament-team">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon">
+                                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                                </span> {{ "Équipes"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="tournament-team-content" class="col-md-12 collapse in"
+                                     aria-expanded="true">
+                                    <div class="">
+                                        <table class="table table-striped table-condensed table-hover table-bordered">
+                                            {% for team, players in subscribers %}
+                                            <tr>
+                                                <td>#{{ loop.index }}</td>
+                                                <td><strong>{{ team }}</strong></td>
+                                                <td>
+                                                {% for player in players %}
+                                                    {{ player }}{% if not loop.last %}, {% endif %}
+                                                {% endfor %}
+                                                </td>
+                                                {% endfor %}
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
