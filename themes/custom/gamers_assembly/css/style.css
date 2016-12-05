@@ -144,13 +144,13 @@ a:hover {
 }
 /* line 113, ../sass/partials/_design.scss */
 .info-block-head .fa {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /* line 118, ../sass/partials/_design.scss */
 .info-block-padding {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 18px;
 }
 
