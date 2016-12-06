@@ -69,18 +69,26 @@
                                 </div>
                             </div>
                             <div class="row">
+                                {% set sub_count = node.field_tournament_sub_count.value!=NULL ? node.field_tournament_sub_count.value : 0 %}
+                                {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count%}
+
                                 <div id="tournament-team-content" class="col-md-12 collapse in"
                                      aria-expanded="true">
                                     <div class="">
                                         <table class="table table-striped table-condensed table-hover table-bordered">
-                                            <tr>
-                                                <td>#0</td>
-                                                <td><i class="fa fa-lock" aria-hidden="true"></i></td>
-                                                <td></td>
-                                            </tr>
+                                            {% if(node.field_tournament_reserved_slot.value >=1) %}
+                                            {% for i in 1..node.field_tournament_reserved_slot.value %}
+                                                <tr>
+                                                    <td>#{{ i }}</td>
+                                                    <td><i class="fa fa-lock" aria-hidden="true"></i> {{ "Slot réservé"|t }}</td>
+                                                    <td></td>
+                                                </tr>
+                                            {% endfor %}
+                                            {% endif %}
+
                                             {% for team, players in subscribers %}
                                             <tr>
-                                                <td>#{{ loop.index }}</td>
+                                                <td>#{{ loop.index + node.field_tournament_reserved_slot.value  }}</td>
                                                 <td><strong>{{ team }}</strong></td>
                                                 <td>
                                                     {% for player in players %}
@@ -89,11 +97,16 @@
                                                 </td>
                                                 {% endfor %}
                                             </tr>
-                                            <tr>
-                                                <td>#X</td>
-                                                <td>Slot libre</td>
-                                                <td></td>
-                                            </tr>
+
+                                            {% for i in 1..free_slot %}
+                                                <tr>
+                                                    <td>#{{ i+sub_count+node.field_tournament_reserved_slot.value}}</td>
+                                                    <td><i class="fa fa-unlock" aria-hidden="true"></i> {{ "Slot libre"|t}}</td>
+                                                    <td></td>
+                                                </tr>
+                                            {% endfor %}
+
+
                                         </table>
                                     </div>
                                 </div>
