@@ -1,5 +1,7 @@
 abs_urls: false
 roles_profiles:
+  moderator:
+    public: admin
   authenticated:
     public: member
 langcode: fr

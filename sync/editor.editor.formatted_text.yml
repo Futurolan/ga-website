@@ -18,23 +18,7 @@ settings:
           name: Formatting
           items:
             - Bold
-            - Underline
             - Italic
-            - Strike
-            - '-'
-            - HorizontalRule
-            - Format
-            - Table
-        -
-          name: Position
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-            - '-'
-            - Outdent
-            - Indent
         -
           name: Links
           items:
