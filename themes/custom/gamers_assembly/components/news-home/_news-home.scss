@@ -2,7 +2,6 @@
   .new {
     background-color: rgba(0, 0, 0, 0.5);;
     width: 100%;
-    height: 185px;
     margin-bottom: 25px;
     color: $white;
 
@@ -34,9 +33,9 @@
           word-wrap: break-word;
           overflow: hidden;
           display: -webkit-box;
-          height: 80px;
+          height: 40px;
           margin: 0 auto;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
       }

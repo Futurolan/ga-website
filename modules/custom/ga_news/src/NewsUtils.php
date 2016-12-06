@@ -18,7 +18,7 @@ class NewsUtils {
       ->condition('type', 'news')
       ->condition('langcode', $langcode)
       ->sort('created', 'DESC')
-      ->range(0, 3)
+      ->range(0, 4)
       ->execute();
 
     $news = [];
@@ -84,7 +84,7 @@ class NewsUtils {
       $news[] = array(
         "nid" => $node->id(),
         "title" => $node->getTitle(),
-        "image" => ImageStyle::load('news_front')->buildUri($imageUri),
+        "image" => $imageUri,
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
         "subtitle" => $subtitle,

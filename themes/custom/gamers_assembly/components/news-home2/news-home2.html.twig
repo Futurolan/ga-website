@@ -6,34 +6,47 @@
     <div class="hack-line-left"></div>
     <div class="hack-line-right"></div>
 
+    <div class="row ">
 
-    {% for new in news %}
-        <div class="row news-main">
+        {% for new in news %}
             <a href="{{ new.url }}">
-                <div class="col-md-4 news-left">
-                    <div class="news-image" style="background-image:url('{{ file_url(new.image) }}')">
+                <div class="col-md-6 news-main">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-responsive" src="{{ file_url(new.image) }}"/>
+                        </div>
                     </div>
-                    <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
-                        {{ new.subtitle}}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="news-type"
+                                 {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                                {{ new.subtitle }}
+                            </div>
+                        </div>
                     </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="news-background">
+                                <div class="news-title">
+                                    {{ new.title }}
+                                </div>
+                                <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
+                                <div class="news-content">
+                                    {{ new.text|raw }}
+                                </div>
+                                <div class="news-more">
+                                    <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-md-8 news-right">
-                    <div class="news-background">
-                        <div class="news-title">
-                            {{ new.title }}
-                        </div>
-                        <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
-                        <div class="news-content">
-                            {{ new.text|raw }}
-                        </div>
-                        <div class="news-more">
-                            <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
-                        </div>
-                    </div>
-                </div>
+
             </a>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 
     <div class="row ">
         <div class="col-md-12 text-center">

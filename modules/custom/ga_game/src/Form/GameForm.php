@@ -76,6 +76,7 @@ class GameForm extends EntityForm {
       '#type' => 'managed_file',
       '#title' => t('Image'),
       '#required' => TRUE,
+      "#description" => t("Size : 1170x511"),
       '#default_value' => $game->getImage(),
       '#upload_location' => file_default_scheme() . '://game/',
       '#upload_validators' => array(

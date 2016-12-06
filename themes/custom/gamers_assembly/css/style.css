@@ -699,11 +699,6 @@ body {
 .views-tournaments .white-area .tournament a:hover {
   text-decoration: none;
 }
-.views-tournaments .white-area .tournament a .tournament-image {
-  height: 150px;
-  background-size: cover;
-  background-position: center center;
-}
 .views-tournaments .white-area .tournament a .tournament-game {
   text-align: center;
   line-height: 25px;
@@ -767,11 +762,6 @@ body {
 
 .node-tournament .white-area {
   padding-top: 0px;
-}
-.node-tournament .tournament-image {
-  height: 350px;
-  background-size: cover;
-  background-position: center center;
 }
 .node-tournament .tournament-tag-info {
   margin-top: 5px;
@@ -1560,7 +1550,6 @@ select option {
 .news-home .new {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 185px;
   margin-bottom: 25px;
   color: #ffffff;
 }
@@ -1594,9 +1583,9 @@ select option {
   word-wrap: break-word;
   overflow: hidden;
   display: -webkit-box;
-  height: 80px;
+  height: 40px;
   margin: 0 auto;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
@@ -1646,7 +1635,7 @@ select option {
   overflow: hidden;
   display: -webkit-box;
   margin: 0 auto;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   height: 40px;
 }
@@ -1740,7 +1729,7 @@ select option {
   }
 }
 .twitter-home .twitter-userline {
-  height: 605px;
+  height: 700px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }

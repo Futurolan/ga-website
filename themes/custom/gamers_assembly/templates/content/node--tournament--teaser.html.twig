@@ -1,11 +1,11 @@
 <div class="tournament">
     <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
         {% if(node.field_tournament_image.entity.uri.value) %}
-            <div class="tournament-image"
-                 style="background-image:url('{{ file_url(node.field_tournament_image.entity.uri.value) }}')"></div>
+            <img class="img-responsive center-block"
+                 src="{{ file_url(node.field_tournament_image.entity.uri.value) }}"/>
         {% else %}
-            <div class="tournament-image"
-                 style="background-image:url('{{ file_url(node.field_game.entity.getImageUri()) }}')"></div>
+            <img class="img-responsive center-block"
+                 src="{{ file_url(node.field_game.entity.getImageUri()) }}"/>
         {% endif %}
         <div class="tournament-game" style="background-color:{{ node.field_game.entity.getColor() }}">
             <h2>
@@ -15,7 +15,7 @@
 
     </a>
     {% set sub_count = node.field_tournament_sub_count.value!=NULL ? node.field_tournament_sub_count.value : 0 %}
-    {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count%}
+    {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count %}
     {% set free_slot_percent = (node.field_tournament_reserved_slot.value + sub_count )/node.field_tournament_size.value*100 %}
 
     {% if (free_slot_percent>66 ) %}
