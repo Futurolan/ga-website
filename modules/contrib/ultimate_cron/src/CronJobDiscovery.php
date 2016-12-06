@@ -60,7 +60,7 @@ class CronJobDiscovery {
         continue;
       }
 
-      $job_id = CronJobInterface::QUEUE_ID_PREFIX . $id;
+      $job_id = str_replace(':', '__', CronJobInterface::QUEUE_ID_PREFIX . $id);
       if (!CronJob::load($job_id)) {
         $values = [
           'title' => t('Queue: @title', ['@title' => $definition['title']]),
