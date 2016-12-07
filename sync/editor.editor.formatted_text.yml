@@ -18,7 +18,23 @@ settings:
           name: Formatting
           items:
             - Bold
+            - Underline
             - Italic
+            - Strike
+            - '-'
+            - HorizontalRule
+            - Format
+            - Table
+        -
+          name: Position
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - '-'
+            - Outdent
+            - Indent
         -
           name: Links
           items:
@@ -45,7 +61,7 @@ settings:
     stylescombo:
       styles: ''
 image_upload:
-  status: false
+  status: true
   scheme: public
   directory: inline-images
   max_size: ''
