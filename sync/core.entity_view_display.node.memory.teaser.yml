@@ -15,4 +15,9 @@ content:
   links:
     weight: 100
 hidden:
+  field_memory_description: true
+  field_memory_external_url: true
+  field_memory_image: true
+  field_memory_short_description: true
+  field_memory_weight: true
   langcode: true
