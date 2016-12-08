@@ -30,7 +30,7 @@
                     <div class="row">
                         {% if(node.field_news_show_image.value) %}
                             <div class="col-md-12 ">
-                                <img class="img-responsive" src="{{ cropped_image }}"/>
+                                <img class="img-responsive" src="{{ file_url(cropped_image) }}"/>
 
                             </div>
                         {% endif %}
