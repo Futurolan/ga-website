@@ -11,7 +11,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.memory
   module:
-    - image
+    - image_widget_crop
     - path
     - text
 id: node.memory.default
@@ -36,10 +36,16 @@ content:
   field_memory_image:
     weight: 2
     settings:
-      progress_indicator: throbber
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - ratio_site
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   field_memory_short_description:
     weight: 3
     settings:

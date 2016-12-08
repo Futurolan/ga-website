@@ -52,6 +52,12 @@ function gamers_assembly_preprocess_node(&$variables) {
       $variables['cropped_image'] = $style->buildUrl($node->field_page_image->entity->uri->value); // Generates file url.
     }
   }
+  if ($node->getType() == "memory") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if ($node->field_memory_image->entity) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_memory_image->entity->uri->value); // Generates file url.
+    }
+  }
   return $variables;
 }
 

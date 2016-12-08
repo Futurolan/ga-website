@@ -9,8 +9,7 @@
             {% if (node.field_memory_image.entity.uri.value) %}
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="memory-image"
-                             style="background-image:url('{{ file_url(node.field_memory_image.entity.uri.value) }}')"></div>
+                        <img src="{{ cropped_image }}" class="img-responsive"/>
                     </div>
                 </div>
             {% endif %}
