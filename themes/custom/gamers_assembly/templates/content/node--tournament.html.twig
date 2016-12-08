@@ -42,9 +42,15 @@
                                        aria-expanded="true" aria-controls="tournament-team-content">
                                         <div class="col-md-12 info-block-head tournament-team">
                                             <div class="info-block-padding">
+                                                {% if(node.field_tournament_type.value =="Solo") %}
                                                 <span class="info-icon">
                                                     <i class="fa fa-users" aria-hidden="true"></i>
+                                                </span> {{ "Joueurs"|t }}
+                                                {% else %}
+                                                    <span class="info-icon">
+                                                    <i class="fa fa-users" aria-hidden="true"></i>
                                                 </span> {{ "Équipes"|t }}
+                                                {% endif %}
                                             </div>
                                             <div class="info-carret info-block-head">
                                                 <div class="info-block-table">
