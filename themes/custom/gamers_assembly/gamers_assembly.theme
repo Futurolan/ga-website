@@ -20,7 +20,7 @@ function gamers_assembly_preprocess_node(&$variables) {
         $variables['cropped_image'] = $style->buildUrl($node->field_news_tournament->entity->field_tournament_image->entity->uri->value);
       } // Generates file url.
       else {
-        if ($node->field_game->entity->getImageUri()) {
+        if ($node->field_game->entity) {
           $variables['cropped_image'] = $style->buildUrl($node->field_game->entity->getImageUri());
         } // Generates file url.
         else {
