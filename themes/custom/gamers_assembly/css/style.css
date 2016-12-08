@@ -832,7 +832,6 @@ body {
   color: #829e00;
 }
 .node-tournament .tournament-format {
-  margin-top: -20px;
   color: #ffffff;
 }
 .node-tournament .tournament-format h3 {
@@ -847,6 +846,18 @@ body {
 }
 .node-tournament .tournament-format .line.light-grey {
   background-color: #7a7878;
+}
+.node-tournament .tournament-cta a {
+  color: #FC7E00;
+  border: 1px solid #FC7E00;
+  padding: 30px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.node-tournament .tournament-cta a:hover {
+  background-color: #FF8D31;
+  color: #ffffff;
 }
 .node-tournament .tournament-rules {
   margin-bottom: 30px;

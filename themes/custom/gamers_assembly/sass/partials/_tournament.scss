@@ -189,7 +189,6 @@
     }
   }
   .tournament-format {
-    margin-top: -20px;
     color: $white;
     h3 {
       background-color: #00579e;
@@ -203,6 +202,20 @@
       &.light-grey {
         background-color: #7a7878;
       }
+    }
+  }
+  .tournament-cta{
+    a{
+      color:$orange;
+      border:1px solid $orange;
+      padding:30px;
+      display:block;
+      text-align: center;
+      text-decoration: none;
+    }
+    a:hover{
+      background-color:$orange-hover;
+      color:$white;
     }
   }
   .tournament-rules {
