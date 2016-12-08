@@ -11,7 +11,7 @@
         <div class="row news-main">
             <a href="{{ new.url }}">
                 <div class="col-md-4 news-left clearfix">
-                    <img class="img-responsive" src="{{ new.image }}"/>
+                    <img class="img-responsive" src="{{ file_url(new.image) }}"/>
                     <div class="news-type" {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
                         {{ new.subtitle }}
                     </div>
