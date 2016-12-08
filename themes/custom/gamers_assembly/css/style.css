@@ -1728,7 +1728,7 @@ select option {
     right: -125px;
   }
 }
-@media (min-width: 992px) {
+@media (max-width: 1199px) {
   .news-home2 .news-main .news-background .news-content {
     display: none;
   }
