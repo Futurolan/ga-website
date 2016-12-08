@@ -8,7 +8,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.page
   module:
-    - image
+    - image_widget_crop
     - path
     - scheduler
     - text
@@ -32,10 +32,16 @@ content:
   field_page_image:
     weight: 1
     settings:
-      progress_indicator: throbber
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - ratio_site
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   langcode:
     type: language_select
     weight: 3

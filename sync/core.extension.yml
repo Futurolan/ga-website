@@ -8,6 +8,7 @@ module:
   config: 0
   config_translation: 0
   content_translation: 0
+  crop: 0
   ctools: 0
   datetime: 0
   dblog: 0
@@ -37,6 +38,7 @@ module:
   google_analytics: 0
   help: 0
   image: 0
+  image_widget_crop: 0
   imce: 0
   language: 0
   link: 0

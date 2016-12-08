@@ -23,7 +23,7 @@ dependencies:
     - field_collection
     - field_group
     - file
-    - image
+    - image_widget_crop
     - scheduler
     - text
 third_party_settings:
@@ -82,10 +82,17 @@ content:
   field_tournament_image:
     weight: 3
     settings:
-      progress_indicator: throbber
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - news_format
+        - ratio_site
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   field_tournament_planning:
     weight: 7
     settings:

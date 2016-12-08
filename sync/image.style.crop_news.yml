@@ -1,0 +1,22 @@
+uuid: cc61f017-3211-458e-99d5-a1c9b871857e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: crop_news
+label: 'Crop News'
+effects:
+  d4780c2e-e693-49cf-908b-a54da89df439:
+    uuid: d4780c2e-e693-49cf-908b-a54da89df439
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: news_format
+  db7c2a4f-1cfc-4dc3-9389-fb311bc6aec6:
+    uuid: db7c2a4f-1cfc-4dc3-9389-fb311bc6aec6
+    id: image_resize
+    weight: 2
+    data:
+      width: 750
+      height: 422

@@ -18,7 +18,7 @@ class NewsUtils {
       ->condition('type', 'news')
       ->condition('langcode', $langcode)
       ->sort('created', 'DESC')
-      ->range(0, 4)
+      ->range(0, 3)
       ->execute();
 
     $news = [];
@@ -80,11 +80,12 @@ class NewsUtils {
       else {
         $subtitle = "Futurolan";
       }
+      $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
 
       $news[] = array(
         "nid" => $node->id(),
         "title" => $node->getTitle(),
-        "image" => $imageUri,
+        "image" => $style->buildUrl($imageUri),
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
         "subtitle" => $subtitle,

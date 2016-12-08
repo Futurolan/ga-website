@@ -13,7 +13,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.news
   module:
-    - image
+    - image_widget_crop
     - path
     - scheduler
     - text
@@ -50,10 +50,16 @@ content:
   field_news_image:
     weight: 2
     settings:
-      progress_indicator: throbber
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - news_format
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   field_news_show_image:
     weight: 3
     settings:

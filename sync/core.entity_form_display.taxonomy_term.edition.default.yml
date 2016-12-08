@@ -7,7 +7,7 @@ dependencies:
     - image.style.thumbnail
     - taxonomy.vocabulary.edition
   module:
-    - image
+    - image_widget_crop
     - path
     - text
 id: taxonomy_term.edition.default
@@ -16,19 +16,25 @@ bundle: edition
 mode: default
 content:
   description:
-    type: text_textfield
+    type: text_textarea
     weight: 0
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_edition_image:
     weight: 31
     settings:
-      progress_indicator: throbber
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - news_format
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   langcode:
     type: language_select
     weight: 2
@@ -48,4 +54,6 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

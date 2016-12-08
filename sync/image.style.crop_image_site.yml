@@ -1,0 +1,22 @@
+uuid: 88d379cf-dd38-4c5d-ace2-59bcf96e17ef
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: crop_image_site
+label: 'Crop image site'
+effects:
+  71c92dd7-dc02-4ecb-af7b-f71bbd59d295:
+    uuid: 71c92dd7-dc02-4ecb-af7b-f71bbd59d295
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: ratio_site
+  bfb26f81-c8ec-48f6-94ec-236b84917d87:
+    uuid: bfb26f81-c8ec-48f6-94ec-236b84917d87
+    id: image_resize
+    weight: 2
+    data:
+      width: 1170
+      height: 351

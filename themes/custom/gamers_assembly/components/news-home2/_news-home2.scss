@@ -60,7 +60,7 @@
         margin-bottom: -10px;
         margin-right: -10px;
         text-align: right;
-        margin-top: 20px;
+        margin-top: 28px;
         span {
           color: $black;
           font-weight: bold;
@@ -154,5 +154,15 @@
       top: 14px;
       right: -125px;
     }
+  }
+}
+
+
+@media (min-width: 992px){
+  .news-home2 .news-main .news-background{
+    .news-content{
+      display:none;
+    }
+    .news-more{margin-top:53px;}
   }
 }

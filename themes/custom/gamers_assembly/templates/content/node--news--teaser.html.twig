@@ -1,22 +1,8 @@
 <div class="news">
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
 
-        {% if (node.field_news_image.entity.uri.value) %}
-            <img class="img-responsive"
-                 src="{{ file_url(node.field_news_image.entity.uri.value) }}"/>
-        {% elseif(node.field_news_tournament.target_id) %}
-            <img class="img-responsive"
-                 src="{{ file_url(node.field_news_tournament.entity.field_tournament_image.entity.uri.value) }}"/>
-        {% elseif(node.field_game.entity.getImageUri()) %}
-            <img class="img-responsive"
-                 src="{{ file_url(node.field_game.entity.getImageUri()) }}"/>
-        {% elseif(node.field_news_edition.target_id) %}
-            <img class="img-responsive"
-                 src="{{ file_url(node.field_news_edition.entity.field_edition_image.entity.uri.value) }}"/>
-        {% else %}
-            <img class="img-responsive"
-                 src="{{ file_url(nodeImage) }}"/>
-        {% endif %}
+        <img class="img-responsive" src="{{ cropped_image }}"/>
+
 
     </a>
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">

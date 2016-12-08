@@ -1643,7 +1643,7 @@ select option {
   margin-bottom: -10px;
   margin-right: -10px;
   text-align: right;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 .news-home2 .news-main .news-background .news-more span {
   color: #000000;
@@ -1728,8 +1728,16 @@ select option {
     right: -125px;
   }
 }
+@media (min-width: 992px) {
+  .news-home2 .news-main .news-background .news-content {
+    display: none;
+  }
+  .news-home2 .news-main .news-background .news-more {
+    margin-top: 53px;
+  }
+}
 .twitter-home .twitter-userline {
-  height: 700px;
+  height: 605px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }

@@ -7,13 +7,50 @@ function gamers_assembly_preprocess_block(&$variables) {
 
 function gamers_assembly_preprocess_node(&$variables) {
   $variables['host'] = \Drupal::request()->getHost();
-
-  if ($variables['node']->getType() == "news") {
+  $node = $variables['node'];
+  if ($node->getType() == "news") {
     $variables['lastNews'] = \Drupal\ga_news\NewsUtils::getLastNews();
-    $variables['nodeImage'] = \Drupal\ga_news\NewsUtils::getImageUri($variables['node'], "field_news_image");
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
+
+    if ($node->field_news_image->entity) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_news_image->entity->uri->value);
+    } // Generates file url.
+    else {
+      if ($node->field_news_tournament->target_id) {
+        $variables['cropped_image'] = $style->buildUrl($node->field_news_tournament->entity->field_tournament_image->entity->uri->value);
+      } // Generates file url.
+      else {
+        if ($node->field_game->entity->getImageUri()) {
+          $variables['cropped_image'] = $style->buildUrl($node->field_game->entity->getImageUri());
+        } // Generates file url.
+        else {
+          if ($node->field_news_edition->target_id) {
+            $variables['cropped_image'] = $style->buildUrl($node->field_news_edition->entity->field_edition_image->entity->uri->value);
+          } // Generates file url.
+          else {
+            \Drupal\ga_news\NewsUtils::getImageUri($node, "field_news_image");
+          }
+        }
+      }
+    }
   }
-  if ($variables['node']->getType() == "tournament") {
-    $variables['subscribers'] = json_decode($variables['node']->field_tournament_subscribers->value,true);
+
+
+  if ($node->getType() == "tournament") {
+    $variables['subscribers'] = json_decode($node->field_tournament_subscribers->value, TRUE);
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if ($node->field_tournament_image->entity) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_tournament_image->entity->uri->value); // Generates file url.
+    }
+    else {
+      $variables['cropped_image'] = $style->buildUrl($node->get('field_game')->entity->getImageUri()); // Generates file url.
+    }
+  }
+  if ($node->getType() == "page") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if ($node->field_page_image->entity) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_page_image->entity->uri->value); // Generates file url.
+    }
   }
   return $variables;
 }

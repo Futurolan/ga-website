@@ -9,8 +9,7 @@
             {% if (node.get("field_page_image").entity.uri.value) %}
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="page-image"
-                             style="background-image:url('{{ file_url(node.get("field_page_image").entity.uri.value) }}')"></div>
+                        <img src="{{ cropped_image }}" class="img-responsive"/>
                     </div>
                 </div>
             {% endif %}
