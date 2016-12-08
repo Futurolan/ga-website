@@ -1,7 +1,7 @@
 <div class="news">
     <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
 
-        <img class="img-responsive" src="{{ cropped_image }}"/>
+        <img class="img-responsive" src="{{ file_url(cropped_image) }}"/>
 
 
     </a>
