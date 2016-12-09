@@ -148,6 +148,7 @@ a:hover {
   margin-bottom: 30px;
   color: #ffffff;
   padding: 15px;
+  text-align: justify;
 }
 .info-block-body p:last-child {
   margin-bottom: 0px;
