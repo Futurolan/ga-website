@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_subscribers
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
+    - field.field.node.tournament.field_tournament_weight
     - image.style.thumbnail
     - node.type.tournament
   module:
@@ -156,6 +157,7 @@ hidden:
   created: true
   field_tournament_sub_count: true
   field_tournament_subscribers: true
+  field_tournament_weight: true
   path: true
   promote: true
   sticky: true

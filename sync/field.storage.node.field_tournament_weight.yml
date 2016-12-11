@@ -1,0 +1,20 @@
+uuid: 62485d7f-c0a9-4a21-9d22-453bf2140192
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - weight
+id: node.field_tournament_weight
+field_name: field_tournament_weight
+entity_type: node
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

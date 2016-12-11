@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_subscribers
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
+    - field.field.node.tournament.field_tournament_weight
     - node.type.tournament
   module:
     - field_collection
@@ -119,6 +120,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_tournament_weight:
+    weight: 121
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   links:
     weight: 100
     settings: {  }

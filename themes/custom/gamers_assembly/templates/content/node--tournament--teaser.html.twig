@@ -26,19 +26,21 @@
         <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
     </div>
     <div class="row">
-        <div class="col-md-6 text-left">
+        <div class="col-md-7 col-xs-6 text-left">
             <div class="tournament-more">
                 <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
                     {{ "Liste des inscrits"|t }}
                 </a>
             </div>
         </div>
-        <div class="col-md-6 text-right">
-            <div class="tournament-more">
-                <a href="{{ path('ga_ticket') }}">
-                    {{ "S'inscrire"|t }}
-                </a>
-            </div>
+        <div class="col-md-5 col-xs-6 text-right">
+            {% if(node.field_tournament_weezevent_id.value!=NULL) %}
+                <div class="tournament-more">
+                    <a href="{{ path('ga_ticket') }}">
+                        {{ "S'inscrire"|t }}
+                    </a>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
