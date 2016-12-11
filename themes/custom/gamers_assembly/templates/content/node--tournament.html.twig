@@ -32,6 +32,8 @@
                             {{ node.get('field_tournament_planning').value | raw }}
                         </div>
                     </div>
+                    {% if(node.field_tournament_weezevent_id.value!=NULL) %}
+
                     <div class="tournament-subscribers">
 
 
@@ -64,6 +66,7 @@
                                     </a>
                                 </div>
                             </div>
+
                             <div class="row">
                                 {% set sub_count = node.field_tournament_sub_count.value!=NULL ? node.field_tournament_sub_count.value : 0 %}
                                 {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count %}
@@ -113,6 +116,8 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
+
                 </div>
                 <div class="col-md-4">
                     {% if(node.field_tournament_weezevent_id.value!=NULL) %}
