@@ -740,7 +740,7 @@ body {
 }
 .views-tournaments .white-area .tournament .tournament-bar .progress-current {
   position: absolute;
-  height: 2px;
+  height: 5px;
 }
 .views-tournaments .white-area .tournament .tournament-bar .progress-current.low {
   background-color: #27bf27;
