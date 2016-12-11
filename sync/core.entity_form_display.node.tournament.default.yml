@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_image_sponsor
     - field.field.node.tournament.field_tournament_planning
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
@@ -24,6 +25,7 @@ dependencies:
     - field_collection
     - field_group
     - file
+    - image
     - image_widget_crop
     - scheduler
     - text
@@ -44,6 +46,18 @@ third_party_settings:
         required_fields: true
         id: ''
         classes: ''
+    group_partenariat:
+      children:
+        - field_tournament_image_sponsor
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Partenariat
 _core:
   default_config_hash: 3nWj8aGAiUPJwARBf8n6uSDidEKi_YDmlS04IXfhUKA
 id: node.tournament.default
@@ -94,6 +108,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_widget_crop
+  field_tournament_image_sponsor:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   field_tournament_planning:
     weight: 7
     settings:
@@ -138,7 +159,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
   title:
@@ -150,7 +171,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
 hidden:

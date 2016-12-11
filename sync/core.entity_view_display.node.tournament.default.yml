@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_image_sponsor
     - field.field.node.tournament.field_tournament_planning
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
@@ -22,6 +23,7 @@ dependencies:
   module:
     - field_collection
     - file
+    - image
     - options
     - text
     - user
@@ -65,6 +67,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_tournament_image_sponsor:
+    weight: 122
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_tournament_planning:
     weight: 108
     label: above
