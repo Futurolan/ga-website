@@ -1,7 +1,7 @@
 <div class="tournament">
     <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
         <img class="center-block img-responsive"
-             src="{{ cropped_image }}"/>
+             src="{{ file_url(cropped_image) }}"/>
         <div class="tournament-game" style="background-color:{{ node.field_game.entity.getColor() }}">
             <h2>
                 {{ node.getTitle() }}
