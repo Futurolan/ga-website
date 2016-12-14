@@ -58,9 +58,15 @@ class GameForm extends EntityForm {
       '#title' => $this->t('Type'),
       '#default_value' => $game->getType(),
       '#options' => [
-        'moba' => $this->t('MOBA'),
         'fps' => $this->t('FPS'),
-        'card game' => $this->t('Card game'),
+        'moba' => $this->t('MOBA'),
+        'rts' => $this->t('RTS'),
+        'card' => $this->t('Jeu de cartes'),
+        'vsfight' => $this->t('Versus Fighting'),
+        'course' => $this->t('Course'),      
+        'sport' => $this->t('Sport'),      
+        'action' => $this->t('Action'),      
+        'other' => $this->t('Autre'),      
       ],
       '#required' => TRUE,
     ];
