@@ -14,6 +14,15 @@ a:hover{
   color:#70b0e9
 }
 
+a[name]:before {
+  display: block;
+  content: "";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+}
+
+
 .cta {
   z-index: 0;
   position: relative;
