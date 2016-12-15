@@ -6,7 +6,9 @@ function gamers_assembly_preprocess_html(&$variables) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node && $node->getType() == "tournament") {
     if ($node->field_tournament_image_sponsor->entity) {
-      $variables['attributes']['style'][] = "background:url(".file_create_url($node->field_tournament_image_sponsor->entity->uri->value).") center top;background-attachment: fixed";
+      $variables['attributes']['style'] = "background:url(".file_create_url($node->field_tournament_image_sponsor->entity->uri->value).") center top;background-attachment: fixed";
+      $variables['attributes']['class'][] = "tournament-sponsor";
+
     }
 
   }

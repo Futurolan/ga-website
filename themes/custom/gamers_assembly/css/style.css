@@ -777,9 +777,6 @@ body {
 .node-tournament .white-area {
   padding-top: 0px;
 }
-.node-tournament .white-area .container:first-child {
-  background-color: #ffffff;
-}
 .node-tournament .tournament-tag-info {
   margin-top: 5px;
 }
@@ -892,6 +889,13 @@ body {
 }
 .node-tournament .tournament-rules .rule.light-grey {
   background-color: #7a7878;
+}
+
+body.tournament-sponsor .node-tournament .white-area {
+  padding-top: 0px;
+}
+body.tournament-sponsor .node-tournament .white-area .container:first-child {
+  background-color: #ffffff;
 }
 
 .sponsor-page .sponsor-container:not(:last-child) {

@@ -105,9 +105,6 @@
 .node-tournament {
   .white-area {
     padding-top: 0px;
-    .container:first-child{
-      background-color:$white;
-    }
   }
 
 
@@ -240,3 +237,13 @@
   }
 }
 
+body.tournament-sponsor {
+  .node-tournament {
+    .white-area {
+      padding-top: 0px;
+      .container:first-child {
+        background-color: $white;
+      }
+    }
+  }
+}
