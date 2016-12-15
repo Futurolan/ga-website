@@ -39,10 +39,10 @@ class TicketSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form ['iframe_url'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Iframe url'),
-      '#default_value' => $config->get('iframe_url'),
+    $form ['weezevent_code'] = array(
+      '#type' => 'textarea',
+      '#title' => $this->t('Weezevent Code'),
+      '#default_value' => $config->get('weezevent_code'),
       '#required' => TRUE,
     );
 
@@ -60,7 +60,7 @@ class TicketSettingsForm extends ConfigFormBase {
       ->getEditable('ga_ticket.settings');
 
     $config->set('title', $form_state->getValue('title'));
-    $config->set('iframe_url', $form_state->getValue('iframe_url'));
+    $config->set('weezevent_code', $form_state->getValue('weezevent_code'));
     $config->set('langcode', \Drupal::languageManager()
       ->getDefaultLanguage()
       ->getId());
