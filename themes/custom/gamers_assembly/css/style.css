@@ -479,6 +479,7 @@ body {
   display: -webkit-box;
   height: 80px;
   margin: 0 auto;
+  text-align: justify;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
@@ -549,6 +550,7 @@ body {
   padding-left: 20px;
   border-left: 1px solid #bbbbbb;
   margin-bottom: 30px;
+  text-align: justify;
 }
 .node-news .content-left .news-link {
   text-align: center;

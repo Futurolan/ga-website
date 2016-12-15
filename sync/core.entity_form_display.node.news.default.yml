@@ -3,9 +3,9 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.news.field_game
     - field.field.node.news.field_news_content
     - field.field.node.news.field_news_edition
+    - field.field.node.news.field_news_game
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
@@ -29,11 +29,6 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_game:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_news_content:
     weight: 8
     settings:
@@ -44,6 +39,11 @@ content:
     type: text_textarea_with_summary
   field_news_edition:
     weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_news_game:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select

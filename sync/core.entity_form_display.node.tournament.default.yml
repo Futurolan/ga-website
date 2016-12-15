@@ -3,11 +3,11 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.tournament.field_game
     - field.field.node.tournament.field_platform
     - field.field.node.tournament.field_tournament_cashprize
     - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
+    - field.field.node.tournament.field_tournament_game
     - field.field.node.tournament.field_tournament_image
     - field.field.node.tournament.field_tournament_image_sponsor
     - field.field.node.tournament.field_tournament_planning
@@ -65,11 +65,6 @@ targetEntityType: node
 bundle: tournament
 mode: default
 content:
-  field_game:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_platform:
     weight: 6
     settings: {  }
@@ -94,6 +89,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_tournament_game:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_tournament_image:
     weight: 3
     settings:
@@ -141,7 +141,7 @@ content:
     third_party_settings: {  }
     type: number
   field_tournament_type:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select

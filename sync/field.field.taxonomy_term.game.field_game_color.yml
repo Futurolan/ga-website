@@ -1,0 +1,19 @@
+uuid: 031c0086-08ed-48ee-9b3b-66c25accac6f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_color
+    - taxonomy.vocabulary.game
+id: taxonomy_term.game.field_game_color
+field_name: field_game_color
+entity_type: taxonomy_term
+bundle: game
+label: Couleur
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

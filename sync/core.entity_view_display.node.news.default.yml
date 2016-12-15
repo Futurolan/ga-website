@@ -3,9 +3,9 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.news.field_game
     - field.field.node.news.field_news_content
     - field.field.node.news.field_news_edition
+    - field.field.node.news.field_news_game
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
@@ -22,13 +22,6 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
-  field_game:
-    weight: 104
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
   field_news_content:
     weight: 102
     label: above
@@ -37,6 +30,13 @@ content:
     type: text_default
   field_news_edition:
     weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_news_game:
+    weight: 108
     label: above
     settings:
       link: true

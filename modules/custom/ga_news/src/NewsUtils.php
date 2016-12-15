@@ -38,18 +38,6 @@ class NewsUtils {
           ->getName();
       }
 
-      $gameId = $node->field_game->target_id;
-      $color = NULL;
-      $gameShortName = NULL;
-      $gameImage = NULL;
-      $gameImageUri = NULL;
-      if ($gameId) {
-        $game = \Drupal::entityTypeManager()->getStorage("game")->load($gameId);
-        $color = $game->getColor();
-        $gameName = $game->label();
-        $gameImageUri = $game->getImageUri();
-      }
-
       //Set Image
       if ($node->field_news_image->entity) {
         $imageUri = $node->field_news_image->entity->getFileUri();
@@ -57,8 +45,10 @@ class NewsUtils {
       elseif ($node->field_news_tournament->entity) {
         $imageUri = $node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
       }
-      elseif ($gameImageUri) {
-        $imageUri = $gameImageUri;
+      elseif ($node->field_news_game->entity) {
+        $color = $node->field_news_game->entity->field_game_color->value;
+        $gameName = $node->field_news_game->entity->getName();
+        $imageUri = $node->field_news_game->entity->field_game_image->entity->getFileUri();
       }
       elseif ($node->field_news_edition->entity) {
         $imageUri = $node->field_news_edition->entity->field_edition_image->entity->getFileUri();
@@ -71,7 +61,7 @@ class NewsUtils {
       if ($node->field_news_tournament->entity) {
         $subtitle = $node->field_news_tournament->entity->getTitle();
       }
-      elseif ($gameImageUri) {
+      elseif ($node->field_news_game->entity) {
         $subtitle = $gameName;
       }
       elseif ($node->field_news_edition->entity) {

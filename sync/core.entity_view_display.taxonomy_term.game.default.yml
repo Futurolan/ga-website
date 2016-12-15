@@ -1,0 +1,63 @@
+uuid: d8fe9a19-b86e-4a7a-b283-77afcd10543f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game.field_game_color
+    - field.field.taxonomy_term.game.field_game_editor
+    - field.field.taxonomy_term.game.field_game_image
+    - field.field.taxonomy_term.game.field_game_short_name
+    - field.field.taxonomy_term.game.field_game_type
+    - taxonomy.vocabulary.game
+  module:
+    - image
+    - text
+id: taxonomy_term.game.default
+targetEntityType: taxonomy_term
+bundle: game
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_game_color:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_game_editor:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_game_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_game_short_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_game_type:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  langcode: true
