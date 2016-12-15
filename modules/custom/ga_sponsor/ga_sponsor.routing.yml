@@ -1,5 +1,5 @@
 ga_sponsor:
-  path: '/partenaires'
+  path: '/partner'
   defaults:
     _controller: '\Drupal\ga_sponsor\Controller\SponsorController::render'
     _title_callback: '\Drupal\ga_sponsor\Controller\SponsorController::getTitle'
