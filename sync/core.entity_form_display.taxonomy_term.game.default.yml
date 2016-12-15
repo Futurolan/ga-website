@@ -62,9 +62,12 @@ content:
     type: string_textfield
   field_game_type:
     weight: 34
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
   name:
     type: string_textfield
     weight: -5
