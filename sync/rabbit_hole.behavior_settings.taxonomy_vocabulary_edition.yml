@@ -1,0 +1,9 @@
+uuid: 909d7af3-cb06-4297-b3cc-006f4f8793e5
+langcode: fr
+status: true
+dependencies: {  }
+id: taxonomy_vocabulary_edition
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
