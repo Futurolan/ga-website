@@ -17,6 +17,12 @@ html, body {
   letter-spacing: 1px;
 }
 
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 a {
   cursor: pointer;
   color: #4589c6;
@@ -24,6 +30,14 @@ a {
 
 a:hover {
   color: #70b0e9;
+}
+
+a[name]:before {
+  display: block;
+  content: "";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
 }
 
 .cta {
@@ -103,8 +117,6 @@ a:hover {
 }
 
 .white-area {
-  background-color: #ffffff;
-  color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #000000;

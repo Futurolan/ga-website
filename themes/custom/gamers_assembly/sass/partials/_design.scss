@@ -6,6 +6,12 @@ html, body {
   letter-spacing: 1px;
 }
 
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 a {
   cursor: pointer;
   color:#4589c6
@@ -100,8 +106,6 @@ a[name]:before {
 }
 
 .white-area {
-  background-color: $white;
-  color: $white;
   padding-top: 50px;
   padding-bottom: 50px;
   color: $black;

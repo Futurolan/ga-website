@@ -1,6 +1,19 @@
 <?php
 
 
+function gamers_assembly_preprocess_html(&$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->getType() == "tournament") {
+    if ($node->field_tournament_image_sponsor->entity) {
+      $variables['attributes']['style'][] = "background:url(".file_create_url($node->field_tournament_image_sponsor->entity->uri->value).") center top;background-attachment: fixed";
+    }
+
+  }
+
+
+}
+
 function gamers_assembly_preprocess_block(&$variables) {
   $variables['config'] = \Drupal\ga_config\ConfigUtils::getConfiguration();
 }
@@ -43,7 +56,7 @@ function gamers_assembly_preprocess_node(&$variables) {
       $variables['cropped_image'] = $style->buildUrl($node->field_tournament_image->entity->uri->value);
     }
     else {
-     $variables['cropped_image'] = $style->buildUrl($node->field_tournament_game->entity->field_game_image->entity->uri->value);
+      $variables['cropped_image'] = $style->buildUrl($node->field_tournament_game->entity->field_game_image->entity->uri->value);
     }
   }
   if ($node->getType() == "page") {

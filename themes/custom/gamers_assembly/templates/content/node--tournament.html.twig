@@ -4,11 +4,7 @@
         title:node.getTitle()|t
         } only %}
     </div>
-    <div class="white-area"
-            {% if(node.field_tournament_image_sponsor.entity) %}
-                style="background:url({{ file_url(node.field_tournament_image_sponsor.entity.uri.value) }}) center top;background-attachment: fixed"
-            {% endif %}
-    >
+    <div class="white-area">
         <div class="container">
             <div class="row">
                 <img class="center-block img-responsive"
