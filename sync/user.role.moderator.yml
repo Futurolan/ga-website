@@ -78,3 +78,4 @@ permissions:
   74: 'edit terms in tags'
   75: 'delete terms in game_type'
   76: 'edit terms in game_type'
+  77: 'administer taxonomy'
