@@ -11,9 +11,9 @@
                     <div class="row">
                         <div class="col-md-9 col-lg-10">
                             <div class="news-title">{{ node.getTitle() }}</div>
-                            <div class="news-info"><strong>{{ "Par"|t }}</strong> <span
+                            <div class="news-info"><strong>{{ "From"|t }}</strong> <span
                                         class="news-author">{{ author_name }}</span> <span
-                                        class="news-date">{{ "le"|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span>
+                                        class="news-date">{{ ","|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span>
                             </div>
                         </div>
                         <div class="col-md-3 col-lg-2 news-share">
@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             {% include directory ~ '/components/title-line/title-line.html.twig' with {
-                            title:"Dernières Actualités"|t,
+                            title:"Last news"|t,
                             } only %}
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                                 </div>
                                                 <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
                                                 <div class="news-more">
-                                                    <span class="cta btn-motion btn-1c">{{ "Lire la suite" |t }}</span>
+                                                    <span class="cta btn-motion btn-1c">{{ "More..." |t }}</span>
                                                 </div>
                                             </div>
                                         </div>

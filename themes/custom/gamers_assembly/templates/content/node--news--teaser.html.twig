@@ -29,6 +29,6 @@
         <div class="news-content">{{ node.get('field_news_content').summary }}</div>
     </a>
     <div class="news-more">
-        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "Lire la suite"|t }}</a>
+        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "More..."|t }}</a>
     </div>
 </div>

@@ -20,7 +20,7 @@
     {% else %}
         {% set free_slot_class="low" %}
     {% endif %}
-    <div class="tournament-status">{{ "Places restantes :"|t }} <span
+    <div class="tournament-status">{{ "Remaining slots:"|t }} <span
                 class="{{ free_slot_class }}">{{ free_slot }}</span></div>
     <div class="tournament-bar">
         <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
@@ -29,7 +29,7 @@
         <div class="col-md-7 col-xs-6 text-left">
             <div class="tournament-more">
                 <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-                    {{ "Liste des inscrits"|t }}
+                    {{ "Show participants"|t }}
                 </a>
             </div>
         </div>
@@ -37,7 +37,7 @@
             {% if(node.field_tournament_weezevent_id.value!=NULL) %}
                 <div class="tournament-more">
                     <a href="{{ path('ga_ticket') }}">
-                        {{ "S'inscrire"|t }}
+                        {{ "Sign up"|t }}
                     </a>
                 </div>
             {% endif %}
