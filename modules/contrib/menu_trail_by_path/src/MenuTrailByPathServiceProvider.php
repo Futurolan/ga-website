@@ -18,5 +18,7 @@ class MenuTrailByPathServiceProvider extends ServiceProviderBase {
     $definition->setClass('Drupal\menu_trail_by_path\MenuTrailByPathActiveTrail');
     $definition->addArgument(new Reference('menu_trail_by_path.path_helper'));
     $definition->addArgument(new Reference('menu_trail_by_path.menu_helper'));
+    $definition->addArgument(new Reference('router.request_context'));
+    $definition->addArgument(new Reference('language_manager'));
   }
 }

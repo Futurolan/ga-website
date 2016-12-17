@@ -40,10 +40,10 @@ display:
         options:
           items_per_page: 50
           tags:
-            previous: "‹\_précédent"
-            next: "suivant\_›"
-            first: "«\_premier"
-            last: "dernier\_»"
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
       style:
         type: table
         options:

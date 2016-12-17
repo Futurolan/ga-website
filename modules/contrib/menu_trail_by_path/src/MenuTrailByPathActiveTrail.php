@@ -9,6 +9,8 @@ use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Lock\LockBackendInterface;
 use Drupal\menu_trail_by_path\Menu\MenuHelperInterface;
 use Drupal\menu_trail_by_path\Path\PathHelperInterface;
+use Drupal\Core\Routing\RequestContext;
+use Drupal\Core\Language\LanguageManagerInterface;
 
 /**
  * Overrides the class for the file entity normalizer from HAL.
@@ -26,6 +28,16 @@ class MenuTrailByPathActiveTrail extends MenuActiveTrail {
   protected $menuHelper;
 
   /**
+   * @var \Drupal\Core\Routing\RequestContext
+   */
+  protected $context;
+
+  /**
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
    * MenuTrailByPathActiveTrail constructor.
    * @param \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager
    * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
@@ -33,11 +45,28 @@ class MenuTrailByPathActiveTrail extends MenuActiveTrail {
    * @param \Drupal\Core\Lock\LockBackendInterface $lock
    * @param \Drupal\menu_trail_by_path\Path\PathHelperInterface $path_helper
    * @param \Drupal\menu_trail_by_path\Menu\MenuHelperInterface $menu_helper
+   * @param \Drupal\Core\Routing\RequestContext $context
+   * @param \Drupal\Core\Language\LanguageManagerInterface $languageManager
    */
-  public function __construct(MenuLinkManagerInterface $menu_link_manager, RouteMatchInterface $route_match, CacheBackendInterface $cache, LockBackendInterface $lock, PathHelperInterface $path_helper, MenuHelperInterface $menu_helper) {
+  public function __construct(MenuLinkManagerInterface $menu_link_manager, RouteMatchInterface $route_match, CacheBackendInterface $cache, LockBackendInterface $lock, PathHelperInterface $path_helper, MenuHelperInterface $menu_helper, RequestContext $context, LanguageManagerInterface $languageManager) {
     parent::__construct($menu_link_manager, $route_match, $cache, $lock);
-    $this->pathHelper    = $path_helper;
-    $this->menuHelper    = $menu_helper;
+    $this->pathHelper      = $path_helper;
+    $this->menuHelper      = $menu_helper;
+    $this->context         = $context;
+    $this->languageManager = $languageManager;
+  }
+
+  /**
+   * {@inheritdoc}
+   *
+   * @see https://www.drupal.org/node/2824594
+   */
+  protected function getCid() {
+    if (!isset($this->cid)) {
+      return parent::getCid() . ":langcode:{$this->languageManager->getCurrentLanguage()->getId()}:pathinfo:{$this->context->getPathInfo()}";
+    }
+
+    return $this->cid;
   }
 
   /**
