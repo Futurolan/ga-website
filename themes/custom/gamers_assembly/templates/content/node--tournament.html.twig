@@ -86,10 +86,11 @@
                                                     {% endfor %}
                                                 {% endif %}
 
-                                                {% for team, players in subscribers %}
+                                                {% for id, teams in subscribers %}
                                                 <tr>
                                                     <td>
                                                         #{{ loop.index + node.field_tournament_reserved_slot.value }}</td>
+                                                    {% for team, players in teams %}
                                                     <td><strong>{{ team }}</strong></td>
                                                     <td>
                                                         {% for player in players %}
@@ -98,6 +99,8 @@
                                                     </td>
                                                     {% endfor %}
                                                 </tr>
+                                                {% endfor %}
+
 
                                                 {% for i in 1..free_slot %}
                                                     <tr>
