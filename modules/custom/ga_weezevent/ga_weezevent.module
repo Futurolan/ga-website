@@ -24,7 +24,7 @@ function ga_weezevent_update_tournament_info_cron() {
             $team = NULL;
             $pseudo = NULL;
             foreach ($participant->answers as $answer) {
-              if ($answer->label === "Equipe") {
+              if ($answer->label === "Nom d'équipe") {
                 $team = $answer->value;
               }
               if ($answer->label === "Pseudo") {
