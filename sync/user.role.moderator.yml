@@ -79,3 +79,8 @@ permissions:
   75: 'delete terms in game_type'
   76: 'edit terms in game_type'
   77: 'administer taxonomy'
+  78: 'view own unpublished content'
+  79: 'view scheduled content'
+  80: 'override tournament published option'
+  81: 'publish any node type tournament'
+  82: 'unpublish any node type tournament'
