@@ -24,14 +24,14 @@ function ga_weezevent_update_tournament_info_cron() {
             $team = NULL;
             $pseudo = NULL;
             foreach ($participant->answers as $answer) {
-              if ($answer->label === "Equipe") {
+              if ($answer->label === "Nom d'équipe") {
                 $team = $answer->value;
               }
               if ($answer->label === "Pseudo") {
                 $pseudo = $answer->value;
               }
             }
-            $tickets[$team][] = $pseudo;
+            $tickets[$participant->id_transaction][$team][] = $pseudo;
             $count++;
           }
           if ($node->field_tournament_type->value == "Equipe") {
