@@ -925,7 +925,7 @@ body {
 }
 /* line 94, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-more a {
-  color: #999999;
+  color: #000000;
   padding: 5px 20px;
   border: 1px solid #999999;
 }
