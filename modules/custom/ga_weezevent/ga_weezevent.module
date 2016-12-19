@@ -31,7 +31,7 @@ function ga_weezevent_update_tournament_info_cron() {
                 $pseudo = $answer->value;
               }
             }
-            $tickets[$team][] = $pseudo;
+            $tickets[$participant->id_transaction][$team][] = $pseudo;
             $count++;
           }
           if ($node->field_tournament_type->value == "Equipe") {
