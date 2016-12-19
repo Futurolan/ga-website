@@ -19,5 +19,6 @@ sync/ga_config.settings.yml
 sync/google_analytics.settings.yml
 sync/language
 sync/metatag.metatag_defaults.*
+sync/system.performance.yml
 
 modules/contrib/config_readonly/
