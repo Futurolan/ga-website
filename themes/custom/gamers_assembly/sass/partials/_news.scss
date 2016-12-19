@@ -59,7 +59,7 @@
         padding-bottom: 5px;
       }
       .news-content {
-        color: $grey;
+        color: $black;
         display: block;
         text-overflow: ellipsis;
         word-wrap: break-word;
@@ -75,7 +75,7 @@
         margin-top: 10px;
         text-align: right;
         a {
-          color: $grey;
+          color: $black;
           padding: 5px 20px;
           border: 1px solid $grey;
         }
@@ -116,7 +116,7 @@
       }
 
       .news-date {
-        color: $grey;
+        color: $black;
       }
     }
 

@@ -584,7 +584,7 @@ body {
 }
 /* line 61, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-content {
-  color: #999999;
+  color: #000000;
   display: block;
   text-overflow: ellipsis;
   word-wrap: break-word;
@@ -603,7 +603,7 @@ body {
 }
 /* line 77, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-more a {
-  color: #999999;
+  color: #000000;
   padding: 5px 20px;
   border: 1px solid #999999;
 }
@@ -640,7 +640,7 @@ body {
 }
 /* line 118, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-date {
-  color: #999999;
+  color: #000000;
 }
 /* line 123, ../sass/partials/_news.scss */
 .node-news .content-left .news-share {
