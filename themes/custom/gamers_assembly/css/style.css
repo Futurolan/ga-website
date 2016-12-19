@@ -63,7 +63,7 @@ a[name]:before {
 /* line 42, ../sass/partials/_design.scss */
 .btn-white {
   background-color: #ffffff;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
@@ -139,7 +139,7 @@ a[name]:before {
 .white-area {
   padding-top: 50px;
   padding-bottom: 50px;
-  color: #000000;
+  color: #333333;
 }
 
 /* Collapse */
@@ -267,7 +267,7 @@ a[name]:before {
 }
 /* line 22, ../sass/partials/_navigation.scss */
 #block-mainnavigation .navbar-toggle:hover, #block-mainnavigation .navbar-toggle:focus {
-  background-color: #000000;
+  background-color: #333333;
 }
 /* line 26, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul {
@@ -372,7 +372,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
 
 /* line 116, ../sass/partials/_navigation.scss */
 .menu-footer {
-  background-color: #000000;
+  background-color: #333333;
   color: #ffffff;
   position: absolute;
   bottom: 0;
@@ -565,7 +565,7 @@ body {
 /* line 42, ../sass/partials/_news.scss */
 .views-news .white-area .news h2 a {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
@@ -584,7 +584,7 @@ body {
 }
 /* line 61, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-content {
-  color: #000000;
+  color: #333333;
   display: block;
   text-overflow: ellipsis;
   word-wrap: break-word;
@@ -603,7 +603,7 @@ body {
 }
 /* line 77, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-more a {
-  color: #000000;
+  color: #333333;
   padding: 5px 20px;
   border: 1px solid #999999;
 }
@@ -640,7 +640,7 @@ body {
 }
 /* line 118, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-date {
-  color: #000000;
+  color: #333333;
 }
 /* line 123, ../sass/partials/_news.scss */
 .node-news .content-left .news-share {
@@ -748,7 +748,7 @@ body {
 }
 /* line 224, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-more span {
-  color: #000000;
+  color: #333333;
   font-weight: bold;
   display: inline-block;
   padding: 5px 25px;
@@ -819,7 +819,7 @@ body {
   background-color: #ffffff;
   display: inline-block;
   padding: 15px 50px;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
@@ -925,7 +925,7 @@ body {
 }
 /* line 94, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-more a {
-  color: #000000;
+  color: #333333;
   padding: 5px 20px;
   border: 1px solid #999999;
 }
@@ -984,7 +984,7 @@ body {
 }
 /* line 157, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-team {
-  background-color: #000000;
+  background-color: #333333;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1132,7 +1132,7 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
 }
 /* line 27, ../sass/partials/_information.scss */
 .information-page .info-equipment {
-  background-color: #000000;
+  background-color: #333333;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1362,7 +1362,7 @@ select option {
 :root .css3-metro-dropdown::after {
   content: "\25bc";
   background-color: #ffffff;
-  color: #000000;
+  color: #333333;
   margin: 5px;
   position: absolute;
   top: -4px;
@@ -1405,7 +1405,7 @@ select option {
   right: 1px;
   width: 32px;
   height: 32px;
-  background-color: #000000;
+  background-color: #333333;
   border: none;
 }
 /* line 92, ../sass/partials/_form.scss */
@@ -1423,12 +1423,12 @@ select option {
 
 /* line 106, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse select, :root .css3-metro-dropdown-inverse:after, :root .css3-metro-dropdown-inverse::after {
-  background: #000000;
+  background: #333333;
 }
 
 /* line 110, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse select {
-  border: 1px solid #000000;
+  border: 1px solid #333333;
 }
 
 /* line 114, ../sass/partials/_form.scss */
@@ -1438,7 +1438,7 @@ select option {
 
 /* line 118, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse option {
-  background: #000000;
+  background: #333333;
   color: #fff;
 }
 
@@ -1474,7 +1474,7 @@ select option {
 /* line 14, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .col-md-6:first-child {
   padding-right: 0px;
-  border-right: 1px solid #000000;
+  border-right: 1px solid #333333;
 }
 /* line 18, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .col-md-6:last-child {
@@ -1688,7 +1688,7 @@ select option {
 /* line 284, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item.active {
   background-color: white;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 /* line 288, ../components/streams/_streams.scss */
@@ -1732,7 +1732,7 @@ select option {
 .home-block .title {
   background-color: white;
   font-size: 18px;
-  color: #000000;
+  color: #333333;
   padding: 10px 15px;
 }
 /* line 17, ../components/home-block/_home-block.scss */
@@ -1760,7 +1760,7 @@ select option {
 /* line 36, ../components/home-block/_home-block.scss */
 .home-block a.btn-progress {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
   text-decoration: none;
   display: block;
   background-color: #ffffff;
@@ -1884,7 +1884,7 @@ select option {
 /* line 13, ../components/tournaments-home-cta/_tournaments-home-cta.scss */
 .tournaments-home-cta .cta a {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
 }
 
 /* line 1, ../components/headline/_headline.scss */
@@ -1985,7 +1985,7 @@ select option {
 }
 /* line 40, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-date {
-  color: #bbbbbb;
+  color: #333333;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
@@ -2011,7 +2011,7 @@ select option {
 }
 /* line 64, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-more span {
-  color: #000000;
+  color: #333333;
   font-weight: bold;
   display: inline-block;
   padding: 5px 50px;
@@ -2082,7 +2082,7 @@ select option {
   background-color: #ffffff;
   display: inline-block;
   padding: 15px 50px;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
