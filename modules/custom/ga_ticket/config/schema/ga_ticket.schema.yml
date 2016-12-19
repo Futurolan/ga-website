@@ -5,3 +5,6 @@ ga_ticket.settings:
     title:
       type: text
       label: 'Title'
+    weezevent_code:
+      type: text
+      label: 'Weezevent Code'
