@@ -640,7 +640,7 @@ body {
 }
 /* line 118, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-date {
-  color: #333333;
+  color: #999999;
 }
 /* line 123, ../sass/partials/_news.scss */
 .node-news .content-left .news-share {
@@ -721,7 +721,7 @@ body {
 }
 /* line 199, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-date {
-  color: #bbbbbb;
+  color: #333333;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
   font-size: 12px;
