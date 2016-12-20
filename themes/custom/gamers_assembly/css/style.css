@@ -575,8 +575,8 @@ body {
 }
 /* line 53, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-date {
-  color: #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  color: #333333;
+  border-bottom: 1px solid #333333;
   margin-bottom: 10px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -605,7 +605,7 @@ body {
 .views-news .white-area .news .news-more a {
   color: #333333;
   padding: 5px 20px;
-  border: 1px solid #999999;
+  border: 1px solid #333333;
 }
 
 /* line 88, ../sass/partials/_news.scss */
@@ -640,7 +640,7 @@ body {
 }
 /* line 118, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-date {
-  color: #999999;
+  color: #333333;
 }
 /* line 123, ../sass/partials/_news.scss */
 .node-news .content-left .news-share {
@@ -1985,7 +1985,7 @@ select option {
 }
 /* line 40, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-date {
-  color: #333333;
+  color: #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
