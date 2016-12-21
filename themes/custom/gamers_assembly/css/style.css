@@ -1448,10 +1448,15 @@ select option {
 }
 
 /* line 2, ../components/slideshow/_slideshow.scss */
+.slideshow .video-container {
+  background-color: #000;
+}
+/* line 6, ../components/slideshow/_slideshow.scss */
 .slideshow video {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* line 1, ../components/streams/_streams.scss */

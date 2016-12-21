@@ -1,9 +1,14 @@
 .slideshow {
-  video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+	.video-container {
+		background-color: #000;
+	}
+
+	video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 @media (max-width: 1250px) {
