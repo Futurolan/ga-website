@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-8 tournament-tag-info">
                     <span class="tournament-tag">{{ node.field_tournament_game.entity.field_game_editor.value }}</span>
-                    <span class="tournament-tag">{{ node.field_tournament_game.entity.field_game_type.entity.getName()|upper }}</span>
+                    <span class="tournament-tag">{{ node.field_tournament_game.entity.field_game_type.entity.getTranslation(language).getName() }}</span>
                     <span class="tournament-tag">{{ node.field_tournament_type.value }}</span>
                     <span class="tournament-tag">{{ node.field_platform.entity.label }}</span>
                 </div>

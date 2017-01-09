@@ -21,7 +21,11 @@ function gamers_assembly_preprocess_block(&$variables) {
 }
 
 function gamers_assembly_preprocess_node(&$variables) {
+
+
   $variables['host'] = \Drupal::request()->getHost();
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
   $node = $variables['node'];
   if ($node->getType() == "news") {
     $variables['lastNews'] = \Drupal\ga_news\NewsUtils::getLastNews();
