@@ -1,37 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+/* line 1, ../sass/partials/_layout.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
+/* line 6, ../sass/partials/_layout.scss */
 body {
   padding-top: 70px;
   margin-bottom: 60px;
 }
 
+/* line 1, ../sass/partials/_design.scss */
 * {
   font-size: 14px;
 }
 
+/* line 5, ../sass/partials/_design.scss */
 html, body {
   letter-spacing: 1px;
 }
 
+/* line 9, ../sass/partials/_design.scss */
 body {
   background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center center;
 }
 
+/* line 15, ../sass/partials/_design.scss */
 a {
   cursor: pointer;
   color: #4589c6;
 }
 
+/* line 19, ../sass/partials/_design.scss */
 a:hover {
   color: #70b0e9;
 }
 
+/* line 23, ../sass/partials/_design.scss */
 a[name]:before {
   display: block;
   content: "";
@@ -40,6 +48,7 @@ a[name]:before {
   visibility: hidden;
 }
 
+/* line 32, ../sass/partials/_design.scss */
 .cta {
   z-index: 0;
   position: relative;
@@ -51,12 +60,14 @@ a[name]:before {
 }
 
 /* Button 1c */
+/* line 42, ../sass/partials/_design.scss */
 .btn-white {
   background-color: #ffffff;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
+/* line 48, ../sass/partials/_design.scss */
 .btn-1c:after {
   width: 0%;
   height: 100%;
@@ -65,16 +76,19 @@ a[name]:before {
   background: #27bf27;
 }
 
+/* line 56, ../sass/partials/_design.scss */
 .btn-1c:hover,
 .btn-1c:active {
   color: white !important;
 }
 
+/* line 61, ../sass/partials/_design.scss */
 .btn-1c:hover:after,
 .btn-1c:active:after {
   width: 100%;
 }
 
+/* line 66, ../sass/partials/_design.scss */
 .btn-motion:after {
   content: '';
   position: absolute;
@@ -84,10 +98,12 @@ a[name]:before {
   transition: all 0.3s;
 }
 
+/* line 75, ../sass/partials/_design.scss */
 .slide-area {
   background-color: red;
 }
 
+/* line 79, ../sass/partials/_design.scss */
 .grey-area {
   background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
   background-size: cover;
@@ -96,6 +112,7 @@ a[name]:before {
   padding-bottom: 50px;
 }
 
+/* line 87, ../sass/partials/_design.scss */
 .grey-area-title {
   background: url("../images/bg-home-grey-area.jpg") center center no-repeat;
   background-size: cover;
@@ -103,10 +120,12 @@ a[name]:before {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+/* line 94, ../sass/partials/_design.scss */
 .grey-area-title .title-line {
   margin-bottom: 0px;
 }
 
+/* line 99, ../sass/partials/_design.scss */
 .blue-area {
   background: url("../images/bg-home-blue-area.jpg") center center no-repeat;
   background-size: cover;
@@ -116,67 +135,80 @@ a[name]:before {
   overflow: hidden;
 }
 
+/* line 108, ../sass/partials/_design.scss */
 .white-area {
   padding-top: 50px;
   padding-bottom: 50px;
-  color: #000000;
+  color: #333333;
 }
 
 /* Collapse */
+/* line 115, ../sass/partials/_design.scss */
 .info-header {
   padding-left: 20px;
   border-left: 1px solid #bbbbbb;
   margin-bottom: 30px;
 }
 
+/* line 121, ../sass/partials/_design.scss */
 .info-block-head {
   text-align: left;
   font-size: 18px;
   color: #ffffff;
 }
+/* line 126, ../sass/partials/_design.scss */
 .info-block-head .fa {
   font-size: 18px;
 }
 
+/* line 131, ../sass/partials/_design.scss */
 .info-block-padding {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 18px;
 }
 
+/* line 137, ../sass/partials/_design.scss */
 .info-block-table {
   display: table;
   width: 100%;
   height: 100%;
 }
 
+/* line 143, ../sass/partials/_design.scss */
 .info-block-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
+/* line 148, ../sass/partials/_design.scss */
 .info-block-body {
   background-color: #474747;
   margin-bottom: 30px;
   color: #ffffff;
   padding: 15px;
 }
+/* line 154, ../sass/partials/_design.scss */
 .info-block-body p:last-child {
   margin-bottom: 0px;
 }
 
+/* line 159, ../sass/partials/_design.scss */
 .info-collapse {
   margin-bottom: 30px;
 }
+/* line 162, ../sass/partials/_design.scss */
 .info-collapse .info-block-body {
   margin-bottom: 0px;
 }
+/* line 166, ../sass/partials/_design.scss */
 .info-collapse .info-icon {
   width: 25px;
   display: inline-block;
   margin-right: 5px;
   text-align: center;
 }
+/* line 173, ../sass/partials/_design.scss */
 .info-collapse .info-carret {
   text-align: center;
   border-left: 2px solid #ffffff;
@@ -187,28 +219,35 @@ a[name]:before {
   right: 0;
   height: 100%;
 }
+/* line 183, ../sass/partials/_design.scss */
 .info-collapse .info-carret .fa {
   font-size: 32px;
 }
+/* line 189, ../sass/partials/_design.scss */
 .info-collapse [aria-expanded="true"] .fa-caret-up {
   display: inline-block;
 }
+/* line 192, ../sass/partials/_design.scss */
 .info-collapse [aria-expanded="true"] .fa-caret-down {
   display: none;
 }
+/* line 198, ../sass/partials/_design.scss */
 .info-collapse [aria-expanded="false"] .fa-caret-up {
   display: none;
 }
+/* line 201, ../sass/partials/_design.scss */
 .info-collapse [aria-expanded="false"] .fa-caret-down {
   display: inline-block;
 }
 
+/* line 1, ../sass/partials/_navigation.scss */
 #block-mainnavigation {
   background-color: #0058A2;
   padding: 0;
   border: none;
   z-index: 1;
 }
+/* line 6, ../sass/partials/_navigation.scss */
 #block-mainnavigation .navbar-brand {
   margin-right: 20px;
   background: url("../images/logo.png") center center no-repeat;
@@ -216,23 +255,29 @@ a[name]:before {
   height: 70px;
   background-size: contain;
 }
+/* line 13, ../sass/partials/_navigation.scss */
 #block-mainnavigation .navbar-toggle {
   border-color: #ffffff;
   margin-top: 18px;
   border-radius: 0px;
 }
+/* line 18, ../sass/partials/_navigation.scss */
 #block-mainnavigation .navbar-toggle .icon-bar {
   background-color: #ffffff;
 }
+/* line 22, ../sass/partials/_navigation.scss */
 #block-mainnavigation .navbar-toggle:hover, #block-mainnavigation .navbar-toggle:focus {
-  background-color: #000000;
+  background-color: #333333;
 }
+/* line 26, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul {
   list-style: none;
 }
+/* line 28, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li {
   margin: 0;
 }
+/* line 30, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a {
   transition: background-color 0.3s;
   color: #ffffff;
@@ -241,22 +286,28 @@ a[name]:before {
   padding: 25px 15px;
   text-transform: uppercase;
 }
+/* line 37, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a:hover, #block-mainnavigation ul li a.is-active {
   background-color: #156AAD;
 }
+/* line 40, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a.ticketing {
   background-color: #FC7E00;
 }
+/* line 42, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a.ticketing:hover, #block-mainnavigation ul li a.ticketing.is-active {
   background-color: #FF8D31;
 }
+/* line 46, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a.main-sponsor {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+/* line 50, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li a.main-sponsor img {
   height: 70px;
 }
+/* line 55, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li.nav-item--active-trail > .active-mesh {
   background-color: red;
   position: absolute;
@@ -264,13 +315,16 @@ a[name]:before {
   height: 9px;
   background: url(../images/menu-arrow.png) no-repeat center center;
 }
+/* line 62, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li.nav-item--active-trail > a {
   background-color: #156AAD;
 }
+/* line 65, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li:hover ul {
   height: auto;
   display: block;
 }
+/* line 69, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li ul {
   display: none;
   position: absolute;
@@ -278,37 +332,47 @@ a[name]:before {
   transition: opacity 0.3s ease-out;
   background-color: #0058A2;
 }
+/* line 75, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li ul li {
   width: 100%;
 }
+/* line 77, ../sass/partials/_navigation.scss */
 #block-mainnavigation ul li ul li a {
   padding: 10px 22px;
 }
 
+/* line 88, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-horizontal {
   padding-top: 112px !important;
 }
+/* line 90, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-horizontal #block-mainnavigation {
   margin-top: 42px;
 }
+/* line 93, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open {
   padding-top: 155px !important;
 }
+/* line 95, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open #block-mainnavigation {
   margin-top: 85px;
 }
+/* line 100, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-vertical {
   padding-top: 122px !important;
 }
+/* line 102, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-vertical #block-mainnavigation {
   margin-top: 42px;
 }
+/* line 106, ../sass/partials/_navigation.scss */
 body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
   padding-left: 15rem;
 }
 
+/* line 116, ../sass/partials/_navigation.scss */
 .menu-footer {
-  background-color: #000000;
+  background-color: #333333;
   color: #ffffff;
   position: absolute;
   bottom: 0;
@@ -318,141 +382,174 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
   padding-bottom: 10px;
   text-align: center;
 }
+/* line 128, ../sass/partials/_navigation.scss */
 .menu-footer ul {
   padding-left: 0px;
   list-style-type: none;
   display: inline-block;
   margin: 0;
 }
+/* line 133, ../sass/partials/_navigation.scss */
 .menu-footer ul li {
   margin-bottom: 15px;
   display: inline-block;
 }
+/* line 136, ../sass/partials/_navigation.scss */
 .menu-footer ul li a {
   color: #ffffff;
   border-right: 1px solid #ffffff;
   padding-right: 10px;
 }
+/* line 141, ../sass/partials/_navigation.scss */
 .menu-footer ul li:last-child a {
   border-right: none;
 }
+/* line 146, ../sass/partials/_navigation.scss */
 .menu-footer a {
   color: #ffffff;
   padding-left: 10px;
   padding-right: 10px;
 }
+/* line 151, ../sass/partials/_navigation.scss */
 .menu-footer a i {
   margin-bottom: 15px;
 }
+/* line 156, ../sass/partials/_navigation.scss */
 .menu-footer a:hover, .menu-footer a:focus {
   color: white;
   text-decoration: underline;
 }
+/* line 161, ../sass/partials/_navigation.scss */
 .menu-footer i {
   font-size: 16px;
 }
 
 @media (max-width: 1200px) {
+  /* line 168, ../sass/partials/_navigation.scss */
   .navbar-header {
     float: none;
   }
 
+  /* line 171, ../sass/partials/_navigation.scss */
   .navbar-left, .navbar-right {
     float: none !important;
   }
 
+  /* line 174, ../sass/partials/_navigation.scss */
   .navbar-toggle {
     display: block;
   }
 
+  /* line 177, ../sass/partials/_navigation.scss */
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
+  /* line 181, ../sass/partials/_navigation.scss */
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
   }
 
+  /* line 185, ../sass/partials/_navigation.scss */
   .navbar-collapse.collapse {
     display: none !important;
   }
 
+  /* line 188, ../sass/partials/_navigation.scss */
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px;
   }
 
+  /* line 192, ../sass/partials/_navigation.scss */
   .navbar-nav > li {
     float: none;
   }
 
+  /* line 195, ../sass/partials/_navigation.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
+  /* line 199, ../sass/partials/_navigation.scss */
   .collapse.in {
     display: block !important;
     overflow-y: auto !important;
   }
 
+  /* line 204, ../sass/partials/_navigation.scss */
   .main-sponsor {
     display: none !important;
   }
 
+  /* line 208, ../sass/partials/_navigation.scss */
   .nav-item .navbar-nav {
     display: block !important;
     position: relative !important;
     height: auto !important;
     margin-top: 0px !important;
   }
+  /* line 214, ../sass/partials/_navigation.scss */
   .nav-item .navbar-nav li a {
     padding: 25px 15px 25px 50px !important;
   }
 }
 @media (max-width: 768px) {
+  /* line 221, ../sass/partials/_navigation.scss */
   .navbar-brand {
     margin-left: 15px;
   }
 }
 @media (min-width: 768px) {
+  /* line 227, ../sass/partials/_navigation.scss */
   .navbar-brand {
     margin-left: 0px !important;
   }
 }
+/* line 3, ../sass/partials/_typography.scss */
 body {
   font-family: 'Roboto', sans-serif !important;
 }
 
+/* line 2, ../sass/partials/_news.scss */
 .views-news a:hover, .views-news a:focus {
   text-decoration: none;
 }
+/* line 6, ../sass/partials/_news.scss */
 .views-news .title-line {
   margin-bottom: 0px;
 }
+/* line 10, ../sass/partials/_news.scss */
 .views-news .form-item, .views-news .form-actions {
   display: inline-block;
 }
+/* line 13, ../sass/partials/_news.scss */
 .views-news label {
   width: auto;
   margin-right: 10px;
 }
+/* line 17, ../sass/partials/_news.scss */
 .views-news select {
   min-width: 150px;
 }
+/* line 22, ../sass/partials/_news.scss */
 .views-news .white-area .headline {
   margin-bottom: 50px;
 }
+/* line 25, ../sass/partials/_news.scss */
 .views-news .white-area .news {
   margin-bottom: 30px;
 }
+/* line 27, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-image {
   height: 150px;
   background-size: cover;
   background-position: center center;
 }
+/* line 32, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-tags {
   background-color: #004278;
   color: #ffffff;
@@ -460,13 +557,15 @@ body {
   line-height: 25px;
   font-weight: bold;
 }
+/* line 39, ../sass/partials/_news.scss */
 .views-news .white-area .news h2 {
   margin-top: 10px;
   margin-bottom: 0px;
 }
+/* line 42, ../sass/partials/_news.scss */
 .views-news .white-area .news h2 a {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
@@ -474,16 +573,18 @@ body {
   display: block;
   margin-bottom: 5px;
 }
+/* line 53, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-date {
-  color: #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  color: #333333;
+  border-bottom: 1px solid #333333;
   margin-bottom: 10px;
   font-weight: 400;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
+/* line 61, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-content {
-  color: #999999;
+  color: #333333;
   display: block;
   text-overflow: ellipsis;
   word-wrap: break-word;
@@ -495,47 +596,58 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+/* line 74, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-more {
   margin-top: 10px;
   text-align: right;
 }
+/* line 77, ../sass/partials/_news.scss */
 .views-news .white-area .news .news-more a {
-  color: #999999;
+  color: #333333;
   padding: 5px 20px;
-  border: 1px solid #999999;
+  border: 1px solid #333333;
 }
 
+/* line 88, ../sass/partials/_news.scss */
 .node-news .headline {
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 48px;
   font-weight: bold;
 }
+/* line 95, ../sass/partials/_news.scss */
 .node-news .title-line {
   margin-bottom: 0px;
 }
+/* line 99, ../sass/partials/_news.scss */
 .node-news .blue-area {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+/* line 105, ../sass/partials/_news.scss */
 .node-news .content-left .news-title {
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 0px;
 }
+/* line 111, ../sass/partials/_news.scss */
 .node-news .content-left .news-info {
   margin-bottom: 20px;
 }
+/* line 114, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-author {
   font-weight: bold;
 }
+/* line 118, ../sass/partials/_news.scss */
 .node-news .content-left .news-info .news-date {
-  color: #999999;
+  color: #333333;
 }
+/* line 123, ../sass/partials/_news.scss */
 .node-news .content-left .news-share {
   margin-bottom: 20px;
   text-align: right;
 }
+/* line 128, ../sass/partials/_news.scss */
 .node-news .content-left .news-facebook {
   background-color: #3B5998;
   color: #ffffff;
@@ -544,6 +656,7 @@ body {
   text-align: center;
   display: inline-block;
 }
+/* line 137, ../sass/partials/_news.scss */
 .node-news .content-left .news-twitter {
   background-color: #00aced;
   color: #ffffff;
@@ -552,11 +665,13 @@ body {
   text-align: center;
   display: inline-block;
 }
+/* line 146, ../sass/partials/_news.scss */
 .node-news .content-left .news-image {
   height: 350px;
   background-size: cover;
   background-position: center center;
 }
+/* line 152, ../sass/partials/_news.scss */
 .node-news .content-left .news-content {
   margin-top: 30px;
   padding-left: 20px;
@@ -564,31 +679,39 @@ body {
   margin-bottom: 30px;
   text-align: justify;
 }
+/* line 159, ../sass/partials/_news.scss */
 .node-news .content-left .news-link {
   text-align: center;
 }
+/* line 161, ../sass/partials/_news.scss */
 .node-news .content-left .news-link a {
   cursor: pointer;
   color: #ffffff;
   padding: 5px 20px;
   border: 1px solid white;
 }
+/* line 167, ../sass/partials/_news.scss */
 .node-news .content-left .news-link a:focus, .node-news .content-left .news-link a:hover {
   text-decoration: none;
 }
+/* line 174, ../sass/partials/_news.scss */
 .node-news .content-right .title-line {
   margin-bottom: 20px;
 }
+/* line 179, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-image {
   height: 72px !important;
 }
+/* line 183, ../sass/partials/_news.scss */
 .node-news .content-right .news-main h2 {
   margin-top: 0px;
 }
+/* line 187, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
+/* line 191, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-title {
   font-size: 16px;
   white-space: nowrap;
@@ -596,12 +719,14 @@ body {
   text-overflow: ellipsis;
   display: block;
 }
+/* line 199, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-date {
-  color: #bbbbbb;
+  color: #333333;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
   font-size: 12px;
 }
+/* line 206, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-content {
   color: white;
   display: block;
@@ -614,14 +739,16 @@ body {
   -webkit-box-orient: vertical;
   height: 40px;
 }
+/* line 219, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-more {
   margin-bottom: -10px;
   margin-right: -10px;
   text-align: right;
   margin-top: 15px;
 }
+/* line 224, ../sass/partials/_news.scss */
 .node-news .content-right .news-main .news-background .news-more span {
-  color: #000000;
+  color: #333333;
   font-weight: bold;
   display: inline-block;
   padding: 5px 25px;
@@ -629,28 +756,35 @@ body {
   background-color: #ffffff;
   font-size: 12px;
 }
+/* line 237, ../sass/partials/_news.scss */
 .node-news .content-right .news, .node-news .content-right .news-main {
   margin-bottom: 20px;
 }
+/* line 239, ../sass/partials/_news.scss */
 .node-news .content-right .news .news-left, .node-news .content-right .news-main .news-left {
   padding-right: 0px;
 }
+/* line 242, ../sass/partials/_news.scss */
 .node-news .content-right .news .news-right, .node-news .content-right .news-main .news-right {
   padding-left: 0px;
 }
+/* line 245, ../sass/partials/_news.scss */
 .node-news .content-right .news a, .node-news .content-right .news-main a {
   text-decoration: none;
   color: #ffffff;
 }
+/* line 249, ../sass/partials/_news.scss */
 .node-news .content-right .news a:hover, .node-news .content-right .news a:focus, .node-news .content-right .news-main a:hover, .node-news .content-right .news-main a:focus {
   color: #ffffff;
 }
+/* line 252, ../sass/partials/_news.scss */
 .node-news .content-right .news .news-image, .node-news .content-right .news-main .news-image {
   position: relative;
   height: 80px;
   background-size: cover;
   background-position: center center;
 }
+/* line 258, ../sass/partials/_news.scss */
 .node-news .content-right .news .news-image .news-overlay, .node-news .content-right .news-main .news-image .news-overlay {
   position: absolute;
   bottom: 0;
@@ -668,6 +802,7 @@ body {
   overflow: hidden;
   padding: 2px 5px;
 }
+/* line 276, ../sass/partials/_news.scss */
 .node-news .content-right .news .news-type, .node-news .content-right .news-main .news-type {
   text-align: center;
   font-weight: bold;
@@ -678,46 +813,57 @@ body {
   overflow: hidden;
   background-color: #004278;
 }
+/* line 288, ../sass/partials/_news.scss */
 .node-news .content-right .more-news {
   margin-top: 20px;
   background-color: #ffffff;
   display: inline-block;
   padding: 15px 50px;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
 @media (max-width: 992px) {
+  /* line 301, ../sass/partials/_news.scss */
   .node-news .news-share {
     text-align: left !important;
   }
 }
+/* line 2, ../sass/partials/_tournament.scss */
 .views-tournaments a:hover, .views-tournaments a:focus {
   text-decoration: none;
 }
+/* line 6, ../sass/partials/_tournament.scss */
 .views-tournaments label {
   width: 100px;
 }
+/* line 9, ../sass/partials/_tournament.scss */
 .views-tournaments select {
   width: 150px;
 }
+/* line 13, ../sass/partials/_tournament.scss */
 .views-tournaments .title-line {
   margin-bottom: 0px;
 }
+/* line 17, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area {
   padding-top: 40px;
 }
+/* line 19, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament {
   margin-bottom: 30px;
 }
+/* line 22, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament a:hover {
   text-decoration: none;
 }
+/* line 27, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament a .tournament-game {
   text-align: center;
   line-height: 25px;
   font-weight: bold;
 }
+/* line 32, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament a .tournament-game h2 {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -730,20 +876,24 @@ body {
   color: #ffffff;
   font-weight: bold;
 }
+/* line 49, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-status {
   font-weight: 100;
   margin-top: 5px;
-  color: #bbbbbb;
 }
+/* line 53, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-status .low {
   color: #27bf27;
 }
+/* line 57, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-status .medium {
   color: #f0ad4e;
 }
+/* line 61, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-status .high {
   color: #d9534f;
 }
+/* line 66, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-bar {
   background-color: #999999;
   height: 5px;
@@ -752,34 +902,43 @@ body {
   margin-bottom: 10px;
   position: relative;
 }
+/* line 74, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-bar .progress-current {
   position: absolute;
   height: 5px;
 }
+/* line 78, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-bar .progress-current.low {
   background-color: #27bf27;
 }
+/* line 82, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-bar .progress-current.medium {
   background-color: #f0ad4e;
 }
+/* line 86, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-bar .progress-current.high {
   background-color: #d9534f;
 }
+/* line 92, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-more {
   margin-top: 10px;
 }
+/* line 94, ../sass/partials/_tournament.scss */
 .views-tournaments .white-area .tournament .tournament-more a {
-  color: #999999;
+  color: #333333;
   padding: 5px 20px;
   border: 1px solid #999999;
 }
 
+/* line 105, ../sass/partials/_tournament.scss */
 .node-tournament .white-area {
   padding-top: 0px;
 }
+/* line 111, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-tag-info {
   margin-top: 5px;
 }
+/* line 115, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-tag {
   background-color: #d7eaf9;
   color: #85a9c7;
@@ -787,22 +946,25 @@ body {
   display: inline-block;
   margin-bottom: 10px;
 }
+/* line 123, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-game-description {
   margin-top: 0px;
   padding-left: 20px;
   border-left: 1px solid #bbbbbb;
   margin-bottom: 30px;
-  color: #bbbbbb;
 }
+/* line 130, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-description {
   margin-top: 30px;
   /*padding-left: 20px;
   border-left: 1px solid $light-grey;*/
   margin-bottom: 20px;
 }
+/* line 137, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-planning {
   margin-bottom: 30px;
 }
+/* line 139, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-planning h3 {
   background-color: #272625;
   color: #ffffff;
@@ -810,57 +972,70 @@ body {
   margin-bottom: 0px;
   font-size: 18px;
 }
+/* line 146, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-planning .content {
   background-color: #474747;
   padding: 10px 15px;
   color: white;
 }
+/* line 151, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-planning .content p:last-child {
   margin-bottom: 0px;
 }
+/* line 157, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-team {
-  background-color: #000000;
+  background-color: #333333;
   padding-left: 15px;
   padding-right: 15px;
 }
+/* line 167, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize {
   color: #ffffff;
 }
+/* line 169, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize h3 {
   background-color: #829e00;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
+/* line 175, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .line {
   padding: 10px 15px;
   background-color: #474747;
 }
+/* line 178, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .line.light-grey {
   background-color: #7a7878;
 }
+/* line 182, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cashprize .note {
   font-size: 12px;
   font-style: italic;
   padding: 5px 0px;
   color: #829e00;
 }
+/* line 189, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format {
   color: #ffffff;
 }
+/* line 191, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format h3 {
   background-color: #00579e;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
+/* line 197, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format .line {
   padding: 10px 15px;
   background-color: #474747;
 }
+/* line 200, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-format .line.light-grey {
   background-color: #7a7878;
 }
+/* line 206, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cta a {
   color: #FC7E00;
   border: 1px solid #FC7E00;
@@ -869,38 +1044,47 @@ body {
   text-align: center;
   text-decoration: none;
 }
+/* line 214, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-cta a:hover {
   background-color: #FF8D31;
   color: #ffffff;
 }
+/* line 219, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules {
   margin-bottom: 30px;
   color: #ffffff;
 }
+/* line 222, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules h3 {
   background-color: #9e3000;
   padding: 10px 15px;
   margin-bottom: 0px;
   font-size: 18px;
 }
+/* line 228, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules .rule {
   padding: 10px 15px;
   background-color: #474747;
 }
+/* line 231, ../sass/partials/_tournament.scss */
 .node-tournament .tournament-rules .rule.light-grey {
   background-color: #7a7878;
 }
 
+/* line 240, ../sass/partials/_tournament.scss */
 body.tournament-sponsor .node-tournament .white-area {
   padding-top: 0px;
 }
+/* line 242, ../sass/partials/_tournament.scss */
 body.tournament-sponsor .node-tournament .white-area .container:first-child {
   background-color: #ffffff;
 }
 
+/* line 2, ../sass/partials/_sponsor.scss */
 .sponsor-page .sponsor-container:not(:last-child) {
   margin-bottom: 35px;
 }
+/* line 6, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor {
   height: 130px;
   line-height: 130px;
@@ -910,28 +1094,35 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   display: block;
   margin-bottom: 10px;
 }
+/* line 16, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor:hover {
   opacity: 0.8;
   transition: 0.2s;
 }
+/* line 21, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor img {
   display: inline-block;
 }
 
+/* line 2, ../sass/partials/_information.scss */
 .information-page .white-area {
   padding-top: 0px;
 }
+/* line 6, ../sass/partials/_information.scss */
 .information-page .google-map {
   margin-bottom: 50px;
 }
+/* line 7, ../sass/partials/_information.scss */
 .information-page .google-map .content-left {
   background: url(../images/bg-home-blue-area.jpg) center center no-repeat;
   color: white;
   padding-top: 50px;
 }
+/* line 12, ../sass/partials/_information.scss */
 .information-page .google-map .content-right {
   background-color: #ddd;
 }
+/* line 19, ../sass/partials/_information.scss */
 .information-page .info-ticketing {
   background-color: #FC7E00;
   margin-bottom: 50px;
@@ -939,61 +1130,74 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   padding-left: 15px;
   padding-right: 15px;
 }
+/* line 27, ../sass/partials/_information.scss */
 .information-page .info-equipment {
-  background-color: #000000;
+  background-color: #333333;
   padding-left: 15px;
   padding-right: 15px;
 }
+/* line 33, ../sass/partials/_information.scss */
 .information-page .info-restoration {
   background-color: #46679e;
   padding-left: 15px;
   padding-right: 15px;
 }
+/* line 39, ../sass/partials/_information.scss */
 .information-page .info-schedule {
   background-color: #0058a2;
   padding-right: 85px;
 }
+/* line 44, ../sass/partials/_information.scss */
 .information-page .info-access {
   background-color: #4589c6;
   padding-right: 85px;
 }
+/* line 49, ../sass/partials/_information.scss */
 .information-page .info-pricing {
   background-color: #005a7c;
   padding-right: 85px;
 }
+/* line 54, ../sass/partials/_information.scss */
 .information-page .info-accommodation {
   background-color: #00356f;
   padding-right: 85px;
 }
 
+/* line 2, ../sass/partials/_medias.scss */
 .medias-page .info-header {
   padding-left: 20px;
   border-left: 1px solid #bbbbbb;
   margin-bottom: 30px;
 }
+/* line 8, ../sass/partials/_medias.scss */
 .medias-page .info-block-head {
   padding-right: 85px;
   text-align: left;
   font-size: 18px;
   color: #ffffff;
 }
+/* line 14, ../sass/partials/_medias.scss */
 .medias-page .info-block-head .fa {
   font-size: 22px;
 }
+/* line 19, ../sass/partials/_medias.scss */
 .medias-page .info-block-padding {
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 18px;
 }
+/* line 25, ../sass/partials/_medias.scss */
 .medias-page .info-block-table {
   display: table;
   width: 100%;
   height: 100%;
 }
+/* line 31, ../sass/partials/_medias.scss */
 .medias-page .info-block-cell {
   display: table-cell;
   vertical-align: middle;
 }
+/* line 36, ../sass/partials/_medias.scss */
 .medias-page .info-block-body {
   background-color: #474747;
   margin-bottom: 30px;
@@ -1001,43 +1205,55 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   overflow: hidden;
   text-align: justify;
 }
+/* line 43, ../sass/partials/_medias.scss */
 .medias-page .info-block-body p:last-child {
   margin-bottom: 0px;
 }
+/* line 47, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .hack-height {
   margin-bottom: -99999px;
   padding-bottom: 99999px;
 }
+/* line 52, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .border-style {
   border-right: 2px solid white;
 }
+/* line 56, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .info-block-left, .medias-page .info-block-body .info-block-right {
   padding: 15px;
 }
+/* line 59, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .info-block-left a:hover, .medias-page .info-block-body .info-block-left a:focus, .medias-page .info-block-body .info-block-right a:hover, .medias-page .info-block-body .info-block-right a:focus {
   text-decoration: none;
 }
+/* line 64, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .info-block-left {
   padding-right: 0px;
 }
+/* line 68, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .info-block-right {
   padding-left: 0px;
 }
+/* line 72, ../sass/partials/_medias.scss */
 .medias-page .info-block-body .flickr-img {
   margin-bottom: 15px;
 }
+/* line 77, ../sass/partials/_medias.scss */
 .medias-page .info-collapse {
   margin-bottom: 30px;
 }
+/* line 80, ../sass/partials/_medias.scss */
 .medias-page .info-collapse .info-block-body {
   margin-bottom: 0px;
 }
+/* line 84, ../sass/partials/_medias.scss */
 .medias-page .info-collapse .info-icon {
   width: 25px;
   display: inline-block;
   margin-right: 5px;
   text-align: center;
 }
+/* line 91, ../sass/partials/_medias.scss */
 .medias-page .info-collapse .info-carret {
   text-align: center;
   border-left: 2px solid #ffffff;
@@ -1048,27 +1264,34 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   right: 0;
   height: 100%;
 }
+/* line 101, ../sass/partials/_medias.scss */
 .medias-page .info-collapse .info-carret .fa {
   font-size: 32px;
 }
+/* line 107, ../sass/partials/_medias.scss */
 .medias-page .info-collapse [aria-expanded="true"] .fa-caret-up {
   display: inline-block;
 }
+/* line 110, ../sass/partials/_medias.scss */
 .medias-page .info-collapse [aria-expanded="true"] .fa-caret-down {
   display: none;
 }
+/* line 116, ../sass/partials/_medias.scss */
 .medias-page .info-collapse [aria-expanded="false"] .fa-caret-up {
   display: none;
 }
+/* line 119, ../sass/partials/_medias.scss */
 .medias-page .info-collapse [aria-expanded="false"] .fa-caret-down {
   display: inline-block;
 }
 
+/* line 2, ../sass/partials/_page.scss */
 .node-page .page-image {
   height: 350px;
   background-size: cover;
   background-position: center center;
 }
+/* line 8, ../sass/partials/_page.scss */
 .node-page .page-content {
   margin-top: 30px;
   padding-left: 20px;
@@ -1076,6 +1299,7 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   margin-bottom: 30px;
 }
 
+/* line 1, ../sass/partials/_memory.scss */
 .memory-image {
   height: 350px;
   background-size: contain;
@@ -1084,6 +1308,7 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   margin-bottom: 30px;
 }
 
+/* line 1, ../sass/partials/_form.scss */
 select, input {
   height: 30px;
   background-color: #999999;
@@ -1092,10 +1317,12 @@ select, input {
   opacity: 0.25;
 }
 
+/* line 9, ../sass/partials/_form.scss */
 select {
   width: 100%;
   opacity: 1;
 }
+/* line 13, ../sass/partials/_form.scss */
 select option {
   color: #ffffff;
 }
@@ -1103,11 +1330,13 @@ select option {
 /**
  * Select
  */
+/* line 22, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown option, :root .css3-metro-dropdown:after, :root .css3-metro-dropdown::after, :root .css3-metro-dropdown select {
   color: #fff;
   margin-bottom: 0px;
 }
 
+/* line 27, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown select, :root .css3-metro-dropdown:after, :root .css3-metro-dropdown::after {
   display: block;
   background: rgba(153, 153, 153, 0.25);
@@ -1116,10 +1345,12 @@ select option {
   appearance: none;
 }
 
+/* line 35, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown select, :root .css3-metro-dropdown option {
   padding: 6px 45px 6px 15px;
 }
 
+/* line 39, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown {
   position: relative;
   display: inline-block;
@@ -1127,10 +1358,11 @@ select option {
   width: auto;
 }
 
+/* line 46, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown::after {
   content: "\25bc";
   background-color: #ffffff;
-  color: #000000;
+  color: #333333;
   margin: 5px;
   position: absolute;
   top: -4px;
@@ -1146,6 +1378,7 @@ select option {
   pointer-events: none;
 }
 
+/* line 65, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown select {
   height: 34px;
   border: 0;
@@ -1154,24 +1387,28 @@ select option {
   border: 1px solid #999999;
 }
 
+/* line 73, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown option {
   background: #999999;
   color: #fff;
 }
 
+/* line 78, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown select:hover, :root .css3-metro-dropdown:after:hover, :root .css3-metro-dropdown::after:hover {
   background: #0058A2;
 }
 
+/* line 83, ../sass/partials/_form.scss */
 .css3-metro-dropdown .caret {
   position: absolute;
   top: 1px;
   right: 1px;
   width: 32px;
   height: 32px;
-  background-color: #000000;
+  background-color: #333333;
   border: none;
 }
+/* line 92, ../sass/partials/_form.scss */
 .css3-metro-dropdown .caret::after {
   content: "";
   width: 0;
@@ -1184,53 +1421,71 @@ select option {
   left: 12px;
 }
 
+/* line 106, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse select, :root .css3-metro-dropdown-inverse:after, :root .css3-metro-dropdown-inverse::after {
-  background: #000000;
+  background: #333333;
 }
 
+/* line 110, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse select {
-  border: 1px solid #000000;
+  border: 1px solid #333333;
 }
 
+/* line 114, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse::after {
   background-color: #999999;
 }
 
+/* line 118, ../sass/partials/_form.scss */
 :root .css3-metro-dropdown-inverse option {
-  background: #000000;
+  background: #333333;
   color: #fff;
 }
 
+/* line 123, ../sass/partials/_form.scss */
 .css3-metro-dropdown-inverse .caret {
   background-color: #999999;
 }
 
+/* line 2, ../components/slideshow/_slideshow.scss */
+.slideshow .video-container {
+  background-color: #000;
+}
+/* line 6, ../components/slideshow/_slideshow.scss */
 .slideshow video {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
+/* line 1, ../components/streams/_streams.scss */
 .stream {
   margin-bottom: 40px;
 }
+/* line 4, ../components/streams/_streams.scss */
 .stream .stream-video {
   padding: 0;
 }
+/* line 7, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list {
   padding: 0;
   border: 1px solid #ffffff;
 }
+/* line 12, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .col-md-6 {
   cursor: pointer;
 }
+/* line 14, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .col-md-6:first-child {
   padding-right: 0px;
-  border-right: 1px solid #000000;
+  border-right: 1px solid #333333;
 }
+/* line 18, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .col-md-6:last-child {
   padding-left: 0px;
 }
+/* line 22, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .stream-tab-chat, .stream .stream-chat-video-list .stream-tabs .stream-tab-video-list {
   color: black;
   width: 100%;
@@ -1241,19 +1496,23 @@ select option {
   background-color: #bbbbbb;
   transition: all 0.2s ease-in;
 }
+/* line 31, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-tabs .stream-tab-chat.active, .stream .stream-chat-video-list .stream-tabs .stream-tab-video-list.active {
   background-color: #ffffff;
   transition: all 0.2s ease-in;
 }
+/* line 37, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat {
   display: none;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
 }
+/* line 41, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat {
   overflow-y: auto;
   height: 362px;
 }
+/* line 45, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line {
   -webkit-transition: all 1s ease-in;
   -moz-transition: all 1s ease-in;
@@ -1262,47 +1521,59 @@ select option {
   transition: all 1s ease-in;
   word-wrap: break-word;
 }
+/* line 54, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line[data-faded] {
   opacity: .8;
 }
+/* line 61, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice {
   opacity: .7;
   font-weight: 300;
 }
+/* line 69, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-4"] {
   color: #765eed;
   font-style: italic;
 }
+/* line 74, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-3"] {
   color: #1aa2e6;
   font-style: italic;
 }
+/* line 79, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-2"] {
   color: #1ae6a2;
   font-style: italic;
 }
+/* line 84, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="-1"] {
   color: #5ee61a;
   font-style: italic;
 }
+/* line 89, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="1"] {
   color: #ffea00;
 }
+/* line 93, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="2"] {
   color: #ff8000;
   font-weight: 400;
 }
+/* line 98, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="3"] {
   color: red;
   font-weight: 400;
 }
+/* line 103, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-level="4"] {
   color: red;
   font-weight: 700;
 }
+/* line 108, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-notice[data-faded] {
   opacity: .3;
 }
+/* line 112, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-timedout {
   opacity: .2;
   font-size: .75em;
@@ -1312,6 +1583,7 @@ select option {
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
+/* line 122, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line.chat-cleared {
   opacity: .2;
   font-size: .33em;
@@ -1321,27 +1593,34 @@ select option {
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
+/* line 132, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-channel {
   margin-right: .375em;
   opacity: .6;
   font-weight: 300;
 }
+/* line 138, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-name {
   font-weight: 700;
 }
+/* line 142, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-colon {
   margin-right: .375em;
   opacity: .85;
 }
+/* line 147, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line:not(.chat-action) .chat-colon:after {
   content: ':';
 }
+/* line 151, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-message {
   font-weight: 400;
 }
+/* line 155, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-line:not(.chat-action) .chat-message {
   color: inherit !important;
 }
+/* line 159, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .emoticon {
   background-position: center center;
   background-repeat: no-repeat;
@@ -1350,9 +1629,11 @@ select option {
   vertical-align: middle !important;
   height: 1.5em;
 }
+/* line 168, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badges {
   margin-right: .125em;
 }
+/* line 172, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badges > div {
   margin-bottom: 1px;
   border-radius: 2px;
@@ -1364,35 +1645,44 @@ select option {
   background-repeat: no-repeat;
   margin-right: .3em;
 }
+/* line 184, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-mod {
   background-color: #33ae0a;
   background-image: url(http://www.twitch.tv/images/xarth/badge_mod.svg);
 }
+/* line 189, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-turbo {
   background-color: #6441a4;
   background-image: url(http://www.twitch.tv/images/xarth/badge_turbo.svg);
 }
+/* line 194, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-broadcaster {
   background-color: #e71818;
   background-image: url(http://www.twitch.tv/images/xarth/badge_broadcaster.svg);
 }
+/* line 199, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-admin {
   background-color: #faaf19;
   background-image: url(http://www.twitch.tv/images/xarth/badge_admin.svg);
 }
+/* line 204, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-staff {
   background-color: #200f33;
   background-image: url(http://www.twitch.tv/images/xarth/badge_staff.svg);
 }
+/* line 212, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat .chat-badge-bot {
   background-image: url(https://cdn.betterttv.net/tags/bot.png);
 }
+/* line 261, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-chat #chat [class*="chat-room"] {
   font-size: .5em;
 }
+/* line 275, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list {
   height: 362px;
 }
+/* line 278, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item {
   cursor: pointer;
   line-height: 40px;
@@ -1400,24 +1690,29 @@ select option {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
+/* line 284, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item.active {
   background-color: white;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
+/* line 288, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item.active.online .stream-video-list-count {
   background-position: left -15px;
   font-weight: normal;
 }
+/* line 293, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item.online .stream-video-list-count {
   background: url("../images/eye.png") left 1px no-repeat;
   padding-left: 25px;
   line-height: 15px;
   margin-top: 12px;
 }
+/* line 299, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item.online .stream-video-list-name:before {
   background-color: #7eff00;
 }
+/* line 302, ../components/streams/_streams.scss */
 .stream .stream-chat-video-list .stream-video-list .stream-video-list-item .stream-video-list-name:before {
   content: "";
   display: inline-block;
@@ -1428,6 +1723,7 @@ select option {
   margin-right: 5px;
 }
 
+/* line 1, ../components/home-block/_home-block.scss */
 .home-block {
   background-color: rgba(255, 255, 255, 0.1);
   background-position: left bottom;
@@ -1437,37 +1733,44 @@ select option {
   padding-bottom: 30px;
   margin-bottom: 20px;
 }
+/* line 11, ../components/home-block/_home-block.scss */
 .home-block .title {
   background-color: white;
   font-size: 18px;
-  color: #000000;
+  color: #333333;
   padding: 10px 15px;
 }
+/* line 17, ../components/home-block/_home-block.scss */
 .home-block .text {
   text-align: right;
   padding: 20px 15px 20px 60px;
   letter-spacing: 1px;
 }
+/* line 22, ../components/home-block/_home-block.scss */
 .home-block .btn-bottom {
   position: absolute;
   bottom: 0px;
   right: 0px;
   left: 0px;
 }
+/* line 29, ../components/home-block/_home-block.scss */
 .home-block a.reverse {
   background-color: #FC7E00;
   color: #ffffff;
 }
+/* line 33, ../components/home-block/_home-block.scss */
 .home-block a:hover {
   text-decoration: none;
 }
+/* line 36, ../components/home-block/_home-block.scss */
 .home-block a.btn-progress {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
   text-decoration: none;
   display: block;
   background-color: #ffffff;
 }
+/* line 42, ../components/home-block/_home-block.scss */
 .home-block a.btn-progress .cta {
   z-index: 0;
   position: relative;
@@ -1478,15 +1781,18 @@ select option {
   transition-duration: 0.4s;
 }
 
+/* line 1, ../components/title-line/_title-line.scss */
 .title-line {
   margin-bottom: 40px;
   /* headlines with lines */
 }
+/* line 3, ../components/title-line/_title-line.scss */
 .title-line .line {
   background-color: #ffffff;
   margin-top: 30px;
   height: 2px;
 }
+/* line 8, ../components/title-line/_title-line.scss */
 .title-line h2 {
   text-align: center;
   text-transform: uppercase;
@@ -1497,11 +1803,13 @@ select option {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+/* line 20, ../components/title-line/_title-line.scss */
 .title-line .decorated {
   overflow: hidden;
   text-align: center;
   margin-top: 0px;
 }
+/* line 26, ../components/title-line/_title-line.scss */
 .title-line .mushroom {
   background: url("../images/mushroom.png") right center no-repeat;
   content: '';
@@ -1512,9 +1820,11 @@ select option {
   margin-left: 5px;
   margin-top: -5px;
 }
+/* line 37, ../components/title-line/_title-line.scss */
 .title-line .mushroom.black {
   background: url("../images/mushroom-black.png") right center no-repeat;
 }
+/* line 41, ../components/title-line/_title-line.scss */
 .title-line .space-invader {
   background: url("../images/space-invader-black.png") right center no-repeat;
   content: '';
@@ -1525,9 +1835,11 @@ select option {
   margin-left: 5px;
   margin-top: -5px;
 }
+/* line 52, ../components/title-line/_title-line.scss */
 .title-line .space-invader.black {
   background: url("../images/space-invader-black.png") right center no-repeat;
 }
+/* line 56, ../components/title-line/_title-line.scss */
 .title-line .decorated > span, .title-line .decorated > h2 > span {
   position: relative;
   display: inline-block;
@@ -1538,6 +1850,7 @@ select option {
   letter-spacing: 2px;
   line-height: 28px;
 }
+/* line 67, ../components/title-line/_title-line.scss */
 .title-line .decorated > span:before, .title-line .decorated > span:after, .title-line .decorated > h2 > span:before, .title-line .decorated > h2 > span:after {
   content: '';
   position: absolute;
@@ -1546,33 +1859,40 @@ select option {
   width: 1337%;
   margin: 0 20px;
 }
+/* line 76, ../components/title-line/_title-line.scss */
 .title-line .decorated > span:before, .title-line .decorated > h2 > span:before {
   right: 100%;
 }
+/* line 80, ../components/title-line/_title-line.scss */
 .title-line .decorated > span:after, .title-line .decorated > h2 > span:after {
   left: 100%;
 }
 
+/* line 1, ../components/tournaments-home-cta/_tournaments-home-cta.scss */
 .tournaments-home-cta {
   background: url("../images/cup.png") center center no-repeat;
   background-size: cover;
 }
+/* line 4, ../components/tournaments-home-cta/_tournaments-home-cta.scss */
 .tournaments-home-cta .text {
   text-align: right;
   padding: 48px 30px 48px 130px;
   font-weight: bold;
   letter-spacing: 1px;
 }
+/* line 10, ../components/tournaments-home-cta/_tournaments-home-cta.scss */
 .tournaments-home-cta .cta {
   padding: 10px;
   text-align: center;
   background-color: #ffffff;
 }
+/* line 13, ../components/tournaments-home-cta/_tournaments-home-cta.scss */
 .tournaments-home-cta .cta a {
   font-weight: bold;
-  color: #000000;
+  color: #333333;
 }
 
+/* line 1, ../components/headline/_headline.scss */
 .headline {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -1580,28 +1900,34 @@ select option {
   font-weight: bold;
 }
 
+/* line 2, ../components/news-home/_news-home.scss */
 .news-home .new {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   margin-bottom: 25px;
   color: #ffffff;
 }
+/* line 8, ../components/news-home/_news-home.scss */
 .news-home .new .col {
   display: inline-block;
 }
+/* line 10, ../components/news-home/_news-home.scss */
 .news-home .new .col.first {
   width: 195px;
 }
+/* line 12, ../components/news-home/_news-home.scss */
 .news-home .new .col.first .tag {
   text-align: center;
   line-height: 25px;
   font-weight: bold;
 }
+/* line 18, ../components/news-home/_news-home.scss */
 .news-home .new .col.second {
   width: calc(100% - 220px);
   padding: 10px;
   vertical-align: top;
 }
+/* line 22, ../components/news-home/_news-home.scss */
 .news-home .new .col.second h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1610,6 +1936,7 @@ select option {
   padding-bottom: 15px;
   margin-top: 10px;
 }
+/* line 30, ../components/news-home/_news-home.scss */
 .news-home .new .col.second .teaser {
   display: block;
   text-overflow: ellipsis;
@@ -1622,6 +1949,7 @@ select option {
   -webkit-box-orient: vertical;
 }
 
+/* line 2, ../components/news-home2/_news-home2.scss */
 .news-home2 .hack-line-left {
   position: absolute;
   height: 2px;
@@ -1630,6 +1958,7 @@ select option {
   top: 14px;
   left: -4999px;
 }
+/* line 10, ../components/news-home2/_news-home2.scss */
 .news-home2 .hack-line-right {
   position: absolute;
   height: 2px;
@@ -1638,16 +1967,20 @@ select option {
   top: 14px;
   right: -15px;
 }
+/* line 20, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-image {
   height: 130px !important;
 }
+/* line 24, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main h2 {
   margin-top: 0px;
 }
+/* line 28, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
+/* line 32, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-title {
   font-size: 18px;
   white-space: nowrap;
@@ -1655,11 +1988,13 @@ select option {
   text-overflow: ellipsis;
   display: block;
 }
+/* line 40, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-date {
   color: #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
+/* line 46, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-content {
   color: white;
   display: block;
@@ -1672,42 +2007,51 @@ select option {
   -webkit-box-orient: vertical;
   height: 40px;
 }
+/* line 59, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-more {
   margin-bottom: -10px;
   margin-right: -10px;
   text-align: right;
   margin-top: 28px;
 }
+/* line 64, ../components/news-home2/_news-home2.scss */
 .news-home2 .news-main .news-background .news-more span {
-  color: #000000;
+  color: #333333;
   font-weight: bold;
   display: inline-block;
   padding: 5px 50px;
   cursor: pointer;
   background-color: #ffffff;
 }
+/* line 76, ../components/news-home2/_news-home2.scss */
 .news-home2 .news, .news-home2 .news-main {
   margin-bottom: 20px;
 }
+/* line 78, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-left, .news-home2 .news-main .news-left {
   padding-right: 0px;
 }
+/* line 81, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-right, .news-home2 .news-main .news-right {
   padding-left: 0px;
 }
+/* line 84, ../components/news-home2/_news-home2.scss */
 .news-home2 .news a, .news-home2 .news-main a {
   text-decoration: none;
   color: #ffffff;
 }
+/* line 88, ../components/news-home2/_news-home2.scss */
 .news-home2 .news a:hover, .news-home2 .news a:focus, .news-home2 .news-main a:hover, .news-home2 .news-main a:focus {
   color: #ffffff;
 }
+/* line 91, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-image, .news-home2 .news-main .news-image {
   position: relative;
   height: 80px;
   background-size: cover;
   background-position: center center;
 }
+/* line 97, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-image .news-overlay, .news-home2 .news-main .news-image .news-overlay {
   position: absolute;
   bottom: 0;
@@ -1725,6 +2069,7 @@ select option {
   overflow: hidden;
   padding: 2px 5px;
 }
+/* line 115, ../components/news-home2/_news-home2.scss */
 .news-home2 .news .news-type, .news-home2 .news-main .news-type {
   text-align: center;
   font-weight: bold;
@@ -1735,23 +2080,27 @@ select option {
   overflow: hidden;
   background-color: #004278;
 }
+/* line 127, ../components/news-home2/_news-home2.scss */
 .news-home2 .more-news {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #ffffff;
   display: inline-block;
   padding: 15px 50px;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
 }
 
 @media (max-width: 992px) {
+  /* line 141, ../components/news-home2/_news-home2.scss */
   .news-home2 .news .news-left, .news-home2 .news-main .news-left {
     padding-right: 15px;
   }
+  /* line 144, ../components/news-home2/_news-home2.scss */
   .news-home2 .news .news-right, .news-home2 .news-main .news-right {
     padding-left: 15px;
   }
+  /* line 149, ../components/news-home2/_news-home2.scss */
   .news-home2 .hack-line-right {
     position: absolute;
     height: 2px;
@@ -1762,18 +2111,22 @@ select option {
   }
 }
 @media (max-width: 1199px) {
+  /* line 163, ../components/news-home2/_news-home2.scss */
   .news-home2 .news-main .news-background .news-content {
     display: none;
   }
+  /* line 166, ../components/news-home2/_news-home2.scss */
   .news-home2 .news-main .news-background .news-more {
     margin-top: 53px;
   }
 }
+/* line 2, ../components/twitter-home/_twitter-home.scss */
 .twitter-home .twitter-userline {
   height: 605px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
+/* line 8, ../components/twitter-home/_twitter-home.scss */
 .twitter-home .hack-line-right {
   position: absolute;
   height: 2px;
@@ -1784,6 +2137,7 @@ select option {
 }
 
 @media (max-width: 992px) {
+  /* line 21, ../components/twitter-home/_twitter-home.scss */
   .twitter-home .hack-line-left {
     position: absolute;
     height: 2px;
@@ -1793,6 +2147,7 @@ select option {
     left: -125px;
   }
 }
+/* line 3, ../components/sponsors-banner/_sponsors-banner.scss */
 .sponsors-banner .sponsor {
   text-align: center;
   height: 150px;
@@ -1801,25 +2156,30 @@ select option {
   vertical-align: middle;
 }
 
+/* line 2, ../components/signup-home/_signup-home.scss */
 .signup .status {
   background-color: #ffffff;
   padding: 7px 10px;
   color: #004278;
   font-size: 18px;
 }
+/* line 9, ../components/signup-home/_signup-home.scss */
 .signup .tournaments {
   border-bottom: 1px solid #ffffff;
 }
+/* line 12, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row {
   margin-left: 0px;
   margin-right: 0px;
 }
+/* line 16, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .tag {
   padding: 5px;
   font-weight: bold;
   text-align: center;
   border-left: 1px solid #ffffff;
 }
+/* line 22, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name {
   position: relative;
   padding: 5px 10px;
@@ -1829,6 +2189,7 @@ select option {
   height: 30px;
   z-index: 0;
 }
+/* line 31, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name .title {
   position: absolute;
   left: 15px;
@@ -1840,6 +2201,7 @@ select option {
   line-height: 30px;
   vertical-align: middle;
 }
+/* line 43, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name .progress-current {
   position: absolute;
   left: 0;
@@ -1848,20 +2210,22 @@ select option {
   bottom: 0;
   z-index: 1;
 }
+/* line 51, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name .progress-current.low {
   background-color: #27bf27;
 }
+/* line 55, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name .progress-current.medium {
   background-color: #f0ad4e;
 }
+/* line 59, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .row .name .progress-current.high {
   background-color: #d9534f;
 }
+/* line 66, ../components/signup-home/_signup-home.scss */
 .signup .tournaments .separator {
   height: 1px;
   border-left: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
   background-color: #004278;
 }
-
-/*# sourceMappingURL=style.css.map */

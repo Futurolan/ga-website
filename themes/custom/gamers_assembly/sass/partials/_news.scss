@@ -51,15 +51,15 @@
         }
       }
       .news-date {
-        color: $light-grey;
-        border-bottom: 1px solid $light-grey;
+        color: $black;
+        border-bottom: 1px solid $black;
         margin-bottom: 10px;
         font-weight: 400;
         margin-bottom: 5px;
         padding-bottom: 5px;
       }
       .news-content {
-        color: $grey;
+        color: $black;
         display: block;
         text-overflow: ellipsis;
         word-wrap: break-word;
@@ -75,9 +75,9 @@
         margin-top: 10px;
         text-align: right;
         a {
-          color: $grey;
+          color: $black;
           padding: 5px 20px;
-          border: 1px solid $grey;
+          border: 1px solid $black;
         }
       }
     }
@@ -116,7 +116,7 @@
       }
 
       .news-date {
-        color: $grey;
+        color: $black;
       }
     }
 
@@ -197,7 +197,7 @@
         }
 
         .news-date {
-          color: $light-grey;
+          color: $black;
           border-bottom: 1px solid $light-grey;
           margin-bottom: 10px;
           font-size: 12px;

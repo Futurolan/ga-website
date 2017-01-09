@@ -31,7 +31,14 @@ function ga_weezevent_update_tournament_info_cron() {
                 $pseudo = $answer->value;
               }
             }
-            $tickets[$participant->id_transaction][$team][] = $pseudo;
+            
+            $key = $participant->id_transaction;
+            // HACK pour gerer l'achat multiple de billets
+            if ($node->field_tournament_type->value == "Solo" && isset($tickets[$key])) {
+              $tickets[][$team][] = $pseudo;
+            } else {
+              $tickets[$key][$team][] = $pseudo;
+            }
             $count++;
           }
           if ($node->field_tournament_type->value == "Equipe") {

@@ -49,7 +49,6 @@
       .tournament-status {
         font-weight: 100;
         margin-top: 5px;
-        color: $light-grey;
 
         .low {
           color: $sign-low;
@@ -93,7 +92,7 @@
       .tournament-more {
         margin-top: 10px;
         a {
-          color: $grey;
+          color: $black;
           padding: 5px 20px;
           border: 1px solid $grey;
         }
@@ -126,7 +125,6 @@
     padding-left: 20px;
     border-left: 1px solid $light-grey;
     margin-bottom: 30px;
-    color: $light-grey;
   }
 
   .tournament-description {
