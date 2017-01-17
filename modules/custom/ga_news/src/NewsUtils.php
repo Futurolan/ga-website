@@ -42,7 +42,7 @@ class NewsUtils {
       if ($node->field_news_image->entity) {
         $imageUri = $node->field_news_image->entity->getFileUri();
       }
-      elseif ($node->field_news_tournament->entity) {
+      elseif ($node->field_news_tournament->entity && $node->field_news_tournament->entity->field_tournament_image->entity) {
         $imageUri = $node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
       }
       elseif ($node->field_news_game->entity) {
