@@ -100,16 +100,18 @@
                                                 {% endfor %}
 
 
-                                                {% for i in 1..free_slot %}
-                                                    <tr>
-                                                        <td>
-                                                            #{{ i+sub_count+node.field_tournament_reserved_slot.value }}</td>
-                                                        <td><i class="fa fa-unlock"
-                                                               aria-hidden="true"></i> {{ "Free slot"|t }}
-                                                        </td>
-                                                        <td></td>
-                                                    </tr>
-                                                {% endfor %}
+                                                {% if(free_slot >=1) %}
+                                                    {% for i in 1..free_slot %}
+                                                        <tr>
+                                                            <td>
+                                                                #{{ i+sub_count+node.field_tournament_reserved_slot.value }}</td>
+                                                            <td><i class="fa fa-unlock"
+                                                                   aria-hidden="true"></i> {{ "Free slot"|t }}
+                                                            </td>
+                                                            <td></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% endif %}
 
 
                                             </table>
