@@ -26,7 +26,8 @@ class FrontPreLiveController extends ControllerBase {
       '#config' => $config,
       '#slides' => $slides,
       '#sponsors' => $sponsors,
-      '#news' => $news
+      '#news' => $news,
+      '#cache' => array('max-age' => 60),
     );
 
   }
