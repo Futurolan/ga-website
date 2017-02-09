@@ -286,7 +286,7 @@ class FormManglerService {
           ?: BehaviorSettings::REDIRECT_NOT_APPLICABLE,
         ),
         $form_state->getValue('rh_entity_type'),
-        isset($entity) ? $entity->id() : $form_state->getValue('rh_entity_type')
+        isset($entity) ? $entity->id() : NULL
       );
     }
   }

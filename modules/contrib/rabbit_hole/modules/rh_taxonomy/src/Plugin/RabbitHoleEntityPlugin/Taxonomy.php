@@ -24,4 +24,13 @@ class Taxonomy extends RabbitHoleEntityPluginBase {
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getEntityTokenMap() {
+    return array(
+      'taxonomy_term' => 'term',
+      'taxonomy_vocabulary' => 'vocabulary',
+    );
+  }
 }

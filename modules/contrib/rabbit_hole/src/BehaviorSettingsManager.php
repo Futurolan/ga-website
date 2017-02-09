@@ -30,7 +30,6 @@ class BehaviorSettingsManager implements BehaviorSettingsManagerInterface {
    * {@inheritdoc}
    */
   public function saveBehaviorSettings($settings, $entity_type_id, $entity_id = NULL) {
-
     $id = $this->generateBehaviorSettingsFullId($entity_type_id, $entity_id);
 
     $entity = BehaviorSettings::load($id);

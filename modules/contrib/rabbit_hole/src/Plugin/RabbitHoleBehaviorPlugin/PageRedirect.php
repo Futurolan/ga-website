@@ -13,13 +13,15 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Utility\Token;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Routing\TrustedRedirectResponse;
 use Drupal\rabbit_hole\Plugin\RabbitHoleBehaviorPluginBase;
 use Drupal\rabbit_hole\Exception\InvalidRedirectResponseException;
 use Drupal\rabbit_hole\BehaviorSettingsManagerInterface;
 use Drupal\rabbit_hole\Plugin\RabbitHoleEntityPluginManager;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+
+
 
 /**
  * Redirects to another page.
@@ -172,7 +174,7 @@ class PageRedirect extends RabbitHoleBehaviorPluginBase implements ContainerFact
       case self::REDIRECT_SEE_OTHER:
       case self::REDIRECT_TEMPORARY_REDIRECT:
         if ($current_response === NULL) {
-          return new RedirectResponse($target, $response_code);
+          return new TrustedRedirectResponse($target, $response_code);
         }
         else {
           // If a response already exists we don't need to do anything with it.
@@ -217,19 +219,17 @@ class PageRedirect extends RabbitHoleBehaviorPluginBase implements ContainerFact
     $redirect = NULL;
     $redirect_code = NULL;
 
-    if (isset($entity)) {
-      if ($entity_is_bundle) {
-        $redirect = $bundle_settings->get('redirect');
-        $redirect_code = $bundle_settings->get('redirect_code');
-      }
-      else {
-        $redirect = isset($entity->rh_redirect->value)
-          ? $entity->rh_redirect->value
-          : self::RABBIT_HOLE_PAGE_REDIRECT_DEFAULT;
-        $redirect_code = isset($entity->rh_redirect_code->value)
-          ? $entity->rh_redirect_code->value
-          : self::RABBIT_HOLE_PAGE_REDIRECT_RESPONSE_DEFAULT;
-      }
+    if ($entity_is_bundle) {
+      $redirect = $bundle_settings->get('redirect');
+      $redirect_code = $bundle_settings->get('redirect_code');
+    }
+    elseif (isset($entity)) {
+      $redirect = isset($entity->rh_redirect->value)
+        ? $entity->rh_redirect->value
+        : self::RABBIT_HOLE_PAGE_REDIRECT_DEFAULT;
+      $redirect_code = isset($entity->rh_redirect_response->value)
+        ? $entity->rh_redirect_response->value
+        : self::RABBIT_HOLE_PAGE_REDIRECT_RESPONSE_DEFAULT;
     }
     else {
       $redirect = NULL;
@@ -268,18 +268,22 @@ class PageRedirect extends RabbitHoleBehaviorPluginBase implements ContainerFact
       '#after_build' => array(),
     );
 
-    $entity_type_for_tokens = NULL;
+    $entity_type_id = NULL;
     if (isset($entity)) {
-      $entity_type_for_tokens = $entity_is_bundle
+      $entity_type_id = $entity_is_bundle
         ? $entity->getEntityType()->getBundleOf()
         : $entity->getEntityTypeId();
     }
     else {
-      $entity_type_for_tokens = $this->rhEntityPluginManager
+      $entity_type_id = $this->rhEntityPluginManager
         ->loadSupportedGlobalForms()[$form_id];
     }
 
+    $entity_type_for_tokens = NULL;
     if ($this->moduleHandler->moduleExists('token')) {
+      $token_map = $this->rhEntityPluginManager->loadEntityTokenMap();
+      $entity_type_for_tokens = $token_map[$entity_type_id];
+
       $form['rabbit_hole']['redirect']['rh_redirect']['#element_validate'][]
         = 'token_element_validate';
       $form['rabbit_hole']['redirect']['rh_redirect']['#after_build'][]

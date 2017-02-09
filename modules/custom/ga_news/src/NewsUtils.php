@@ -79,7 +79,7 @@ class NewsUtils {
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
         "subtitle" => $subtitle,
-        "color" => $color,
+        "color" => $color?$color:'#000000',
         "url" => $node->url()
       );
     }

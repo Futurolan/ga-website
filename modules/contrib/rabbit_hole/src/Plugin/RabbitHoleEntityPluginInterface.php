@@ -56,4 +56,12 @@ interface RabbitHoleEntityPluginInterface extends PluginInspectionInterface {
    */
   public function getGlobalFormSubmitHandlerAttachLocations();
 
+  /**
+   * Return a map of entity IDs used by this plugin to token IDs.
+   *
+   * @return array
+   *   A map of token IDs to entity IDs in the form
+   *   array('entity ID' => 'token ID')
+   */
+  public function getEntityTokenMap();
 }
