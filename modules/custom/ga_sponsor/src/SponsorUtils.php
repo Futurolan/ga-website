@@ -65,7 +65,7 @@ class SponsorUtils {
         "title" => $node->getTitle(),
         "url" => $node->field_sponsor_url->value,
         "image" => ImageStyle::load('sponsor_front')
-          ->buildUri($node->get("field_sponsor_image")->entity->uri->value)
+          ->buildUrl($node->get("field_sponsor_image")->entity->uri->value)
       );
     }
     ksort($sponsors);
