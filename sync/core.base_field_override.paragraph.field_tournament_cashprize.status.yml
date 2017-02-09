@@ -1,0 +1,22 @@
+uuid: e9050c3c-7cf8-423d-aec0-43ffd9c34d7d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.field_tournament_cashprize
+id: paragraph.field_tournament_cashprize.status
+field_name: status
+entity_type: paragraph
+bundle: field_tournament_cashprize
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

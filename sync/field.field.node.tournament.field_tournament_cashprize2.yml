@@ -1,0 +1,28 @@
+uuid: 15aebedd-8718-4650-9466-beee04fbe4ce
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_cashprize2
+    - node.type.tournament
+  module:
+    - entity_reference_revisions
+id: node.tournament.field_tournament_cashprize2
+field_name: field_tournament_cashprize2
+entity_type: node
+bundle: tournament
+label: Cashprize
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      field_tournament_cashprize:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

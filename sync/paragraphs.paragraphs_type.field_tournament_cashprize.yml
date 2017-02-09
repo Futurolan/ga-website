@@ -1,0 +1,6 @@
+uuid: d67a8dd6-8f51-4755-a695-1b1c2a0e8454
+langcode: fr
+status: true
+dependencies: {  }
+id: field_tournament_cashprize
+label: Cashprize
