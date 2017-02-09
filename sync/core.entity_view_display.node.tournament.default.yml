@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tournament.field_platform
     - field.field.node.tournament.field_tournament_cashprize
+    - field.field.node.tournament.field_tournament_cashprize2
     - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_game
@@ -21,6 +22,7 @@ dependencies:
     - field.field.node.tournament.field_tournament_weight
     - node.type.tournament
   module:
+    - entity_reference_revisions
     - field_collection
     - file
     - image
@@ -47,6 +49,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: field_collection_list
+  field_tournament_cashprize2:
+    type: entity_reference_revisions_entity_view
+    weight: 124
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_tournament_description:
     weight: 118
     label: above

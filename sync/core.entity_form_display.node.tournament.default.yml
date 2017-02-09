@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tournament.field_platform
     - field.field.node.tournament.field_tournament_cashprize
+    - field.field.node.tournament.field_tournament_cashprize2
     - field.field.node.tournament.field_tournament_description
     - field.field.node.tournament.field_tournament_format
     - field.field.node.tournament.field_tournament_game
@@ -27,6 +28,7 @@ dependencies:
     - file
     - image
     - image_widget_crop
+    - paragraphs
     - scheduler
     - text
 third_party_settings:
@@ -75,6 +77,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: field_collection_embed
+  field_tournament_cashprize2:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+    third_party_settings: {  }
   field_tournament_description:
     weight: 2
     settings:

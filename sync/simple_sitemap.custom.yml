@@ -1,18 +1,19 @@
--
-  path: /
-  priority: '1.0'
--
-  path: /news
-  priority: '0.8'
--
-  path: /ticket
-  priority: '0.8'
--
-  path: /tournament
-  priority: '0.8'
--
-  path: /visitors
-  priority: '0.8'
--
-  path: /medias
-  priority: '0.8'
+links:
+  -
+    path: /
+    priority: '1.0'
+  -
+    path: /news
+    priority: '0.8'
+  -
+    path: /ticket
+    priority: '0.8'
+  -
+    path: /tournament
+    priority: '0.8'
+  -
+    path: /visitors
+    priority: '0.8'
+  -
+    path: /medias
+    priority: '0.8'
