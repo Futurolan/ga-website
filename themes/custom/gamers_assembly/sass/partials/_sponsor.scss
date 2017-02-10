@@ -2,6 +2,14 @@
   .sponsor-container:not(:last-child) {
     margin-bottom: 35px;
   }
+  .sponsor-container {
+    .row{
+      text-align:center;
+    }
+    .col-md-2 {
+      display:inline-block;
+    }
+  }
 
   .logo-sponsor {
     height: 130px;
