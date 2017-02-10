@@ -1084,6 +1084,17 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
 .sponsor-page .sponsor-container:not(:last-child) {
   margin-bottom: 35px;
 }
+
+.sponsor-page .sponsor-container .row{
+  text-align:center;
+}
+
+.sponsor-page .sponsor-container .col-md-2{
+  display:inline-block;
+  float:none;
+}
+
+
 /* line 6, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor {
   height: 130px;
