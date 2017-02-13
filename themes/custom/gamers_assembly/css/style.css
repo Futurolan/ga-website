@@ -1082,20 +1082,19 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
 
 /* line 2, ../sass/partials/_sponsor.scss */
 .sponsor-page .sponsor-container:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 5px;
 }
-
-.sponsor-page .sponsor-container .row{
-  text-align:center;
-}
-
-.sponsor-page .sponsor-container .col-md-2{
-  display:inline-block;
-  float:none;
-}
-
-
 /* line 6, ../sass/partials/_sponsor.scss */
+.sponsor-page .sponsor-container .row {
+  text-align: center;
+}
+/* line 9, ../sass/partials/_sponsor.scss */
+.sponsor-page .sponsor-container .col-md-2 {
+  display: inline-block;
+  float: none;
+  margin-bottom: 30px;
+}
+/* line 16, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor {
   height: 130px;
   line-height: 130px;
@@ -1105,12 +1104,12 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   display: block;
   margin-bottom: 10px;
 }
-/* line 16, ../sass/partials/_sponsor.scss */
+/* line 26, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor:hover {
   opacity: 0.8;
   transition: 0.2s;
 }
-/* line 21, ../sass/partials/_sponsor.scss */
+/* line 31, ../sass/partials/_sponsor.scss */
 .sponsor-page .logo-sponsor img {
   display: inline-block;
 }
