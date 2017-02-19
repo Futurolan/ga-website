@@ -1,0 +1,8 @@
+ga_schedule.settings:
+  type: config_object
+  label: 'Schedule settings'
+  mapping:
+    title:
+      type: text
+      label: 'Title'
+

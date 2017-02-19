@@ -1,0 +1,19 @@
+<div class="sponsor-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:config.title
+        } only %}
+    </div>
+    <div class="white-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        Filter HERE
+                    </div>
+                </div>
+                <div class="row">
+                    {% include directory ~ '/components/schedule/schedule.html.twig' %}
+                </div>
+            </div>
+    </div>
+</div>

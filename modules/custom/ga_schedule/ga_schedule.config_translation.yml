@@ -1,0 +1,5 @@
+ga_schedule.settings:
+  title: 'GA Schedule'
+  base_route_name: ga_schedule.settings
+  names:
+    - ga_schedule.settings

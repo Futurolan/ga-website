@@ -29,6 +29,14 @@ gamers_assembly.sponsors-banner:
   dependencies:
     - gamers_assembly/loopslider
 
+gamers_assembly.schedule:
+  version: 1.X
+  js:
+    components/schedule/schedule.js: {}
+  dependencies:
+    - core/jquery
+    - gamers_assembly/google_charts
+
 tmi:
   version: 1.X
   js:
@@ -65,9 +73,14 @@ font-awesome:
 loopslider:
   version: 0.1
   js:
-    libraries/slideshow/jquery.loopslider.min.js: { minidfied: true }
+    libraries/slideshow/jquery.loopslider.min.js: { minified: true }
   css:
     theme:
       libraries/slideshow/loopslider.css : {}
   dependencies:
     - core/jquery
+
+google_charts:
+  version: 0.1
+  js:
+    https://www.gstatic.com/charts/loader.js: {type: external, minified: true}
