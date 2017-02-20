@@ -1,8 +1,12 @@
 <script>
-    var test = [];
-    {% for activity in activities %}
-    {% endfor %}
+    var activities = [
+        {% for activity in activities %}
+        ['{{ activity.field_room.entity.getName() }}','{{ activity.getTitle() }}', new Date('{{ activity.field_date.getValue()[0]['value'] }}'), new Date('{{ activity.field_date.getValue()[0]['end_value'] }}')],
+        {% endfor %}
+    ];
 </script>
+
 {{ attach_library('gamers_assembly/gamers_assembly.schedule') }}
 
+<button class="filter">FILTER ME</button>
 <div id="timeline"></div>

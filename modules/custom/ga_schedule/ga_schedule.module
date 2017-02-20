@@ -5,6 +5,7 @@ function ga_schedule_theme($existing, $type, $theme, $path) {
     'ga_schedule' => array(
       'variables' => array(
         'config' => NULL,
+        'activities' => NULL,
       ),
       'template' => 'ga-schedule'
     )

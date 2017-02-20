@@ -8,9 +8,11 @@ use Drupal\ga_schedule\ScheduleUtils;
 class ScheduleController extends ControllerBase {
   public function render() {
     $config = ScheduleUtils::getConfiguration();
+    $activities = ScheduleUtils::getActivities();
     return array(
       '#theme' => "ga_schedule",
-      '#config' => $config
+      '#config' => $config,
+      '#activities' => $activities
     );
   }
 
