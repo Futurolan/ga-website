@@ -11,6 +11,7 @@ module:
   crop: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
@@ -29,6 +30,7 @@ module:
   ga_news: 0
   ga_planning: 0
   ga_platform: 0
+  ga_schedule: 0
   ga_slide: 0
   ga_sponsor: 0
   ga_stream: 0

@@ -1,0 +1,84 @@
+uuid: 63664ae7-1042-4b47-a68a-29c79dbee435
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.activity.field_date
+    - field.field.node.activity.field_room
+    - node.type.activity
+  module:
+    - datetime_range
+    - path
+    - scheduler
+id: node.activity.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+  field_room:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

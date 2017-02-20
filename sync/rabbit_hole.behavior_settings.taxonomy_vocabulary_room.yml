@@ -1,0 +1,9 @@
+uuid: 8afca089-8196-4395-8c72-9f2090f49002
+langcode: fr
+status: true
+dependencies: {  }
+id: taxonomy_vocabulary_room
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

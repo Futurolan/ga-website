@@ -1,0 +1,28 @@
+uuid: d01a3dfa-6b00-4bba-bb03-4da37929e18e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room
+    - node.type.activity
+    - taxonomy.vocabulary.room
+id: node.activity.field_room
+field_name: field_room
+entity_type: node
+bundle: activity
+label: Salle
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      room: room
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

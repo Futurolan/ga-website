@@ -1,0 +1,9 @@
+uuid: 3f602144-1545-4c8b-9fec-a9876a8bd1a8
+langcode: fr
+status: true
+dependencies: {  }
+name: Salle
+vid: room
+description: ''
+hierarchy: 0
+weight: 0
