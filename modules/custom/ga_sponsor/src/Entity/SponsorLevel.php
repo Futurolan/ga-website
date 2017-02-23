@@ -54,4 +54,24 @@ class SponsorLevel extends ConfigEntityBase implements SponsorLevelInterface {
    */
   protected $label;
 
+  /**
+   * The Sponsor level display front status.
+   *
+   * @var string
+   */
+  protected $display_front;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getDisplayFront() {
+      return $this->display_front;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setDisplayFront($display_front) {
+    $this->display_front = $display_front;
+  }
 }

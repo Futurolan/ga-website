@@ -8,6 +8,9 @@ ga_sponsor.sponsor_level.*:
     label:
       type: label
       label: 'Label'
+    display_front:
+      type: boolean
+      label: 'Display front'
     weight:
       type: integer
       label: 'Weight'

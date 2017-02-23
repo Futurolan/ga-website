@@ -28,6 +28,14 @@ class SponsorLevelForm extends EntityForm {
       '#required' => TRUE,
     ];
 
+    $form['display_front'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Display in front page'),
+      '#maxlength' => 255,
+      '#default_value' => $sponsor_level->getDisplayFront(),
+    ];
+
+
     $form['id'] = [
       '#type' => 'machine_name',
       '#default_value' => $sponsor_level->id(),

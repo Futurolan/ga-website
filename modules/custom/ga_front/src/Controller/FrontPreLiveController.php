@@ -17,7 +17,7 @@ use Drupal\ga_sponsor\SponsorUtils;
 class FrontPreLiveController extends ControllerBase {
   public function render() {
     $slides = SlideUtils::getSlides();
-    $sponsors = SponsorUtils::getFrontSponsors();
+    $sponsors = SponsorUtils::getSponsors();
     $news = NewsUtils::getLastNews();
     $config = FrontUtils::getPreliveConfiguration();
 

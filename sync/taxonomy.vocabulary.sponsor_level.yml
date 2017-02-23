@@ -1,9 +1,0 @@
-uuid: 06e41c8d-74fb-4247-b65c-bf5c19ec5632
-langcode: fr
-status: true
-dependencies: {  }
-name: 'Niveau de partenariat'
-vid: sponsor_level
-description: ''
-hierarchy: 0
-weight: 0

@@ -10,4 +10,9 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
 interface SponsorLevelInterface extends ConfigEntityInterface {
 
   // Add get/set methods for your configuration properties here.
+
+  public function getDisplayFront();
+
+  public function setDisplayFront($display);
+
 }
