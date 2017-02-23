@@ -27,12 +27,13 @@ class SponsorUtils {
       $sponsorLevelEntity = \Drupal::entityTypeManager()
         ->getStorage("sponsor_level")
         ->load($node->field_sponsor_level->target_id);
-
-      $sponsors[$sponsorLevelEntity->weight] = array(
-        "title" => $sponsorLevelEntity->label(),
-        "sponsors" => [],
-        "displayFront" => $sponsorLevelEntity->getDisplayFront()
-      );
+      if (!isset($sponsors[$sponsorLevelEntity->weight])) {
+        $sponsors[$sponsorLevelEntity->weight] = array(
+          "title" => $sponsorLevelEntity->label(),
+          "sponsors" => [],
+          "displayFront" => $sponsorLevelEntity->getDisplayFront()
+        );
+      }
 
       $sponsors[$sponsorLevelEntity->weight]["sponsors"][] = array(
         "title" => $node->getTitle(),
