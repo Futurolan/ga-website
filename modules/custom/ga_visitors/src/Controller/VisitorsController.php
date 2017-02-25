@@ -10,7 +10,8 @@ class VisitorsController extends ControllerBase {
     $config = VisitorsUtils::getConfiguration();
     return array(
       '#theme' => "ga_visitors",
-      '#config' => $config
+      '#config' => $config,
+      '#cache' => array('max-age' => 60)
     );
   }
 

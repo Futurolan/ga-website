@@ -12,7 +12,8 @@ class ScheduleController extends ControllerBase {
     return array(
       '#theme' => "ga_schedule",
       '#config' => $config,
-      '#activities' => $activities
+      '#activities' => $activities,
+      '#cache' => array('max-age' => 60)
     );
   }
 

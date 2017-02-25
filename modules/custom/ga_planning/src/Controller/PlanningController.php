@@ -10,7 +10,8 @@ class PlanningController extends ControllerBase {
     $config = PlanningUtils::getConfiguration();
     return array(
       '#theme' => "ga_planning",
-      '#config' => $config
+      '#config' => $config,
+      '#cache' => array('max-age' => 60)
     );
   }
   public function getTitle() {

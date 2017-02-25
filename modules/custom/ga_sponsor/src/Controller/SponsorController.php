@@ -12,7 +12,8 @@ class SponsorController extends ControllerBase {
     return array(
       '#theme' => "ga_sponsor",
       '#config' => $config,
-      '#sponsors' => $sponsors
+      '#sponsors' => $sponsors,
+      '#cache' => array('max-age' => 60)
     );
   }
   public function getTitle() {

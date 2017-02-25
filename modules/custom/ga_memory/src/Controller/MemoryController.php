@@ -12,7 +12,8 @@ class MemoryController extends ControllerBase {
     return array(
       '#theme' => "ga_memory",
       '#config' => $config,
-      '#memories' => $memories
+      '#memories' => $memories,
+      '#cache' => array('max-age' => 60)
     );
   }
 

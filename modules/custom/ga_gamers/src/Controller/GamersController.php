@@ -10,7 +10,8 @@ class GamersController extends ControllerBase {
     $config = GamersUtils::getConfiguration();
     return array(
       '#theme' => "ga_gamers",
-      '#config' => $config
+      '#config' => $config,
+      '#cache' => array('max-age' => 60),
     );
   }
 

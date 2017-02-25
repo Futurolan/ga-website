@@ -10,7 +10,8 @@ class TicketController extends ControllerBase {
     $config = TicketUtils::getConfiguration();
     return array(
       '#theme' => "ga_ticket",
-      '#config' => $config
+      '#config' => $config,
+      '#cache' => array('max-age' => 60)
     );
   }
 
