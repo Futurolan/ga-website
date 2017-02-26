@@ -1,10 +1,12 @@
 (function ($) {
     'use strict';
+    $(window).resize(function(){
+        drawChart();
+    });
 
-
+    var day = 0;
     $('.filter').click(function () {
-
-        activities = activities.slice(0, -1);
+        day = $(this).attr('x-data');
         drawChart();
     });
     google.charts.load('current', {'packages': ['timeline']});
@@ -19,9 +21,8 @@
 
         dataTable.addColumn({type: 'date', id: 'Start'});
         dataTable.addColumn({type: 'date', id: 'End'});
-        dataTable.addRows(activities);
+        dataTable.addRows(activityDay[day]);
 
         chart.draw(dataTable);
     }
-
 })(jQuery);

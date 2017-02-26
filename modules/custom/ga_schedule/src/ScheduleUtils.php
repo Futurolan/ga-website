@@ -40,10 +40,12 @@ class ScheduleUtils {
       $node = \Drupal::entityManager()
         ->getTranslationFromContext($node, $langcode);
 
-      $activities[] = $node;
+      $date = date('d/m/Y',$node->created->getString());
+
+      $activities[$date][] = $node;
     }
 
-
+    ksort($activities);
     return $activities;
 
   }

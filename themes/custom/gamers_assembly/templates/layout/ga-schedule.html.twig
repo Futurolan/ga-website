@@ -5,15 +5,19 @@
         } only %}
     </div>
     <div class="white-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        Filter HERE
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for key in activities|keys %}
+                        <button class="filter" x-data="{{ loop.index0 }}">{{ key }}</button>
+                    {% endfor %}
                 </div>
-                <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     {% include directory ~ '/components/schedule/schedule.html.twig' %}
                 </div>
             </div>
+        </div>
     </div>
 </div>
