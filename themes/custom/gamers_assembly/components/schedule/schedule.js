@@ -1,28 +1,30 @@
 (function ($) {
     'use strict';
-    $(window).resize(function(){
-        drawChart();
-    });
 
-    var day = 0;
+
+    var day = Object.keys(activityDay)[0];
     $('.filter').click(function () {
         day = $(this).attr('x-data');
-        drawChart();
     });
-    google.charts.load('current', {'packages': ['timeline']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var container = document.getElementById('timeline');
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
+    var container = document.getElementById('timeline');
 
-        dataTable.addColumn({type: 'string', id: 'Salle'});
-        dataTable.addColumn({type: 'string', id: 'Nom'});
+    // Configuration for the Timeline
+    var options = {
+        zoomMin: 1000 * 60 * 60 * 24,
+        zoomMax: 1000 * 60 * 60 * 24,
+        min: new Date(day),
+        max: addDays(day,1),
+    };
+    console.log(addDays(day,1));
+    // Create a Timeline
+    var timeline = new vis.Timeline(container, activityDay[day], options);
+    timeline.setWindow(new Date(day), addDays(day,1), {animation: false});
 
-        dataTable.addColumn({type: 'date', id: 'Start'});
-        dataTable.addColumn({type: 'date', id: 'End'});
-        dataTable.addRows(activityDay[day]);
 
-        chart.draw(dataTable);
+    function addDays(date, days) {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
     }
+
 })(jQuery);

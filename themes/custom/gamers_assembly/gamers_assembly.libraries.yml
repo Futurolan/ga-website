@@ -35,7 +35,7 @@ gamers_assembly.schedule:
     components/schedule/schedule.js: {}
   dependencies:
     - core/jquery
-    - gamers_assembly/google_charts
+    - gamers_assembly/visjs
 
 tmi:
   version: 1.X
@@ -84,3 +84,11 @@ google_charts:
   version: 0.1
   js:
     https://www.gstatic.com/charts/loader.js: {type: external, minified: true}
+
+visjs:
+  version: 4.18.1
+  js:
+    libraries/visjs/vis.min.js: { minified: true}
+  css:
+      theme:
+        libraries/visjs/vis.min.css: { minified: true}
