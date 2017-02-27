@@ -13,9 +13,8 @@
         zoomMin: 1000 * 60 * 60 * 24,
         zoomMax: 1000 * 60 * 60 * 24,
         min: new Date(day),
-        max: addDays(day,1),
+        max: addDays(day,1)
     };
-    console.log(addDays(day,1));
     // Create a Timeline
     var timeline = new vis.Timeline(container, activityDay[day], options);
     timeline.setWindow(new Date(day), addDays(day,1), {animation: false});
