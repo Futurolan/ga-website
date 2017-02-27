@@ -1,0 +1,28 @@
+uuid: 7d7f21ba-a172-44f8-9a15-4ebd45be14fb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game
+    - node.type.activity
+    - taxonomy.vocabulary.game
+id: node.activity.field_game
+field_name: field_game
+entity_type: node
+bundle: activity
+label: Game
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game: game
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

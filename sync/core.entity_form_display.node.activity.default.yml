@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.activity.field_date
+    - field.field.node.activity.field_game
     - field.field.node.activity.field_room
     - node.type.activity
   module:
@@ -25,6 +26,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+  field_game:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_room:
     weight: 32
     settings: {  }
