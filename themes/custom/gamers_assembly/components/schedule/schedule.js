@@ -3,7 +3,7 @@
 
 
     var day = Object.keys(activityDay)[0];
-    console.log(day);
+    console.log(activityDay);
     $('.filter').click(function () {
         day = $(this).attr('x-data');
     });
