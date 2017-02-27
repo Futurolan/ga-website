@@ -40,7 +40,7 @@ class ScheduleUtils {
       $node = \Drupal::entityManager()
         ->getTranslationFromContext($node, $langcode);
 
-      $date = date('d/m/Y',strtotime($node->field_date->getValue()[0]['value']));
+      $date = date('m/d/Y',strtotime($node->field_date->getValue()[0]['value']));
 
       $activities[$date][] = $node;
     }

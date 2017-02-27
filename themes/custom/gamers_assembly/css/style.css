@@ -1874,4 +1874,14 @@ select option {
   background-color: #004278;
 }
 
+.schedule #timeline .vis-item.vis-range {
+  border-radius: 0px;
+}
+.schedule #timeline .activity {
+  height: 50px;
+}
+.schedule #timeline .activity img {
+  height: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

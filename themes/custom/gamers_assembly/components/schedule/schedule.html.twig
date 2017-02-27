@@ -1,22 +1,25 @@
-<script>
-    var activityDay = {
+<div class="schedule">
+    <script>
+        var activityDay = {
 
-        {% for key,activityDay in activities %}
-        '{{ key }}': [
-            {% for activity in activityDay %}
-            {
-                room: '{{ activity.field_room.entity.getName() }}',
-                content: '{{ activity.getTitle() }}',
-                start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
-                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}')
-            },
+            {% for key,activityDay in activities %}
+            '{{ key }}': [
+                {% for activity in activityDay %}
+                {
+                    group: '{{ activity.field_room.entity.getName() }}',
+                    content: '<div class="activity"><img src="{{ file_url(activity.field_game.entity.field_game_image.entity.getFileUri()) }}"/></div>',
+                    title: '<div class="activity-tooltip">{{ activity.getTitle() }}<br/>{{ activity.field_game.entity.getName() }}</div>',
+                    start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
+                    end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}')
+                },
+                {% endfor %}
+            ],
             {% endfor %}
-        ],
-        {% endfor %}
-    };
-</script>
+        };
+    </script>
 
-{{ attach_library('gamers_assembly/gamers_assembly.schedule') }}
+    {{ attach_library('gamers_assembly/gamers_assembly.schedule') }}
 
 
-<div id="timeline"></div>
+    <div id="timeline"></div>
+</div>
