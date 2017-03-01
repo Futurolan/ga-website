@@ -58,7 +58,7 @@ function gamers_assembly_preprocess_node(&$variables) {
   if ($node->getType() == "tournament") {
     $variables['subscribers'] = json_decode($node->field_tournament_subscribers->value, TRUE);
     $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
-    if ($node->field_tournament_image->entity) {
+    if (isset($node->field_tournament_image->entity)) {
       $variables['cropped_image'] = $style->buildUrl($node->field_tournament_image->entity->uri->value);
     }
     else {
@@ -67,14 +67,20 @@ function gamers_assembly_preprocess_node(&$variables) {
   }
   if ($node->getType() == "page") {
     $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
-    if ($node->field_page_image->entity) {
+    if (isset($node->field_page_image->entity)) {
       $variables['cropped_image'] = $style->buildUrl($node->field_page_image->entity->uri->value);
     }
   }
   if ($node->getType() == "memory") {
     $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
-    if ($node->field_memory_image->entity) {
+    if (isset($node->field_memory_image->entity)) {
       $variables['cropped_image'] = $style->buildUrl($node->field_memory_image->entity->uri->value);
+    }
+  }
+  if ($node->getType() == "animation") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if (isset($node->field_animation_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_animation_image->entity->uri->value);
     }
   }
   return $variables;

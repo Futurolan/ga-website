@@ -10,22 +10,23 @@ label: Memory
 type: 'canonical_entities:node'
 pattern: 'medias/[node:title]'
 selection_criteria:
-  be8ca3ba-cff8-4ca4-a998-df44c5b095bf:
+  84c7e819-34a5-4eea-add7-812997064245:
     id: node_type
     bundles:
       memory: memory
     negate: false
     context_mapping:
       node: node
-    uuid: be8ca3ba-cff8-4ca4-a998-df44c5b095bf
-  38a84f61-7ead-489c-a0da-82468757d4f1:
+    uuid: 84c7e819-34a5-4eea-add7-812997064245
+  317ba87a-1a26-4a65-b3a1-e163c954317d:
     id: language
     langcodes:
       fr: fr
+      en: en
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: 38a84f61-7ead-489c-a0da-82468757d4f1
+    uuid: 317ba87a-1a26-4a65-b3a1-e163c954317d
 selection_logic: and
 weight: -10
 relationships:

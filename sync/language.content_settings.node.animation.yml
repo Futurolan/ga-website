@@ -1,0 +1,11 @@
+uuid: 6d63c837-e169-4dcb-a137-78c45fe29882
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.animation
+id: node.animation
+target_entity_type_id: node
+target_bundle: animation
+default_langcode: site_default
+language_alterable: false

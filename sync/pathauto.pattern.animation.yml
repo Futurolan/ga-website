@@ -1,24 +1,24 @@
-uuid: 7dac9d4d-3258-4e01-9198-75cb74644287
+uuid: e1e61766-3ce8-4b4b-bfc5-f8248e900d16
 langcode: fr
 status: true
 dependencies:
   module:
     - language
     - node
-id: page_simples
-label: 'Page Simples'
+id: animation
+label: Animation
 type: 'canonical_entities:node'
-pattern: 'pages/[node:title]'
+pattern: 'animations/[node:title]'
 selection_criteria:
-  8c068d66-f50c-4116-b517-9a0b0b69156c:
+  49a91656-9268-43f1-bb9b-75ac876e9840:
     id: node_type
     bundles:
-      page: page
+      animation: animation
     negate: false
     context_mapping:
       node: node
-    uuid: 8c068d66-f50c-4116-b517-9a0b0b69156c
-  13a33f03-00fa-4328-bb32-f7cb2306b189:
+    uuid: 49a91656-9268-43f1-bb9b-75ac876e9840
+  cc83b933-735d-48ea-a166-d7cd79f82755:
     id: language
     langcodes:
       fr: fr
@@ -26,7 +26,7 @@ selection_criteria:
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: 13a33f03-00fa-4328-bb32-f7cb2306b189
+    uuid: cc83b933-735d-48ea-a166-d7cd79f82755
 selection_logic: and
 weight: -10
 relationships:

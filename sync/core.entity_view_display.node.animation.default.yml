@@ -1,0 +1,34 @@
+uuid: 1aeab98f-f09a-4431-ba54-b71f9c790048
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.animation.field_animation_content
+    - field.field.node.animation.field_animation_image
+    - node.type.animation
+  module:
+    - image
+    - text
+    - user
+id: node.animation.default
+targetEntityType: node
+bundle: animation
+mode: default
+content:
+  field_animation_content:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_animation_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  langcode: true
+  links: true

@@ -1211,6 +1211,50 @@ select option {
   background-color: #999999;
 }
 
+.views-animations a:hover, .views-animations a:focus {
+  text-decoration: none;
+}
+.views-animations label {
+  width: 100px;
+}
+.views-animations select {
+  width: 150px;
+}
+.views-animations .title-line {
+  margin-bottom: 0px;
+}
+.views-animations .white-area {
+  padding-top: 40px;
+}
+.views-animations .white-area .animation {
+  margin-bottom: 30px;
+}
+.views-animations .white-area .animation a:hover {
+  text-decoration: none;
+}
+.views-animations .white-area .animation h2 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin: 0px;
+  padding: 5px;
+  background-color: #333333;
+}
+
+.node-animation .white-area {
+  padding-top: 0px;
+}
+.node-animation .animation-content {
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 1px solid #bbbbbb;
+  margin-bottom: 30px;
+}
+
 .slideshow .video-container {
   background-color: #000;
 }
