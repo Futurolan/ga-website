@@ -1,0 +1,87 @@
+.influencer{
+  .flip-container {
+    perspective: 1000px;
+  }
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container, .front, .back {
+    width: 250px;
+    height: 250px;
+  }
+
+  .front, .back {
+    box-shadow: 0px 0px 5px 0px #888888;
+  }
+
+  .flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    padding: 10px;
+    background-color: $black;
+    color: $white;
+
+    .description{
+      margin:10px 0;
+    }
+    h3 {
+      text-align: center;
+      margin: 0px;
+      padding: 5px;
+      margin-top: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+
+  .flip-resume {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 11px;
+    color: #cccccc;
+    font-style: italic;
+    hyphens: auto;
+    text-align: justify;
+  }
+
+  p.flip-day {
+    margin-top: 15px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  ul.flip-day {
+    list-style: none;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+
+  ul.flip-day li {
+    font-size: 12px;
+    color: #eee;
+  }
+
+}

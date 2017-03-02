@@ -1,0 +1,38 @@
+uuid: cd2dcb93-c233-461b-aec1-02e5e97236bb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_influencer_image
+    - node.type.influencer
+  module:
+    - image
+id: node.influencer.field_influencer_image
+field_name: field_influencer_image
+entity_type: node
+bundle: influencer
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: influencers
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

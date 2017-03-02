@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
     - field.field.node.news.field_news_tournament
-    - image.style.thumbnail
+    - image.style.crop_news
     - node.type.news
   module:
     - image_widget_crop
@@ -50,14 +50,14 @@ content:
   field_news_image:
     weight: 2
     settings:
-      show_crop_area: true
       show_default_crop: true
       warn_multiple_usages: true
-      preview_image_style: thumbnail
-      crop_preview_image_style: crop_thumbnail
+      preview_image_style: crop_news
+      crop_preview_image_style: crop_preview
       crop_list:
         - news_format
       progress_indicator: throbber
+      show_crop_area: false
     third_party_settings: {  }
     type: image_widget_crop
   field_news_show_image:

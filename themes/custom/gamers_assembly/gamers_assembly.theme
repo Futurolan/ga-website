@@ -83,6 +83,12 @@ function gamers_assembly_preprocess_node(&$variables) {
       $variables['cropped_image'] = $style->buildUrl($node->field_animation_image->entity->uri->value);
     }
   }
+  if ($node->getType() == "influencer") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_influencer");
+    if (isset($node->field_influencer_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_influencer_image->entity->uri->value);
+    }
+  }
   return $variables;
 }
 

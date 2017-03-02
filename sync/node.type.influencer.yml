@@ -1,4 +1,4 @@
-uuid: 045b8991-de83-419d-a4e5-8f168ac4a0e8
+uuid: aae24a95-ba80-4185-a52e-955e3f8a1aec
 langcode: fr
 status: true
 dependencies:
@@ -20,8 +20,8 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Activity
-type: activity
+name: Influenceur
+type: influencer
 description: ''
 help: ''
 new_revision: false

@@ -1,16 +1,16 @@
-uuid: 7e3a57fd-6871-4661-8db3-47f245a00fb1
+uuid: eaf72431-d759-4cf5-89e8-7f80b89381e4
 langcode: fr
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.animation
+    - node.type.influencer
   module:
     - node
     - user
     - views_filter_autosubmit
-id: animations
-label: Animations
+id: influenceurs
+label: Influenceurs
 module: views
 description: ''
 tag: ''
@@ -130,7 +130,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            animation: animation
+            influencer: influencer
           group: 1
           exposed: false
           expose:
@@ -214,7 +214,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Animations
+      title: Influenceurs
       header: {  }
       footer: {  }
       empty: {  }
@@ -241,7 +241,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: animations
+      path: influencers
       rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
