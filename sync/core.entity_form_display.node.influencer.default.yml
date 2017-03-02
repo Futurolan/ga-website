@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.influencer.field_influencer_description
     - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
     - field.field.node.influencer.field_influencer_weight
     - image.style.crop_influencer
     - node.type.influencer
@@ -13,7 +14,6 @@ dependencies:
     - path
     - scheduler
     - text
-    - weight
 id: node.influencer.default
 targetEntityType: node
 bundle: influencer
@@ -21,7 +21,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   field_influencer_description:
@@ -44,37 +44,39 @@ content:
       show_crop_area: false
     third_party_settings: {  }
     type: image_widget_crop
-  field_influencer_weight:
-    weight: 26
-    settings: {  }
+  field_influencer_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: weight_selector
+    type: string_textfield
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -84,12 +86,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -97,7 +99,8 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_influencer_weight: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.influencer.field_influencer_description
     - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
     - field.field.node.influencer.field_influencer_weight
     - node.type.influencer
   module:
@@ -30,6 +31,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_influencer_link:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_influencer_weight:
     weight: 103
     label: above

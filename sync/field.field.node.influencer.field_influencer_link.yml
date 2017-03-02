@@ -1,0 +1,19 @@
+uuid: 76d51549-9803-4760-a186-ffec62d3ad25
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_influencer_link
+    - node.type.influencer
+id: node.influencer.field_influencer_link
+field_name: field_influencer_link
+entity_type: node
+bundle: influencer
+label: Lien
+description: 'Url absolue http://...'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
