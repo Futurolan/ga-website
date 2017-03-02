@@ -1286,21 +1286,39 @@ select option {
 }
 .influencer .back {
   transform: rotateY(180deg);
-  padding: 10px;
+  position: relative;
+}
+.influencer .back .mask {
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 250px;
+  opacity: 0.9;
+  top: 0px;
+  left: 0px;
   background-color: #333333;
-  color: #ffffff;
+  z-index: 1;
 }
-.influencer .back .description {
-  margin: 10px 0;
+.influencer .back .content {
+  padding: 10px;
+  z-index: 2;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 0px;
+  left: 0px;
 }
-.influencer .back h3 {
+.influencer .back .content h3 {
   text-align: center;
-  margin: 0px;
   padding: 5px;
-  margin-top: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  margin: 5px 0;
+  color: #333333;
   font-size: 18px;
+  background-color: #ffffff;
+}
+.influencer .back .content .description {
+  margin: 10px 0;
+  color: #ffffff;
 }
 .influencer .flip-resume {
   margin-top: 10px;

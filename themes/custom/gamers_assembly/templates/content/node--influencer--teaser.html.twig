@@ -5,10 +5,14 @@
             <div class="front">
                 <img src="{{ file_url(cropped_image) }}">
             </div>
-            <div class="back">
-                <h3>{{ node.getTitle() }}</h3>
-                <div class="description">
-                    {{ node.field_influencer_description.value|raw }}
+            <div class="back" style="background-image: url('{{ file_url(cropped_image) }}')">
+                <div class="mask"></div>
+
+                <div class="content">
+                    <h3>{{ node.getTitle() }}</h3>
+                    <div class="description">
+                        {{ node.field_influencer_description.value|raw }}
+                    </div>
                 </div>
             </div>
         </div>

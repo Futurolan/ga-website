@@ -38,21 +38,40 @@
 
   .back {
     transform: rotateY(180deg);
-    padding: 10px;
-    background-color: $black;
-    color: $white;
-
-    .description{
-      margin:10px 0;
+    position: relative;
+    .mask{
+      position:absolute;
+      display:block;
+      width:250px;
+      height:250px;
+      opacity: 0.9;
+      top:0px;
+      left:0px;
+      background-color: $black;
+      z-index:1;
     }
-    h3 {
-      text-align: center;
-      margin: 0px;
-      padding: 5px;
-      margin-top: 15px;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      font-size: 18px;
+
+    .content{
+      padding:10px;
+      z-index:2;
+      position:absolute;
+      width:250px;
+      height:250px;
+      top:0px;
+      left:0px;
+
+      h3 {
+        text-align: center;
+        padding: 5px;
+        margin: 5px 0;
+        color: $black;
+        font-size: 18px;
+        background-color:$white;
+      }
+      .description{
+        margin:10px 0;
+        color:$white;
+      }
     }
   }
 
