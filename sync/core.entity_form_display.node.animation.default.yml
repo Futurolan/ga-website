@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_weight
     - image.style.crop_image_site
     - node.type.animation
   module:
@@ -89,4 +90,5 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_animation_weight: true

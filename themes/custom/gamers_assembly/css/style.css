@@ -1345,6 +1345,11 @@ select option {
   color: #eee;
 }
 
+.user-login-form {
+  width: 50%;
+  margin: 10rem auto;
+}
+
 .slideshow .video-container {
   background-color: #000;
 }

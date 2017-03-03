@@ -1,0 +1,20 @@
+uuid: 8eeb1da9-8fc9-4151-96ef-c35b6814f44e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - weight
+id: node.field_animation_weight
+field_name: field_animation_weight
+entity_type: node
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_weight
     - node.type.animation
   module:
     - image
@@ -29,6 +30,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_animation_weight:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
 hidden:
   langcode: true
   links: true

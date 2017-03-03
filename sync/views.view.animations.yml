@@ -202,10 +202,10 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
-        field_tournament_weight_value:
-          id: field_tournament_weight_value
-          table: node__field_tournament_weight
-          field: field_tournament_weight_value
+        field_animation_weight_value:
+          id: field_animation_weight_value
+          table: node__field_animation_weight
+          field: field_animation_weight_value
           relationship: none
           group_type: group
           admin_label: ''
