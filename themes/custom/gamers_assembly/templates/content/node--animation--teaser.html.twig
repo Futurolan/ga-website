@@ -3,9 +3,10 @@
         <img class="center-block img-responsive"
              src="{{ file_url(cropped_image) }}"/>
         <h2>
-
             {{ node.getTitle() }}
         </h2>
     </a>
+    <div class="date">{{ node.field_date.getValue()[0]['value']|date('U')|date("d.m.Y / H:i:s", "Europe/Paris") }} - {{ node.field_date.getValue()[0]['end_value']|date("H:i:s", "Europe/Paris")  }}</div>
 
 </div>
+

@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_weight
+    - field.field.node.animation.field_date
     - node.type.animation
   module:
     - user
@@ -15,6 +18,11 @@ mode: teaser
 content:
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_animation_content: true
   field_animation_image: true
+  field_animation_weight: true
+  field_date: true
   langcode: true

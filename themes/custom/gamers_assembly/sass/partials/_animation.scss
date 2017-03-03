@@ -18,6 +18,9 @@
     padding-top: 40px;
     .animation {
       margin-bottom: 30px;
+      .date {
+        margin-top:5px;
+      }
       a {
         &:hover {
           text-decoration: none;
@@ -43,6 +46,9 @@
 
   .white-area {
     padding-top: 0px;
+    .date {
+      margin-top:5px;
+    }
   }
 
   .animation-content {

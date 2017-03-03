@@ -1229,6 +1229,9 @@ select option {
 .views-animations .white-area .animation {
   margin-bottom: 30px;
 }
+.views-animations .white-area .animation .date {
+  margin-top: 5px;
+}
 .views-animations .white-area .animation a:hover {
   text-decoration: none;
 }
@@ -1247,6 +1250,9 @@ select option {
 
 .node-animation .white-area {
   padding-top: 0px;
+}
+.node-animation .white-area .date {
+  margin-top: 5px;
 }
 .node-animation .animation-content {
   margin-top: 30px;

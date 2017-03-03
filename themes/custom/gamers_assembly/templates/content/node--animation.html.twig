@@ -13,6 +13,11 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                    <div class="date">{{ node.field_date.getValue()[0]['value']|date('U')|date("d.m.Y / H:i:s", "Europe/Paris") }} - {{ node.field_date.getValue()[0]['end_value']|date("H:i:s", "Europe/Paris")  }}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="animation-content">
                         {{ node.field_animation_content.value | raw }}
                     </div>

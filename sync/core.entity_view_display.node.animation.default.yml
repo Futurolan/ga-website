@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
     - field.field.node.animation.field_animation_weight
+    - field.field.node.animation.field_date
     - node.type.animation
   module:
+    - datetime_range
     - image
     - text
     - user
@@ -38,6 +40,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+  field_date:
+    weight: 4
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
 hidden:
   langcode: true
   links: true
