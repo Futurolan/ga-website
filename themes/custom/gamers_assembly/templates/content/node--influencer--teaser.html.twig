@@ -1,25 +1,3 @@
-<!--<div class="influencer">
-
-    <a href="{{ node.field_influencer_link.value }}" target="_blank">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            <div class="flipper">
-                <div class="front">
-                    <img src="{{ file_url(cropped_image) }}">
-                </div>
-                <div class="back" style="background-image: url('{{ file_url(cropped_image) }}')">
-                    <div class="mask"></div>
-
-                    <div class="content">
-                        <h3>{{ node.getTitle() }}</h3>
-                        <div class="description">
-                            {{ node.field_influencer_description.value|raw }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</div>-->
 <div class="thumbnail">
     <a class="div-link" href="{{ node.field_influencer_link.value }}" target="_blank"></a>
     <img src="{{ file_url(cropped_image) }}" class="">

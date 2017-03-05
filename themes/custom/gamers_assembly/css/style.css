@@ -1519,6 +1519,128 @@ select option {
   margin-bottom: 30px;
 }
 
+/* line 63, ../sass/partials/_animation.scss */
+.views-animations .btn {
+  border-radius: 0px;
+}
+/* line 67, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction {
+  position: relative;
+  width: auto;
+  padding: 15px 25px;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 76, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction > .row {
+  display: table;
+  width: calc(100% + 30px);
+}
+/* line 81, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction > .row > [class^="col-"],
+.views-animations .bs-calltoaction > .row > [class*=" col-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 88, ../sass/partials/_animation.scss */
+.views-animations .cta-contents {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-right: 1px solid #cacaca;
+}
+/* line 94, ../sass/partials/_animation.scss */
+.views-animations .cta-title > img {
+  width: 128px;
+  height: 128px;
+  text-align: center;
+}
+/* line 100, ../sass/partials/_animation.scss */
+.views-animations .cta-title {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* line 107, ../sass/partials/_animation.scss */
+.views-animations .cta-desc {
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 113, ../sass/partials/_animation.scss */
+.views-animations .cta-desc p:last-child {
+  margin-bottom: 0;
+}
+/* line 117, ../sass/partials/_animation.scss */
+.views-animations .cta-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (max-width: 991px) {
+  /* line 123, ../sass/partials/_animation.scss */
+  .views-animations .bs-calltoaction > .row {
+    display: block;
+    width: auto;
+  }
+  /* line 128, ../sass/partials/_animation.scss */
+  .views-animations .bs-calltoaction > .row > [class^="col-"],
+  .views-animations .bs-calltoaction > .row > [class*=" col-"] {
+    float: none;
+    display: block;
+    position: relative;
+  }
+  /* line 135, ../sass/partials/_animation.scss */
+  .views-animations .cta-contents {
+    text-align: center;
+  }
+}
+/* line 142, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+/* line 148, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+/* line 154, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+/* line 160, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+/* line 166, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+/* line 172, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+/* line 178, ../sass/partials/_animation.scss */
+.views-animations .bs-calltoaction.bs-calltoaction-primary .cta-button .btn,
+.views-animations .bs-calltoaction.bs-calltoaction-info .cta-button .btn,
+.views-animations .bs-calltoaction.bs-calltoaction-success .cta-button .btn,
+.views-animations .bs-calltoaction.bs-calltoaction-warning .cta-button .btn,
+.views-animations .bs-calltoaction.bs-calltoaction-danger .cta-button .btn {
+  border-color: #fff;
+}
+
 /* line 1, ../sass/partials/_influencer.scss */
 .influencer {
   padding-bottom: 15px;
