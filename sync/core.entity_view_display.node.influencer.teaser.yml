@@ -15,4 +15,8 @@ content:
   links:
     weight: 100
 hidden:
+  field_influencer_description: true
+  field_influencer_image: true
+  field_influencer_link: true
+  field_influencer_weight: true
   langcode: true

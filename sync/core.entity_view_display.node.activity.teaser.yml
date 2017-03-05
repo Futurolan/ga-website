@@ -15,4 +15,7 @@ content:
   links:
     weight: 100
 hidden:
+  field_date: true
+  field_game: true
+  field_room: true
   langcode: true

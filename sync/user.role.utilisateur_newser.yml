@@ -1,0 +1,31 @@
+uuid: e331c2f4-738c-4286-a3b1-c447a375032d
+langcode: fr
+status: true
+dependencies: {  }
+id: utilisateur_newser
+label: 'Utilisateur newser'
+weight: -8
+is_admin: null
+permissions:
+  - 'create content translations'
+  - 'delete content translations'
+  - 'update content translations'
+  - 'translate any entity'
+  - 'translate news node'
+  - 'translate page node'
+  - 'translate sponsor node'
+  - 'translate tournament node'
+  - 'use text format formatted_text'
+  - 'view own unpublished content'
+  - 'override news authored on option'
+  - 'publish any node type news'
+  - 'unpublish any node type news'
+  - 'schedule publishing of nodes'
+  - 'view scheduled content'
+  - 'translate activity node'
+  - 'translate influencer node'
+  - 'translate memory node'
+  - 'translate edition taxonomy_term'
+  - 'translate game taxonomy_term'
+  - 'translate tags taxonomy_term'
+  - 'translate game_type taxonomy_term'

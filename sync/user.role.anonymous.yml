@@ -6,7 +6,7 @@ _core:
   default_config_hash: 7pqmYlE2VRF7s799rJhgrf5juI3Y-fJIITLPNRlB9yw
 id: anonymous
 label: 'Utilisateur Anonyme'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access content'
