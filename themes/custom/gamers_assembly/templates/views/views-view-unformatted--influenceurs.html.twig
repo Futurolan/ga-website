@@ -1,11 +1,12 @@
 {% for row in rows %}
-	{% if loop.index0 == 0 or loop.index%4 == 0 %}
-		{% if loop.index%3 == 0 %}
-		</div>
+	{% if loop.index0 == 0 or loop.index0%4 == 0 %}
+		{% if loop.index0%4 == 0 and loop.index0 != 0 %}
+			</div></div>
 		{% endif %}
 		<div class="row">
+			<div class="row-height">
 	{% endif %}
-	    <div class="col-md-3">
+	    <div class="col-md-3 col-md-height influencer">
 	        {{ row.content }}
 	    </div>
 {% endfor %}
