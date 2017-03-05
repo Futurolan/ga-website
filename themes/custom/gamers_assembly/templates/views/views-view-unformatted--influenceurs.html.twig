@@ -1,5 +1,11 @@
 {% for row in rows %}
-    <div class="col-md-3">
-        {{ row.content }}
-    </div>
+	{% if loop.index0 == 0 or loop.index%4 == 0 %}
+		{% if loop.index%3 == 0 %}
+		</div>
+		{% endif %}
+		<div class="row">
+	{% endif %}
+	    <div class="col-md-3">
+	        {{ row.content }}
+	    </div>
 {% endfor %}

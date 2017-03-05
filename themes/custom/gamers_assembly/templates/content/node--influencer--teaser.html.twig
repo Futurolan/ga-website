@@ -1,4 +1,4 @@
-<div class="influencer">
+<!--<div class="influencer">
 
     <a href="{{ node.field_influencer_link.value }}" target="_blank">
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -19,4 +19,14 @@
             </div>
         </div>
     </a>
-</div>
+</div>-->
+<a class="influencer" href="{{ node.field_influencer_link.value }}" target="_blank">
+    <div class="thumbnail">
+        <img src="{{ file_url(cropped_image) }}" class="">
+        <div class="caption">
+             <h4 class="">{{ node.getTitle() }}</h4>
+
+            {{ node.field_influencer_description.value|raw }}
+        </div>
+    </div>
+</a>

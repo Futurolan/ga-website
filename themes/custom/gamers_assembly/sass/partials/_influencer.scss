@@ -1,4 +1,4 @@
-.influencer{
+.influencer {
   .flip-container {
     perspective: 1000px;
   }
@@ -103,4 +103,8 @@
     color: #eee;
   }
 
+}
+
+.influencer:hover {
+  text-decoration: none;
 }
