@@ -5,7 +5,7 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
     <div {{ attributes.addClass(classes) }}>
         <div class="grey-area-title">
             {% include directory ~ "/components/title-line/title-line.html.twig" with {
-            title:"Animations"|t
+            title: view.title
             } only %}
         </div>
         <div class="white-area">
