@@ -1,15 +1,3 @@
-<!--<div class="animation">
-    <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-        <img class="center-block img-responsive"
-             src="{{ file_url(cropped_image) }}"/>
-        <h2>
-            {{ node.getTitle() }}
-        </h2>
-    </a>
-    <div class="date">{{ node.field_date.getValue()[0]['value']|date('U')|date("d.m.Y / H:i:s", "Europe/Paris") }} - {{ node.field_date.getValue()[0]['end_value']|date("H:i:s", "Europe/Paris")  }}</div>
-
-</div>-->
-
 <div class="bs-calltoaction bs-calltoaction-default">
     <div class="row">
         <div class="col-md-2 cta-contents">
@@ -19,10 +7,7 @@
             </div>
         </div>
         <div class="col-md-10 cta-button">
-            <h3>Flat Rs 10000 OFF on Exchange of Dell Premium Laptops</h3>
-            <p>
-            	Flipkart is giving away flat Rs 10000 discount on Dell Premium Laptops which are listed on the landing page. Shop from high configuration laptops at Flipkart and take away flat Rs 10000  on exchange. 
-			</p>
+ 			{{ node.field_animation_content.value | raw }}
         </div>
      </div>
 </div>
