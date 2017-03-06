@@ -21,7 +21,7 @@
         {% set free_slot_class="low" %}
     {% endif %}
     <div class="tournament-status">{{ "Remaining slots:"|t }} <span
-                class="{{ free_slot_class }}">{{ free_slot }}</span></div>
+                class="{{ free_slot_class }}">{{ free_slot }}</span> / {{node.field_tournament_size.value}}</div>
     <div class="tournament-bar">
         <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
     </div>
