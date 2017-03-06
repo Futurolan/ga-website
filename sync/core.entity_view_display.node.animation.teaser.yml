@@ -23,4 +23,6 @@ hidden:
   field_animation_content: true
   field_animation_image: true
   field_animation_weight: true
+  field_animation_localisation: true
+  field_animation_url: true
   langcode: true
