@@ -1,27 +1,21 @@
-<!--<div class="animation">
-    <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-        <img class="center-block img-responsive"
-             src="{{ file_url(cropped_image) }}"/>
-        <h2>
-            {{ node.getTitle() }}
-        </h2>
-    </a>
-    <div class="date">{{ node.field_date.getValue()[0]['value']|date('U')|date("d.m.Y / H:i:s", "Europe/Paris") }} - {{ node.field_date.getValue()[0]['end_value']|date("H:i:s", "Europe/Paris")  }}</div>
-
-</div>-->
-
-<div class="bs-calltoaction bs-calltoaction-default">
+<div class="animation-teaser bs-calltoaction bs-calltoaction-default">
     <div class="row">
         <div class="col-md-2 cta-contents">
-            <h1 class="cta-title"><img src="{{ file_url(cropped_image) }}" width="128" height="128"></h1>
-            <div class="cta-desc">
-                <a href="#" class="btn btn-primary btn-block">Site web</a>
-            </div>
+            <h1 class="cta-title"><img src="{{ file_url(cropped_image) }}" class="img-responsive"></h1>
+            {% if(node.field_animation_url.value) %}
+                <div class="cta-desc">
+                    <a href="{{ node.field_animation_url.value }}" target="_blank" class="btn btn-primary btn-block">Site
+                        web</a>
+                </div>
+            {% endif %}
         </div>
         <div class="col-md-10 cta-button">
             <h3>{{ node.getTitle() }}</h3>
- 			{{ node.field_animation_content.value | raw }}
+            {{ node.field_animation_content.value | raw }}
+            {% if(node.field_animation_localisation.value) %}
+                {{ node.field_animation_localisation.value }}
+            {% endif %}
         </div>
-     </div>
+    </div>
 </div>
 

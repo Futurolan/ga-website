@@ -1,3 +1,5 @@
+
+
 .views-animations {
   a:hover, a:focus {
     text-decoration: none;
@@ -27,39 +29,21 @@
         }
       }
       h2 {
-          font-weight: bold;
-          color: $white;
-          font-size: 20px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: block;
-          margin: 0px;
-          padding:5px;
-          background-color:$black;
+        font-weight: bold;
+        color: $white;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        margin: 0px;
+        padding:5px;
+        background-color:$black;
       }
     }
   }
-}
 
-.node-animation {
 
-  .white-area {
-    padding-top: 0px;
-    .date {
-      margin-top:5px;
-    }
-  }
-
-  .animation-content {
-    margin-top: 30px;
-    padding-left: 20px;
-    border-left: 1px solid $light-grey;
-    margin-bottom: 30px;
-  }
-}
-
-.views-animations {
   .btn {
     border-radius: 0px;
   }
@@ -92,9 +76,7 @@
               }
               
               .cta-title > img{
-                  width:128px;
-                  height:128px;
-                  text-align:center;
+                  margin:auto;
               }
 
                   .cta-title{

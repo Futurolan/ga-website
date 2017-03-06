@@ -214,7 +214,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Animations
+      title: Exposants
       header: {  }
       footer: {  }
       empty: {  }
@@ -241,7 +241,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: animations
+      path: exposants
       rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1

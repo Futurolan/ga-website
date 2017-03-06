@@ -78,7 +78,7 @@ function gamers_assembly_preprocess_node(&$variables) {
     }
   }
   if ($node->getType() == "animation") {
-    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_animation");
     if (isset($node->field_animation_image->entity)) {
       $variables['cropped_image'] = $style->buildUrl($node->field_animation_image->entity->uri->value);
     }

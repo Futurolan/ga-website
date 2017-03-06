@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_localisation
+    - field.field.node.animation.field_animation_url
     - field.field.node.animation.field_animation_weight
-    - field.field.node.animation.field_date
-    - image.style.crop_image_site
+    - image.style.crop_animation
     - node.type.animation
   module:
-    - datetime_range
     - image_widget_crop
     - path
     - scheduler
@@ -37,19 +37,28 @@ content:
     settings:
       show_default_crop: true
       warn_multiple_usages: true
-      preview_image_style: crop_image_site
+      preview_image_style: crop_animation
       crop_preview_image_style: crop_preview
       crop_list:
-        - ratio_site
+        - animation
       progress_indicator: throbber
       show_crop_area: false
     third_party_settings: {  }
     type: image_widget_crop
-  field_date:
-    weight: 2
-    settings: {  }
+  field_animation_localisation:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: string_textfield
+  field_animation_url:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   langcode:
     type: language_select
     weight: 4

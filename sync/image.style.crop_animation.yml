@@ -1,0 +1,23 @@
+uuid: 2fa1764e-242a-4f25-8dba-534c03ade013
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: crop_animation
+label: 'Crop animation'
+effects:
+  51c9dbb7-3998-486c-a6ed-165feb2ed066:
+    uuid: 51c9dbb7-3998-486c-a6ed-165feb2ed066
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: animation
+  2f6fb0a9-970f-4bb5-bfd7-f752a9df33cf:
+    uuid: 2f6fb0a9-970f-4bb5-bfd7-f752a9df33cf
+    id: image_scale
+    weight: 2
+    data:
+      width: 128
+      height: 128
+      upscale: false

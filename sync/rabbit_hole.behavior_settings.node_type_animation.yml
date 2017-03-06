@@ -1,0 +1,9 @@
+uuid: b4f0137c-dd83-4fad-ac94-42a44a78ad22
+langcode: fr
+status: true
+dependencies: {  }
+id: node_type_animation
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301
