@@ -20,17 +20,25 @@
     //Filter function
     $('.filter').click(function () {
         day = $(this).attr('x-data');
+        $('.filter').removeClass('active');
+        $(this).addClass('active');
         createTimeline(day);
     });
 
     //Timeline creation
     function createTimeline(day) {
+
+        var min =new Date(day);
+        var max = addDays(day, 1)
+        activityDay[day].forEach(function(activity){
+
+        });
         var data = new vis.DataSet(activityDay[day]);
         var options = {
             zoomMin: 1000 * 60 * 60 * 24,
             zoomMax: 1000 * 60 * 60 * 24,
-            min: new Date(day),
-            max: addDays(day, 1)
+            min: min,
+            max: max
         };
 
         $('#timeline').empty();

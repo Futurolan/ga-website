@@ -1,0 +1,16 @@
+.schedule-page {
+  .white-area {
+    .container {
+      .filter{
+        border:1px solid black;
+        display:inline-block;
+        cursor:pointer;
+        &.active{
+          background-color:#27bf27;
+          color:$white;
+
+        }
+      }
+    }
+  }
+}

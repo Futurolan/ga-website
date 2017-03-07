@@ -1,35 +1,38 @@
-.schedule{
-  #timeline{
+.schedule {
 
 
-    .vis-panel.vis-left .vis-label{
-      display:flex;
-      .vis-inner{
-        margin:auto;
-        display:block;
-      }
-    }
-    .vis-item {
-      &.vis-range{
-        border-radius:0px;
-      }
+    #timeline {
+      margin-top: 2rem;
 
-      .vis-item-overflow {
-        overflow: visible;
-
-        .vis-item-content{
-          padding:0;
-
+      .vis-panel.vis-left .vis-label {
+        display: flex;
+        .vis-inner {
+          margin: auto;
+          display: block;
         }
       }
-    }
+      .vis-item {
+        &.vis-range {
+          border-radius: 0px;
+        }
 
-    .activity{
-      .content{
-        padding:20px;
+        .vis-item-overflow {
+          overflow: visible;
+
+          .vis-item-content {
+            padding: 0;
+
+          }
+        }
+      }
+
+      .activity {
+        .content {
+          padding: 20px;
+
+        }
 
       }
 
-    }
   }
 }

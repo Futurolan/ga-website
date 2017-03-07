@@ -1623,6 +1623,16 @@ select option {
     vertical-align: bottom;
   }
 }
+.schedule-page .white-area .container .filter {
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+.schedule-page .white-area .container .filter.active {
+  background-color: #27bf27;
+  color: #ffffff;
+}
+
 .slideshow .video-container {
   background-color: #000;
 }
@@ -2286,6 +2296,9 @@ select option {
   background-color: #004278;
 }
 
+.schedule #timeline {
+  margin-top: 2rem;
+}
 .schedule #timeline .vis-panel.vis-left .vis-label {
   display: flex;
 }
