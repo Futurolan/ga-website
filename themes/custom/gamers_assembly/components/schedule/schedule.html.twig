@@ -7,15 +7,28 @@
                 {% for activity in activityDay %}
                 {
                     group: '{{ activity.field_room.entity.getName() }}',
-                    content: '<div class="activity"><img src="{{ file_url(activity.field_game.entity.field_game_image.entity.getFileUri()) }}"/></div>',
+                    content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value  }}"{% endif %}><div class="content">{{ activity.getTitle() }}</div></div>',
                     title: '<div class="activity-tooltip">{{ activity.getTitle() }}<br/>{{ activity.field_game.entity.getName() }}</div>',
                     start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
-                    end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}')
+                    end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}'),
                 },
                 {% endfor %}
             ],
             {% endfor %}
         };
+
+        var rooms = [
+            {% for activityDay in activities %}
+
+
+            {% for activity in activityDay %}
+            '{{ activity.field_room.entity.getName() }}',
+            {% endfor %}
+
+            {% endfor %}
+        ]
+
+
     </script>
 
     {{ attach_library('gamers_assembly/gamers_assembly.schedule') }}

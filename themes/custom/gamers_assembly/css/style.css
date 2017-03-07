@@ -2286,14 +2286,24 @@ select option {
   background-color: #004278;
 }
 
+.schedule #timeline .vis-panel.vis-left .vis-label {
+  display: flex;
+}
+.schedule #timeline .vis-panel.vis-left .vis-label .vis-inner {
+  margin: auto;
+  display: block;
+}
 .schedule #timeline .vis-item.vis-range {
   border-radius: 0px;
 }
-.schedule #timeline .activity {
-  height: 50px;
+.schedule #timeline .vis-item .vis-item-overflow {
+  overflow: visible;
 }
-.schedule #timeline .activity img {
-  height: 20px;
+.schedule #timeline .vis-item .vis-item-overflow .vis-item-content {
+  padding: 0;
+}
+.schedule #timeline .activity .content {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

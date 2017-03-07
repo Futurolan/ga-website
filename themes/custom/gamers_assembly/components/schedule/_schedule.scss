@@ -1,15 +1,35 @@
 .schedule{
   #timeline{
 
-    .vis-item.vis-range{
-      border-radius:0px;
-    }
-    .activity{
-      height:50px;
 
-      img{
-        height:20px;
+    .vis-panel.vis-left .vis-label{
+      display:flex;
+      .vis-inner{
+        margin:auto;
+        display:block;
       }
+    }
+    .vis-item {
+      &.vis-range{
+        border-radius:0px;
+      }
+
+      .vis-item-overflow {
+        overflow: visible;
+
+        .vis-item-content{
+          padding:0;
+
+        }
+      }
+    }
+
+    .activity{
+      .content{
+        padding:20px;
+
+      }
+
     }
   }
 }
