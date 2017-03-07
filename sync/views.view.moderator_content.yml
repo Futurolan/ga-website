@@ -3143,10 +3143,10 @@ display:
           range: '20'
           plugin_id: weight_selector
       sorts:
-        field_influencer_weight_value:
-          id: field_influencer_weight_value
-          table: node__field_influencer_weight
-          field: field_influencer_weight_value
+        field_animation_weight_value:
+          id: field_animation_weight_value
+          table: node__field_animation_weight
+          field: field_animation_weight_value
           relationship: none
           group_type: group
           admin_label: ''
