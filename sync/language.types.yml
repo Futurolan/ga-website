@@ -24,11 +24,12 @@ negotiation:
     enabled:
       language-url: -20
       language-selected: -19
+      language-browser: -15
     method_weights:
-      language-user-admin: -17
       language-url: -20
       language-selected: -19
       language-user: -18
+      language-user-admin: -17
       language-session: -16
       language-browser: -15
 langcode: fr
