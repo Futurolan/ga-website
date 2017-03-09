@@ -52,9 +52,8 @@
         timeline.setGroups(groups);
 
         timeline.on('select', function (properties) {
-            console.log(properties.items[0]);
             activityDay[day].forEach(function (activity) {
-                if (activity.id === properties.items[0]) {
+                if (activity.id === properties.items[0] && activity.url) {
                     window.location = activity.url
                 }
             })

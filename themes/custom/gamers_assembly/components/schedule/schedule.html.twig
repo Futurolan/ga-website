@@ -12,7 +12,7 @@
                     {% if(activity.field_description.value) %}title: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',{% endif %}
                     start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
                     end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}'),
-                    url: "{{ activity.field_lien.value|escape('js') }}"
+                    {% if(activity.field_lien.value) %}url: "{{ activity.field_lien.value|escape('js') }}"{% endif %}
                 },
                 {% endfor %}
             ],
