@@ -29,28 +29,34 @@
     //Timeline creation
     function createTimeline(day) {
 
-        var min =new Date(day);
-        var max = addDays(day, 1)
-        activityDay[day].forEach(function(activity){
+        var min = addDays(day, 10);
+        var max = addDays(day, -10)
 
+        activityDay[day].forEach(function (activity) {
+            if (activity.start < min)
+                min = activity.start;
+            if (activity.end > max)
+                max = activity.end;
         });
+        console.log(min);
+        console.log(max);
         var data = new vis.DataSet(activityDay[day]);
         var options = {
-            zoomMin: 1000 * 60 * 60 * 24,
-            zoomMax: 1000 * 60 * 60 * 24,
+            zoomMin: max.getTime()-min.getTime(),
+            zoomMax: max.getTime()-min.getTime(),
             min: min,
             max: max
         };
 
         $('#timeline').empty();
-        var timeline = new vis.Timeline( document.getElementById('timeline'), data, options);
+        var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
         timeline.setWindow(new Date(day), addDays(day, 1), {animation: false});
         timeline.setGroups(groups);
 
         timeline.on('select', function (properties) {
             console.log(properties.items[0]);
-            activityDay[day].forEach(function(activity){
-                if(activity.id === properties.items[0]){
+            activityDay[day].forEach(function (activity) {
+                if (activity.id === properties.items[0]) {
                     window.location = activity.url
                 }
             })
