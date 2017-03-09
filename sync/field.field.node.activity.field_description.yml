@@ -1,0 +1,21 @@
+uuid: 5286894f-0355-4bb8-9600-9dda6b3a3f60
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.activity
+  module:
+    - text
+id: node.activity.field_description
+field_name: field_description
+entity_type: node
+bundle: activity
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

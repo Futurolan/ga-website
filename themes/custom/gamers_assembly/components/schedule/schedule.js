@@ -25,6 +25,7 @@
         createTimeline(day);
     });
 
+
     //Timeline creation
     function createTimeline(day) {
 
@@ -46,6 +47,14 @@
         timeline.setWindow(new Date(day), addDays(day, 1), {animation: false});
         timeline.setGroups(groups);
 
+        timeline.on('select', function (properties) {
+            console.log(properties.items[0]);
+            activityDay[day].forEach(function(activity){
+                if(activity.id === properties.items[0]){
+                    window.location = activity.url
+                }
+            })
+        });
     }
 
     //Add a day to a date

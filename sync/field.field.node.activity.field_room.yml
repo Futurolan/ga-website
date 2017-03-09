@@ -10,7 +10,7 @@ id: node.activity.field_room
 field_name: field_room
 entity_type: node
 bundle: activity
-label: Salle
+label: 'Groupe / Salle '
 description: ''
 required: true
 translatable: false
@@ -23,6 +23,6 @@ settings:
       room: room
     sort:
       field: _none
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

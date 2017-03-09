@@ -1,38 +1,57 @@
 .schedule {
 
+  #timeline {
+    margin-top: 2rem;
 
-    #timeline {
-      margin-top: 2rem;
+    .vis-tooltip {
+      border: 1px solid $black;
+      border-radius: 0;
 
-      .vis-panel.vis-left .vis-label {
-        display: flex;
-        .vis-inner {
-          margin: auto;
-          display: block;
-        }
-      }
-      .vis-item {
-        &.vis-range {
-          border-radius: 0px;
-        }
-
-        .vis-item-overflow {
-          overflow: visible;
-
-          .vis-item-content {
-            padding: 0;
-
-          }
+      background-color: white;
+      padding:1rem;
+      .activity-tooltip{
+        font-family: 'Roboto', sans-serif !important;
+        p{
+          margin:0 0 0.5rem;
         }
       }
 
-      .activity {
-        .content {
-          padding: 20px;
+    }
+    .vis-panel.vis-left .vis-label {
+      display: flex;
+      .vis-inner {
+        margin: auto;
+        display: block;
+      }
+    }
+    .vis-item {
+      cursor: pointer;
+      &.vis-range {
+        border-radius: 0px;
+      }
+
+      .vis-item-overflow {
+        //overflow: visible;
+        height: 6rem;
+
+        .vis-item-content {
+          padding: 0;
+          white-space: normal;
 
         }
+      }
+    }
+
+    .activity {
+      .content {
+        padding: 0.5rem;
+        height: 6rem;
+        font-size: 1.2rem;
+        overflow: hidden;
 
       }
+
+    }
 
   }
 }

@@ -2299,6 +2299,18 @@ select option {
 .schedule #timeline {
   margin-top: 2rem;
 }
+.schedule #timeline .vis-tooltip {
+  border: 1px solid #333333;
+  border-radius: 0;
+  background-color: white;
+  padding: 1rem;
+}
+.schedule #timeline .vis-tooltip .activity-tooltip {
+  font-family: 'Roboto', sans-serif !important;
+}
+.schedule #timeline .vis-tooltip .activity-tooltip p {
+  margin: 0 0 0.5rem;
+}
 .schedule #timeline .vis-panel.vis-left .vis-label {
   display: flex;
 }
@@ -2306,17 +2318,24 @@ select option {
   margin: auto;
   display: block;
 }
+.schedule #timeline .vis-item {
+  cursor: pointer;
+}
 .schedule #timeline .vis-item.vis-range {
   border-radius: 0px;
 }
 .schedule #timeline .vis-item .vis-item-overflow {
-  overflow: visible;
+  height: 6rem;
 }
 .schedule #timeline .vis-item .vis-item-overflow .vis-item-content {
   padding: 0;
+  white-space: normal;
 }
 .schedule #timeline .activity .content {
-  padding: 20px;
+  padding: 0.5rem;
+  height: 6rem;
+  font-size: 1.2rem;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
