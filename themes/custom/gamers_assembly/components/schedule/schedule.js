@@ -38,8 +38,6 @@
             if (activity.end > max)
                 max = activity.end;
         });
-        console.log(min);
-        console.log(max);
         var data = new vis.DataSet(activityDay[day]);
         var options = {
             zoomMin: max.getTime()-min.getTime(),
