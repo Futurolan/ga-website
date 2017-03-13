@@ -2333,7 +2333,7 @@ select option {
   color: #ffffff;
 }
 .schedule #timeline .vis-labelset .vis-label .vis-inner {
-  height: 7rem !important;
+  height: 7.2rem !important;
   display: flex !important;
   align-items: center;
 }
