@@ -36,7 +36,6 @@ gamers_assembly.schedule:
   dependencies:
     - core/jquery
     - gamers_assembly/visjs
-    - gamers_assembly/lodash
 
 tmi:
   version: 1.X
