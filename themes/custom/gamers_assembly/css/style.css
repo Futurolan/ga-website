@@ -2331,6 +2331,7 @@ select option {
 .schedule #timeline .vis-labelset .vis-label {
   background-color: #0058A2;
   color: #ffffff;
+  height: 6rem;
 }
 .schedule #timeline .vis-panel.vis-left .vis-label {
   display: flex;
