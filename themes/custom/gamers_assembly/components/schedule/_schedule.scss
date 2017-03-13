@@ -23,7 +23,11 @@
     .vis-labelset .vis-label {
       background-color: #0058A2;
       color: #ffffff;
-      height:6rem;
+      .vis-inner {
+        height: 6rem ! important;
+        display: flex !important;
+        align-items: center;
+      }
     }
 
     .vis-panel.vis-left .vis-label {
