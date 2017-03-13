@@ -6,7 +6,7 @@
             {% for activity in activityDay %}
             {
                 id:{{ activity.id }},
-                group: '{{ activity.field_room.entity.getName() }}',
+                group: '{{ activity.field_room.entity.id() }}',
                 content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif %}><div class="content">{{ activity.getTitle()|escape('js') }}</div></div>',
                 {% if(activity.field_description.value) %}title: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',{% endif %}
                 start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
@@ -26,7 +26,6 @@
                 value: {{ activity.field_room.entity.getWeight() }},
                 content:'{{ activity.field_room.entity.getName() }}',
                 {% endfor %}
-
             },
             {% endfor %}
         ]

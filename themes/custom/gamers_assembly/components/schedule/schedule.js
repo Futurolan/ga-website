@@ -1,8 +1,9 @@
 (function ($) {
     'use strict';
 
-    var uniqueRooms = _.unique(rooms,'id')
+    var uniqueRooms = _.unique(rooms,'id');
     var groups = new vis.DataSet(uniqueRooms);
+    console.log(groups);
 
 
     //Filter function
@@ -20,12 +21,12 @@
     var options = {
         zoomMin: 1000 * 60 * 60 * 4,
         zoomMax: 1000 * 60 * 60 * 24 * 3,
-        rollingMode: false,
+        rollingMode:false,
         hiddenDates: [{start: '2017-04-15 00:00:00', end: '2017-04-15 08:00:00', repeat: 'daily'}],
         stack: false,
         groupOrder: function (a, b) {
             return a.value - b.value;
-        },
+        }
     };
 
     var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
