@@ -17,6 +17,7 @@
     });
 
 
+
     var data = new vis.DataSet(activities);
     var options = {
         zoomMin: 1000 * 60 * 60 * 4,
@@ -40,6 +41,7 @@
         })
     });
 
+    $('.filter.active').click();
 
     //Add a day to a date
     function addDays(date, days) {
