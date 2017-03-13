@@ -35,8 +35,13 @@
 
     timeline.on('select', function (properties) {
         activities.forEach(function (activity) {
-            if (activity.id === properties.items[0] && activity.url) {
-                window.location = activity.url
+            if (activity.id === properties.items[0]) {
+                $('#activity-modal-label').text(activity.contentText);
+                $('#activity-modal-content').html(activity.title);
+                $('#activity-modal-url a').attr('href',activity.url);
+                $('#activity-modal').modal();
+
+
             }
         })
     });

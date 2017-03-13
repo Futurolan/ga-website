@@ -8,6 +8,7 @@
                 id:{{ activity.id }},
                 group: '{{ activity.field_room.entity.id() }}',
                 content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif %}><div class="content">{{ activity.getTitle()|escape('js') }}</div></div>',
+                contentText: '{{ activity.getTitle()|escape('js')  }}',
                 {% if(activity.field_description.value) %}title: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',{% endif %}
                 start: new Date('{{ activity.field_date.getValue()[0]['value'] }}'),
                 end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}'),
@@ -39,4 +40,26 @@
 
 
     <div id="timeline"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="activity-modal" tabindex="-1" role="dialog" aria-labelledby="activity-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="activity-modal-label">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="activity-modal-content">
+
+                    </div>
+                    <div id="activity-modal-url">
+                        <a href="">Voir les informations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
