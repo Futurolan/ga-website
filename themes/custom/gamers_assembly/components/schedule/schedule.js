@@ -1,9 +1,9 @@
 (function ($) {
     'use strict';
+    console.log(_);
 
     var uniqueRooms = _.unique(rooms,'id');
     var groups = new vis.DataSet(uniqueRooms);
-    console.log(groups);
 
 
     //Filter function

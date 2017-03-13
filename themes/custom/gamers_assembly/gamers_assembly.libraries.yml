@@ -34,6 +34,7 @@ gamers_assembly.schedule:
   js:
     components/schedule/schedule.js: {}
   dependencies:
+    - core/underscore
     - core/jquery
     - gamers_assembly/visjs
 
@@ -92,8 +93,3 @@ visjs:
   css:
       theme:
         libraries/visjs/vis.min.css: { minified: true}
-
-lodash:
-  version: 4.17.4
-  js:
-    libraries/lodash/lodash.core.min.js: {minified: true}
