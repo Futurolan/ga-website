@@ -8,15 +8,23 @@
       border-radius: 0;
 
       background-color: white;
-      padding:1rem;
-      .activity-tooltip{
+      padding: 1rem;
+      .activity-tooltip {
         font-family: 'Roboto', sans-serif !important;
-        p{
-          margin:0 0 0.5rem;
+        p {
+          margin: 0 0 0.5rem;
         }
       }
 
     }
+    .vis-even {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    .vis-labelset .vis-label {
+      background-color: #0058A2;
+      color: #ffffff
+    }
+
     .vis-panel.vis-left .vis-label {
       display: flex;
       .vis-inner {
@@ -25,6 +33,8 @@
       }
     }
     .vis-item {
+      background-color: #00698f;
+      color: #ffffff;
       cursor: pointer;
       &.vis-range {
         border-radius: 0px;

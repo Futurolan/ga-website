@@ -36,6 +36,7 @@ gamers_assembly.schedule:
   dependencies:
     - core/jquery
     - gamers_assembly/visjs
+    - gamers_assembly/lodash
 
 tmi:
   version: 1.X
@@ -92,3 +93,8 @@ visjs:
   css:
       theme:
         libraries/visjs/vis.min.css: { minified: true}
+
+lodash:
+  version: 4.17.4
+  js:
+    libraries/lodash/lodash.core.js:{}

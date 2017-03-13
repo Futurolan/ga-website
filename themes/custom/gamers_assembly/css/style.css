@@ -896,6 +896,20 @@ body.tournament-sponsor .node-tournament .white-area .container:first-child {
   background-color: #ffffff;
 }
 
+.tournament .tournament-image {
+  position: relative;
+}
+.tournament .tournament-image span {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80px;
+}
+
 .sponsor-page .sponsor-container:not(:last-child) {
   margin-bottom: 5px;
 }
@@ -2311,6 +2325,13 @@ select option {
 .schedule #timeline .vis-tooltip .activity-tooltip p {
   margin: 0 0 0.5rem;
 }
+.schedule #timeline .vis-even {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.schedule #timeline .vis-labelset .vis-label {
+  background-color: #0058A2;
+  color: #ffffff;
+}
 .schedule #timeline .vis-panel.vis-left .vis-label {
   display: flex;
 }
@@ -2319,6 +2340,8 @@ select option {
   display: block;
 }
 .schedule #timeline .vis-item {
+  background-color: #00698f;
+  color: #ffffff;
   cursor: pointer;
 }
 .schedule #timeline .vis-item.vis-range {
