@@ -2,7 +2,7 @@
     'use strict';
     console.log(_);
 
-    var uniqueRooms = _.unique(rooms,'id');
+    var uniqueRooms = _.unique(rooms, 'id');
     var groups = new vis.DataSet(uniqueRooms);
 
 
@@ -11,18 +11,17 @@
         var day = $(this).attr('x-data');
         $('.filter').removeClass('active');
 
-        timeline.setWindow(day, addDays(day,1));
+        timeline.setWindow(day, addDays(day, 1));
 
         $(this).addClass('active');
     });
-
 
 
     var data = new vis.DataSet(activities);
     var options = {
         zoomMin: 1000 * 60 * 60 * 4,
         zoomMax: 1000 * 60 * 60 * 24 * 3,
-        rollingMode:false,
+        rollingMode: false,
         hiddenDates: [{start: '2017-04-15 00:00:00', end: '2017-04-15 08:00:00', repeat: 'daily'}],
         stack: false,
         groupOrder: function (a, b) {
@@ -38,7 +37,13 @@
             if (activity.id === properties.items[0]) {
                 $('#activity-modal-label').text(activity.titleText);
                 $('#activity-modal-content').html(activity.description);
-                $('#activity-modal-url a').attr('href',activity.url);
+                if (activity.url != '') {
+                    $('#activity-modal-url').show();
+                    $('#activity-modal-url a').attr('href', activity.url);
+                }
+                else {
+                    $('#activity-modal-url').hide();
+                }
                 $('#activity-modal').modal();
 
 
