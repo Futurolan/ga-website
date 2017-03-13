@@ -97,4 +97,4 @@ visjs:
 lodash:
   version: 4.17.4
   js:
-    libraries/lodash/lodash.core.js: {}
+    libraries/lodash/lodash.core.min.js: {minified: true}
