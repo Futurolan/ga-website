@@ -37,7 +37,7 @@
             if (activity.id === properties.items[0]) {
                 $('#activity-modal-label').text(activity.titleText);
                 $('#activity-modal-content').html(activity.description);
-                if (activity.url != '') {
+                if (activity.url) {
                     $('#activity-modal-url').show();
                     $('#activity-modal-url a').attr('href', activity.url);
                 }
