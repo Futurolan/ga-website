@@ -20,13 +20,15 @@
         var rooms = [
             {% for activityDay in activities %}
 
+
+            {% for activity in activityDay %}
             {
-                {% for activity in activityDay %}
                 id: {{ activity.field_room.target_id }},
                 value: {{ activity.field_room.entity.getWeight() }},
-                content:'{{ activity.field_room.entity.getName() }}',
-                {% endfor %}
+                content: '{{ activity.field_room.entity.getName() }}',
             },
+            {% endfor %}
+
             {% endfor %}
         ]
 
