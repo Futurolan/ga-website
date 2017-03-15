@@ -26,7 +26,8 @@
         stack: false,
         groupOrder: function (a, b) {
             return a.value - b.value;
-        }
+        },
+        locale: 'fr'
     };
 
     var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
