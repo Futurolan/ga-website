@@ -20,5 +20,5 @@ default_value:
     value: '0'
 default_value_callback: ''
 settings:
-  range: '100'
+  range: '20'
 field_type: weight

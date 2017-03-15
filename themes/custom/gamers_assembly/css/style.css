@@ -203,6 +203,12 @@ a[name]:before {
   display: inline-block;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 #block-mainnavigation {
   background-color: #0058A2;
   padding: 0;

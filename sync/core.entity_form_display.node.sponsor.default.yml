@@ -13,7 +13,6 @@ dependencies:
     - image
     - path
     - scheduler
-    - weight
 _core:
   default_config_hash: VLBxJufUVnj3Du28xjXd_2aPWBbF-rnOhyJd_ZzcFzI
 id: node.sponsor.default
@@ -45,11 +44,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_sponsor_weight:
-    type: weight_selector
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 4
@@ -101,4 +95,5 @@ content:
     weight: 12
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_sponsor_weight: true
