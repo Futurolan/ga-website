@@ -98,4 +98,4 @@ visjs:
 moment:
   version: 2.8.1
   js:
-    http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.1/moment-with-locales.min.js: {type: external, minified: true}
+    https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.1/moment-with-locales.min.js: {type: external, minified: true}
