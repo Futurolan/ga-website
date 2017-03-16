@@ -80,6 +80,11 @@
         }
       }
     }
+    li:hover {
+    	ul {
+    		width: 200px;
+    	}
+    }
   }
 }
 
@@ -214,6 +219,16 @@ body {
     li a {
       padding: 25px 15px 25px 50px !important;
     }
+  }
+
+  #block-mainnavigation {
+  	ul {
+  		li:hover {
+  			ul {
+  				width: auto !important;
+  			}
+  		}
+  	}
   }
 }
 

@@ -290,6 +290,9 @@ img {
 #block-mainnavigation ul li ul li a {
   padding: 10px 22px;
 }
+#block-mainnavigation ul li:hover ul {
+  width: 200px;
+}
 
 body.toolbar-fixed.toolbar-horizontal {
   padding-top: 112px !important;
@@ -416,6 +419,10 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open #block-mainnavigation {
   }
   .nav-item .navbar-nav li a {
     padding: 25px 15px 25px 50px !important;
+  }
+
+  #block-mainnavigation ul li:hover ul {
+    width: auto !important;
   }
 }
 @media (max-width: 768px) {
@@ -2371,5 +2378,3 @@ select option {
   font-size: 1.2rem;
   overflow: hidden;
 }
-
-/*# sourceMappingURL=style.css.map */
