@@ -8,7 +8,7 @@
                 id:{{ activity.id }},
                 group: '{{ activity.field_room.entity.id() }}',
                 content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif %}><div class="content">{{ activity.getTitle()|escape('js') }}</div></div>',
-                titleText: '{{ activity.getTitle()|escape('js')  }}',
+                titleText: '{{ activity.getTitle()|escape('js') }}',
                 description: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',
                 start: new Date('{{ activity.field_date.getValue()[0]['value'] }}Z'),
                 end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z'),
@@ -41,6 +41,33 @@
 
     <div id="timeline"></div>
 
+    <div class="schedule-mobile">
+        {% for key,activityDay in activities %}
+            <h2>{{ key |date("d/m/Y") }}</h2>
+            {% for activity in activityDay %}
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="schedule-mobile-activity">
+                            <h3>{{ activity.getTitle() }}</h3>
+                            <div class="schedule-mobile-date">
+                                {{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }}
+                                - {{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", "Europe/Paris") }}
+                            </div>
+                            <div class="schedule-mobile-description">
+                                {{ activity.field_description.value|raw }}
+                            </div>
+                            {% if(activity.field_lien.value) %}
+                                <div class="schedule-mobile-url">
+                                    <a href="{{ activity.field_lien.value }}">{{ 'Voir les informations'|t }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="activity-modal" tabindex="-1" role="dialog" aria-labelledby="activity-modal">
         <div class="modal-dialog" role="document">
@@ -55,7 +82,7 @@
 
                     </div>
                     <div id="activity-modal-url">
-                        <a href="">Voir les informations</a>
+                        <a href="">{{ 'Voir les informations'|t }}</a>
                     </div>
                 </div>
             </div>

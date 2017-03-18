@@ -70,4 +70,34 @@
     }
 
   }
+
+  .schedule-mobile{
+    display:none;
+    margin-bottom:1rem;
+    h2{
+      background-color: $blue;
+      color:$white;
+      padding:1rem;
+    }
+
+    &-activity{
+      border-left:1px solid #bbbbbb;
+      padding-left:1rem;
+    }
+  }
 }
+
+
+@media(max-width:767px){
+
+  .schedule-page .white-area .container .filter{display:none;}
+  .schedule {
+    .schedule-mobile {
+      display: block;
+    }
+    #timeline {
+      display: none;
+    }
+  }
+}
+

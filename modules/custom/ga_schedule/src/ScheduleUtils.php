@@ -27,7 +27,7 @@ class ScheduleUtils {
       ->condition('status', 1)
       ->condition('type', 'activity')
       ->condition('langcode', $langcode)
-      ->sort('created', 'DESC')
+      ->sort('field_date', 'ASC')
       ->execute();
 
     $activities = [];
