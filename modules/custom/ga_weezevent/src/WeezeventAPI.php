@@ -72,5 +72,33 @@
 				watchdog_exception('ga_weezevent', $e->getMessage());
 			}
 		}
+
+                public function tickets() {
+                        $client = \Drupal::httpClient();
+
+                        try {
+                                $response = $client->get('/tickets',
+                                        array(
+                                                'base_uri' => $this->base_uri,
+                                                'query' => array(
+                                                        'api_key' => $this->api_key,
+                                                        'access_token' => $this->access_token,
+                                                        'id_event' => $this->id_event
+                                                )
+                                        )
+                                );
+                                $data = (string) $response->getBody();
+                                $result = \GuzzleHttp\json_decode($data);
+                                foreach ($result->events as $event) {
+					return $event;
+                                }
+
+                        } catch (RequestException $e) {
+                                watchdog_exception('ga_weezevent', $e->getMessage());
+                        } catch (InvalidArgumentException $e) {
+                                watchdog_exception('ga_weezevent', $e->getMessage());
+                        }
+                }
+
 	}
 	
