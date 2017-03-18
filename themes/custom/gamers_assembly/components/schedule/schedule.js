@@ -27,7 +27,10 @@
         groupOrder: function (a, b) {
             return a.value - b.value;
         },
-        locale: 'fr'
+        locale: 'fr',
+        moment: function (date) {
+            return vis.moment(date).utc();
+        }
     };
 
     var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
