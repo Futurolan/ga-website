@@ -3,10 +3,9 @@
 		{% if loop.index0%4 == 0 and loop.index0 != 0 %}
 			</div></div>
 		{% endif %}
-		<div class="row">
-			<div class="row-height">
+		<div class="row row-flex row-flex-wrap">
 	{% endif %}
-	    <div class="col-md-3 col-md-height influencer animated zoomIn">
+	    <div class="col-md-3 influencer animated zoomIn">
 	        {{ row.content }}
 	    </div>
 {% endfor %}
