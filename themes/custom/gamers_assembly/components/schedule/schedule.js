@@ -22,7 +22,7 @@
         zoomMin: 1000 * 60 * 60 * 4,
         zoomMax: 1000 * 60 * 60 * 24 * 3,
         rollingMode: false,
-        hiddenDates: [{start: '2017-04-15 00:00:00', end: '2017-04-15 08:00:00', repeat: 'daily'}],
+        hiddenDates: [{start: '2017-04-15 00:00:00', end: '2017-04-15 10:00:00', repeat: 'daily'}, {start: '2017-04-17 17:00:00', end: '2017-04-18 00:00:00'}],
         stack: false,
         groupOrder: function (a, b) {
             return a.value - b.value;

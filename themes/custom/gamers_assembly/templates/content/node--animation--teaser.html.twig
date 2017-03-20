@@ -11,10 +11,11 @@
         </div>
         <div class="col-md-10 cta-button">
             <h3>{{ node.getTitle() }}</h3>
-            {{ node.field_animation_content.value | raw }}
             {% if(node.field_animation_localisation.value) %}
-                {{ node.field_animation_localisation.value }}
+              <i class="text-muted fa fa-map-marker"></i>
+              <span class="text-muted">{{ node.field_animation_localisation.value }}</span>
             {% endif %}
+             {{ node.field_animation_content.value | raw }}
         </div>
     </div>
 </div>
