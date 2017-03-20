@@ -36,3 +36,6 @@ permissions:
   - 'edit any news content'
   - 'edit own news content'
   - 'revert news revisions'
+  - 'view the administration theme'
+  - 'view moderator in toolbar'
+  - 'access toolbar'
