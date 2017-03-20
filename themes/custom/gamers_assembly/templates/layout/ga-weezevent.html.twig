@@ -9,91 +9,135 @@
             <div class="row">
                 <div class="col-md-12">
 
+<style>
+.table th, .table td {
+text-align: center;
+}
+</style>
+
 <div class="container">
 <table class="table table-striped table-hover col-md-2" width="500">
-	<tr>
-		<th style="color:#eee; background:#111;">Billet</th>
-		<th style="text-align: center; color:#eee; background:#111;" width="110">Achet&eacute;</th>
-		<th style="text-align: center; color:#eee; background:#111;" width="110">Billets</th>
-		<th style="text-align: center; color:#eee; background:#111;" width="110">Remplissage</th>
-		<th style="text-align: center; color:#eee; background:#111;" width="150">Revenu</th>
+	<tr style="color:#eee; background:#111;">
+                <th>id</th>
+		<th class="text-left">Billet</th>
+		<th>Prix</th>
+		<th>Slots</th>
+		<th>Participants</th>
+		<th>Remplissage</th>
+		<th>Revenu</th>
+		<th>Revenu²</th>
 	</tr>
 
 {% set sum_participants_total = 0 %}
 {% set sum_quota_total = 0 %}
 {% set sum_revenu_total = 0 %}
+{% set sum_revenu2_total = 0 %}
 {% set sum_revenu_quota_total = 0 %}
+
 {% for cat in weezdata.categories %}
 	{% for ticket in cat.tickets %}
 		{% set sum_participants_total = sum_participants_total + ticket.participants %}
 		{% if ticket.group_size %}
-			{% set sum_quota_total = sum_quota_total + ticket.quotas * ticket.group_size%}
-			{% set sum_revenu_total = sum_revenu_total + (ticket.participants / ticket.group_size) * ticket.price %}
-			{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
+			{% if ticket.quotas %}
+				{% set sum_quota_total = sum_quota_total + ticket.quotas * ticket.group_size%}
+				{% set sum_revenu_total = sum_revenu_total + (ticket.participants / ticket.group_size) * ticket.price %}
+				{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
+			{% else %}
+                                {% set sum_revenu2_total = sum_revenu2_total + (ticket.participants / ticket.group_size) * ticket.price %}
+			{% endif %}
 		{% else %}
-			{% set sum_quota_total = sum_quota_total + ticket.quotas %}
-			{% set sum_revenu_total = sum_revenu_total + ticket.participants * ticket.price %}
-			{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
+                        {% if ticket.quotas %}
+ 				{% set sum_quota_total = sum_quota_total + ticket.quotas %}
+				{% set sum_revenu_total = sum_revenu_total + ticket.participants * ticket.price %}
+				{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
+                        {% else %}
+                                {% set sum_revenu2_total = sum_revenu2_total + ticket.participants * ticket.price %}
+                        {% endif %}
 		{% endif %}
 	{% endfor %}
 {% endfor %}
 
         <tr style="background:#333;color:#bbb">
-                <td>Total billetterie</td>
                 <td>&nbsp;</td>
-                <td style="text-align: center;">{{ sum_participants_total }}/{{ sum_quota_total }}</td>
+		<td>Total billetterie</td>
                 <td>&nbsp;</td>
-                <td style="text-align: center;">{{ sum_revenu_total }}/{{sum_revenu_quota_total}}</td>
+                <td>&nbsp;</td>
+                <td>{{ sum_participants_total }}/{{ sum_quota_total }}</td>
+                <td>&nbsp;</td>
+                <td>{{ sum_revenu_total }}€/{{sum_revenu_quota_total}}€</td>
+		<td>{{ sum_revenu2_total }}€</td>
         </tr>
         {% for cat in weezdata.categories %}
         {% set sum_participants_cat = 0 %}
         {% set sum_quota_cat = 0 %}
         {% set sum_revenu_cat = 0 %}
+        {% set sum_revenu2_cat = 0 %}
         {% set sum_revenu_quota_cat = 0 %}
         {% for ticket in cat.tickets %}
                 {% set sum_participants_cat = sum_participants_cat + ticket.participants %}
                 {% if ticket.group_size %}
-                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas * ticket.group_size%}
-                        {% set sum_revenu_cat = sum_revenu_cat + (ticket.participants / ticket.group_size) * ticket.price %}
-                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
+                        {% if ticket.quotas %}
+	                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas * ticket.group_size%}
+	                        {% set sum_revenu_cat = sum_revenu_cat + (ticket.participants / ticket.group_size) * ticket.price %}
+	                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
+                        {% else %}
+                                {% set sum_revenu2_cat = sum_revenu2_cat + (ticket.participants / ticket.group_size) * ticket.price %}
+                        {% endif %}
                 {% else %}
-                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas %}
-                        {% set sum_revenu_cat = sum_revenu_cat + ticket.participants * ticket.price %}
-                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
+                        {% if ticket.quotas %}
+	                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas %}
+	                        {% set sum_revenu_cat = sum_revenu_cat + ticket.participants * ticket.price %}
+	                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
+                        {% else %}
+                                {% set sum_revenu2_cat = sum_revenu2_cat + ticket.participants * ticket.price %}
+                        {% endif %}
                 {% endif %}
         {% endfor %}
  	<tr style="background:#999;">
+                <td>&nbsp;</td>
 		<td>{{ cat.name }}</td>
                 <td>&nbsp;</td>
-                <td style="text-align: center;">{{ sum_participants_cat }}/{{ sum_quota_cat }}</td>
-                <td style="text-align: center;">{{ (100 * sum_participants_cat / sum_quota_cat)|round(2) }}%</td>
-                <td style="text-align: center;">{{ sum_revenu_cat }} / {{ sum_revenu_quota_cat }} </td>
+                <td>&nbsp;</td>
+                <td>{{ sum_participants_cat }}/{{ sum_quota_cat }}</td>
+                <td>{{ (100 * sum_participants_cat / sum_quota_cat)|round(2) }}%</td>
+                <td>{{ sum_revenu_cat }}€/{{ sum_revenu_quota_cat }}€</td>
+		<td>{{ sum_revenu2_cat }}€</td>
 	</tr>
 	{% for ticket in cat.tickets %}
 	<tr>
-		<td>{{ ticket.name }} ({{ ticket.price}}e)</td>
+		<td>{{ ticket.id }}</td>
+		<td>{{ ticket.name }}</td>
+		<td>{{ticket.price}}</td>
 {% if ticket.group_size %}
 {% if ticket.quotas %}
-		<td style="text-align: center;">{{ ticket.participants / ticket.group_size}}/{{ ticket.quotas }}</td>
-		<td style="text-align: center;">{{ ticket.participants }}/{{ ticket.quotas * ticket.group_size}}</td>
-		<td style="text-align: center;">{{ (100 * ticket.participants / (ticket.quotas * ticket.group_size))|round(2)}}%</td>
-{% else %}
-                <td style="text-align: center;">{{ ticket.participants / ticket.group_size}}</td>
-                <td style="text-align: center;">{{ ticket.participants }}</td>
+		<td>{{ ticket.participants / ticket.group_size}}/{{ ticket.quotas }}</td>
+		<td>{{ ticket.participants }}/{{ ticket.quotas * ticket.group_size}}</td>
+		<td>{{ (100 * ticket.participants / (ticket.quotas * ticket.group_size))|round(2)}}%</td>
+                <td>{{ (ticket.participants / ticket.group_size) * ticket.price }}€/{{ ticket.quotas * ticket.price}}€</td>
                 <td>&nbsp;</td>
+{% else %}
+                <td>{{ ticket.participants / ticket.group_size}}</td>
+                <td>{{ ticket.participants }}</td>
+                <td>&nbsp;</td>
+		<td>&nbsp;</td>
+                <td>{{ (ticket.participants / ticket.group_size) * ticket.price }}€</td>
 {% endif %}
 {% else %}
 {% if ticket.quotas %}
                 <td>&nbsp;</td>
-                <td style="text-align: center;">{{ ticket.participants }}/{{ ticket.quotas}}</td>
-                <td style="text-align: center;">{{ (100 * ticket.participants / ticket.quotas)|round(2)}}%</td>
+                <td>{{ ticket.participants }}/{{ ticket.quotas}}</td>
+                <td>{{ (100 * ticket.participants / ticket.quotas)|round(2)}}%</td>
+                <td>{{ ticket.participants * ticket.price }}€/{{ ticket.quotas * ticket.price}}€</td>
+                <td>&nbsp;</td>
 {% else %}
                 <td>&nbsp;</td>
-                <td style="text-align: center;">{{ ticket.participants }}</td>
+                <td>{{ ticket.participants }}</td>
                 <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>{{ ticket.participants * ticket.price }}€</td>
 {% endif %}
 {% endif %}
-		<td style="text-align: center;">{{ ticket.participants * ticket.price }}</td>
+
 	</tr>
 	{% endfor %}
 	{% endfor %}
