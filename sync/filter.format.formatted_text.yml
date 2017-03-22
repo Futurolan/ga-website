@@ -8,12 +8,6 @@ name: 'Formatted Text'
 format: formatted_text
 weight: 0
 filters:
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: true
-    weight: 10
-    settings: {  }
   filter_html:
     id: filter_html
     provider: filter
@@ -36,3 +30,9 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
