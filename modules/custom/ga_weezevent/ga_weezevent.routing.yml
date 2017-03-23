@@ -4,7 +4,7 @@ ga_weezevent:
     _controller: '\Drupal\ga_weezevent\Controller\WeezeventController::render'
     _title_callback: '\Drupal\ga_weezevent\Controller\WeezeventController::getTitle'
   requirements:
-    _permission: 'moderator'
+    _role: 'moderator'
 
 ga_weezevent.settings:
   path: '/admin/ga/weezevent/settings'
