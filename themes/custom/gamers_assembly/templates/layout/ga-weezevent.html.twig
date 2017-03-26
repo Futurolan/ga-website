@@ -12,139 +12,88 @@
 <style>
 .table th, .table td {
 text-align: center;
+vertical-align: middle !important;
+min-width: 100px;
 }
 </style>
 
-<div class="container">
-<table class="table table-striped table-hover col-md-2" width="500">
-	<tr style="color:#eee; background:#111;">
-                <th>id</th>
-		<th class="text-left">Billet</th>
-		<th>Prix</th>
-		<th>Slots</th>
-		<th>Participants</th>
-		<th>Remplissage</th>
-		<th>Revenu</th>
-		<th>Revenu²</th>
-	</tr>
-
-{% set sum_participants_total = 0 %}
-{% set sum_quota_total = 0 %}
-{% set sum_revenu_total = 0 %}
-{% set sum_revenu2_total = 0 %}
-{% set sum_revenu_quota_total = 0 %}
-
-{% for cat in weezdata.categories %}
-	{% for ticket in cat.tickets %}
-		{% set sum_participants_total = sum_participants_total + ticket.participants %}
-		{% if ticket.group_size %}
-			{% if ticket.quotas %}
-				{% set sum_quota_total = sum_quota_total + ticket.quotas * ticket.group_size%}
-				{% set sum_revenu_total = sum_revenu_total + (ticket.participants / ticket.group_size) * ticket.price %}
-				{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
-			{% else %}
-                                {% set sum_revenu2_total = sum_revenu2_total + (ticket.participants / ticket.group_size) * ticket.price %}
-			{% endif %}
-		{% else %}
-                        {% if ticket.quotas %}
- 				{% set sum_quota_total = sum_quota_total + ticket.quotas %}
-				{% set sum_revenu_total = sum_revenu_total + ticket.participants * ticket.price %}
-				{% set sum_revenu_quota_total = sum_revenu_quota_total + ticket.quotas * ticket.price %}
-                        {% else %}
-                                {% set sum_revenu2_total = sum_revenu2_total + ticket.participants * ticket.price %}
-                        {% endif %}
-		{% endif %}
-	{% endfor %}
-{% endfor %}
-
-        <tr style="background:#333;color:#bbb">
-                <td>&nbsp;</td>
-		<td>Total billetterie</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>{{ sum_participants_total }}/{{ sum_quota_total }}</td>
-                <td>&nbsp;</td>
-                <td>{{ sum_revenu_total }}€/{{sum_revenu_quota_total}}€</td>
-		<td>{{ sum_revenu2_total }}€</td>
-        </tr>
-        {% for cat in weezdata.categories %}
-        {% set sum_participants_cat = 0 %}
-        {% set sum_quota_cat = 0 %}
-        {% set sum_revenu_cat = 0 %}
-        {% set sum_revenu2_cat = 0 %}
-        {% set sum_revenu_quota_cat = 0 %}
-        {% for ticket in cat.tickets %}
-                {% set sum_participants_cat = sum_participants_cat + ticket.participants %}
-                {% if ticket.group_size %}
-                        {% if ticket.quotas %}
-	                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas * ticket.group_size%}
-	                        {% set sum_revenu_cat = sum_revenu_cat + (ticket.participants / ticket.group_size) * ticket.price %}
-	                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
-                        {% else %}
-                                {% set sum_revenu2_cat = sum_revenu2_cat + (ticket.participants / ticket.group_size) * ticket.price %}
-                        {% endif %}
-                {% else %}
-                        {% if ticket.quotas %}
-	                        {% set sum_quota_cat = sum_quota_cat + ticket.quotas %}
-	                        {% set sum_revenu_cat = sum_revenu_cat + ticket.participants * ticket.price %}
-	                        {% set sum_revenu_quota_cat = sum_revenu_quota_cat + ticket.quotas * ticket.price %}
-                        {% else %}
-                                {% set sum_revenu2_cat = sum_revenu2_cat + ticket.participants * ticket.price %}
-                        {% endif %}
-                {% endif %}
-        {% endfor %}
- 	<tr style="background:#999;">
-                <td>&nbsp;</td>
-		<td>{{ cat.name }}</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>{{ sum_participants_cat }}/{{ sum_quota_cat }}</td>
-                <td>{{ (100 * sum_participants_cat / sum_quota_cat)|round(2) }}%</td>
-                <td>{{ sum_revenu_cat }}€/{{ sum_revenu_quota_cat }}€</td>
-		<td>{{ sum_revenu2_cat }}€</td>
-	</tr>
-	{% for ticket in cat.tickets %}
-	<tr>
-		<td>{{ ticket.id }}</td>
-		<td>{{ ticket.name }}</td>
-		<td>{{ticket.price}}</td>
-{% if ticket.group_size %}
-{% if ticket.quotas %}
-		<td>{{ ticket.participants / ticket.group_size}}/{{ ticket.quotas }}</td>
-		<td>{{ ticket.participants }}/{{ ticket.quotas * ticket.group_size}}</td>
-		<td>{{ (100 * ticket.participants / (ticket.quotas * ticket.group_size))|round(2)}}%</td>
-                <td>{{ (ticket.participants / ticket.group_size) * ticket.price }}€/{{ ticket.quotas * ticket.price}}€</td>
-                <td>&nbsp;</td>
-{% else %}
-                <td>{{ ticket.participants / ticket.group_size}}</td>
-                <td>{{ ticket.participants }}</td>
-                <td>&nbsp;</td>
-		<td>&nbsp;</td>
-                <td>{{ (ticket.participants / ticket.group_size) * ticket.price }}€</td>
-{% endif %}
-{% else %}
-{% if ticket.quotas %}
-                <td>&nbsp;</td>
-                <td>{{ ticket.participants }}/{{ ticket.quotas}}</td>
-                <td>{{ (100 * ticket.participants / ticket.quotas)|round(2)}}%</td>
-                <td>{{ ticket.participants * ticket.price }}€/{{ ticket.quotas * ticket.price}}€</td>
-                <td>&nbsp;</td>
-{% else %}
-                <td>&nbsp;</td>
-                <td>{{ ticket.participants }}</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>{{ ticket.participants * ticket.price }}€</td>
-{% endif %}
-{% endif %}
-
-	</tr>
-	{% endfor %}
-	{% endfor %}
-
+<div class="container table-responsive">
+  <table class="table table-hover table-condensed">
+    <thead style="background:#111;color:#eee">
+      <tr>
+        <th class="col-md-1">id</th>
+        <th class="col-md-5">Billet</th>
+        <th class="col-md-1">Prix</th>
+        <th class="col-md-1">Slots</th>
+        <th class="col-md-1">Participants</th>
+        <th class="col-md-1">Remplissage</th>
+        <th class="col-md-2">Revenu</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for cat in weezdata.categories %}
+      <tr style="cursor:pointer;background:#ccc;" data-toggle="collapse" data-target="#{{cat.id}}">
+        <td>&nbsp;</td>
+        <td>{{ cat.name }}</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          {{ cat.participants }}/{{ cat.quotas }}
+          {% if cat.participants2 %}<br/>(+{{cat.participants2}}){% endif %}
+        </td>
+        <td>{{ (100 * cat.participants / cat.quotas )|round(2) }}%</td>
+        <td>
+          {{ cat.revenu }}€/{{ cat.revenu_quotas }}€
+          {% if cat.revenu2 %}<br/>(+{{cat.revenu2}}€){% endif %}
+        </td>
+      </tr>
+      <tr id="{{cat.id}}" class="collapse">
+        <td colspan=7 style="padding:0px">
+          <table class="table table-hover table-consended">
+            <tbody>
+            {% for ticket in cat.tickets %}
+              <tr class="
+              {% if ticket.remplissage > 90 %} bg-danger
+              {% elseif ticket.remplissage > 70 %} bg-warning
+              {% endif %}">
+                <td class="col-md-1">{{ ticket.id }}</td>
+                <td class="col-md-5">{{ ticket.name }}</td>
+                <td class="col-md-1">{{ ticket.price }}€</td>
+                <td class="col-md-1">{% if ticket.group_size > 1 %}{{ ticket.participants / ticket.group_size}}/{{ ticket.quotas }}{% else %}&nbsp;{% endif %}</td>
+              {% if ticket.quotas %}
+                <td class="col-md-1">{{ ticket.participants }}/{{ ticket.quotas * ticket.group_size}}</td>
+                <td class="col-md-1">{{ (100 * (ticket.participants / ticket.group_size) / ticket.quotas )|round(2) }}%</td>
+                <td class="col-md-2">{{ (ticket.participants / ticket.group_size)*ticket.price}}€/{{ ticket.price * ticket.quotas}}€</td>
+              {% else %}
+                <td class="col-md-1">{{ ticket.participants }}</td>
+                <td class="col-md-1">&nbsp;</td>
+                <td class="col-md-2">{{ (ticket.participants / ticket.group_size)*ticket.price}}€</td>
+              {% endif %}
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    {% endfor %}
+    <tr style="background:#0058A2;color:#fff">
+    <td>&nbsp;</td>
+    <td>Total billetterie</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+      {{ weezdata.participants }}/{{ weezdata.quotas }}
+      {% if weezdata.participants2 %}<br/>(+{{weezdata.participants2}}){% endif %}
+    </td>
+    <td>{{ (100 * weezdata.participants / weezdata.quotas )|round(2) }}%</td>
+    <td>
+      {{ weezdata.revenu_joueurs }}€/{{weezdata.revenu_joueurs_quotas}}€
+      {% if (weezdata.revenu2 + weezdata.revenu - weezdata.revenu_joueurs) > 0 %}<br/>(+{{weezdata.revenu2 + weezdata.revenu - weezdata.revenu_joueurs}}€){% endif %}
+    </td>
+  </tr>
 </table>
 </div>		
-                </div>
+               </div>
             </div>
         </div>
     </div>

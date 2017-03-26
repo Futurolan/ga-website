@@ -32,6 +32,13 @@ class WeezeventSettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('ga_weezevent.settings');
 
+    $form ['title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $config->get('title'),
+      '#required' => TRUE,
+    );
+
     $form ['api_key'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Api key'),
@@ -66,6 +73,7 @@ class WeezeventSettingsForm extends ConfigFormBase {
     $config = \Drupal::service('config.factory')
       ->getEditable('ga_weezevent.settings');
 
+    $config->set('title', $form_state->getValue('title'));
     $config->set('api_key', $form_state->getValue('api_key'));
     $config->set('access_token', $form_state->getValue('access_token'));
     $config->set('id_event', $form_state->getValue('id_event'));
