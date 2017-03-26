@@ -214,7 +214,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Influenceurs
+      title: Invités
       header: {  }
       footer: {  }
       empty: {  }
