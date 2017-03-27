@@ -142,7 +142,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: From
+          label: Par
           exclude: false
           alter:
             alter_text: false
@@ -294,7 +294,7 @@ display:
           exposed: true
           expose:
             operator_id: redirect_source__path_op
-            label: From
+            label: Par
             description: ''
             use_operator: false
             operator: redirect_source__path_op
