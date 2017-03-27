@@ -47,8 +47,17 @@
             {% for activity in activityDay %}
                 <div class="row">
                     <div class="col-xs-12">
-                        <div class="schedule-mobile-activity">
+                        <div class="schedule-mobile-activity"
+                        {% if(activity.field_game.entity) %}
+                            style="border-color:{{activity.field_game.entity.field_game_color.value}}"
+                        {% endif %}>
                             <h3>{{ activity.getTitle() }}</h3>
+                            <div class="schedule-mobile-loc"
+                            {% if(activity.field_game.entity) %}
+                                style="background-color:{{activity.field_game.entity.field_game_color.value}}"
+                            {% endif %}>
+                              {{ activity.field_room.entity.getName() }}
+                            </div>
                             <div class="schedule-mobile-date">
                                 {{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }}
                                 - {{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", "Europe/Paris") }}

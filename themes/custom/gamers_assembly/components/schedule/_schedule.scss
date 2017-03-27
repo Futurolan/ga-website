@@ -81,8 +81,19 @@
     }
 
     &-activity{
-      border-left:1px solid #bbbbbb;
+      border-right:1px solid #0058A2;
       padding-left:1rem;
+      padding-right:1remp;
+      position:relative;
+    }
+
+    &-loc{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #0058A2;
+      padding: 1rem;
+      color: #fff;
     }
   }
 }
