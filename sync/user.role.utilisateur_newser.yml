@@ -39,3 +39,4 @@ permissions:
   - 'view the administration theme'
   - 'view moderator in toolbar'
   - 'access toolbar'
+  - 'override news published option'

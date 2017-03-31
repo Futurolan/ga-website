@@ -2963,6 +2963,7 @@ display:
         access: false
         fields: false
         sorts: false
+        header: false
       access:
         type: perm
         options:
@@ -3019,7 +3020,7 @@ display:
           value:
             fr: fr
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: langcode_op
             label: 'Translation language'
@@ -3063,7 +3064,7 @@ display:
           exposed: true
           expose:
             operator_id: field_animation_localisation_value_op
-            label: 'Localisation (field_animation_localisation)'
+            label: Localisation
             description: ''
             use_operator: false
             operator: field_animation_localisation_value_op
@@ -3567,6 +3568,18 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<a class="button button--primary"  href="/node/add/animation?destination=/admin/moderator-content/animations">Ajouter un exposant</a>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: 0
       contexts:

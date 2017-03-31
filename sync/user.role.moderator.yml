@@ -3,7 +3,7 @@ langcode: fr
 status: true
 dependencies: {  }
 id: moderator
-label: 'Utilisateur modérateur'
+label: 'Moderator user'
 weight: -7
 is_admin: null
 permissions:
@@ -114,3 +114,10 @@ permissions:
   114: 'unpublish any content'
   115: 'delete terms in room'
   116: 'edit terms in room'
+  117: 'override animation published option'
+  118: 'override activity published option'
+  119: 'override influencer published option'
+  120: 'override news published option'
+  121: 'override page published option'
+  122: 'override memory published option'
+  124: 'unpublish any node type animation'
