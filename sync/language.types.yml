@@ -22,9 +22,7 @@ negotiation:
       language-url-fallback: 1
   language_interface:
     enabled:
-      language-url: -20
       language-selected: -19
-      language-browser: -15
     method_weights:
       language-url: -20
       language-selected: -19
