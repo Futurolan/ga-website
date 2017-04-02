@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    $(".stream-block-video-list .stream-video-list-item").click(function () {
+    $(".stream-video-list .stream-video-list-item").click(function () {
         var key = $(this).attr("x-key");
         client.part(channels[0]);
         channels = [key];
@@ -29,7 +29,7 @@
         randomColorsChosen = {},
         clientOptions = {
             options: {
-                debug: true
+                debug: false
             },
             channels: channels,
             connection: {

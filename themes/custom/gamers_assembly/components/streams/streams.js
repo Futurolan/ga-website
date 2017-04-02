@@ -4,7 +4,7 @@
     $(".stream-video-list .stream-video-list-item").each(function () {
         var key = $(this).attr("x-key");
         $.ajax({
-            url: "https://api.twitch.tv/kraken/streams/" + key,
+            url: "https://api.twitch.tv/kraken/streams/" + key+"?client_id=3e1bo4w4sfblm61c8baoacmcxab9dq",
         }).done(function (data) {
             if (data && data.stream) {
                 $("#stream-video-list-item-" + key).addClass('online');
