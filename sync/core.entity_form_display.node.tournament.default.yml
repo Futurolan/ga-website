@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.tournament.field_tournament_planning
     - field.field.node.tournament.field_tournament_reserved_slot
     - field.field.node.tournament.field_tournament_rules
+    - field.field.node.tournament.field_tournament_show_toornament
     - field.field.node.tournament.field_tournament_size
     - field.field.node.tournament.field_tournament_sub_count
     - field.field.node.tournament.field_tournament_subscribers
+    - field.field.node.tournament.field_tournament_toornament_id
     - field.field.node.tournament.field_tournament_type
     - field.field.node.tournament.field_tournament_weezevent_id
     - field.field.node.tournament.field_tournament_weight
@@ -61,6 +63,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: Partenariat
+    group_toornament:
+      children:
+        - field_tournament_show_toornament
+        - field_tournament_toornament_id
+      parent_name: ''
+      weight: 13
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Toornament
 _core:
   default_config_hash: 3nWj8aGAiUPJwARBf8n6uSDidEKi_YDmlS04IXfhUKA
 id: node.tournament.default
@@ -80,13 +95,14 @@ content:
     type: field_collection_embed
   field_tournament_cashprize2:
     type: entity_reference_paragraphs
-    weight: 31
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       add_mode: button
       form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
   field_tournament_description:
     weight: 2
@@ -147,12 +163,25 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+  field_tournament_show_toornament:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   field_tournament_size:
     weight: 29
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+  field_tournament_toornament_id:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_tournament_type:
     weight: 4
     settings: {  }
@@ -172,7 +201,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
   title:
@@ -184,7 +213,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
 hidden:

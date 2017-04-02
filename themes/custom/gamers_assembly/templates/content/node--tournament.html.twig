@@ -21,9 +21,20 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
+
+
                     <div class="tournament-game-description">
                         {{ node.field_tournament_game.entity.getDescription()|raw }}
                     </div>
+
+                    {% if(node.field_tournament_show_toornament.value) %}
+                        <div class="tournament-toornament">
+                            <iframe width="100%" height="450"
+                                    src="https://widget.toornament.com/tournaments/{{ node.field_tournament_toornament_id.value }}/navigator?_locale=fr_FR&theme=discipline"
+                                    frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+                        </div>
+                    {% endif %}
+
                     <div class="tournament-game-description">
                         {{ node.field_tournament_description.value|raw }}
                     </div>
@@ -84,20 +95,20 @@
                                                     {% endfor %}
                                                 {% endif %}
 
-						{% set i = node.field_tournament_reserved_slot.value + 1 %}
+                                                {% set i = node.field_tournament_reserved_slot.value + 1 %}
                                                 {% for id, teams in subscribers %}
-                                                {% for team, players in teams %}
-						<tr>
-                                                    <td>#{{ i }}</td>
-							{% set i = i + 1 %}
-                                                    <td><strong>{{ team }}</strong></td>
-                                                    <td>
-                                                        {% for player in players %}
-                                                            {{ player }}{% if not loop.last %}, {% endif %}
-                                                        {% endfor %}
-                                                    </td>
-                                                </tr>
-						{% endfor %}
+                                                    {% for team, players in teams %}
+                                                        <tr>
+                                                            <td>#{{ i }}</td>
+                                                            {% set i = i + 1 %}
+                                                            <td><strong>{{ team }}</strong></td>
+                                                            <td>
+                                                                {% for player in players %}
+                                                                    {{ player }}{% if not loop.last %}, {% endif %}
+                                                                {% endfor %}
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
                                                 {% endfor %}
 
 

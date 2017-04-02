@@ -1,0 +1,19 @@
+uuid: fa3d7e8a-5733-4faa-bc15-ff23ffd48615
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_toornament_id
+    - node.type.tournament
+id: node.tournament.field_tournament_toornament_id
+field_name: field_tournament_toornament_id
+entity_type: node
+bundle: tournament
+label: 'Toornament ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

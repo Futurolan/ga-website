@@ -19,7 +19,7 @@
 
     $(".stream-video-list .stream-video-list-item").click(function () {
         var key = $(this).attr("x-key");
-        $(".stream-video iframe").attr('src', "http://player.twitch.tv/?channel=" + key);
+        $(".stream-video iframe").attr('src', "https://player.twitch.tv/?channel=" + key);
         $(".stream-video-list-item").removeClass('active');
         $("#stream-video-list-item-" + key).addClass('active');
     });
