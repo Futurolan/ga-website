@@ -199,6 +199,9 @@ body {
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+
   }
   .navbar-nav > li {
     float: none;
