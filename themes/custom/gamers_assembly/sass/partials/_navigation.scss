@@ -206,7 +206,7 @@ body {
   }
   .collapse.in {
     display: block !important;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     overflow-x: hidden;
   }
 
