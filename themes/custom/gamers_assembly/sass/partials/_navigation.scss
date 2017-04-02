@@ -170,6 +170,9 @@ body {
 }
 
 @media (max-width: 1200px) {
+  #menu-right {
+    display: none;
+  }
   .mobile-menu-open {
     overflow: hidden;
   }
@@ -206,7 +209,7 @@ body {
   }
   .collapse.in {
     display: block !important;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     overflow-x: hidden;
   }
 
