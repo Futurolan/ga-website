@@ -2,6 +2,8 @@
 
 namespace Drupal\ga_toornament;
 
+use GuzzleHttp\Exception\RequestException;
+
 class ToornamentAPI {
   private $base_uri = "https://api.toornament.com";
   private $api_key = NULL;
@@ -21,6 +23,7 @@ class ToornamentAPI {
           ),
           'base_uri' => $this->base_uri,
           'query' => array(
+            'has_result'=>1,
             'sort'=>'latest'
           )
         )
@@ -30,9 +33,9 @@ class ToornamentAPI {
       return \GuzzleHttp\json_decode($data);
 
     } catch (RequestException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
-    } catch (InvalidArgumentException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
+      watchdog_exception('ga_weezevent', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 }

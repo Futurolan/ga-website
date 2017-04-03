@@ -21,8 +21,15 @@ class ToornamentUtils {
 
     foreach ($tournamentsNids as $nid) {
       $node = Node::load($nid);
-      $toornament_id = $node->field_tournament_toornament_id->value;
-      $lastMatch = $toornament->getLastMatch($toornament_id);
+      if($node->get('field_tournament_show_toornament')->value){
+        $toornament_id = $node->get('field_tournament_toornament_id')->value;
+        $lastMatchResult = $toornament->getLastMatch($toornament_id);
+        //var_dump($lastMatchResult[0]->opponents[1]->participant->name);
+
+
+
+
+      }
     }
     $sponsors = [];
 

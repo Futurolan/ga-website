@@ -35,6 +35,7 @@ module:
   ga_sponsor: 0
   ga_stream: 0
   ga_ticket: 0
+  ga_toornament: 0
   ga_visitors: 0
   ga_weezevent: 0
   google_analytics: 0

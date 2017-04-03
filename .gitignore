@@ -18,6 +18,8 @@ sync/ga_weezevent.settings.yml
 sync/ga_memory.settings.yml
 sync/ga_config.settings.yml
 sync/ga_schedule.settings.yml
+sync/ga_toornament.settings.yml
+
 sync/google_analytics.settings.yml
 sync/language
 sync/metatag.metatag_defaults.*
