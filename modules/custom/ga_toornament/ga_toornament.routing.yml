@@ -1,4 +1,4 @@
-ga_weezevent.settings:
+ga_toornament.settings:
   path: '/admin/ga/toornament/settings'
   defaults:
     _title: 'Toornament settings form'

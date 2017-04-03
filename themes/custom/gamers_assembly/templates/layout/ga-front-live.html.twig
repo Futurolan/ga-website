@@ -23,6 +23,7 @@
                         {% include directory ~ '/components/tournaments-home-cta/tournaments-home-cta.html.twig' %}
                     </div>
                     <div class="col-md-4">
+                        Bloc ici
                     </div>
                 </div>
             </div>
@@ -30,33 +31,30 @@
     </div>
 </div>
 
-<div class="row blue-area">
-    <div class="col-md-12">
-        <div class="row title-line">
-            <div class="line col-md-5"></div>
-            <div class=" col-md-2">
-                <h2 class="mushroom">{{ "News"|t }}</h2>
-            </div>
-            <div class="line col-md-5"></div>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    {% include directory ~ '/components/news-home/news-home.html.twig' %}
-
-                </div>
-                <div class="col-md-5">
-                    {% include directory ~ '/components/twitter-home/twitter-home.html.twig' %}
+<div class="blue-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% include directory ~ '/components/news-home2/news-home2.html.twig' %}
+                    </div>
+                    <div class="col-md-4">
+                        {% include directory ~ '/components/twitter-home/twitter-home.html.twig' %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row white-area">
-    <div class="col-md-12">
+<!-- TODO: Move to footer -->
+{% if(config.show_sponsors) %}
+    <div class="white-area">
+        {% include directory ~ '/components/title-line/title-line.html.twig' with {
+        title:"Partners"|t,
+        icon:"space-invader black"
+        } only %}
         {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
     </div>
-</div>
+{% endif %}

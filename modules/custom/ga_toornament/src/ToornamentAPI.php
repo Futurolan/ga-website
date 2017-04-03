@@ -2,26 +2,26 @@
 
 namespace Drupal\ga_toornament;
 
-class WeezeventAPI {
-  private $base_uri = "https://api.toornament.com/v1";
+class ToornamentAPI {
+  private $base_uri = "https://api.toornament.com";
   private $api_key = NULL;
 
   public function __construct($api_key) {
     $this->api_key = $api_key;
   }
 
-  public function participants($id_ticket) {
+  public function getLastMatch($tournaments_id) {
     $client = \Drupal::httpClient();
 
     try {
-      $response = $client->get('/participants',
+      $response = $client->get('/v1/tournaments/'.$tournaments_id .'/matches',
         array(
+          'headers' => array(
+            'X-Api-Key'=>$this->api_key
+          ),
           'base_uri' => $this->base_uri,
           'query' => array(
-            'api_key' => $this->api_key,
-            'access_token' => $this->access_token,
-            'id_ticket[]' => $id_ticket,
-            'full' => 1
+            'sort'=>'latest'
           )
         )
       );

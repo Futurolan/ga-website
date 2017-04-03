@@ -37,4 +37,10 @@ class FrontUtils {
 
     return $variables;
   }
+
+  public static function getLiveConfiguration() {
+    $config = \Drupal::config('ga_front.prelive.settings');
+    $variables['show_sponsors'] = $config->get('show_sponsors');
+    return $variables;
+  }
 }
