@@ -13,7 +13,6 @@ gamers_assembly.streams:
     components/streams/streams.js: {}
   dependencies:
     - core/jquery
-    - gamers_assembly/tmi
 
 gamers_assembly.slideshow:
   version: 1.X

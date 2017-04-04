@@ -44,7 +44,13 @@
                     </div>
                 </div>
                 <div class="col-md-12 stream-chat">
-                    <div id="chat"></div>
+                    <iframe
+                            src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout"
+                            height="371"
+                            width="100%"
+                            frameborder="0"
+                            scrolling="no">
+                    </iframe>
                 </div>
             </div>
         </div>

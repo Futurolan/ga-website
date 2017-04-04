@@ -25,7 +25,7 @@ class ToornamentUtils {
         $toornament_id = $node->get('field_tournament_toornament_id')->value;
         $lastMatchResult = $toornament->getLastMatch($toornament_id);
         //var_dump($lastMatchResult[0]->opponents[1]->participant->name);
-
+        //$lastMatcharray_chunk($lastMatchResult,5)[0]
 
 
 
