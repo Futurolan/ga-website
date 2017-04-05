@@ -27,7 +27,8 @@
         groupOrder: function (a, b) {
             return a.value - b.value;
         },
-        locale: 'fr'
+        locale: 'fr',
+	orientation: 'both',
     };
 
     var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
