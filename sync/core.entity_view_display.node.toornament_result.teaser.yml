@@ -1,0 +1,18 @@
+uuid: cb40e849-ca8e-46c7-b4a0-e9edb0b37903
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.toornament_result
+  module:
+    - user
+id: node.toornament_result.teaser
+targetEntityType: node
+bundle: toornament_result
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: d46e7822-f417-4599-8f74-4b7293815591
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.toornament_result
+id: node.toornament_result.promote
+field_name: promote
+entity_type: node
+bundle: toornament_result
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

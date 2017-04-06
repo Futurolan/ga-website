@@ -21,7 +21,7 @@ class FrontLiveController extends ControllerBase {
     $news = NewsUtils::getLastNews();
     $sponsors = SponsorUtils::getSponsors();
     $config = FrontUtils::getLiveConfiguration();
-    $lastMatch = ToornamentUtils::getLastMatch();
+    $results = ToornamentUtils::getResults();
 
 
     return array(
@@ -30,7 +30,7 @@ class FrontLiveController extends ControllerBase {
       '#streams' => $streams,
       '#sponsors' => $sponsors,
       '#news' => $news,
-      '#lastMatch' => $lastMatch
+      '#results' => $results
     );
 
   }

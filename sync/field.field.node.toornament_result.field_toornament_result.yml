@@ -1,0 +1,19 @@
+uuid: f5cda79c-d33c-410b-a756-9f3eea87ba22
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toornament_result
+    - node.type.toornament_result
+id: node.toornament_result.field_toornament_result
+field_name: field_toornament_result
+entity_type: node
+bundle: toornament_result
+label: Résultat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

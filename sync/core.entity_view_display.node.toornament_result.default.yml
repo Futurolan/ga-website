@@ -1,0 +1,57 @@
+uuid: 19feb7eb-173a-48c2-81e1-afadb5e80f79
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.toornament_result.field_toornament_participant
+    - field.field.node.toornament_result.field_toornament_participant2
+    - field.field.node.toornament_result.field_toornament_result
+    - field.field.node.toornament_result.field_toornament_result2
+    - field.field.node.toornament_result.field_toornament_tournament
+    - node.type.toornament_result
+  module:
+    - user
+id: node.toornament_result.default
+targetEntityType: node
+bundle: toornament_result
+mode: default
+content:
+  field_toornament_participant:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_toornament_participant2:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_toornament_result:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_toornament_result2:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_toornament_tournament:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden:
+  langcode: true
