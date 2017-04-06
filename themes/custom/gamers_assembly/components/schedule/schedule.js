@@ -4,7 +4,7 @@
 
     var uniqueRooms = _.unique(rooms, 'id');
     var groups = new vis.DataSet(uniqueRooms);
-
+    var idFilter=-1;
 
     //Filter function
     $('.filter').click(function () {
@@ -16,6 +16,22 @@
         $(this).addClass('active');
     });
 
+    $('.filterCat').click(function () {
+        if ($(this).hasClass('active')) {
+          $('.filterCat').removeClass('active');
+          $('.vis-item').removeClass('filtered');
+          $('.schedule-mobile .row').removeClass('filtered');
+          idFilter=-1;
+        } else { 
+          idFilter = $(this).attr('x-data');
+          $('.filterCat').removeClass('active');
+          $('.vis-item').removeClass('filtered');
+          $('.schedule-mobile .row').removeClass('filtered');
+          $('.vis-item:not(.cat'+idFilter+')').addClass('filtered');
+          $('.schedule-mobile .row:not(.cat'+idFilter+')').addClass('filtered');
+          $(this).addClass('active');
+        }
+    });
 
     var data = new vis.DataSet(activities);
     var options = {
@@ -29,6 +45,7 @@
         },
         locale: 'fr',
 	orientation: 'both',
+	margin: 4,
     };
 
     var timeline = new vis.Timeline(document.getElementById('timeline'), data, options);
@@ -38,6 +55,7 @@
         activities.forEach(function (activity) {
             if (activity.id === properties.items[0]) {
                 $('#activity-modal-label').text(activity.titleText);
+                $('#activity-modal-daterange').html(activity.start.getHours()+":"+activity.start.getMinutes()+"-"+activity.end);
                 $('#activity-modal-content').html(activity.description);
                 if (activity.url) {
                     $('#activity-modal-url').show();
@@ -51,6 +69,16 @@
 
             }
         })
+    });
+
+    timeline.on('rangechanged', function (properties) {
+        if (idFilter >= 0) {
+		$('.vis-item:not(.cat'+idFilter+')').addClass('filtered');
+                $('.schedule-mobile .row:not(.cat'+idFilter+')').addClass('filtered');
+	} else {
+                $('.vis-item').removeClass('filtered');
+                $('.schedule-mobile .row').removeClass('filtered');
+	}
     });
 
     $('.filter.active').click();

@@ -1,3 +1,11 @@
+ga_toornament:
+  path: '/toornament'
+  defaults:
+    _controller: '\Drupal\ga_toornament\Controller\ToornamentController::render'
+    _title: 'Toornament'
+  requirements:
+    _permission: 'access content'
+
 ga_toornament.settings:
   path: '/admin/ga/toornament/settings'
   defaults:

@@ -1,0 +1,30 @@
+<div class="toornament-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:'toornament'
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+<script>
+
+var timer, nbr;
+function reloadiframe() {
+    document.getElementById("iframe").src = nbr + ".html";
+    if (nbr > 5) {
+        clearInterval(timer);
+    }
+}
+function reload() {
+    nbr = 1;
+    timer = setInterval(reloadiframe, 2000);
+}
+
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+

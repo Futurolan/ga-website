@@ -7,11 +7,18 @@
     <div class="white-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 info">Ces horaires sont donnés à titre indicatif, ils peuvent évoluer en fonction de l'avancement des différents tournois</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
                     {% for key in activities|keys %}
                         <div class="filter cta btn-motion btn-1c{% if(loop.first) %} active{% endif %}" x-data="{{ key }}">{{ key|date("d/m/Y") }}</div>
                     {% endfor %}
                 </div>
+                <div class="col-md-6">
+                        <div class="filterCat cta btn-motion btn-1c" x-data="19">LoL</div>
+		</div>
             </div>
             <div class="row">
                 <div class="col-md-12">

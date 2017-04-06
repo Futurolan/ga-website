@@ -46,7 +46,7 @@
                     </div>
                     {% if(node.field_tournament_weezevent_id.value!=NULL) %}
                         <div class="tournament-subscribers">
-                            <div class="info-collapse">
+                            <div class="info-collapse" id="info-collapse">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <a role="button" data-toggle="collapse" href="#tournament-team-content"
@@ -191,6 +191,65 @@
                             </div>
                         </div>
                     </div>
+
+{% if user.hasPermission('create tournament content') %}
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="tournament-cta">
+                          <a id="copyButton" class="btn-motion">Export Participants</a>
+                        </div>
+                      </div>
+                    </div>
+
+{% endif %}
+<textarea style="position:absolute;top:-9999px" id="copyTarget">{% if(node.field_tournament_type.value =="Solo") %}
+{% for id, teams in subscribers %}
+{% for team, players in teams %}
+{% for player in players %}
+{{ player }}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% else %}
+{% for id, teams in subscribers %}
+{% for team, players in teams %}
+{{ team }}
+{% endfor %}
+{% endfor %}
+{% endif %}</textarea>
+
+<script>
+  function copyToClipboard(elem){
+    var origSelectionStart, origSelectionEnd;
+    target = elem;
+    origSelectionStart = elem.selectionStart;
+    origSelectionEnd = elem.selectionEnd;
+    var currentFocus = document.activeElement;
+    target.focus();
+    target.setSelectionRange(0, target.value.length);
+    var succeed;
+    try {
+          succeed = document.execCommand("copy");
+    } catch(e) {
+        succeed = false;
+    }
+    if (currentFocus && typeof currentFocus.focus === "function") {
+        currentFocus.focus();
+    }
+    elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+    return succeed;
+  }
+{% if user.hasPermission('create tournament content') %}
+  document.getElementById("copyButton").addEventListener("click", function() {
+    copyToClipboard(document.getElementById("copyTarget"));
+  });
+{% endif %}
+  document.getElementById("info-collapse").addEventListener("click", function(event) {
+    if(event.ctrlKey) {
+      copyToClipboard(document.getElementById("copyTarget"));
+    }
+  });
+</script>
                 </div>
             </div>
         </div>

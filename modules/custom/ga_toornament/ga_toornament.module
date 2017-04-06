@@ -1,0 +1,14 @@
+<?php
+
+function ga_toornament_theme($existing, $type, $theme, $path) {
+  return array(
+    'ga_toornament' => array(
+      'variables' => array(
+        'config' => NULL,
+        'toordata' => NULL,
+      ),
+      'template' => 'ga-toornament'
+    )
+  );
+}
+

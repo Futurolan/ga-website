@@ -7,12 +7,14 @@
             {
                 id:{{ activity.id }},
                 group: '{{ activity.field_room.entity.id() }}',
-                content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif %}><div class="content">{{ activity.getTitle()|escape('js') }}</div></div>',
+                content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif 
+%}><div class="content">{{ activity.getTitle()|escape('js') }}</div><div class="datetime">{{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }}-{{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", "Europe/Paris") }}</div></div>',
                 titleText: '{{ activity.getTitle()|escape('js') }}',
                 description: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',
                 start: new Date('{{ activity.field_date.getValue()[0]['value'] }}Z'),
-                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z'),
-                {% if(activity.field_lien.value) %}url: "{{ activity.field_lien.value|escape('js') }}"{% endif %}
+                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z')
+                {% if(activity.field_lien.value) %},url: "{{ activity.field_lien.value|escape('js') }}"{% endif %}
+		{% if(activity.field_game.entity) %},className: 'cat{{activity.field_game.entity.id()}}'{% endif %}
             },
             {% endfor %}
             {% endfor %}
@@ -45,7 +47,7 @@
         {% for key,activityDay in activities %}
             <h2>{{ key |date("d/m/Y") }}</h2>
             {% for activity in activityDay %}
-                <div class="row">
+                <div class="row{% if(activity.field_game.entity) %} cat{{activity.field_game.entity.id()}}{% endif %}">
                     <div class="col-xs-12">
                         <div class="schedule-mobile-activity"
                         {% if(activity.field_game.entity) %}
@@ -85,6 +87,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="activity-modal-label">Modal title</h4>
+                    <span id="activity-modal-daterange">Modal daterange</span>
                 </div>
                 <div class="modal-body">
                     <div id="activity-modal-content">
