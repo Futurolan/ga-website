@@ -12,3 +12,6 @@ function ga_toornament_theme($existing, $type, $theme, $path) {
   );
 }
 
+function ga_toornament_update_last_match_info_cron() {
+  \Drupal\ga_toornament\ToornamentUtils::updateMatch();
+}

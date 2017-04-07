@@ -1,21 +1,27 @@
 <div class="last-result">
     <div class="row">
         <div class="col-md-12">
-            {{ "Derniers résultats"|t }}
+            <h2>{{ "Derniers résultats"|t }}</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <table class="table">
+                {% for result in results %}
                 <tr>
-                    <td>LoL</td>
-                    <td>poule</td>
-                    <td>Millénium</td>
-                    <td>V - D</td>
-                    <td>aAa</td>
+                    <td>{{ result.created.value|date }}</td>
+                    <td>{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value}}</td>
+                    <td>{{ result.field_toornament_participant.value }}</td>
+                    <td>{{ result.field_toornament_result.value }}</td>
+                    <td>{{ result.field_toornament_result2.value }}</td>
+                    <td>{{ result.field_toornament_participant2.value }}</td>
                 </tr>
+                {% endfor %}
+                {% if(results|length ==0 ) %}
+                    Aucun résultat pour le moment
+                {% endif %}
             </table>
         </div>
     </div>
-    //TODO Implémenter Toornament
+
 </div>
