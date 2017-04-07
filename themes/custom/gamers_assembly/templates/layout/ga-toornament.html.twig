@@ -7,24 +7,37 @@
     <div class="white-area">
         <div class="container">
             <div class="row">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
-
 var timer, nbr;
+var id = "0";
+
 function reloadiframe() {
-    document.getElementById("iframe").src = nbr + ".html";
-    if (nbr > 5) {
-        clearInterval(timer);
+  document.getElementById("iframe_tv").src = "https://tv.toornament.com/"+id;
+//  document.getElementById("iframe_tv").src = "https://widget.toornament.com/tournaments/"+id+"/navigator?_locale=en_US&theme=discipline";
+
+  $.ajax({
+    url: "/toornament/nextid/"+id,
+    type: 'GET',
+    cache:false,
+    success: function (data) { // data is the html text returned
+      id = data;
     }
+  });
 }
-function reload() {
-    nbr = 1;
-    timer = setInterval(reloadiframe, 2000);
-}
-
-
+  timer = setInterval(reloadiframe, 10000);
 </script>
             </div>
         </div>
     </div>
 </div>
-
+<iframe id="iframe_tv" width="1920" height="1080" frameBorder="0" style="width:100%; height:100%; display: block;position:absolute;top:0px;left:0px;z-index:999;"></iframe>
+<script>
+reloadiframe();
+</script>
+<style>
+.js {
+background-color:black !important;
+overflow:hidden !important;
+}
+</style>

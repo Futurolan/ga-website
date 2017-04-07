@@ -6,6 +6,14 @@ ga_toornament:
   requirements:
     _permission: 'access content'
 
+ga_toornament.id:
+  path: '/toornament/nextid/{id}'
+  defaults:
+    _controller: '\Drupal\ga_toornament\Controller\ToornamentController::nextid'
+    _title: 'Toornament'
+  requirements:
+    _permission: 'access content'
+
 ga_toornament.settings:
   path: '/admin/ga/toornament/settings'
   defaults:

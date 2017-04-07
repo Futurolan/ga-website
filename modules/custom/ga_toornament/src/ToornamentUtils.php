@@ -6,6 +6,30 @@ use Drupal\node\Entity\Node;
 
 class ToornamentUtils {
 
+  public static function getNextId($id) {
+    $next=0;
+    $first_id=0;
+    $toornamentsNids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'tournament')
+//      ->condition('field_tournament_show_toornament',true)
+      ->sort('field_tournament_weight')
+      ->execute();
+    foreach ($toornamentsNids as $nid) {
+      $node = Node::load($nid);
+      if (!$first_id) {
+        $first_id=$node->get('field_tournament_toornament_id')->value;
+      }
+      if ($next) {
+        return ($node->get('field_tournament_toornament_id')->value);
+      }
+      if ($node->get('field_tournament_toornament_id')->value == $id) {
+        $next = 1;
+      }
+    }
+    return $first_id;
+  }
+
   public static function getLastMatch() {
     $config = \Drupal::config('ga_toornament.settings');
 
