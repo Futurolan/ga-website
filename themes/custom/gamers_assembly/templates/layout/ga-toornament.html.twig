@@ -11,11 +11,28 @@
 <script>
 var timer, nbr;
 var id = "0";
+var active = "#iframe_tv2";
+var inactive = "#iframe_tv1";
 
-function reloadiframe() {
-  document.getElementById("iframe_tv").src = "https://tv.toornament.com/"+id;
-//  document.getElementById("iframe_tv").src = "https://widget.toornament.com/tournaments/"+id+"/navigator?_locale=en_US&theme=discipline";
+function switchiframe() {
+  $(inactive).css({left:1920+"px"});
+  $(inactive).attr('src',"https://tv.toornament.com/"+id);
+}
 
+function preloadiframe() {
+  if (active == "#iframe_tv1") {
+    inactive = "#iframe_tv1";
+    active = "#iframe_tv2";
+  } else {
+    inactive = "#iframe_tv2";
+    active = "#iframe_tv1";
+  }
+  $(inactive).css({zIndex:888});
+  $(active).css({zIndex:999});
+  
+  $(active).css({left:0+"px"});
+  setTimeout(switchiframe,2000);
+  console.log(active + ".." + id);
   $.ajax({
     url: "/toornament/nextid/"+id,
     type: 'GET',
@@ -25,15 +42,19 @@ function reloadiframe() {
     }
   });
 }
-  timer = setInterval(reloadiframe, 10000);
+
 </script>
             </div>
         </div>
     </div>
 </div>
-<iframe id="iframe_tv" width="1920" height="1080" frameBorder="0" style="width:100%; height:100%; display: block;position:absolute;top:0px;left:0px;z-index:999;"></iframe>
+<iframe id="iframe_tv1" width="1920" height="1080" frameBorder="0" scrolling="no" style="position:absolute;top:0px;left:0px;z-index:999;overflow:hidden;background-color:black;transition: left 1s 
+ease-in-out;-webkit-transition: left 1s ease-in-out;"></iframe>
+<iframe id="iframe_tv2" width="1920" height="1080" frameBorder="0" scrolling="no" style="position:absolute;top:0px;left:0px;z-index:888;overflow:hidden;transition: left 1s 
+ease-in-out;-webkit-transition: left 1s ease-in-out;"></iframe>
 <script>
-reloadiframe();
+preloadiframe();
+timer = setInterval(preloadiframe, 15000);
 </script>
 <style>
 .js {

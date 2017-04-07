@@ -12,6 +12,7 @@ class ToornamentUtils {
     $toornamentsNids = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'tournament')
+      ->exists('field_tournament_toornament_id')
 //      ->condition('field_tournament_show_toornament',true)
       ->sort('field_tournament_weight')
       ->execute();
