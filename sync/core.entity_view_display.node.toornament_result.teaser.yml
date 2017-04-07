@@ -15,4 +15,9 @@ content:
   links:
     weight: 100
 hidden:
+  field_toornament_participant: true
+  field_toornament_participant2: true
+  field_toornament_result: true
+  field_toornament_result2: true
+  field_toornament_tournament: true
   langcode: true
