@@ -38,7 +38,7 @@ class ToornamentUtils {
       ->condition('status', 1)
       ->condition('type', 'toornament_result')
       ->range(0, 5)
-      ->sort('created')
+      ->sort('created','DESC')
       ->execute();
 
     foreach ($resultIds as $resultId){

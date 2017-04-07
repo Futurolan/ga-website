@@ -1,3 +1,4 @@
+uuid: 801d5971-1d8f-424a-b79f-507157f9f394
 langcode: fr
 status: true
 dependencies:
@@ -5,6 +6,7 @@ dependencies:
     - ga_toornament
 title: 'Update toornament info'
 id: ga_toornament_update_last_match_info_job
+weight: 0
 module: ga_toornament
 callback: ga_toornament_update_last_match_info_cron
 scheduler:
@@ -16,14 +18,14 @@ launcher:
   id: serial
   configuration:
     timeouts:
-      lock_timeout: '3600'
-      max_execution_time: '3600'
+      lock_timeout: 3600
+      max_execution_time: 3600
     launcher:
-      max_threads: '1'
+      max_threads: 1
       poorman_keepalive: 0
 logger:
   id: database
   configuration:
     method: '3'
-    expire: '1209600'
-    retain: '1000'
+    expire: 1209600
+    retain: 1000
