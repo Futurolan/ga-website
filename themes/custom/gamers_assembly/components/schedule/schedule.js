@@ -55,7 +55,7 @@
         activities.forEach(function (activity) {
             if (activity.id === properties.items[0]) {
                 $('#activity-modal-label').text(activity.titleText);
-                $('#activity-modal-daterange').html(activity.start.getHours()+":"+activity.start.getMinutes()+"-"+activity.end);
+                $('#activity-modal-daterange').html(activity.daterange);
                 $('#activity-modal-content').html(activity.description);
                 if (activity.url) {
                     $('#activity-modal-url').show();

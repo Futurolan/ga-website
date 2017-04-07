@@ -12,7 +12,9 @@
                 titleText: '{{ activity.getTitle()|escape('js') }}',
                 description: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',
                 start: new Date('{{ activity.field_date.getValue()[0]['value'] }}Z'),
-                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z')
+                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z'),
+                daterange: '{{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }} - {{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", 
+"Europe/Paris") }}'
                 {% if(activity.field_lien.value) %},url: "{{ activity.field_lien.value|escape('js') }}"{% endif %}
 		{% if(activity.field_game.entity) %},className: 'cat{{activity.field_game.entity.id()}}'{% endif %}
             },
