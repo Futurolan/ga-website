@@ -49,4 +49,20 @@ class ScheduleUtils {
     return $activities;
 
   }
+
+  public static function getGames(){
+
+    $games = [];
+   
+    $gameTerms = \Drupal::service('entity_type.manager')->getStorage("taxonomy_term")->loadTree('game', $parent = 0, $max_depth = NULL, $load_entities = FALSE);
+    foreach ($gameTerms as $game) {
+      $g = [];
+      $g['name'] = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($game->tid)->get('field_game_short_name')->getValue()[0]['value'];
+      $g['tid'] = $game->tid;
+      $games[$game->weight] = $g;
+    }
+    ksort($games);
+    return array_slice($games,0,8);
+
+  }
 }

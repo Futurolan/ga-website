@@ -16,9 +16,11 @@
                         <div class="filter cta btn-motion btn-1c{% if(loop.first) %} active{% endif %}" x-data="{{ key }}">{{ key|date("d/m/Y") }}</div>
                     {% endfor %}
                 </div>
-                <div class="col-md-6">
-                        <div class="filterCat cta btn-motion btn-1c" x-data="19">LoL</div>
-		</div>
+                <div class="col-md-6 text-right">
+                    {% for game in games %}
+                         <div class="filterCat cta btn-motion btn-1c" x-data="{{game.tid}}">{{ game.name }}</div>
+                    {% endfor %}
+ 		</div>
             </div>
             <div class="row">
                 <div class="col-md-12">
