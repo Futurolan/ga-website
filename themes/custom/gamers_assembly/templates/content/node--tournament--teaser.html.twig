@@ -23,8 +23,13 @@
     {% else %}
         {% set free_slot_class="low" %}
     {% endif %}
+    {% if (free_slot==0 ) %}
+      <div class="tournament-status text-center">Tournoi complet</div>
+    {% else %}
     <div class="tournament-status">{{ "Remaining slots:"|t }} <span
                 class="{{ free_slot_class }}">{{ free_slot }}</span> / {{ node.field_tournament_size.value }}</div>
+    {% endif %}
+ 
     <div class="tournament-bar">
         <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
     </div>
@@ -37,6 +42,7 @@
             </div>
         </div>
         <div class="col-md-5 col-xs-6 text-right">
+        {% if (free_slot) %}
             {% if(node.field_tournament_weezevent_id.value!=NULL) %}
                 <div class="tournament-more">
                     <a href="{{ path('ga_ticket') }}">
@@ -44,6 +50,7 @@
                     </a>
                 </div>
             {% endif %}
+        {% endif %}
         </div>
     </div>
 </div>
