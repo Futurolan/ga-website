@@ -20,7 +20,7 @@
     $(".stream-video-list .stream-video-list-item").click(function () {
         var key = $(this).attr("x-key");
         $(".stream-video iframe").attr('src', "https://player.twitch.tv/?channel=" + key);
-        $(".stream-chat iframe").html(' <iframe src="https://www.twitch.tv/'+key+'/chat?darkpopout" height="378" width="100%" frameborder="0" scrolling="no"></iframe>');
+        $(".stream-chat iframe").attr('src', "https://www.twitch.tv/"+key+"/chat?darkpopout");
         $(".stream-video-list-item").removeClass('active');
         $("#stream-video-list-item-" + key).addClass('active');
     });
