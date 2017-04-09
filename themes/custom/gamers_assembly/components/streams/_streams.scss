@@ -42,7 +42,9 @@
 
     }
     .stream-video-list {
-      height: 362px;
+      height: 380px;
+      overflow: scroll;
+      overflow-x: hidden;
 
       .stream-video-list-item {
         cursor: pointer;
@@ -79,6 +81,34 @@
         }
 
       }
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .stream {
+    .stream-chat-video-list {
+      .stream-tabs {
+        .col-md-6 {
+          &:first-child {
+            padding-right: 15px;
+            border-right: 0px solid $black;
+          }
+          &:last-child {
+            padding-left: 15px;
+          }
+        }
+      }
+
+      .stream-video-list {
+        height: auto;
+        overflow-y: auto;
+      }
+
+      .stream-viewer {
+        display: none;
+      }
+
     }
   }
 }

@@ -34,7 +34,7 @@
                                         <div class="col-md-8">
                                             <div class="stream-video-list-name">{{ stream.name }}</div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 stream-viewer">
                                             <span class="stream-eye"></span>
                                             <div class="stream-video-list-count"></div>
                                         </div>
@@ -43,14 +43,18 @@
                             {% endfor %}</div>
                     </div>
                 </div>
-                <div class="col-md-12 stream-chat">
-                    <iframe
-                            src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout"
-                            height="371"
-                            width="100%"
-                            frameborder="0"
-                            scrolling="no">
-                    </iframe>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="stream-chat">
+                            <iframe
+                                    src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout"
+                                    height="378"
+                                    width="100%"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
