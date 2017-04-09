@@ -9,7 +9,7 @@
             <table class="table">
                 {% for activity in activities %}
                 <tr>
-                    <td>{{ activity.field_date.value|date('d/m/Y H:i', "Europe/Paris") }}</td>
+                    <td>{{ activity.field_date.value|date('H:i', "Europe/Paris") }}</td>
                     <td>{{ activity.getTitle() }}</td>
                     <td>{{ activity.field_room.entity.getName() }}</td>
                 </tr>

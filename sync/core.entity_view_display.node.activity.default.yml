@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.activity.field_date
     - field.field.node.activity.field_description
+    - field.field.node.activity.field_display_front_page
     - field.field.node.activity.field_game
     - field.field.node.activity.field_lien
     - field.field.node.activity.field_room
@@ -33,6 +34,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+  field_display_front_page:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_game:
     weight: 103
     label: above

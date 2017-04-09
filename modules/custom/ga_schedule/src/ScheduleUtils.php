@@ -83,6 +83,7 @@ class ScheduleUtils {
       ->condition('langcode', $langcode)
       ->range(0, 5)
       ->condition('field_date', date('c'), '>')
+      ->condition('field_display_front_page','0','=')
       ->sort('field_date', 'ASC')
       ->execute();
 
