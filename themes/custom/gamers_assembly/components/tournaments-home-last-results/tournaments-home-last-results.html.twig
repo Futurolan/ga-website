@@ -9,7 +9,7 @@
             <table class="table">
                 {% for result in results %}
                     <tr>
-                        <td>{{ result.created.value|date('d/m/Y H:i') }}</td>
+                        <td>{{ result.created.value|date('d/m/Y H:i', "Europe/Paris") }}</td>
                         <td>{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</td>
                         <td>{{ result.field_toornament_participant.value }}</td>
                         <td>{{ result.field_toornament_result.value }}</td>
