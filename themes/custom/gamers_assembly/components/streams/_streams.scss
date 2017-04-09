@@ -8,6 +8,10 @@
     padding: 0;
     border: 1px solid $white;
 
+    .stream-video-more {
+      display: none;
+    }
+
     .stream-tabs {
       .col-md-6 {
         cursor: pointer;
@@ -103,7 +107,7 @@
       }
 
       .stream-video-list {
-        /*height: auto;*/
+        height: 200px;
         overflow-y: hidden;
       }
 
@@ -111,6 +115,7 @@
       }
 
       .stream-video-more {
+        display: block;
         padding: 5px;
         background-color: $white;
         text-align: center;
