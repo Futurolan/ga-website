@@ -8,6 +8,10 @@
     padding: 0;
     border: 1px solid $white;
 
+    .stream-video-more {
+      display: none;
+    }
+
     .stream-tabs {
       .col-md-6 {
         cursor: pointer;
@@ -88,25 +92,53 @@
 @media (max-width: 991px){
   .stream {
     .stream-chat-video-list {
+      border-bottom: 0px;
+
       .stream-tabs {
         .col-md-6 {
           &:first-child {
-            padding-right: 15px;
-            border-right: 0px solid $black;
+            /*padding-right: 15px;
+            border-right: 0px solid $black;*/
           }
           &:last-child {
-            padding-left: 15px;
+            /*padding-left: 15px;*/
           }
         }
       }
 
       .stream-video-list {
-        height: auto;
-        overflow-y: auto;
+        height: 200px;
+        overflow-y: hidden;
       }
 
       .stream-viewer {
-        display: none;
+      }
+
+      .stream-video-more {
+        display: block;
+        padding: 5px;
+        background-color: $white;
+        text-align: center;
+        font-weight: bold;
+        color: $black;
+        font-size: 16px;
+        height: 32px;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &.active {
+          .fa-arrow-down {
+            display: none;
+          }
+
+          .fa-arrow-up {
+            display: block;
+          }
+        }
+
+        .fa-arrow-up {
+          display: none;
+        }
       }
 
     }

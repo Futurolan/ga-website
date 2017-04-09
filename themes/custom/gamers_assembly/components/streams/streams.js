@@ -26,16 +26,26 @@
     });
 
     $(".stream-tab-video-list").click(function () {
-        $(".stream-video-list").show();
+        $(".stream-video-list, .stream-video-more").show();
         $(".stream-chat").hide();
         $(".stream-tab-video-list").addClass("active");
         $(".stream-tab-chat").removeClass("active");
     });
     $(".stream-tab-chat").click(function () {
-        $(".stream-video-list").hide();
+        $(".stream-video-list, .stream-video-more").hide();
         $(".stream-chat").show();
         $(".stream-tab-video-list").removeClass("active");
         $(".stream-tab-chat").addClass("active");
+    });
+
+    $('.stream-video-more').click(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.stream-video-list').height('200px');
+        } else {
+            $(this).addClass('active');
+            $('.stream-video-list').height('auto');
+        }
     });
 
 })(jQuery);
