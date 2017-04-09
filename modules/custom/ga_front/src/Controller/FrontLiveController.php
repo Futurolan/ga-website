@@ -10,6 +10,7 @@ namespace Drupal\ga_front\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\ga_front\FrontUtils;
 use Drupal\ga_news\NewsUtils;
+use Drupal\ga_schedule\ScheduleUtils;
 use Drupal\ga_sponsor\SponsorUtils;
 use Drupal\ga_stream\StreamUtils;
 use Drupal\ga_toornament\ToornamentUtils;
@@ -21,6 +22,7 @@ class FrontLiveController extends ControllerBase {
     $news = NewsUtils::getLastNews();
     $sponsors = SponsorUtils::getSponsors();
     $config = FrontUtils::getLiveConfiguration();
+    $activities = ScheduleUtils::getNextActivities();
     $results = ToornamentUtils::getResults();
 
 
@@ -30,7 +32,9 @@ class FrontLiveController extends ControllerBase {
       '#streams' => $streams,
       '#sponsors' => $sponsors,
       '#news' => $news,
-      '#results' => $results
+      '#activities' => $activities,
+      '#results' => $results,
+      '#cache' => array('max-age' => 60),
     );
 
   }
