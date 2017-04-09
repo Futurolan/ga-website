@@ -38,4 +38,14 @@
         $(".stream-tab-chat").addClass("active");
     });
 
+    $('.stream-video-more').click(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.stream-video-list').height('380px');
+        } else {
+            $(this).addClass('active');
+            $('.stream-video-list').height('auto');
+        }
+    });
+
 })(jQuery);

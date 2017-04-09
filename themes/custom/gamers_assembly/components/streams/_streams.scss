@@ -88,25 +88,52 @@
 @media (max-width: 991px){
   .stream {
     .stream-chat-video-list {
+      border-bottom: 0px;
+
       .stream-tabs {
         .col-md-6 {
           &:first-child {
-            padding-right: 15px;
-            border-right: 0px solid $black;
+            /*padding-right: 15px;
+            border-right: 0px solid $black;*/
           }
           &:last-child {
-            padding-left: 15px;
+            /*padding-left: 15px;*/
           }
         }
       }
 
       .stream-video-list {
-        height: auto;
-        overflow-y: auto;
+        /*height: auto;*/
+        overflow-y: hidden;
       }
 
       .stream-viewer {
-        display: none;
+      }
+
+      .stream-video-more {
+        padding: 5px;
+        background-color: $white;
+        text-align: center;
+        font-weight: bold;
+        color: $black;
+        font-size: 16px;
+        height: 32px;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &.active {
+          .fa-arrow-down {
+            display: none;
+          }
+
+          .fa-arrow-up {
+            display: block;
+          }
+        }
+
+        .fa-arrow-up {
+          display: none;
+        }
       }
 
     }
