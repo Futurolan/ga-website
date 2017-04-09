@@ -9,12 +9,12 @@
             <table class="table">
                 {% for result in results %}
                     <tr>
-                        <td>{{ result.created.value|date('H:i', "Europe/Paris") }}</td>
-                        <td>{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</td>
-                        <td>{{ result.field_toornament_participant.value }}</td>
-                        <td>{{ result.field_toornament_result.value }}</td>
-                        <td>{{ result.field_toornament_result2.value }}</td>
-                        <td>{{ result.field_toornament_participant2.value }}</td>
+                        <td class="date">{{ result.created.value|date('H:i', "Europe/Paris") }}</td>
+                        <td class="game">{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</td>
+                        <td class="participant participant-1">{{ result.field_toornament_participant.value }}</td>
+                        <td{% if(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result.value }}</td>
+                        <td{% if(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result2.value }}</td>
+                        <td class="participant participant-2">{{ result.field_toornament_participant2.value }}</td>
                     </tr>
                 {% endfor %}
                 {% if(results|length ==0 ) %}

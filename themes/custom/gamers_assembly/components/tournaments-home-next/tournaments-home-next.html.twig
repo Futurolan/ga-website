@@ -9,9 +9,9 @@
             <table class="table">
                 {% for activity in activities %}
                 <tr>
-                    <td>{{ (activity.field_date.getValue()[0]['value']~'Z')|date('H:i',"Europe/Paris") }}</td>
-                    <td>{{ activity.getTitle() }}</td>
-                    <td>{{ activity.field_room.entity.getName() }}</td>
+                    <td class="date">{{ (activity.field_date.getValue()[0]['value']~'Z')|date('H:i',"Europe/Paris") }}</td>
+                    <td class="title">{{ activity.getTitle() }}</td>
+                    <td class="room">{{ activity.field_room.entity.getName() }}</td>
                 </tr>
                 {% endfor %}
             </table>
