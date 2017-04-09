@@ -9,7 +9,7 @@
     border: 1px solid $white;
 
     .stream-video-more {
-      display: none;
+      display: none !important;
     }
 
     .stream-tabs {
