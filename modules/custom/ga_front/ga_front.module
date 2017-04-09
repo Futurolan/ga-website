@@ -8,6 +8,7 @@ function ga_front_theme($existing, $type, $theme, $path) {
         'streams' => NULL,
         'news' => NULL,
         'sponsors' => NULL,
+        'activities' => NULL,
         'results' => NULL
       ),
       'template' => 'ga-front-live'

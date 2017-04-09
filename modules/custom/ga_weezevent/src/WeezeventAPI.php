@@ -2,6 +2,8 @@
 
 namespace Drupal\ga_weezevent;
 
+use GuzzleHttp\Exception\RequestException;
+
 class WeezeventAPI {
   private $base_uri = "https://api.weezevent.com";
   private $api_key = NULL;
@@ -33,9 +35,9 @@ class WeezeventAPI {
       return \GuzzleHttp\json_decode($data);
 
     } catch (RequestException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
-    } catch (InvalidArgumentException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
+      watchdog_exception('ga_weezevent', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 
@@ -67,9 +69,9 @@ class WeezeventAPI {
       watchdog_exception('ga_weezevent', "unknown id_ticket");
 
     } catch (RequestException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
-    } catch (InvalidArgumentException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
+      watchdog_exception('ga_weezevent', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 
@@ -94,9 +96,9 @@ class WeezeventAPI {
       }
 
     } catch (RequestException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
-    } catch (InvalidArgumentException $e) {
-      watchdog_exception('ga_weezevent', $e->getMessage());
+      watchdog_exception('ga_weezevent', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 

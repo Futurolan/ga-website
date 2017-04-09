@@ -1,21 +1,20 @@
 <div class="tournaments-home-next">
     <div class="row">
         <div class="col-md-12">
-            {{ "A suivre"|t }}
+            <h2>{{ "A suivre"|t }}</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <table class="table">
+                {% for activity in activities %}
                 <tr>
-                    <td>LoL</td>
-                    <td>poule</td>
-                    <td>Millénium</td>
-                    <td>V - D</td>
-                    <td>aAa</td>
+                    <td>{{ activity.field_date.value|date('d/m/Y H:i') }}</td>
+                    <td>{{ activity.getTitle() }}</td>
+                    <td>{{ activity.field_room.entity.getName() }}</td>
                 </tr>
+                {% endfor %}
             </table>
         </div>
     </div>
-    //TODO Implémenter Toornament
 </div>
