@@ -10,7 +10,7 @@
                 {% for result in results %}
                     <tr>
                         <td class="date">{{ result.created.value|date('H:i', "Europe/Paris") }}</td>
-                        <td class="game">{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</td>
+                        <td class="game"><a href="{{ path('entity.node.canonical', {'node': result.field_toornament_tournament.entity.id()}) }}">{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</a></td>
                         <td class="participant participant-1">{{ result.field_toornament_participant.value }}</td>
                         <td{% if(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result.value }}</td>
                         <td{% if(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result2.value }}</td>
