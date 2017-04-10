@@ -49,5 +49,8 @@
             $('.stream-video-list').height('auto');
         }
     });
+    $(".stream-chat").show();
+    $(".stream-chat").hide();
+
 
 })(jQuery);
