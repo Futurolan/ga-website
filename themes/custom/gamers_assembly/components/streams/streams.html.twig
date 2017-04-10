@@ -9,6 +9,7 @@
                         src="https://player.twitch.tv/?channel={{ streams[0].key }}"
                         height="422"
                         width="100%"
+                        name="video_{{ streams[0].key }}"
                         frameborder="0"
                         scrolling="no"
                         allowfullscreen="true">
@@ -52,11 +53,12 @@
                     <div class="col-md-12">
                         <div class="stream-chat">
                             <iframe
-                                    src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout"
+                                    src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout=1" name="chat_{{ streams[0].key }}"
                                     height="378"
                                     width="100%"
                                     frameborder="0"
-                                    scrolling="no">
+                                    scrolling="no"
+                                    allowfullscreen="true">
                             </iframe>
                         </div>
                     </div>
