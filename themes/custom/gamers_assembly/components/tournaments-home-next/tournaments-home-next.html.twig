@@ -10,7 +10,13 @@
                 {% for activity in activities %}
                 <tr>
                     <td class="date">{{ (activity.field_date.getValue()[0]['value']~'Z')|date('H:i',"Europe/Paris") }}</td>
-                    <td class="title">{{ activity.getTitle() }}</td>
+                    <td class="title">
+                      {% if (activity.field_lien.getValue()) %}
+                        <a href="{{ activity.field_lien.getValue()[0]['value'] }}">{{ activity.getTitle() }}</a>
+                      {% else %}
+                        {{ activity.getTitle() }}
+                      {% endif %}
+                    </td>
                     <td class="room">{{ activity.field_room.entity.getName() }}</td>
                 </tr>
                 {% endfor %}
