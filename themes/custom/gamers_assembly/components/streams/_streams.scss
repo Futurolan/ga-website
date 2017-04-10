@@ -39,7 +39,8 @@
       }
     }
     .stream-chat {
-      display: none;
+      position: absolute;
+      top: -5000px;
       border: 1px solid $white;
       padding:0px;
       line-height: 0;
@@ -107,8 +108,12 @@
       }
 
       .stream-video-list {
+        height: auto;
+      }
+
+      .stream-video-list-content {
         height: 200px;
-        overflow-y: hidden;
+        overflow: hidden;
       }
 
       .stream-viewer {

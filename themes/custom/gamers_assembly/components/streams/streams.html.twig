@@ -27,6 +27,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="stream-video-list">
+                        <div class="stream-video-list-content">
                             {% for stream in streams %}
                                 <div id="stream-video-list-item-{{ stream.key }}"
                                      x-key="{{ stream.key }}"
@@ -46,6 +47,7 @@
                         <div class="stream-video-more">
                             <i class="fa fa-arrow-down" aria-hidden="true"></i>
                             <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        </div>
                         </div>
                     </div>
                 </div>
