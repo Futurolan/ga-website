@@ -1,3 +1,4 @@
+{{ attach_library('gamers_assembly/gamers_assembly.tournaments-home-last-results') }}
 <div class="last-result">
     <div class="row">
         <div class="col-md-12">
@@ -7,19 +8,9 @@
     <div class="row">
         <div class="col-md-12">
             <table class="table">
-                {% for result in results %}
                     <tr>
-                        <td class="date">{{ result.created.value|date('H:i', "Europe/Paris") }}</td>
-                        <td class="game"><a href="{{ path('entity.node.canonical', {'node': result.field_toornament_tournament.entity.id()}) }}">{{ result.field_toornament_tournament.entity.field_tournament_game.entity.field_game_short_name.value }}</a></td>
-                        <td class="participant participant-1">{{ result.field_toornament_participant.value }}</td>
-                        <td{% if(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result.value }}</td>
-                        <td{% if(result.field_toornament_result.value<result.field_toornament_result2.value) %} class="win" {% elseif(result.field_toornament_result.value>result.field_toornament_result2.value) %} class="loose" {% else %} class="draw" {% endif %}>{{ result.field_toornament_result2.value }}</td>
-                        <td class="participant participant-2">{{ result.field_toornament_participant2.value }}</td>
+                        <td>Chargement des résultats</td>
                     </tr>
-                {% endfor %}
-                {% if(results|length ==0 ) %}
-                    {{ 'Aucun résultat pour le moment'|t }}
-                {% endif %}
             </table>
         </div>
     </div>

@@ -22,8 +22,6 @@ class FrontLiveController extends ControllerBase {
     $news = NewsUtils::getLastNews();
     $sponsors = SponsorUtils::getSponsors();
     $config = FrontUtils::getLiveConfiguration();
-    $activities = ScheduleUtils::getNextActivities();
-    $results = ToornamentUtils::getResults();
 
 
     return array(
@@ -32,8 +30,6 @@ class FrontLiveController extends ControllerBase {
       '#streams' => $streams,
       '#sponsors' => $sponsors,
       '#news' => $news,
-      '#activities' => $activities,
-      '#results' => $results,
       '#cache' => array('max-age' => 60),
     );
 

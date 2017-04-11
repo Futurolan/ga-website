@@ -14,6 +14,20 @@ gamers_assembly.streams:
   dependencies:
     - core/jquery
 
+gamers_assembly.tournaments-home-next:
+  version: 1.x
+  js:
+    components/tournaments-home-next/tournaments-home-next.js: {}
+  dependencies:
+    - core/jquery
+
+gamers_assembly.tournaments-home-last-results:
+  version: 1.x
+  js:
+    components/tournaments-home-last-results/tournaments-home-last-results.js: {}
+  dependencies:
+    - core/jquery
+
 gamers_assembly.slideshow:
   version: 1.X
   js:
