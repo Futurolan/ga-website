@@ -12,4 +12,8 @@
     $(window).resize(function () {
         stickyFooter();
     });
+
+    $( "a[href='/ticket']" ).addClass("ticketing");
+    $( "a[href='/pages/passbar']" ).addClass("ticketing");
+
 })(jQuery);

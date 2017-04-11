@@ -12,6 +12,11 @@ dependencies:
     - field.storage.node.field_room
     - field.storage.node.field_sponsor_image
     - field.storage.node.field_sponsor_level
+    - field.storage.node.field_tournament_show_toornament
+    - field.storage.node.field_tournament_size
+    - field.storage.node.field_tournament_sub_count
+    - field.storage.node.field_tournament_toornament_id
+    - field.storage.node.field_tournament_weezevent_id
     - image.style.crop_influenceur_petit
     - image.style.vignette_50x50
     - node.type.activity
@@ -87,16 +92,19 @@ display:
           summary: ''
           description: ''
           columns:
-            status_1: status_1
+            status: status
             publishcontent: publishcontent
-            field_animation_image: field_animation_image
             title: title
-            field_animation_localisation: field_animation_localisation
+            field_tournament_sub_count: field_tournament_sub_count
+            field_tournament_size: field_tournament_sub_count
+            field_tournament_weezevent_id: field_tournament_weezevent_id
+            field_tournament_show_toornament: field_tournament_show_toornament
+            field_tournament_toornament_id: field_tournament_show_toornament
             changed: changed
             operations: operations
-            field_animation_weight: field_animation_weight
+            field_tournament_weight: field_tournament_weight
           info:
-            status_1:
+            status:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -110,13 +118,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_animation_image:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             title:
               sortable: false
               default_sort_order: asc
@@ -124,11 +125,39 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_animation_localisation:
+            field_tournament_sub_count:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: /
+              empty_column: false
+              responsive: ''
+            field_tournament_size:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
+              empty_column: false
+              responsive: ''
+            field_tournament_weezevent_id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_tournament_show_toornament:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ' - '
+              empty_column: false
+              responsive: ''
+            field_tournament_toornament_id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ' / '
               empty_column: false
               responsive: ''
             changed:
@@ -143,7 +172,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_animation_weight:
+            field_tournament_weight:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -1621,6 +1650,123 @@ display:
         groups:
           1: AND
       fields:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: status
+          plugin_id: field
+        publishcontent:
+          id: publishcontent
+          table: node
+          field: publishcontent
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Publish/Unpublish
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: node
+          plugin_id: publishcontent_node
         title:
           id: title
           table: node_field_data
@@ -1668,6 +1814,325 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_tournament_sub_count:
+          id: field_tournament_sub_count
+          table: node__field_tournament_sub_count
+          field: field_tournament_sub_count
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Inscrits
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tournament_size:
+          id: field_tournament_size
+          table: node__field_tournament_size
+          field: field_tournament_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Taille
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tournament_weezevent_id:
+          id: field_tournament_weezevent_id
+          table: node__field_tournament_weezevent_id
+          field: field_tournament_weezevent_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: WeezID
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tournament_show_toornament:
+          id: field_tournament_show_toornament
+          table: node__field_tournament_show_toornament
+          field: field_tournament_show_toornament
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Toornament
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_true: 'On'
+            format_custom_false: 'Off'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tournament_toornament_id:
+          id: field_tournament_toornament_id
+          table: node__field_tournament_toornament_id
+          field: field_tournament_toornament_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         changed:
           id: changed
           table: node_field_data
@@ -1857,7 +2322,12 @@ display:
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_tournament_show_toornament'
+        - 'config:field.storage.node.field_tournament_size'
+        - 'config:field.storage.node.field_tournament_sub_count'
+        - 'config:field.storage.node.field_tournament_toornament_id'
+        - 'config:field.storage.node.field_tournament_weezevent_id'
   page_4:
     display_plugin: page
     id: page_4
