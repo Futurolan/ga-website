@@ -11,7 +11,7 @@
             var str = '';
             $.each(data, function (index, activity) {
 
-                if(new Date(activity.field_date_1)>new Date() && count <=10) {
+                if(new Date(activity.field_date_1)>new Date() && count <10) {
                     str += '<tr>';
                     str += '<td class="date">' + activity.field_date + '</td>';
                     if (activity.field_lien && activity.field_lien != '') {
