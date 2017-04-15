@@ -7,10 +7,11 @@
         $.ajax({
             url: "/next_activities"
         }).done(function (data) {
+            var count = 0;
             var str = '';
             $.each(data, function (index, activity) {
 
-                if(new Date(activity.field_date_1)>new Date()) {
+                if(new Date(activity.field_date_1)>new Date() && count <=10) {
                     str += '<tr>';
                     str += '<td class="date">' + activity.field_date + '</td>';
                     if (activity.field_lien && activity.field_lien != '') {
@@ -20,6 +21,7 @@
                     }
                     str += '<td class="room">' + activity.field_room + '</td>';
                     str += '</tr>';
+                    count ++;
                 }
             });
             $('.tournaments-home-next table').html(str);
