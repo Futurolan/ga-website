@@ -348,7 +348,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{field_date_1__end_value}}'
+            text: '{{field_date_1__value}}'
             make_link: false
             path: ''
             absolute: false

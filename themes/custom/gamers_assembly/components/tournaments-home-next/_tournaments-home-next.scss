@@ -4,8 +4,16 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 240px;
       display: block;
+      width:240px;
+    }
+  }
+}
+
+@media(max-width:767px){
+  .title {
+    a {
+      width:auto!important;
     }
   }
 }
