@@ -28,12 +28,12 @@ class WeezeventUtils {
         if (!isset($ticket->group_size)) {
           $ticket->group_size = 1;
         }
-        $sum_quotas[$cat->name] += $ticket->quotas * $ticket->group_size;
+        $sum_quotas[$cat->name] += $ticket->quotas;
         if ($ticket->quotas) {
-          $ticket->remplissage = round(100 * ($ticket->participants / $ticket->group_size) / $ticket->quotas,2);
+          $ticket->remplissage = round(100 * $ticket->participants / $ticket->quotas,2);
           $sum_participants[$cat->name] += (int) $ticket->participants;
           $sum_revenu[$cat->name] += ($ticket->price / $ticket->group_size) * $ticket->participants;
-          $sum_revenu_quotas[$cat->name] += $ticket->price * $ticket->quotas;
+          $sum_revenu_quotas[$cat->name] += ($ticket->price / $ticket->group_size) * $ticket->quotas;
         } else {
           $sum_participants2[$cat->name] += (int) $ticket->participants;
           $sum_revenu2[$cat->name] += (int) ($ticket->price / $ticket->group_size) * $ticket->participants;

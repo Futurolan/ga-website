@@ -19,55 +19,54 @@ function ga_weezevent_update_tournament_info_cron() {
   $tournamentNids = \Drupal::entityQuery('node')
     ->condition('status', 1)
     ->condition('type', 'tournament')
+    ->exists('field_tournament_weezevent_id')
     ->execute();
 
   foreach ($tournamentNids as $nid) {
     $node = \Drupal\node\Entity\Node::load($nid);
-    if($node->field_tournament_weezevent_id->value!=NULL){
-      try {
-        \Drupal::logger('ga_weezevent')->info("Update weezevent tournament ".$node->getTitle()." with id ".$node->field_tournament_weezevent_id->value);
+    try {
+      \Drupal::logger('ga_weezevent')->info("Update tournament ".$node->getTitle()." with id ".$node->field_tournament_weezevent_id->value."\n");
 
-        $result = $weezevent->participants($node->field_tournament_weezevent_id->value);
-        $ticket_info = $weezevent->ticket_info($node->field_tournament_weezevent_id->value);
+      $result = $weezevent->participants($node->field_tournament_weezevent_id->value);
+      $ticket_info = $weezevent->ticket_info($node->field_tournament_weezevent_id->value);
 
-        $tickets = array();
-        if (isset($result)) {
-          foreach ($result->participants as $participant) {
-            $team = NULL;
-            $pseudo = NULL;
-            foreach ($participant->answers as $answer) {
-              if ($answer->label === "Nom d'équipe") {
-                $team = $answer->value;
-              }
-              if ($answer->label === "Pseudo") {
-                $pseudo = $answer->value;
-              }
+      $tickets = array();
+      if (isset($result)) {
+        foreach ($result->participants as $participant) {
+          $team = NULL;
+          $pseudo = NULL;
+          foreach ($participant->answers as $answer) {
+            if ($answer->label === "Nom d'équipe") {
+              $team = $answer->value;
             }
-            $key = $participant->id_transaction;
-            if (isset($ticket_info->group_size)) { // cas d'un tournoi par équipe
-              $newteam = $team;
-              $i=2;
-              while ( count($tickets[$key][$newteam]) == ((int)$ticket_info->group_size)) {
-                $newteam = $team . $i;
-                $i++;
-              }
-              $tickets[$key][$newteam][] = $pseudo;
-            } else { // cas d'un tournoi solo
-              $tickets[][$team][] = $pseudo;															
+            if ($answer->label === "Pseudo") {
+              $pseudo = $answer->value;
             }
           }
-          if (isset($ticket_info->group_size)) {
-            $count = ((int) $ticket_info->participants) / ( (int) $ticket_info->group_size);
-          } else {
-            $count = (int) $ticket_info->participants;
+          $key = $participant->id_transaction;
+          if (isset($ticket_info->group_size)) { // cas d'un tournoi par équipe
+            $newteam = $team;
+            $i=2;
+            while ( isset($tickets[$key]) && isset($tickets[$key][$newteam])&& (count($tickets[$key][$newteam]) == ((int)$ticket_info->group_size))) {
+              $newteam = $team . $i;
+              $i++;
+            }
+            $tickets[$key][$newteam][] = $pseudo;
+          } else { // cas d'un tournoi solo
+            $tickets[][$team][] = $pseudo;															
           }
-          $node->field_tournament_subscribers->setValue(json_encode($tickets));
-          $node->field_tournament_sub_count->setValue($count);
-          $node->save();
         }
-      } catch (Exception $e) {
-        \Drupal::logger('ga_weezevent')->error($e->getMessage());
+        if (isset($ticket_info->group_size)) {
+          $count = ((int) $ticket_info->participants) / ( (int) $ticket_info->group_size);
+        } else {
+          $count = (int) $ticket_info->participants;
+        }
+        $node->field_tournament_subscribers->setValue(json_encode($tickets));
+        $node->field_tournament_sub_count->setValue($count);
+        $node->save();
       }
+    } catch (Exception $e) {
+      \Drupal::logger('ga_weezevent')->error($e->getMessage());
     }
   }
 }
