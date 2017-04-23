@@ -129,7 +129,8 @@ class FormManglerService {
         ?: $entity_type->id();
       $bundle_settings = $this->rhBehaviorSettingsManager
         ->loadBehaviorSettingsAsConfig($bundle_entity_type,
-            $entity->bundle());
+          $entity->getEntityType()->getBundleEntityType()
+            ? $entity->bundle() : NULL);
 
       // If the form is about to be attached to an entity,
       // but the bundle isn't allowed to be overridden, exit.

@@ -4,6 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.activity.field_date
+    - field.field.node.activity.field_description
+    - field.field.node.activity.field_display_front_page
+    - field.field.node.activity.field_game
+    - field.field.node.activity.field_lien
+    - field.field.node.activity.field_room
     - node.type.activity
   module:
     - user
@@ -14,8 +20,12 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_date: true
+  field_description: true
+  field_display_front_page: true
   field_game: true
+  field_lien: true
   field_room: true
   langcode: true

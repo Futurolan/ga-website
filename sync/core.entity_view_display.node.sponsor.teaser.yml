@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.sponsor.field_sponsor_image
+    - field.field.node.sponsor.field_sponsor_level
+    - field.field.node.sponsor.field_sponsor_url
+    - field.field.node.sponsor.field_sponsor_weight
     - node.type.sponsor
   module:
     - user
@@ -17,6 +20,10 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_sponsor_image: true
+  field_sponsor_level: true
+  field_sponsor_url: true
+  field_sponsor_weight: true
   langcode: true

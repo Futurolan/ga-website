@@ -26,6 +26,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_memory_external_url:
     weight: 5
     settings:
@@ -33,6 +34,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_memory_image:
     weight: 2
     settings:
@@ -46,6 +48,7 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_widget_crop
+    region: content
   field_memory_short_description:
     weight: 3
     settings:
@@ -53,16 +56,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   langcode:
     type: language_select
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1
@@ -70,6 +76,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field_memory_weight: true

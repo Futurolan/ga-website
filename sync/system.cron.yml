@@ -4,3 +4,4 @@ threshold:
 langcode: fr
 _core:
   default_config_hash: YvTvx7gAR2Oy2-a-ukLSooH6_5RtQPyNwBF7m4_TVcU
+logging: 1

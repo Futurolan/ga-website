@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.influencer.field_influencer_description
+    - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
+    - field.field.node.influencer.field_influencer_weight
     - node.type.influencer
   module:
     - user
@@ -14,6 +18,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_influencer_description: true
   field_influencer_image: true

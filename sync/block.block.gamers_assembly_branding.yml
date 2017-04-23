@@ -10,7 +10,7 @@ _core:
   default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
 id: gamers_assembly_branding
 theme: gamers_assembly
-region: '-1'
+region: header
 weight: -1
 provider: null
 plugin: system_branding_block

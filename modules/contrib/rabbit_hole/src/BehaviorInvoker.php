@@ -157,7 +157,10 @@ class BehaviorInvoker implements BehaviorInvokerInterface {
     $config = $this->rhBehaviorSettingsManager->loadBehaviorSettingsAsConfig(
       $entity->getEntityType()->getBundleEntityType()
         ?: $entity->getEntityType()->id(),
-      $entity->bundle());
+      $entity->getEntityType()->getBundleEntityType()
+        ? $entity->bundle()
+        : NULL
+    );
 
     // We trigger the default bundle action under the following circumstances:
     $trigger_default_bundle_action =

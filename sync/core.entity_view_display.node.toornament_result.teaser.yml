@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.toornament_result.field_toornament_participant
+    - field.field.node.toornament_result.field_toornament_participant2
+    - field.field.node.toornament_result.field_toornament_result
+    - field.field.node.toornament_result.field_toornament_result2
+    - field.field.node.toornament_result.field_toornament_tournament
     - node.type.toornament_result
   module:
     - user
@@ -14,6 +19,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_toornament_participant: true
   field_toornament_participant2: true

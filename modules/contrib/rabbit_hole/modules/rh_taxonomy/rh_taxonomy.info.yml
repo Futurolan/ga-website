@@ -6,8 +6,8 @@ dependencies:
   - rabbit_hole
   - taxonomy
 
-# Information added by Drupal.org packaging script on 2017-02-05
-version: '8.x-1.0-beta2'
+# Information added by Drupal.org packaging script on 2017-04-09
+version: '8.x-1.0-beta3'
 core: '8.x'
 project: 'rabbit_hole'
-datestamp: 1486311486
+datestamp: 1491779586

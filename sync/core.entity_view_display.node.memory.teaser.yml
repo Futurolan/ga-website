@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.memory.field_memory_description
+    - field.field.node.memory.field_memory_external_url
+    - field.field.node.memory.field_memory_image
+    - field.field.node.memory.field_memory_short_description
+    - field.field.node.memory.field_memory_weight
     - node.type.memory
   module:
     - user
@@ -14,6 +19,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_memory_description: true
   field_memory_external_url: true

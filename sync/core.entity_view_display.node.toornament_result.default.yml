@@ -23,6 +23,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_toornament_participant2:
     weight: 102
     label: above
@@ -30,6 +31,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_toornament_result:
     weight: 103
     label: above
@@ -37,6 +39,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_toornament_result2:
     weight: 104
     label: above
@@ -44,6 +47,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_toornament_tournament:
     weight: 105
     label: above
@@ -51,7 +55,9 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   langcode: true

@@ -4,7 +4,25 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.tournament.field_platform
+    - field.field.node.tournament.field_tournament_cashprize
+    - field.field.node.tournament.field_tournament_cashprize2
+    - field.field.node.tournament.field_tournament_description
+    - field.field.node.tournament.field_tournament_format
+    - field.field.node.tournament.field_tournament_game
     - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_image_sponsor
+    - field.field.node.tournament.field_tournament_planning
+    - field.field.node.tournament.field_tournament_reserved_slot
+    - field.field.node.tournament.field_tournament_rules
+    - field.field.node.tournament.field_tournament_show_toornament
+    - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_sub_count
+    - field.field.node.tournament.field_tournament_subscribers
+    - field.field.node.tournament.field_tournament_toornament_id
+    - field.field.node.tournament.field_tournament_type
+    - field.field.node.tournament.field_tournament_weezevent_id
+    - field.field.node.tournament.field_tournament_weight
     - node.type.tournament
   module:
     - user
@@ -19,14 +37,22 @@ hidden:
   field_game: true
   field_platform: true
   field_tournament_cashprize: true
+  field_tournament_cashprize2: true
   field_tournament_description: true
   field_tournament_format: true
+  field_tournament_game: true
   field_tournament_image: true
+  field_tournament_image_sponsor: true
   field_tournament_planning: true
   field_tournament_reserved_slot: true
   field_tournament_rules: true
+  field_tournament_show_toornament: true
   field_tournament_size: true
+  field_tournament_sub_count: true
+  field_tournament_subscribers: true
+  field_tournament_toornament_id: true
   field_tournament_type: true
   field_tournament_weezevent_id: true
+  field_tournament_weight: true
   langcode: true
   links: true

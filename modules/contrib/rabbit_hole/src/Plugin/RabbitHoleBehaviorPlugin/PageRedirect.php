@@ -124,16 +124,16 @@ class PageRedirect extends RabbitHoleBehaviorPluginBase implements ContainerFact
    * {@inheritdoc}
    */
   public function performAction(Entity $entity, Response $current_response = NULL) {
-    // Return new RedirectResponse($this->path, $this->code);.
     $target = $entity->get('rh_redirect')->value;
     $response_code = NULL;
 
     $bundle_entity_type = $entity->getEntityType()->getBundleEntityType();
     $bundle_settings = $this->rhBehaviorSettingsManager
-      ->loadBehaviorSettingsAsConfig($bundle_entity_type,
-          $entity->bundle());
+      ->loadBehaviorSettingsAsConfig(
+        $bundle_entity_type ?: $entity->getEntityType()->id(),
+        $bundle_entity_type ? $entity->bundle() : NULL);
 
-    if (!isset($target)) {
+    if (empty($target)) {
       $target = $bundle_settings->get('redirect');
       $response_code = $bundle_settings->get('redirect_code');
     }
