@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.animation.field_animation_content
     - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_localisation
+    - field.field.node.animation.field_animation_url
     - field.field.node.animation.field_animation_weight
     - node.type.animation
   module:
@@ -19,6 +21,7 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_animation_content: true
   field_animation_image: true

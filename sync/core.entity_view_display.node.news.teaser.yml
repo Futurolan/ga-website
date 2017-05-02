@@ -5,8 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.field_news_content
+    - field.field.node.news.field_news_edition
+    - field.field.node.news.field_news_game
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_show_image
     - field.field.node.news.field_news_tags
+    - field.field.node.news.field_news_tournament
     - node.type.news
   module:
     - user
@@ -25,8 +29,13 @@ content:
       link: false
       view_mode: default
     third_party_settings: {  }
+    region: content
 hidden:
   field_news_content: true
+  field_news_edition: true
+  field_news_game: true
   field_news_image: true
+  field_news_show_image: true
+  field_news_tournament: true
   langcode: true
   links: true

@@ -38,6 +38,8 @@ class WeezeventAPI {
       watchdog_exception('ga_weezevent', $e);
     } catch (\InvalidArgumentException $e) {
       watchdog_exception('ga_weezevent', $e);
+    } catch (Exception $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 
@@ -72,6 +74,8 @@ class WeezeventAPI {
       watchdog_exception('ga_weezevent', $e);
     } catch (\InvalidArgumentException $e) {
       watchdog_exception('ga_weezevent', $e);
+    } catch (Exception $e) {
+      watchdog_exception('ga_weezevent', $e);
     }
   }
 
@@ -98,6 +102,8 @@ class WeezeventAPI {
     } catch (RequestException $e) {
       watchdog_exception('ga_weezevent', $e);
     } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_weezevent', $e);
+    } catch (Exception $e) {
       watchdog_exception('ga_weezevent', $e);
     }
   }

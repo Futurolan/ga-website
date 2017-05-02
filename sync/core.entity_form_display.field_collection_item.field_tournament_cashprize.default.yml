@@ -19,6 +19,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_cashprize_note:
     weight: 2
     settings:
@@ -26,6 +27,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_cashprize_total:
     weight: 0
     settings:
@@ -33,4 +35,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden: {  }

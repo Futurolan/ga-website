@@ -16,10 +16,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   description: true
   langcode: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_page_content
     - field.field.node.page.field_page_image
     - node.type.page
   module:
@@ -15,6 +16,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_page_content: true
   field_page_image: true

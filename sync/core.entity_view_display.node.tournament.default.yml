@@ -45,12 +45,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_tournament_cashprize:
     weight: 110
     label: above
     settings: {  }
     third_party_settings: {  }
     type: field_collection_list
+    region: content
   field_tournament_cashprize2:
     type: entity_reference_revisions_entity_view
     weight: 124
@@ -59,12 +61,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_tournament_description:
     weight: 118
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_tournament_format:
     weight: 109
     label: above
@@ -72,6 +76,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_tournament_game:
     weight: 123
     label: above
@@ -79,6 +84,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_tournament_image_sponsor:
     weight: 122
     label: above
@@ -87,12 +93,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_tournament_planning:
     weight: 108
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_tournament_reserved_slot:
     weight: 115
     label: above
@@ -101,12 +109,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_tournament_rules:
     weight: 111
     label: above
     settings: {  }
     third_party_settings: {  }
     type: file_default
+    region: content
   field_tournament_show_toornament:
     weight: 126
     label: above
@@ -116,6 +126,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_tournament_size:
     weight: 114
     label: above
@@ -124,6 +135,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_tournament_sub_count:
     weight: 120
     label: above
@@ -132,12 +144,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_tournament_subscribers:
     weight: 119
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_tournament_toornament_id:
     weight: 125
     label: above
@@ -145,12 +159,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_tournament_type:
     weight: 107
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_tournament_weezevent_id:
     weight: 116
     label: above
@@ -158,6 +174,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_tournament_weight:
     weight: 121
     label: above
@@ -166,10 +183,12 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_tournament_image: true
   langcode: true

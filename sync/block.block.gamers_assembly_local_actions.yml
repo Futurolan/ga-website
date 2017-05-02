@@ -8,7 +8,7 @@ _core:
   default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
 id: gamers_assembly_local_actions
 theme: gamers_assembly
-region: '-1'
+region: header
 weight: -4
 provider: null
 plugin: local_actions_block
