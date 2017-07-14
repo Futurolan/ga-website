@@ -48,45 +48,44 @@ function toolbar_menu_toolbar() {
 
   /** @var \Drupal\toolbar_menu\ToolbarMenuManager $toolbar_manager */
   $toolbar_manager = \Drupal::service('toolbar_menu.manager');
-
-  foreach ($toolbar_manager->getMenus() as $weight => $menu) {
-    $items['toolbar_menu_' . $menu->id()] = array(
+  foreach ($toolbar_manager->getToolbarMenuElements() as $element_id => $element) {
+    $items['toolbar_menu_' . $element_id] = [
       '#type' => 'toolbar_item',
-      'tab' => array(
+      'tab' => [
         '#type' => 'link',
-        '#title' => $menu->label(),
+        '#title' => $element->getDisplayLabel(),
         '#url' => Url::fromRoute('<front>'),
-        '#attributes' => array(
-          'title' => $menu->getDescription(),
-          'class' => array(
+        '#attributes' => [
+          'title' => $element->getDisplayLabel(),
+          'class' => [
             'toolbar-icon',
             'toolbar-icon-toolbar-menu',
-            'toolbar-icon-toolbar-menu-' . $menu->id(),
-          ),
+            'toolbar-icon-toolbar-menu-' . $element_id,
+          ],
           'data-drupal-subtrees' => '',
-        ),
-      ),
-      'tray' => array(
-        '#heading' => t('@menu_label actions', ['@menu_label' => $menu->label()]),
-        'toolbar_menu_' . $menu->id() . '_links' => array(
+        ],
+      ],
+      'tray' => [
+        '#heading' => t('@menu_label actions', ['@menu_label' => $element->getDisplayLabel()]),
+        'toolbar_menu_' . $element_id . '_links' => [
           '#type' => 'container',
-          '#id' => $menu->id(),
+          '#id' => $element->loadMenu()->id(),
           '#pre_render' => ['toolbar_menu_prerender_toolbar_tray'],
-          '#attributes' => array(
-            'class' => array('toolbar-menu-administration'),
-          ),
-        ),
-      ),
-      '#weight' => $weight,
-      '#attached' => array(
-        'library' => array(
+          '#attributes' => [
+            'class' => ['toolbar-menu-administration'],
+          ],
+        ],
+      ],
+      '#weight' => $element->weight(),
+      '#attached' => [
+        'library' => [
           'toolbar_menu/icons',
-        ),
-      ),
-      '#cache' => array(
-        'tags' => $menu->getCacheTags(),
-      )
-    );
+        ],
+      ],
+      '#cache' => [
+        'tags' => array_merge($element->getCacheTags(), $element->loadMenu()->getCacheTags(), ['toolbar_menu']),
+      ],
+    ];
   }
   return $items;
 }
@@ -109,11 +108,11 @@ function toolbar_menu_prerender_toolbar_tray(array $element) {
 
   $tree = $menu_tree->load($element['#id'], $parameters);
 
-  $manipulators = array(
-    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-    array('callable' => 'toolbar_menu.menu_link_tree_manipulators:addIcons'),
-  );
+  $manipulators = [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ['callable' => 'toolbar_menu.menu_link_tree_manipulators:addIcons'],
+  ];
   $tree = $menu_tree->transform($tree, $manipulators);
 
   $element['toolbar_menu_' . $element['#id']] = $menu_tree->build($tree);
