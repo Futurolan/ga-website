@@ -1,0 +1,5 @@
+galloween.corescripts:
+  version: 1.x
+  css:
+    theme:
+      css/galloween.css: {}
