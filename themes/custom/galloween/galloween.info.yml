@@ -1,5 +1,15 @@
 name: Galloween
 type: theme
 description: A theme for the Galloween
-base theme: gamers_assembly
 core: 8.x
+base theme: gamers_assembly
+
+libraries:
+  - galloween/galloween.corescripts
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+
+

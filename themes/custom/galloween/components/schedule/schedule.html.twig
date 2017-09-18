@@ -1,0 +1,106 @@
+<div class="schedule">
+    <script>
+        var activities = [
+
+            {% for key,activityDay in activities %}
+            {% for activity in activityDay %}
+            {
+                id:{{ activity.id }},
+                group: '{{ activity.field_room.entity.id() }}',
+                content: '<div class="activity" {% if(activity.field_game.entity) %}style="background-color:{{ activity.field_game.entity.field_game_color.value }}"{% endif 
+%}><div class="content">{{ activity.getTitle()|escape('js') }}</div><div class="datetime">{{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }}-{{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", "Europe/Paris") }}</div></div>',
+                titleText: '{{ activity.getTitle()|escape('js') }}',
+                description: '<div class="activity-tooltip">{{ activity.field_description.value|raw|escape('js') }}</div>',
+                start: new Date('{{ activity.field_date.getValue()[0]['value'] }}Z'),
+                end: new Date('{{ activity.field_date.getValue()[0]['end_value'] }}Z'),
+                daterange: '{{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }} - {{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", 
+"Europe/Paris") }}'
+                {% if(activity.field_lien.value) %},url: "{{ activity.field_lien.value|escape('js') }}"{% endif %}
+		{% if(activity.field_game.entity) %},className: 'cat{{activity.field_game.entity.id()}}'{% endif %}
+            },
+            {% endfor %}
+            {% endfor %}
+        ];
+
+        var rooms = [
+            {% for activityDay in activities %}
+
+
+            {% for activity in activityDay %}
+            {
+                id: {{ activity.field_room.target_id }},
+                value: {{ activity.field_room.entity.getWeight() }},
+                content: '{{ activity.field_room.entity.getName() }}',
+            },
+            {% endfor %}
+
+            {% endfor %}
+        ]
+
+
+    </script>
+
+    {{ attach_library('gamers_assembly/gamers_assembly.schedule') }}
+
+
+    <div id="timeline"></div>
+
+    <div class="schedule-mobile">
+        {% for key,activityDay in activities %}
+            <h2>{{ key |date("d/m/Y") }}</h2>
+            {% for activity in activityDay %}
+                <div class="row{% if(activity.field_game.entity) %} cat{{activity.field_game.entity.id()}}{% endif %}">
+                    <div class="col-xs-12">
+                        <div class="schedule-mobile-activity"
+                        {% if(activity.field_game.entity) %}
+                            style="border-color:{{activity.field_game.entity.field_game_color.value}}"
+                        {% endif %}>
+                            <h3>{{ activity.getTitle() }}</h3>
+                            <div class="schedule-mobile-loc"
+                            {% if(activity.field_game.entity) %}
+                                style="background-color:{{activity.field_game.entity.field_game_color.value}}"
+                            {% endif %}>
+                              {{ activity.field_room.entity.getName() }}
+                            </div>
+                            <div class="schedule-mobile-date">
+                                {{ (activity.field_date.getValue()[0]['value']~'Z')|date("H:i", "Europe/Paris") }}
+                                - {{ (activity.field_date.getValue()[0]['end_value']~'Z')|date("H:i", "Europe/Paris") }}
+                            </div>
+                            <div class="schedule-mobile-description">
+                                {{ activity.field_description.value|raw }}
+                            </div>
+                            {% if(activity.field_lien.value) %}
+                                <div class="schedule-mobile-url">
+                                    <a href="{{ activity.field_lien.value }}">{{ 'Voir les informations'|t }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="activity-modal" tabindex="-1" role="dialog" aria-labelledby="activity-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="activity-modal-label">Modal title</h4>
+                    <span id="activity-modal-daterange">Modal daterange</span>
+                </div>
+                <div class="modal-body">
+                    <div id="activity-modal-content">
+
+                    </div>
+                    <div id="activity-modal-url">
+                        <a href="">{{ 'Voir les informations'|t }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

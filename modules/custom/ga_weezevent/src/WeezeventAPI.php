@@ -60,8 +60,16 @@ class WeezeventAPI {
       $data = (string) $response->getBody();
       $result = \GuzzleHttp\json_decode($data);
       foreach ($result->events as $event) {
-        foreach ($event->categories as $category) {
-          foreach ($category->tickets as $ticket) {
+        if (isset($event->categories)) {
+          foreach ($event->categories as $category) {
+            foreach ($category->tickets as $ticket) {
+              if ($ticket->id === $id_ticket) {
+                return $ticket;
+              }
+            }
+          }
+        } else {
+          foreach ($event->tickets as $ticket) {
             if ($ticket->id === $id_ticket) {
               return $ticket;
             }

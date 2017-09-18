@@ -1,0 +1,15 @@
+{{ attach_library('gamers_assembly/gamers_assembly.sponsors-banner') }}
+
+<div class="slideshow">
+    <div class="footer-slider-container">
+        {% for sponsorList in sponsors %}
+            {% if(sponsorList.displayFront) %}
+                {% for sponsor in sponsorList.sponsors %}
+                    <figure>
+                        <img src="{{ file_url(sponsor.image) }}" alt="" class="img-responsive center-block">
+                    </figure>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

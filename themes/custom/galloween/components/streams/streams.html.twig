@@ -1,0 +1,71 @@
+{{ attach_library('gamers_assembly/gamers_assembly.streams') }}
+
+
+<div class="stream">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="stream-video">
+                <iframe
+                        src="https://player.twitch.tv/?channel={{ streams[0].key }}"
+                        height="422"
+                        width="100%"
+
+                        frameborder="0"
+                        scrolling="no"
+                        allowfullscreen="true">
+                </iframe>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stream-chat-video-list">
+                <div class="row stream-tabs">
+                    <div class="col-xs-6 col-md-6"><h3
+                                class="stream-tab-video-list active">{{ "Streams"|t }}</h3>
+                    </div>
+                    <div class="col-xs-6 col-md-6"><h3 class="stream-tab-chat">{{ "Chat room"|t }}</h3></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="stream-video-list">
+                        <div class="stream-video-list-content">
+                            {% for stream in streams %}
+                                <div id="stream-video-list-item-{{ stream.key }}"
+                                     x-key="{{ stream.key }}"
+                                     class="stream-video-list-item {% if loop.first %}active{% endif %}">
+                                    <div class="row">
+                                        <div class="col-md-8 col-xs-8">
+                                            <div class="stream-video-list-name">{{ stream.name }}</div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 stream-viewer">
+                                            <span class="stream-eye"></span>
+                                            <div class="stream-video-list-count"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="stream-video-more">
+                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="stream-chat">
+                            <iframe
+                                    src="https://www.twitch.tv/{{ streams[0].key }}/chat?darkpopout=1"
+                                    height="378"
+                                    width="100%"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

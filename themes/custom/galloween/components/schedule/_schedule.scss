@@ -1,0 +1,129 @@
+.schedule {
+
+  #timeline {
+    margin-top: 1rem;
+
+    .vis-tooltip {
+      border: 1px solid $black;
+      border-radius: 0;
+
+      background-color: white;
+      padding: 1rem;
+      .activity-tooltip {
+        font-family: 'Roboto', sans-serif !important;
+        p {
+          margin: 0 0 0.5rem;
+        }
+      }
+
+    }
+    .vis-even {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    .vis-labelset .vis-label {
+      background-color: #0058A2;
+      color: #ffffff;
+      .vis-inner {
+        display: flex !important;
+        align-items: center;
+      }
+    }
+
+    .vis-panel.vis-left .vis-label {
+      display: flex;
+      .vis-inner {
+        margin: auto;
+        display: block;
+      }
+    }
+
+    .vis-item {
+      background-color: #00698f;
+      color: #ffffff;
+      cursor: pointer;
+      &.vis-range {
+        border-radius: 0px;
+      }
+
+      &.filtered {
+	opacity:0.15;
+      }
+
+      .vis-item-overflow {
+        //overflow: visible;
+        //height: 3.6rem;
+
+        .vis-item-content {
+          padding: 0;
+          display:inline;
+          //white-space: normal;
+
+        }
+      }
+    }
+    .activity {
+      .content {
+        padding-left: 0.2rem;
+	padding-right: 0.2rem;
+        //height: 1.6rem;
+        font-size: 1.1rem;
+        overflow: hidden;
+      }
+     .datetime {
+        padding-left: 0.3rem;
+	padding-right:0.3rem;
+        height: 1.6rem;
+        font-size: 1rem;
+        overflow: hidden;
+      }
+
+
+    }
+
+  }
+
+  .schedule-mobile{
+    display:none;
+    margin-bottom:1rem;
+    h2{
+      background-color: $blue;
+      color:$white;
+      padding:1rem;
+    }
+
+    &-activity{
+      border-right:1px solid #0058A2;
+      padding-left:1rem;
+      padding-right:1remp;
+      position:relative;
+    }
+
+    &-loc{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #0058A2;
+      padding: 1rem;
+      color: #fff;
+    }
+
+  }
+}
+
+
+@media(max-width:767px){
+
+  .schedule-page .white-area .container .filter{display:none;}
+  .schedule {
+    .schedule-mobile {
+      display: block;
+    }
+    .schedule-mobile .filtered {
+      display: none;;
+    }
+    #timeline {
+      display: none;
+    }
+  }
+}
+
