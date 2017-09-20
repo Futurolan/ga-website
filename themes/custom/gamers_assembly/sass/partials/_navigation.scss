@@ -136,23 +136,23 @@ body {
   &.toolbar-fixed {
     &.toolbar-horizontal {
       padding-top: 112px !important;
-      #block-mainnavigation {
+      #block-mainnavigation, #block-multisite   {
         margin-top: 42px;
       }
       &.toolbar-tray-open {
         padding-top: 155px !important;
-        #block-mainnavigation {
+        #block-mainnavigation, #block-multisite {
           margin-top: 85px;
         }
       }
     }
     &.toolbar-vertical {
       padding-top: 122px !important;
-      #block-mainnavigation {
+      #block-mainnavigation, #block-multisite {
         margin-top: 42px;
       }
       &.toolbar-tray-open {
-        #block-mainnavigation {
+        #block-mainnavigation, #block-multisite {
           padding-left: 15rem;
         }
       }
