@@ -88,6 +88,48 @@
   }
 }
 
+/* CSS used here will be applied after bootstrap.css */
+#block-multisite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: white;
+
+  a {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    text-decoration: none;
+
+    &.gamer-assembly {
+      border-bottom: 2px solid #0058A2;
+    }
+
+    &.galloween {
+      border-bottom: 2px solid #FC7E00;
+    }
+
+    &.futurolan {
+      border-bottom: 2px solid #2ec0ca; 
+    }
+
+    &.gamer-assembly.active {
+      background-color: #0058A2
+    }
+
+    &.galloween.active {
+      background-color: #FC7E00;
+    }
+
+    &.futurolan.active {
+      background-color: #2ec0ca;
+    }
+  }
+}
+
 body {
   &.toolbar-fixed {
     &.toolbar-horizontal {
