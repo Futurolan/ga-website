@@ -23,12 +23,16 @@ class WeezeventUtils {
     $sum_revenu = array();
     $sum_revenu2 = array();
     $sum_revenu_quotas = array();
+    if (!isset($tickets->categories)) {
+      $tickets->categories = [ 0 => (object) [ "name" => "Tournois", "id" => 1, "tickets" => $tickets->tickets ] ] ;
+    }
+
     foreach ($tickets->categories as $cat) {
       foreach ($cat->tickets as $ticket) {
         if (!isset($ticket->group_size)) {
           $ticket->group_size = 1;
         }
-        $sum_quotas[$cat->name] += $ticket->quotas;
+        $sum_quotas[$cat->name] += $ticket->quotas * $ticket->group_size;
         if ($ticket->quotas) {
           $ticket->remplissage = round(100 * $ticket->participants / $ticket->quotas,2);
           $sum_participants[$cat->name] += (int) $ticket->participants;
