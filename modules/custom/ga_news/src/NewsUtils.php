@@ -107,7 +107,7 @@ class NewsUtils {
           $news[] = [
             "nid" => $jsonData->nid,
             "title" => $jsonData->title,
-            "image" => $urlArray['scheme'] . $urlArray['host'] . $jsonData->field_news_image,
+            "image" => $urlArray['scheme'] .'://'. $urlArray['host'] . $jsonData->field_news_image,
             "text" => $jsonData->field_news_content,
             "date" => $jsonData->created,
             "subtitle" => $jsonData->field_news_edition,
