@@ -3,10 +3,10 @@ status: true
 dependencies:
   module:
     - ga_weezevent
-title: 'Update tournament info'
-id: ga_weezevent_update_tournament_info_job
+title: 'Update weezevent info'
+id: ga_weezevent_update_tournament_job
 module: ga_weezevent
-callback: ga_weezevent_update_tournament_info_cron
+callback: ga_weezevent_update_tournament_cron
 scheduler:
   id: simple
   configuration:

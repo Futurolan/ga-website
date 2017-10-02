@@ -12,119 +12,82 @@ class NewsUtils {
   public static function getLastNews() {
 
 
-    $config = \Drupal::config('ga_config.settings');
+    $langcode = \Drupal::languageManager()
+      ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
+      ->getId();
 
-    if ($config->get('external_news_url') == '') {
+    $newsNids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'news')
+      ->condition('langcode', $langcode)
+      ->sort('created', 'DESC')
+      ->range(0, 3)
+      ->execute();
 
-      $langcode = \Drupal::languageManager()
-        ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
-        ->getId();
+    $news = [];
 
-      $newsNids = \Drupal::entityQuery('node')
-        ->condition('status', 1)
-        ->condition('type', 'news')
-        ->condition('langcode', $langcode)
-        ->sort('created', 'DESC')
-        ->range(0, 3)
-        ->execute();
-
-      $news = [];
-
-      foreach ($newsNids as $nid) {
+    foreach ($newsNids as $nid) {
 
 
-        $node = Node::load($nid);
+      $node = Node::load($nid);
 
-        $node = \Drupal::entityManager()
-          ->getTranslationFromContext($node, $langcode);
+      $node = \Drupal::entityManager()
+        ->getTranslationFromContext($node, $langcode);
 
 
-        $tagsArray = [];
-        foreach ($node->field_news_tags as $tag) {
-          $tagsArray[] = \Drupal\taxonomy\Entity\Term::load($tag->target_id)
-            ->getName();
-        }
-
-        //Set Image
-        if ($node->field_news_image->entity) {
-          $imageUri = $node->field_news_image->entity->getFileUri();
-        }
-        elseif ($node->field_news_tournament->entity && $node->field_news_tournament->entity->field_tournament_image->entity) {
-          $imageUri = $node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
-        }
-        elseif ($node->field_news_game->entity) {
-          $color = $node->field_news_game->entity->field_game_color->value;
-          $gameName = $node->field_news_game->entity->getName();
-          $imageUri = $node->field_news_game->entity->field_game_image->entity->getFileUri();
-        }
-        elseif ($node->field_news_edition->entity) {
-          $imageUri = $node->field_news_edition->entity->field_edition_image->entity->getFileUri();
-        }
-        else {
-          $imageUri = NewsUtils::getImageUri($node, "field_news_image");
-        }
-
-        //Set Subtitle
-        if ($node->field_news_tournament->entity) {
-          $subtitle = $node->field_news_tournament->entity->getTitle();
-        }
-        elseif ($node->field_news_game->entity) {
-          $subtitle = $gameName;
-        }
-        elseif ($node->field_news_edition->entity) {
-          $subtitle = $node->field_news_edition->entity->getName();
-        }
-        else {
-          $subtitle = "Futurolan";
-        }
-        $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
-
-        $news[] = [
-          "nid" => $node->id(),
-          "title" => $node->getTitle(),
-          "image" => $style->buildUrl($imageUri),
-          "text" => $node->get("field_news_content")->getValue()[0]['summary'],
-          "date" => $node->getCreatedTime(),
-          "subtitle" => $subtitle,
-          "color" => isset($color) ? $color : '#000000',
-          "url" => $node->url(),
-        ];
+      $tagsArray = [];
+      foreach ($node->field_news_tags as $tag) {
+        $tagsArray[] = \Drupal\taxonomy\Entity\Term::load($tag->target_id)
+          ->getName();
       }
-      return $news;
-    }
-    else {
-      $client = \Drupal::httpClient();
 
-      try {
-        $response = $client->get($config->get('external_news_url'));
-
-        $data = (string) $response->getBody();
-        $jsonDatas = \GuzzleHttp\json_decode($data);
-
-        $urlArray = parse_url($config->get('external_news_url'));
-        foreach ($jsonDatas as $jsonData) {
-
-          $news[] = [
-            "nid" => $jsonData->nid,
-            "title" => $jsonData->title,
-            "image" => $urlArray['scheme'] .'://'. $urlArray['host'] . $jsonData->field_news_image,
-            "text" => $jsonData->field_news_content,
-            "date" => $jsonData->created,
-            "subtitle" => $jsonData->field_news_edition,
-            "color" => isset($color) ? $color : '#000000',
-            "url" => $jsonData->path,
-          ];
-
-        }
-        return $news;
-
-
-      } catch (RequestException $e) {
-        watchdog_exception('ga_news', $e);
-      } catch (\InvalidArgumentException $e) {
-        watchdog_exception('ga_news', $e);
+      //Set Image
+      if ($node->field_news_image->entity) {
+        $imageUri = $node->field_news_image->entity->getFileUri();
       }
+      elseif ($node->field_news_tournament->entity && $node->field_news_tournament->entity->field_tournament_image->entity) {
+        $imageUri = $node->field_news_tournament->entity->field_tournament_image->entity->getFileUri();
+      }
+      elseif ($node->field_news_game->entity) {
+        $color = $node->field_news_game->entity->field_game_color->value;
+        $gameName = $node->field_news_game->entity->getName();
+        $imageUri = $node->field_news_game->entity->field_game_image->entity->getFileUri();
+      }
+      elseif ($node->field_news_edition->entity) {
+        $imageUri = $node->field_news_edition->entity->field_edition_image->entity->getFileUri();
+      }
+      else {
+        $imageUri = NewsUtils::getImageUri($node, "field_news_image");
+      }
+
+      //Set Subtitle
+      if ($node->field_news_tournament->entity) {
+        $subtitle = $node->field_news_tournament->entity->getTitle();
+      }
+      elseif ($node->field_news_game->entity) {
+        $subtitle = $gameName;
+      }
+      elseif ($node->field_news_edition->entity) {
+        $subtitle = $node->field_news_edition->entity->getName();
+      }
+      else {
+        $subtitle = "Futurolan";
+      }
+      $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
+
+      $news[] = [
+        "nid" => $node->id(),
+        "title" => $node->getTitle(),
+        "image" => $style->buildUrl($imageUri),
+        "text" => $node->get("field_news_content")->getValue()[0]['summary'],
+        "date" => $node->getCreatedTime(),
+        "subtitle" => $subtitle,
+        "color" => isset($color) ? $color : '#000000',
+        "url" => $node->url(),
+      ];
     }
+    return $news;
+
   }
 
   public static function getNextPrevIds($created) {
@@ -200,6 +163,84 @@ class NewsUtils {
     return $image_uri;
   }
 
+
+  public static function getNewsCron() {
+
+    $config = \Drupal::config('ga_config.settings');
+
+    if ($config->get('external_news_url') !== '') {
+
+
+      $client = \Drupal::httpClient();
+
+      try {
+        $response = $client->get($config->get('external_news_url'));
+
+        $data = (string) $response->getBody();
+        $jsonDatas = \GuzzleHttp\json_decode($data);
+
+        $urlArray = parse_url($config->get('external_news_url'));
+        foreach ($jsonDatas as $jsonData) {
+
+
+          $ids = \Drupal::entityQuery('node')
+            ->condition('status', 1)
+            ->condition('uuid', $jsonData->uuid)
+            ->condition('type', 'news')
+            ->execute();
+
+          if (count($ids) > 0) {
+            $node = Node::load(array_pop($ids));
+            if(intval($jsonData->changed) != $node->getChangedTime()){
+              $node->set('title', stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES)));
+              $node->set('field_news_content',$jsonData->field_news_content);
+              $node->set('changed',$jsonData->changed);
+              $node->save();
+
+            }
+
+          }
+          else {
+            var_export($jsonData->created);
+            $node = Node::create([
+              'type' => 'news',
+              'title' => stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES))
+            ]);
+
+            $node->set('uuid', $jsonData->uuid);
+            $node->set('created',$jsonData->created);
+            $node->set('changed',$jsonData->changed);
+
+            $node->set('field_news_content',$jsonData->field_news_content);
+            $node->save();
+
+          }
+
+
+
+
+
+//          $news[] = [
+//            "nid" => $jsonData->nid,
+//            "title" => $jsonData->title,
+//            "image" => $urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image,
+//            "text" => $jsonData->field_news_content,
+//            "date" => $jsonData->created,
+//            "subtitle" => $jsonData->field_news_edition,
+//            "color" => isset($color) ? $color : '#000000',
+//            "url" => $jsonData->path,
+//          ];
+
+        }
+
+
+      } catch (RequestException $e) {
+        watchdog_exception('ga_news', $e);
+      } catch (\InvalidArgumentException $e) {
+        watchdog_exception('ga_news', $e);
+      }
+    }
+  }
 
 }
 
