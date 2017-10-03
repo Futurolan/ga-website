@@ -179,7 +179,6 @@ class NewsUtils {
         $data = (string) $response->getBody();
         $jsonDatas = \GuzzleHttp\json_decode($data);
 
-        $urlArray = parse_url($config->get('external_news_url'));
         foreach ($jsonDatas as $jsonData) {
 
 
@@ -191,56 +190,61 @@ class NewsUtils {
 
           if (count($ids) > 0) {
             $node = Node::load(array_pop($ids));
-            if(intval($jsonData->changed) != $node->getChangedTime()){
+            if (intval($jsonData->changed) != $node->getChangedTime()) {
               $node->set('title', stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES)));
-              $node->set('field_news_content',$jsonData->field_news_content);
-              $node->set('changed',$jsonData->changed);
-              $node->save();
-
+            }
+            else {
+              continue;
             }
 
           }
           else {
-            var_export($jsonData->created);
-            $node = Node::create([
-              'type' => 'news',
-              'title' => stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES))
-            ]);
+          var_export($jsonData->created);
+          $node = Node::create([
+            'type' => 'news',
+            'title' => stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES)),
+          ]);
 
-            $node->set('uuid', $jsonData->uuid);
-            $node->set('created',$jsonData->created);
-            $node->set('changed',$jsonData->changed);
-
-            $node->set('field_news_content',$jsonData->field_news_content);
-            $node->save();
-
-          }
+          $node->set('uuid', $jsonData->uuid);
 
 
+        }
+
+          $urlArray = parse_url($config->get('external_news_url'));
 
 
+          $node->set('created', $jsonData->created);
+          $node->set('changed', $jsonData->changed);
+          $node->set('field_news_content', [
+            'value' => $jsonData->field_news_content,
+            'summary' => $jsonData->field_news_content_1,
+          ]);
 
-//          $news[] = [
-//            "nid" => $jsonData->nid,
-//            "title" => $jsonData->title,
-//            "image" => $urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image,
-//            "text" => $jsonData->field_news_content,
-//            "date" => $jsonData->created,
-//            "subtitle" => $jsonData->field_news_edition,
-//            "color" => isset($color) ? $color : '#000000',
-//            "url" => $jsonData->path,
-//          ];
+          $data = file_get_contents($urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image);
+          $file = file_save_data($data, "public://" . basename($jsonData->field_news_image), FILE_EXISTS_REPLACE);
+
+
+          $node->set('field_news_image', [
+            'target_id' => $file->id(),
+          ]);
+
+          $node->set('field_news_show_image', $jsonData->field_news_show_image);
+          $node->set('field_news_edition', [['target_id' => $jsonData->field_news_edition]]);
+          $node->save();
+
 
         }
 
 
-      } catch (RequestException $e) {
-        watchdog_exception('ga_news', $e);
-      } catch (\InvalidArgumentException $e) {
-        watchdog_exception('ga_news', $e);
       }
+  catch
+    (RequestException $e) {
+      watchdog_exception('ga_news', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_news', $e);
     }
-  }
+    }
+}
 
 }
 
