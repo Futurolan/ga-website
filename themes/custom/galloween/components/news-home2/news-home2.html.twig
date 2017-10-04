@@ -19,7 +19,7 @@
                 <div class="col-md-8 news-right">
                     <div class="news-background">
                         <div class="news-title">
-                            {{ new.title }}
+                            {{ new.title|raw }}
                         </div>
                         <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
                         <div class="news-content">

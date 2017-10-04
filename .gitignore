@@ -2,6 +2,8 @@
 .sass-cache
 themes/custom/gamers_assembly/css/
 
+data
+
 sync/ga_slide.slide.*
 sync/ga_stream.stream.*
 sync/ga_game.game.*

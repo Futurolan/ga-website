@@ -1,0 +1,5 @@
+<?php
+
+function ga_news_update_news_cron() {
+  \Drupal\ga_news\NewsUtils::getNewsCron();
+}

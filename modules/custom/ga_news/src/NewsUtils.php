@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\ga_news;
 
 use Drupal\Core\Language\LanguageInterface;
@@ -7,7 +8,9 @@ use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 
 class NewsUtils {
+
   public static function getLastNews() {
+
 
     $langcode = \Drupal::languageManager()
       ->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)
@@ -32,7 +35,7 @@ class NewsUtils {
         ->getTranslationFromContext($node, $langcode);
 
 
-      $tagsArray = array();
+      $tagsArray = [];
       foreach ($node->field_news_tags as $tag) {
         $tagsArray[] = \Drupal\taxonomy\Entity\Term::load($tag->target_id)
           ->getName();
@@ -72,18 +75,19 @@ class NewsUtils {
       }
       $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
 
-      $news[] = array(
+      $news[] = [
         "nid" => $node->id(),
         "title" => $node->getTitle(),
         "image" => $style->buildUrl($imageUri),
         "text" => $node->get("field_news_content")->getValue()[0]['summary'],
         "date" => $node->getCreatedTime(),
         "subtitle" => $subtitle,
-        "color" => isset($color)?$color:'#000000',
-        "url" => $node->url()
-      );
+        "color" => isset($color) ? $color : '#000000',
+        "url" => $node->url(),
+      ];
     }
     return $news;
+
   }
 
   public static function getNextPrevIds($created) {
@@ -110,10 +114,10 @@ class NewsUtils {
       ->range(0, 1)
       ->execute();
 
-    return array(
+    return [
       "prev" => count($prevId) > 0 ? key($prevId) : NULL,
-      "next" => count($nextId) > 0 ? key($nextId) : NULL
-    );
+      "next" => count($nextId) > 0 ? key($nextId) : NULL,
+    ];
   }
 
   public static function getImageUri($entity, $fieldName) {
@@ -158,4 +162,89 @@ class NewsUtils {
 
     return $image_uri;
   }
+
+
+  public static function getNewsCron() {
+
+    $config = \Drupal::config('ga_config.settings');
+
+    if ($config->get('external_news_url') !== '') {
+
+
+      $client = \Drupal::httpClient();
+
+      try {
+        $response = $client->get($config->get('external_news_url'));
+
+        $data = (string) $response->getBody();
+        $jsonDatas = \GuzzleHttp\json_decode($data);
+
+        foreach ($jsonDatas as $jsonData) {
+
+
+          $ids = \Drupal::entityQuery('node')
+            ->condition('status', 1)
+            ->condition('uuid', $jsonData->uuid)
+            ->condition('type', 'news')
+            ->execute();
+
+          if (count($ids) > 0) {
+            $node = Node::load(array_pop($ids));
+            if (intval($jsonData->changed) != $node->getChangedTime()) {
+              $node->set('title', stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES)));
+            }
+            else {
+              continue;
+            }
+
+          }
+          else {
+          var_export($jsonData->created);
+          $node = Node::create([
+            'type' => 'news',
+            'title' => stripslashes(htmlspecialchars_decode($jsonData->title, ENT_QUOTES)),
+          ]);
+
+          $node->set('uuid', $jsonData->uuid);
+
+
+        }
+
+          $urlArray = parse_url($config->get('external_news_url'));
+
+
+          $node->set('created', $jsonData->created);
+          $node->set('changed', $jsonData->changed);
+          $node->set('field_news_content', [
+            'value' => $jsonData->field_news_content,
+            'summary' => $jsonData->field_news_content_1,
+          ]);
+
+          $data = file_get_contents($urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image);
+          $file = file_save_data($data, "public://" . basename($jsonData->field_news_image), FILE_EXISTS_REPLACE);
+
+
+          $node->set('field_news_image', [
+            'target_id' => $file->id(),
+          ]);
+
+          $node->set('field_news_show_image', $jsonData->field_news_show_image);
+          $node->set('field_news_edition', [['target_id' => $jsonData->field_news_edition]]);
+          $node->save();
+
+
+        }
+
+
+      }
+  catch
+    (RequestException $e) {
+      watchdog_exception('ga_news', $e);
+    } catch (\InvalidArgumentException $e) {
+      watchdog_exception('ga_news', $e);
+    }
+    }
 }
+
+}
+

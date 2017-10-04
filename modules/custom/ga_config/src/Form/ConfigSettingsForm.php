@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 class ConfigSettingsForm extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
@@ -34,63 +35,76 @@ class ConfigSettingsForm extends ConfigFormBase {
     $config = $this->config('ga_config.settings');
 
     //Main sponsor
-    $form['main_sponsor'] = array(
+    $form['main_sponsor'] = [
       '#type' => 'details',
       '#title' => t('Main sponsor'),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
-    );
+    ];
 
-    $form['main_sponsor']['main_sponsor_image'] = array(
+    $form['main_sponsor']['main_sponsor_image'] = [
       '#type' => 'managed_file',
       '#title' => t('Image'),
       '#default_value' => $config->get('main_sponsor_image'),
       '#upload_location' => file_default_scheme() . '://global/',
-      '#upload_validators' => array(
-        'file_validate_extensions' => array('gif png jpg jpeg'),
-      ),
-    );
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
 
-    $form['main_sponsor']['main_sponsor_url'] = array(
+    $form['main_sponsor']['main_sponsor_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Url'),
       '#default_value' => $config->get('main_sponsor_url'),
-    );
+    ];
 
 
     //Social Links
-    $form['social_links'] = array(
+    $form['social_links'] = [
       '#type' => 'details',
       '#title' => t('Social Links'),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
-    );
-    $form['social_links']['facebook_url'] = array(
+    ];
+    $form['social_links']['facebook_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Facebook url'),
       '#default_value' => $config->get('facebook_url'),
-    );
-    $form['social_links']['twitter_url'] = array(
+    ];
+    $form['social_links']['twitter_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Twitter url'),
       '#default_value' => $config->get('twitter_url'),
-    );
-    $form['social_links']['flickr_url'] = array(
+    ];
+    $form['social_links']['flickr_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Flickr url'),
       '#default_value' => $config->get('flickr_url'),
-    );
-    $form['social_links']['twitch_url'] = array(
+    ];
+    $form['social_links']['twitch_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Twitch url'),
       '#default_value' => $config->get('twitch_url'),
-    );
-    $form['social_links']['youtube_url'] = array(
+    ];
+    $form['social_links']['youtube_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Youtube url'),
       '#default_value' => $config->get('youtube_url'),
-    );
+    ];
 
+    //Social Links
+    $form['external_news'] = [
+      '#type' => 'details',
+      '#title' => t('External News'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    ];
+    $form['external_news']['external_news_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('External news url'),
+      '#description'=>$this->t('Leave empty if you don\'t want to import news. Set ws_news url if you want to import them'),
+      '#default_value' => $config->get('external_news_url'),
+    ];
 
 
     return parent::buildForm($form, $form_state);
@@ -111,6 +125,7 @@ class ConfigSettingsForm extends ConfigFormBase {
     $config->set('youtube_url', $form_state->getValue('youtube_url'));
     $config->set('main_sponsor_image', $form_state->getValue('main_sponsor_image'));
     $config->set('main_sponsor_url', $form_state->getValue('main_sponsor_url'));
+    $config->set('external_news_url', $form_state->getValue('external_news_url'));
 
     $config->set('langcode', \Drupal::languageManager()
       ->getDefaultLanguage()
