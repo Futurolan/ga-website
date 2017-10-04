@@ -220,13 +220,15 @@ class NewsUtils {
             'summary' => $jsonData->field_news_content_1,
           ]);
 
-          $data = file_get_contents($urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image);
-          $file = file_save_data($data, "public://" . basename($jsonData->field_news_image), FILE_EXISTS_REPLACE);
+          if(strstr($jsonData->field_news_image,'default_images')==FALSE) {
+            $data = file_get_contents($urlArray['scheme'] . '://' . $urlArray['host'] . $jsonData->field_news_image);
+            $file = file_save_data($data, "public://" . basename($jsonData->field_news_image), FILE_EXISTS_REPLACE);
 
 
-          $node->set('field_news_image', [
-            'target_id' => $file->id(),
-          ]);
+            $node->set('field_news_image', [
+              'target_id' => $file->id(),
+            ]);
+          }
 
           $node->set('field_news_show_image', $jsonData->field_news_show_image);
           $node->set('field_news_edition', [['target_id' => $jsonData->field_news_edition]]);
