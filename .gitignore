@@ -9,6 +9,9 @@ sync/ga_stream.stream.*
 sync/ga_game.game.*
 sync/ga_platform.platform.*
 sync/ga_sponsor.sponsor_level.*
+sync/ga_config.settings.yml
+sync/system.site
+sync/system.theme
 
 sync/ga_front.prelive.settings.yml
 sync/ga_ticket.settings.yml
