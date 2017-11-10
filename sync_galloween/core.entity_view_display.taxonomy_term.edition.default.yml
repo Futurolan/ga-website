@@ -1,0 +1,33 @@
+uuid: c3d1cc41-121d-4c52-91c5-0cc34719b8df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.edition.field_edition_image
+    - taxonomy.vocabulary.edition
+  module:
+    - image
+    - text
+id: taxonomy_term.edition.default
+targetEntityType: taxonomy_term
+bundle: edition
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_edition_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

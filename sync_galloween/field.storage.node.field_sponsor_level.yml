@@ -1,0 +1,20 @@
+uuid: c9badb8e-38a7-4232-9a3f-0c440aa8173d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ga_sponsor
+    - node
+id: node.field_sponsor_level
+field_name: field_sponsor_level
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sponsor_level
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

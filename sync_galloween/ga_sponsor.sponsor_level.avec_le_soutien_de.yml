@@ -1,0 +1,7 @@
+uuid: 6b5fff60-7602-43e4-a511-ade6eca9bef3
+langcode: fr
+status: true
+dependencies: {  }
+id: avec_le_soutien_de
+label: 'Avec le soutien de'
+weight: -3

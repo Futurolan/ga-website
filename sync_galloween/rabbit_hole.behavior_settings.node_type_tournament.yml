@@ -1,0 +1,9 @@
+uuid: 04aa0561-4d26-4ce2-8351-5ed11cbfd817
+langcode: fr
+status: true
+dependencies: {  }
+id: node_type_tournament
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

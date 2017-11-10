@@ -1,0 +1,38 @@
+uuid: 1fe1a033-5fec-4141-9912-2a767a180e32
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_edition_image
+    - taxonomy.vocabulary.edition
+  module:
+    - image
+id: taxonomy_term.edition.field_edition_image
+field_name: field_edition_image
+entity_type: taxonomy_term
+bundle: edition
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: images/edition
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

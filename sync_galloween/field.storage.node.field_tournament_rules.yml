@@ -1,0 +1,23 @@
+uuid: f400173f-058e-4f8c-bad8-915743ba6e7b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_tournament_rules
+field_name: field_tournament_rules
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

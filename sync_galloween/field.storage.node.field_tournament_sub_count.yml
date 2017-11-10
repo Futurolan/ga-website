@@ -1,0 +1,20 @@
+uuid: 479f32fb-1c41-44ab-ae43-3a38df21cdbc
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tournament_sub_count
+field_name: field_tournament_sub_count
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

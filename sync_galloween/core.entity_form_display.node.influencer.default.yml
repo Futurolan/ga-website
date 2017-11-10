@@ -1,0 +1,119 @@
+uuid: f3200b17-52cb-475f-9838-32856529ca49
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.influencer.field_influencer_description
+    - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
+    - field.field.node.influencer.field_influencer_weight
+    - image.style.crop_influencer
+    - node.type.influencer
+  module:
+    - image_widget_crop
+    - path
+    - scheduler
+    - text
+id: node.influencer.default
+targetEntityType: node
+bundle: influencer
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_influencer_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_influencer_image:
+    weight: 1
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: crop_influencer
+      crop_preview_image_style: crop_preview
+      crop_list:
+        - influencer
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings: {  }
+    type: image_widget_crop
+    region: content
+  field_influencer_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    third_party_settings: {  }
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_influencer_weight: true

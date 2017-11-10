@@ -6,6 +6,8 @@ gamers_assembly.corescripts:
       libraries/animatecss/animate.css: {}
   js:
     js/script.js: {}
+  dependencies:
+    - core/jquery
 
 gamers_assembly.streams:
   version: 1.x

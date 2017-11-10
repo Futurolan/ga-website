@@ -1,0 +1,19 @@
+uuid: 097b1c45-fe85-4659-a654-dfb44e864484
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_subscribers
+    - node.type.tournament
+id: node.tournament.field_tournament_subscribers
+field_name: field_tournament_subscribers
+entity_type: node
+bundle: tournament
+label: 'Inscrits Json'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

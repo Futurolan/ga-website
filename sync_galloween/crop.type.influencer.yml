@@ -1,0 +1,12 @@
+uuid: 10736fee-5fad-4246-b7b8-e4b31c57e7e7
+langcode: fr
+status: true
+dependencies: {  }
+label: Influenceur
+id: influencer
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

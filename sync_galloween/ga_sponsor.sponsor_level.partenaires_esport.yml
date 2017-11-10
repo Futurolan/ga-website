@@ -1,0 +1,8 @@
+uuid: b4eece46-416c-44ec-ad28-3fdf71110d09
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaires_esport
+label: 'Partenaires esport'
+display_front: false
+weight: -4

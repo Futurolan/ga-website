@@ -1,0 +1,26 @@
+uuid: bf2a63a3-4910-485b-9997-f554fced898b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - galloween
+_core:
+  default_config_hash: 9nzFEkKLubGvSNLo5DMJohAd6-uUoazAzxre3pbvQ2U
+id: galloween_mainnavigation
+theme: galloween
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

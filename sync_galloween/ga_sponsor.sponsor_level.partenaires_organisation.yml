@@ -1,0 +1,8 @@
+uuid: 5e839123-192d-4e32-be0b-e035d2bb8f74
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaires_organisation
+label: 'Partenaires organisation'
+display_front: true
+weight: -7

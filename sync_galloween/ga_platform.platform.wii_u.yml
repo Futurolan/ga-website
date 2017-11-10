@@ -1,0 +1,6 @@
+uuid: 7cb03053-9cc9-42dd-934f-cf99d84db980
+langcode: fr
+status: true
+dependencies: {  }
+id: wii_u
+label: 'Wii U'

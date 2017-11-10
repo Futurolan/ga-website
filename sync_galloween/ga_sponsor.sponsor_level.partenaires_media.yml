@@ -1,0 +1,8 @@
+uuid: c81f8112-1668-48c9-9a20-5e4afe1b6d94
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaires_media
+label: 'Partenaires media'
+display_front: true
+weight: -6

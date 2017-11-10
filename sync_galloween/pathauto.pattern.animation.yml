@@ -1,0 +1,34 @@
+uuid: e1e61766-3ce8-4b4b-bfc5-f8248e900d16
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: animation
+label: Animation
+type: 'canonical_entities:node'
+pattern: 'animations/[node:title]'
+selection_criteria:
+  49a91656-9268-43f1-bb9b-75ac876e9840:
+    id: node_type
+    bundles:
+      animation: animation
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 49a91656-9268-43f1-bb9b-75ac876e9840
+  cc83b933-735d-48ea-a166-d7cd79f82755:
+    id: language
+    langcodes:
+      fr: fr
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: cc83b933-735d-48ea-a166-d7cd79f82755
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

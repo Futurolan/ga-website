@@ -1,0 +1,9 @@
+uuid: 85a4e133-2166-4e53-af2e-c9d271998784
+langcode: fr
+status: true
+dependencies: {  }
+id: taxonomy_vocabulary_game_type
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

@@ -1,0 +1,19 @@
+uuid: 5d8c8916-6cd3-4227-a798-dfb3ed68baa6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animation_localisation
+    - node.type.animation
+id: node.animation.field_animation_localisation
+field_name: field_animation_localisation
+entity_type: node
+bundle: animation
+label: Localisation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

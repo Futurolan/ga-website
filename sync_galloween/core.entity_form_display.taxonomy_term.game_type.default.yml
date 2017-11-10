@@ -1,0 +1,28 @@
+uuid: ca232c77-cb37-462d-b418-2f924fe03558
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_type
+id: taxonomy_term.game_type.default
+targetEntityType: taxonomy_term
+bundle: game_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  langcode: true
+  path: true

@@ -1,0 +1,27 @@
+uuid: cd1f1917-d23c-4e46-8705-4b18e8f80fc1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_rules
+    - node.type.tournament
+  module:
+    - file
+id: node.tournament.field_tournament_rules
+field_name: field_tournament_rules
+entity_type: node
+bundle: tournament
+label: Règlement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf/tournament
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

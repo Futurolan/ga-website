@@ -1,0 +1,8 @@
+uuid: b18c679c-df2a-4dc9-9beb-42b7e33b8bc6
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaires_principaux
+label: 'Partenaire titre'
+display_front: true
+weight: -10

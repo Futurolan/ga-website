@@ -1,0 +1,34 @@
+uuid: 627a9fcf-02d1-4338-b5ad-2ef79af01796
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: memory
+label: Memory
+type: 'canonical_entities:node'
+pattern: 'medias/[node:title]'
+selection_criteria:
+  84c7e819-34a5-4eea-add7-812997064245:
+    id: node_type
+    bundles:
+      memory: memory
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 84c7e819-34a5-4eea-add7-812997064245
+  317ba87a-1a26-4a65-b3a1-e163c954317d:
+    id: language
+    langcodes:
+      fr: fr
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 317ba87a-1a26-4a65-b3a1-e163c954317d
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

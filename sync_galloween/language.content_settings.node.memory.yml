@@ -1,0 +1,16 @@
+uuid: 8962f6d3-ae0a-4e03-8a2f-c0a8e9bdece9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.memory
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.memory
+target_entity_type_id: node
+target_bundle: memory
+default_langcode: site_default
+language_alterable: true

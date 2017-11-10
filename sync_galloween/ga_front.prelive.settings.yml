@@ -1,0 +1,31 @@
+edition_name: 'Edition 2017'
+event_title: 'L''évenement'
+event_text: "<p>L'édition 2017 de la Gamers Assembly aura lieu du 26 au 28 Mars, et se déroulera au Parc des Expositions de Poitiers.</p>\r\n"
+event_cta: '+ d''infos'
+planning_text: "<p>Découvrez l'intégralité du programme, les conférences, les événements de cette édition 2017 de la Gamers Assembly.</p>\r\n"
+planning_cta: Programme
+ticket_text: "<p>La billetterie ouvrira mi-décembre, suivez nous sur les réseaux sociaux pour être tenu informés !</p>\r\n"
+ticket_cta: Twitter
+langcode: fr
+b1_reverse: 0
+b1_title: 'Lieu et date'
+b1_text: "<p>L'édition 2017 de la Gamers Assembly Halloween Edition aura lieu du <strong>10 au 12 novembre</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>à la Salle de Spectacle de la Hune - <strong>Saint-Benoît</strong> (86)</p>\r\n\r\n<ol>\r\n</ol>\r\n"
+b1_cta: '+ d''infos'
+b1_link: /visitors
+b2_reverse: 0
+b2_title: Billetterie
+b2_text: "<p>Inscription au tournoi <strong>20€</strong> par personne en ligne (25€ sur place)</p>\r\n\r\n<p>Fin des inscriptions en ligne le 10 novembre à 18h00</p>\r\n\r\n<p>Inscriptions sur place du 10&nbsp;novembre 18h00 au 11&nbsp;novembre 8h30</p>\r\n"
+b2_cta: Inscrivez-vous
+b2_link: /ticket
+b3_reverse: 0
+b3_title: 'Galloween 2017 en chiffres'
+b3_text: "<p><strong>264</strong>&nbsp;participants</p>\r\n\r\n<p><strong>4&nbsp;</strong>tournois :<br />\r\n<strong>Overwatch</strong> - 14&nbsp;équipes<br />\r\n<strong>League of Legends</strong> - 14&nbsp;équipes<br />\r\n<strong>HearthStone</strong> - 30&nbsp;joueurs<br />\r\n<strong>Krosmaga</strong> - 26&nbsp;joueurs<br />\r\n<strong>Joueurs libres</strong> - 54&nbsp;joueurs</p>\r\n"
+b3_cta: '+ d''infos'
+b3_link: 'http://presse.futurolan.net/uploads/assets/divers/infographie/infographie_720.jpg'
+b1_image:
+  - '40'
+b2_image: {  }
+b3_image: {  }
+show_sponsors: 0
+slide_time: '5000'
+title: 'Gamers Assembly : Halloween Edition'

@@ -1,0 +1,20 @@
+uuid: 52274b71-e6be-4934-80a8-63153bc48ed8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ga_platform
+    - node
+id: node.field_platform
+field_name: field_platform
+entity_type: node
+type: entity_reference
+settings:
+  target_type: platform
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

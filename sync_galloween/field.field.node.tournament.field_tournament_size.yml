@@ -1,0 +1,25 @@
+uuid: fe707fab-29ab-4590-879c-68ed344b9e72
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_size
+    - node.type.tournament
+id: node.tournament.field_tournament_size
+field_name: field_tournament_size
+entity_type: node
+bundle: tournament
+label: Taille
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,29 @@
+uuid: 6afb95ab-2823-4e51-b29f-0c7826220c2e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Souvenir
+type: memory
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

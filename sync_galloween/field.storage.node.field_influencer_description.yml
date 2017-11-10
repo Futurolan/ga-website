@@ -1,0 +1,19 @@
+uuid: 79ae1e9c-51be-47e9-b82b-a8afb26b3372
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_influencer_description
+field_name: field_influencer_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
