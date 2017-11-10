@@ -11,3 +11,11 @@ function ga_sponsor_theme($existing, $type, $theme, $path) {
     )
   );
 }
+
+function ga_sponsor_sponsor_update(){
+  drupal_flush_all_caches();
+}
+
+function ga_sponsor_sponsor_insert(){
+  drupal_flush_all_caches();
+}
