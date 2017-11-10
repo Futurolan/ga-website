@@ -1,0 +1,19 @@
+uuid: c2d9eb6c-306e-445f-a79c-a471e2c5e0d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toornament_participant2
+    - node.type.toornament_result
+id: node.toornament_result.field_toornament_participant2
+field_name: field_toornament_participant2
+entity_type: node
+bundle: toornament_result
+label: Participant2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

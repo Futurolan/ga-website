@@ -1,0 +1,19 @@
+uuid: 4c8a666b-3375-454f-b5c9-c7e7afb25f70
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - node
+id: node.field_tournament_cashprize
+field_name: field_tournament_cashprize
+entity_type: node
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

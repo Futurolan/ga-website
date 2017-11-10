@@ -1,0 +1,31 @@
+uuid: dbedff7d-eb66-4883-9210-2db3ff6a05b3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.animation.field_animation_content
+    - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_localisation
+    - field.field.node.animation.field_animation_url
+    - field.field.node.animation.field_animation_weight
+    - node.type.animation
+  module:
+    - user
+id: node.animation.teaser
+targetEntityType: node
+bundle: animation
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_animation_content: true
+  field_animation_image: true
+  field_animation_localisation: true
+  field_animation_url: true
+  field_animation_weight: true
+  langcode: true

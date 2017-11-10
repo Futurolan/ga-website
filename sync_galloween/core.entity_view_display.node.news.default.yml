@@ -1,0 +1,87 @@
+uuid: 803bd826-98a9-469f-b675-d20d0a9ce310
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_news_content
+    - field.field.node.news.field_news_edition
+    - field.field.node.news.field_news_game
+    - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_show_image
+    - field.field.node.news.field_news_tags
+    - field.field.node.news.field_news_tournament
+    - node.type.news
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: Ut70e99uemhSq_j1E3PlAe_32JIoO7Ofl5OlA7ohLs8
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_news_content:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_news_edition:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_news_game:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_news_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_news_show_image:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_news_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_news_tournament:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

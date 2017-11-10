@@ -1,0 +1,19 @@
+uuid: 785f07eb-1b9f-4a8a-8400-dbd442800045
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cashprize_lines
+    - paragraphs.paragraphs_type.field_tournament_cashprize
+id: paragraph.field_tournament_cashprize.field_cashprize_lines
+field_name: field_cashprize_lines
+entity_type: paragraph
+bundle: field_tournament_cashprize
+label: Lines
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

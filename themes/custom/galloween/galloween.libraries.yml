@@ -3,3 +3,8 @@ galloween.corescripts:
   css:
     theme:
       css/galloween.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+

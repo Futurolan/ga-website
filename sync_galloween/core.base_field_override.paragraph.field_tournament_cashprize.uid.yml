@@ -1,0 +1,20 @@
+uuid: 88b51c6f-f0c2-43e3-ad22-b616f8a257ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.field_tournament_cashprize
+id: paragraph.field_tournament_cashprize.uid
+field_name: uid
+entity_type: paragraph
+bundle: field_tournament_cashprize
+label: 'Écrit par'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

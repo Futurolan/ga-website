@@ -1,0 +1,31 @@
+uuid: 25209136-74e9-48c7-8121-f3c1470e2c05
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.activity.field_date
+    - field.field.node.activity.field_description
+    - field.field.node.activity.field_display_front_page
+    - field.field.node.activity.field_game
+    - field.field.node.activity.field_lien
+    - field.field.node.activity.field_room
+    - node.type.activity
+  module:
+    - user
+id: node.activity.teaser
+targetEntityType: node
+bundle: activity
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date: true
+  field_description: true
+  field_display_front_page: true
+  field_game: true
+  field_lien: true
+  field_room: true
+  langcode: true

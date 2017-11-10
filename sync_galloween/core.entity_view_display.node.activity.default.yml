@@ -1,0 +1,77 @@
+uuid: 03d08843-c503-4b05-856f-60cd0ea9254e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.activity.field_date
+    - field.field.node.activity.field_description
+    - field.field.node.activity.field_display_front_page
+    - field.field.node.activity.field_game
+    - field.field.node.activity.field_lien
+    - field.field.node.activity.field_room
+    - node.type.activity
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.activity.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+  field_date:
+    weight: 101
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_description:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_display_front_page:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_game:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_lien:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_room:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

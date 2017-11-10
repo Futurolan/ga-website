@@ -1,0 +1,34 @@
+uuid: d11df79f-26d4-42e9-a915-aa215d9b6e80
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: tournaments
+label: Tournaments
+type: 'canonical_entities:node'
+pattern: 'tournaments/[node:title]'
+selection_criteria:
+  80f011a1-7397-496e-a121-4cf7c94eae55:
+    id: node_type
+    bundles:
+      tournament: tournament
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 80f011a1-7397-496e-a121-4cf7c94eae55
+  aeadf635-0fc7-4658-895b-0d5c99b55739:
+    id: language
+    langcodes:
+      en: en
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: aeadf635-0fc7-4658-895b-0d5c99b55739
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Langue

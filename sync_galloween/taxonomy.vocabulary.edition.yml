@@ -1,0 +1,9 @@
+uuid: 71c0afd4-f577-4d04-86fa-8a1c4a5f5e9e
+langcode: fr
+status: true
+dependencies: {  }
+name: Edition
+vid: edition
+description: ''
+hierarchy: 0
+weight: 0

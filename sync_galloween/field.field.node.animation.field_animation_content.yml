@@ -1,0 +1,21 @@
+uuid: 73616f06-f018-488a-928e-47bf6bb6552c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animation_content
+    - node.type.animation
+  module:
+    - text
+id: node.animation.field_animation_content
+field_name: field_animation_content
+entity_type: node
+bundle: animation
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,9 @@
+uuid: 31c6d32a-c833-452a-8b24-1aedb409adfa
+langcode: fr
+status: true
+dependencies: {  }
+id: node_type_sponsor
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

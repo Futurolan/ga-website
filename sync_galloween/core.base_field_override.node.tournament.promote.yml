@@ -1,0 +1,24 @@
+uuid: 3ef44f0a-bc14-4c67-8bca-f7ca1e475a43
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tournament
+_core:
+  default_config_hash: lbHNBXmxLfvkcua_zPy-EuAYc0zaq7oqoq5K0lxP9Dc
+id: node.tournament.promote
+field_name: promote
+entity_type: node
+bundle: tournament
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

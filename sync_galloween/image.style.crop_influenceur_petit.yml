@@ -1,0 +1,22 @@
+uuid: 562110f1-94db-48be-a1c1-ca7f0592fbe7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: crop_influenceur_petit
+label: 'Crop influenceur petit'
+effects:
+  e30d2f9c-acc7-4520-b9d9-f9c719d63877:
+    uuid: e30d2f9c-acc7-4520-b9d9-f9c719d63877
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: influencer
+  92df0c6a-07ef-498c-9b89-9e8051c8da03:
+    uuid: 92df0c6a-07ef-498c-9b89-9e8051c8da03
+    id: image_resize
+    weight: 2
+    data:
+      width: 50
+      height: 50

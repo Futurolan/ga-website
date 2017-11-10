@@ -1,0 +1,11 @@
+uuid: c76e42d6-d56c-4568-8610-8fd5b45b4823
+langcode: fr
+status: true
+dependencies: {  }
+id: gahe17
+label: gahe17
+image:
+  - '891'
+video: {  }
+link: '#'
+weight: null

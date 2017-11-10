@@ -1,0 +1,248 @@
+uuid: 64da37a7-0f5b-41fe-b35f-d9ce340654dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.tournament.field_platform
+    - field.field.node.tournament.field_tournament_cashprize
+    - field.field.node.tournament.field_tournament_cashprize2
+    - field.field.node.tournament.field_tournament_description
+    - field.field.node.tournament.field_tournament_format
+    - field.field.node.tournament.field_tournament_game
+    - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_image_sponsor
+    - field.field.node.tournament.field_tournament_planning
+    - field.field.node.tournament.field_tournament_reserved_slot
+    - field.field.node.tournament.field_tournament_rules
+    - field.field.node.tournament.field_tournament_show_toornament
+    - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_sub_count
+    - field.field.node.tournament.field_tournament_subscribers
+    - field.field.node.tournament.field_tournament_toornament_id
+    - field.field.node.tournament.field_tournament_type
+    - field.field.node.tournament.field_tournament_weezevent_id
+    - field.field.node.tournament.field_tournament_weight
+    - image.style.crop_image_site
+    - image.style.thumbnail
+    - node.type.tournament
+  module:
+    - field_collection
+    - field_group
+    - file
+    - image
+    - image_widget_crop
+    - paragraphs
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_inscriptions:
+      children:
+        - field_tournament_weezevent_id
+        - field_tournament_size
+        - field_tournament_reserved_slot
+      parent_name: ''
+      weight: 11
+      label: Inscriptions
+      format_type: details
+      format_settings:
+        label: Inscriptions
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+    group_partenariat:
+      children:
+        - field_tournament_image_sponsor
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Partenariat
+    group_toornament:
+      children:
+        - field_tournament_show_toornament
+        - field_tournament_toornament_id
+      parent_name: ''
+      weight: 13
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Toornament
+_core:
+  default_config_hash: 3nWj8aGAiUPJwARBf8n6uSDidEKi_YDmlS04IXfhUKA
+id: node.tournament.default
+targetEntityType: node
+bundle: tournament
+mode: default
+content:
+  field_platform:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tournament_cashprize:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+    region: content
+  field_tournament_cashprize2:
+    type: entity_reference_paragraphs
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tournament_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tournament_format:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tournament_game:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tournament_image:
+    weight: 3
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: crop_image_site
+      crop_preview_image_style: crop_preview
+      crop_list:
+        - news_format
+        - ratio_site
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings: {  }
+    type: image_widget_crop
+    region: content
+  field_tournament_image_sponsor:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tournament_planning:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tournament_reserved_slot:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tournament_rules:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_tournament_show_toornament:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tournament_size:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tournament_toornament_id:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tournament_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tournament_weezevent_id:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_tournament_sub_count: true
+  field_tournament_subscribers: true
+  field_tournament_weight: true
+  path: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true

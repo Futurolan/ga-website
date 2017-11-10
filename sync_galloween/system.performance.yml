@@ -1,0 +1,8 @@
+cache:
+  page:
+    max_age: 3600
+css:
+  preprocess: true
+js:
+  preprocess: true
+langcode: fr

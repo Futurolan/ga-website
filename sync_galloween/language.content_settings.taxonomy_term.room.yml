@@ -1,0 +1,11 @@
+uuid: 2d47ddf8-721f-4370-a6a3-8dabf8dc1c98
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room
+id: taxonomy_term.room
+target_entity_type_id: taxonomy_term
+target_bundle: room
+default_langcode: site_default
+language_alterable: false

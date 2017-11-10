@@ -1,0 +1,15 @@
+uuid: 7846487e-b8b8-4761-b4ff-266b1f744205
+langcode: fr
+status: true
+dependencies: {  }
+name: vignette_50x50
+label: 'Vignette 50x50'
+effects:
+  34fd603b-aee6-4035-9375-f59eaf7e3508:
+    uuid: 34fd603b-aee6-4035-9375-f59eaf7e3508
+    id: image_scale
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      upscale: false

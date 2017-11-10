@@ -1,0 +1,11 @@
+uuid: 6d37f825-8c8b-4b79-9c31-941ee491178b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.toornament_result
+id: node.toornament_result
+target_entity_type_id: node
+target_bundle: toornament_result
+default_langcode: site_default
+language_alterable: false

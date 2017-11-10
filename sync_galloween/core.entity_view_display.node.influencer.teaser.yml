@@ -1,0 +1,27 @@
+uuid: 44000f9e-feaf-4d0a-b61f-6868804d2c5c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.influencer.field_influencer_description
+    - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
+    - field.field.node.influencer.field_influencer_weight
+    - node.type.influencer
+  module:
+    - user
+id: node.influencer.teaser
+targetEntityType: node
+bundle: influencer
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_influencer_description: true
+  field_influencer_image: true
+  field_influencer_link: true
+  field_influencer_weight: true
+  langcode: true

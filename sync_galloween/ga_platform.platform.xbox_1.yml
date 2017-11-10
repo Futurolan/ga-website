@@ -1,0 +1,6 @@
+uuid: 5146e8ed-db9d-4579-84a8-873188054368
+langcode: fr
+status: true
+dependencies: {  }
+id: xbox_1
+label: 'Xbox One'

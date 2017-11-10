@@ -1,0 +1,9 @@
+uuid: 76b9feeb-69f7-47f4-9719-3c253db1702c
+langcode: fr
+status: true
+dependencies: {  }
+name: Jeu
+vid: game
+description: ''
+hierarchy: 0
+weight: 0

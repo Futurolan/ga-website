@@ -1,0 +1,20 @@
+uuid: 033a5449-d41d-4613-9350-bdb64d3fc14f
+langcode: en
+status: false
+dependencies:
+  theme:
+    - galloween
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: galloween_local_actions
+theme: galloween
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

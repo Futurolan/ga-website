@@ -1,0 +1,64 @@
+uuid: 1aeab98f-f09a-4431-ba54-b71f9c790048
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.animation.field_animation_content
+    - field.field.node.animation.field_animation_image
+    - field.field.node.animation.field_animation_localisation
+    - field.field.node.animation.field_animation_url
+    - field.field.node.animation.field_animation_weight
+    - node.type.animation
+  module:
+    - image
+    - text
+    - user
+id: node.animation.default
+targetEntityType: node
+bundle: animation
+mode: default
+content:
+  field_animation_content:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_animation_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_animation_localisation:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_animation_url:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_animation_weight:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,12 @@
+uuid: f226f80a-88a6-4794-9faa-698cd8972b34
+langcode: fr
+status: true
+dependencies: {  }
+label: 'Image site Format'
+id: ratio_site
+description: ''
+aspect_ratio: '10:3'
+soft_limit_width: 1170
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

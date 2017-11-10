@@ -1,0 +1,20 @@
+uuid: a48dae3c-ed4a-4dc5-b2be-11f2e93438e9
+langcode: en
+status: false
+dependencies:
+  theme:
+    - galloween
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: galloween_page_title
+theme: galloween
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

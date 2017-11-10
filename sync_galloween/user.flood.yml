@@ -1,0 +1,8 @@
+uid_only: false
+ip_limit: 50
+ip_window: 3600
+user_limit: 5
+user_window: 21600
+langcode: fr
+_core:
+  default_config_hash: Dz17ZkSj3BGOJrCPhnlooHxMPhiEmvk4y_57Ymzhm7c

@@ -1,0 +1,22 @@
+uuid: 7f1073c0-5c2d-47c2-9f0d-5eb276cb28a2
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - galloween
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: galloween_login
+theme: galloween
+region: header
+weight: 1
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }
