@@ -1,0 +1,9 @@
+# Family level menu items definition
+entity.family_level.collection:
+  title: 'Family level'
+  route_name: entity.family_level.collection
+  description: 'List Family level (bundles)'
+  parent: system.admin_structure
+  weight: 99
+  requirements:
+    _permission: 'administer family_levels'

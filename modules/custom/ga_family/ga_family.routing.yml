@@ -1,0 +1,15 @@
+ga_family:
+  path: '/family'
+  defaults:
+    _controller: '\Drupal\ga_family\Controller\FamilyController::render'
+    _title_callback: '\Drupal\ga_family\Controller\FamilyController::getTitle'
+  requirements:
+    _permission: 'access content'
+
+ga_family.settings:
+  path: '/admin/ga/family/settings'
+  defaults:
+    _title: 'Families settings form'
+    _form: '\Drupal\ga_family\Form\FamilySettingsForm'
+  requirements:
+    _role: 'moderator'

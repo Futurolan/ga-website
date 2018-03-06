@@ -1,0 +1,18 @@
+ga_family.family_level.*:
+  type: config_entity
+  label: 'Family level config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    display_front:
+      type: boolean
+      label: 'Display front'
+    weight:
+      type: integer
+      label: 'Weight'
+    uuid:
+      type: string

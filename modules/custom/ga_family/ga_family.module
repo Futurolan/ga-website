@@ -1,0 +1,21 @@
+<?php
+
+function ga_family_theme($existing, $type, $theme, $path) {
+  return array(
+    'ga_family' => array(
+      'variables' => array(
+        'config' => NULL,
+        'families' => NULL
+      ),
+      'template' => 'ga-family'
+    )
+  );
+}
+
+function ga_family_family_update(){
+  drupal_flush_all_caches();
+}
+
+function ga_family_family_insert(){
+  drupal_flush_all_caches();
+}
