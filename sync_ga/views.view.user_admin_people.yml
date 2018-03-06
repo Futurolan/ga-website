@@ -54,7 +54,7 @@ display:
           total_pages: 0
           tags:
             previous: '‹ Précédent'
-            next: 'Next ›'
+            next: 'Suivant ›'
             first: '« Premier'
             last: 'Dernier »'
           expose:
@@ -296,8 +296,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Active
-            format_custom_false: Blocked
+            format_custom_true: Actif
+            format_custom_false: Bloqué
           entity_type: user
           entity_field: status
         roles_target_id:

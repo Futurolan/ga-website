@@ -216,7 +216,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Last accessed'
+          label: 'Dernier accès'
           exclude: false
           alter:
             alter_text: false
@@ -476,7 +476,7 @@ display:
             group_items: {  }
           plugin_id: boolean
       sorts: {  }
-      title: 'Fix 404 pages'
+      title: 'Réparer les pages 404'
       header: {  }
       footer: {  }
       empty:

@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: rwRoOr3DiobxwoWSmtUcna1LQz5_HxHvS7H5dl7_-Uo
 id: frontpage
-label: Frontpage
+label: 'Page d''accueil'
 module: node
 description: 'Tout le contenu promu en page d''accueil.'
 tag: default
@@ -180,7 +180,7 @@ display:
             offset_label: Offset
           tags:
             previous: '‹ Précédent'
-            next: 'Next ›'
+            next: 'Suivant ›'
             first: '« Premier'
             last: 'Dernier »'
           quantity: 9

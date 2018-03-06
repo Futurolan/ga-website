@@ -24,6 +24,7 @@ module:
   file: 0
   filter: 0
   ga_config: 0
+  ga_family: 0
   ga_front: 0
   ga_gamers: 0
   ga_memory: 0

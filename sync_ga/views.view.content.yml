@@ -42,7 +42,7 @@ display:
           items_per_page: 50
           tags:
             previous: '‹ Précédent'
-            next: 'Next ›'
+            next: 'Suivant ›'
             first: '« Premier'
             last: 'Dernier »'
       style:
