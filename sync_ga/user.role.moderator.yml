@@ -117,6 +117,7 @@ permissions:
   - 'unpublish any node type animation'
   - 'update content translations'
   - 'use text format formatted_text'
+  - 'use text format full_html'
   - 'view moderator in toolbar'
   - 'view own unpublished content'
   - 'view scheduled content'

@@ -2,6 +2,11 @@
     <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
         <div class="tournament-image">
             <img class="center-block img-responsive" src="{{ file_url(cropped_image) }}"/>
+{% if (node.field_pegi.value !=NULL) %}
+<img class="img-responsive" style="position:absolute;width:32px;top:0px;left:0px" 
+src="/themes/custom/gamers_assembly/images/pegi/pegi_{{node.field_pegi.value}}.png" 
+/>
+{% endif %}
             <span>{{ node.field_platform.entity.label }}</span>
         </div>
         <div class="tournament-game"
