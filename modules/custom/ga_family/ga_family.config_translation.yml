@@ -1,0 +1,5 @@
+ga_family.settings:
+  title: 'GA Family'
+  base_route_name: ga_family.settings
+  names:
+    - ga_family.settings

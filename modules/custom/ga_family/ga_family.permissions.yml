@@ -1,0 +1,4 @@
+administer family_levels:
+  title: 'Administer family levels'
+  description: 'Create, update and delete all family levels.'
+  restrict access: true

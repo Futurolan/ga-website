@@ -1,0 +1,7 @@
+ga_family.settings:
+  type: config_object
+  label: 'Family settings'
+  mapping:
+    title:
+      type: text
+      label: 'Title'

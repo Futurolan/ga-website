@@ -1,0 +1,6 @@
+entity.family_level.add_form:
+  route_name: 'entity.family_level.add_form'
+  title: 'Add Family level'
+  appears_on:
+    - entity.family_level.collection
+
