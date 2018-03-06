@@ -76,7 +76,7 @@ class WeezeventAPI {
           }
         }
       }
-      watchdog_exception('ga_weezevent', "unknown id_ticket");
+      throw new \Exception("unknown ticket id $id_ticket");
 
     } catch (RequestException $e) {
       watchdog_exception('ga_weezevent', $e);

@@ -33,6 +33,7 @@ function ga_weezevent_update_tournament_info_cron() {
       $tickets = array();
       if (isset($result)) {
         foreach ($result->participants as $participant) {
+          if ($participant->id_event > 0) { // PATCH : il arrive que le flux retour de weezevent contienne des billets sans infos (supprimes manuellement en admin du BO?)
           $team = NULL;
           $pseudo = NULL;
           foreach ($participant->answers as $answer) {
@@ -55,6 +56,7 @@ function ga_weezevent_update_tournament_info_cron() {
           } else { // cas d'un tournoi solo
             $tickets[][$team][] = $pseudo;															
           }
+        }
         }
         if (isset($ticket_info->group_size)) {
           $count = ((int) $ticket_info->participants) / ( (int) $ticket_info->group_size);
