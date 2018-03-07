@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   config_prefix = "family_level",
- *   admin_permission = "administer family_level",
+ *   admin_permission = "administer family_levels",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",
