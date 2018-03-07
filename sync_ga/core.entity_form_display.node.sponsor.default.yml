@@ -90,9 +90,9 @@ content:
     region: content
   translation:
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
