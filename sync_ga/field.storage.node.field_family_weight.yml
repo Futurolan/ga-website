@@ -1,0 +1,20 @@
+uuid: 29f1349f-5e68-4ef6-827b-6408d9603b97
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - weight
+id: node.field_family_weight
+field_name: field_family_weight
+entity_type: node
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

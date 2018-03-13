@@ -1,0 +1,20 @@
+uuid: 62783de5-bd8f-4451-a5ff-44716f3a196e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ga_family
+    - node
+id: node.field_family_level
+field_name: field_family_level
+entity_type: node
+type: entity_reference
+settings:
+  target_type: family_level
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

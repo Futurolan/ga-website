@@ -1,0 +1,23 @@
+uuid: 5011884f-7d91-4cf4-a2da-a16a25008fc1
+langcode: fr
+status: true
+dependencies: {  }
+name: family_front
+label: Family
+effects:
+  edda8039-3ddc-460f-b94f-fd570b6afe77:
+    uuid: edda8039-3ddc-460f-b94f-fd570b6afe77
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      upscale: false
+  96da9636-69e4-40b9-b807-525def076e6f:
+    uuid: 96da9636-69e4-40b9-b807-525def076e6f
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      upscale: false

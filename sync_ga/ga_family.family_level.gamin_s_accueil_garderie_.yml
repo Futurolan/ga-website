@@ -1,0 +1,8 @@
+uuid: e2ae545a-dbf2-440f-80ba-f91610f8815d
+langcode: fr
+status: true
+dependencies: {  }
+id: gamin_s_accueil_garderie_
+label: 'Gamin''s Accueil (garderie)'
+display_front: false
+weight: 0

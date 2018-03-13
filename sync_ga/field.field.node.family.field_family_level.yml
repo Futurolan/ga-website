@@ -1,0 +1,23 @@
+uuid: 1ac6b474-0e3c-4160-9531-d64e7fec5ed1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_family_level
+    - node.type.family
+id: node.family.field_family_level
+field_name: field_family_level
+entity_type: node
+bundle: family
+label: Niveau
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:family_level'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

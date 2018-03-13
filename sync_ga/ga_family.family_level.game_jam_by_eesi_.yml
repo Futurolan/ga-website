@@ -1,0 +1,8 @@
+uuid: 409bc98c-5e55-426b-9eb1-b00cc0c84752
+langcode: fr
+status: true
+dependencies: {  }
+id: game_jam_by_eesi_
+label: 'Game Jam by EESI'
+display_front: false
+weight: -3

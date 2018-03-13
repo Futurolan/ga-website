@@ -1,0 +1,8 @@
+uuid: 50018053-4eb1-4e33-bbe5-37ed26d04a1d
+langcode: fr
+status: true
+dependencies: {  }
+id: geeks_gamers_by_la_pixellerie
+label: 'Geeks & Gamers by La Pixellerie'
+display_front: false
+weight: -6

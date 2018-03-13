@@ -123,6 +123,7 @@ permissions:
   - 'translate tournament node'
   - 'unpublish any content'
   - 'unpublish any node type animation'
+  - 'unpublish any node type family'
   - 'update content translations'
   - 'use text format formatted_text'
   - 'use text format full_html'

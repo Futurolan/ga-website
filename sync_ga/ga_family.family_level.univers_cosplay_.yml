@@ -1,0 +1,8 @@
+uuid: e171e622-694f-46ff-8d74-e8455640d8dc
+langcode: fr
+status: true
+dependencies: {  }
+id: univers_cosplay_
+label: 'Univers Cosplay'
+display_front: false
+weight: -2
