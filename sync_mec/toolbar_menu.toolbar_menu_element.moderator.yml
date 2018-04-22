@@ -1,0 +1,9 @@
+uuid: 1083e421-2349-4632-a683-02ee07e20d22
+langcode: fr
+status: true
+dependencies: {  }
+id: moderator
+label: moderator
+weight: 5
+menu: moderator
+rewrite_label: true

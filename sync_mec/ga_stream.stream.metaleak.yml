@@ -1,0 +1,9 @@
+uuid: 5842d4da-07e3-46f7-a5bb-afa0d24501c6
+langcode: fr
+status: true
+dependencies: {  }
+id: metaleak
+label: 'RL RocketBaguette'
+key: rocketbaguette
+type: twitch
+weight: 3

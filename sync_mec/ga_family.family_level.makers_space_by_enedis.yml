@@ -1,0 +1,8 @@
+uuid: 93dd9df7-9f8c-4de2-b80c-4d1e1ad5d453
+langcode: fr
+status: true
+dependencies: {  }
+id: makers_space_by_enedis
+label: 'Makers Space by ENEDIS'
+display_front: false
+weight: -8

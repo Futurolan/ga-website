@@ -1,0 +1,14 @@
+uuid: a3df1223-ca97-4777-98e6-fcce771d90ee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.utilisateur_newser
+  module:
+    - user
+id: user_remove_role_action.utilisateur_newser
+label: 'Retirer le rôle Utilisateur newser aux utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: utilisateur_newser

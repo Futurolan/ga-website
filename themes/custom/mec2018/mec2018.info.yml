@@ -1,0 +1,15 @@
+name: MEC2018
+type: theme
+description: A theme for the Montpellier Esports Convention 2018
+base theme: stable
+core: 8.x
+
+libraries:
+  - mec2018/bootstrap
+  - mec2018/font-awesome
+  - mec2018/mec2018.corescripts
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

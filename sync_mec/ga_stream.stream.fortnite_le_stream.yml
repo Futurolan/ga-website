@@ -1,0 +1,9 @@
+uuid: 80277804-e864-482d-aace-a8cdf6f1afb4
+langcode: fr
+status: true
+dependencies: {  }
+id: fortnite_le_stream
+label: 'Fortnite Le Stream'
+key: lestream
+type: twitch
+weight: -2

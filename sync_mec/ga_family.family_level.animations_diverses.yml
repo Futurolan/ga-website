@@ -1,0 +1,8 @@
+uuid: 10b902ba-9d60-448c-95bb-e6129eddfcae
+langcode: fr
+status: true
+dependencies: {  }
+id: animations_diverses
+label: 'Animations diverses'
+display_front: false
+weight: -1

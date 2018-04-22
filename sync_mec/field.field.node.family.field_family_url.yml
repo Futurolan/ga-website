@@ -1,0 +1,19 @@
+uuid: 4e26933d-71c4-4fdc-bc65-7b7ba354fd9f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_family_url
+    - node.type.family
+id: node.family.field_family_url
+field_name: field_family_url
+entity_type: node
+bundle: family
+label: Url
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

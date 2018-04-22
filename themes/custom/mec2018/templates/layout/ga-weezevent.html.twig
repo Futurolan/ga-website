@@ -1,0 +1,101 @@
+<div class="weezevent-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:config.title
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+<style>
+.table th, .table td {
+text-align: center;
+vertical-align: middle !important;
+min-width: 100px;
+}
+</style>
+
+<div class="container table-responsive">
+  <table class="table table-hover table-condensed">
+    <thead style="background:#111;color:#eee">
+      <tr>
+        <th class="col-md-1">id</th>
+        <th class="col-md-5">Billet</th>
+        <th class="col-md-1">Prix</th>
+        <th class="col-md-1">Slots</th>
+        <th class="col-md-1">Participants</th>
+        <th class="col-md-1">Remplissage</th>
+        <th class="col-md-2">Revenu</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for cat in weezdata.categories %}
+      <tr style="cursor:pointer;background:#ccc;" data-toggle="collapse" data-target="#{{cat.id}}">
+        <td>&nbsp;</td>
+        <td>{{ cat.name }}</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          {{ cat.participants }}/{{ cat.quotas }}
+          {% if cat.participants2 %}<br/>(+{{cat.participants2}}){% endif %}
+        </td>
+        <td>{{ (100 * cat.participants / cat.quotas )|round(2) }}%</td>
+        <td>
+          {{ cat.revenu }}€/{{ cat.revenu_quotas }}€
+          {% if cat.revenu2 %}<br/>(+{{cat.revenu2}}€){% endif %}
+        </td>
+      </tr>
+      <tr id="{{cat.id}}" class="collapse">
+        <td colspan=7 style="padding:0px">
+          <table class="table table-hover table-consended">
+            <tbody>
+            {% for ticket in cat.tickets %}
+              <tr class="
+              {% if ticket.remplissage > 90 %} bg-danger
+              {% elseif ticket.remplissage > 70 %} bg-warning
+              {% endif %}">
+                <td class="col-md-1">{{ ticket.id }}</td>
+                <td class="col-md-5">{{ ticket.name }}</td>
+                <td class="col-md-1">{{ ticket.price }}€</td>
+                <td class="col-md-1">{% if ticket.group_size > 1 %}{{ ticket.participants / ticket.group_size}}/{{ ticket.quotas }}{% else %}&nbsp;{% endif %}</td>
+              {% if ticket.quotas %}
+                <td class="col-md-1">{{ ticket.participants }}/{{ ticket.quotas * ticket.group_size}}</td>
+                <td class="col-md-1">{{ (100 * (ticket.participants / ticket.group_size) / ticket.quotas )|round(2) }}%</td>
+                <td class="col-md-2">{{ (ticket.participants / ticket.group_size)*ticket.price}}€/{{ ticket.price * ticket.quotas}}€</td>
+              {% else %}
+                <td class="col-md-1">{{ ticket.participants }}</td>
+                <td class="col-md-1">&nbsp;</td>
+                <td class="col-md-2">{{ (ticket.participants / ticket.group_size)*ticket.price}}€</td>
+              {% endif %}
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    {% endfor %}
+    <tr style="background:#0058A2;color:#fff">
+    <td>&nbsp;</td>
+    <td>Total billetterie</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+      {{ weezdata.participants }}/{{ weezdata.quotas }}
+      {% if weezdata.participants2 %}<br/>(+{{weezdata.participants2}}){% endif %}
+    </td>
+    <td>{{ (100 * weezdata.participants / weezdata.quotas )|round(2) }}%</td>
+    <td>
+      {{ weezdata.revenu_joueurs }}€/{{weezdata.revenu_joueurs_quotas}}€
+      {% if (weezdata.revenu2 + weezdata.revenu - weezdata.revenu_joueurs) > 0 %}<br/>(+{{weezdata.revenu2 + weezdata.revenu - weezdata.revenu_joueurs}}€){% endif %}
+    </td>
+  </tr>
+</table>
+</div>		
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+

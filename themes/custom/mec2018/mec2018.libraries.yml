@@ -1,0 +1,116 @@
+mec2018.corescripts:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+      libraries/animatecss/animate.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+
+mec2018.streams:
+  version: 1.x
+  js:
+    components/streams/streams.js: {}
+  dependencies:
+    - core/jquery
+
+mec2018.tournaments-home-next:
+  version: 1.x
+  js:
+    components/tournaments-home-next/tournaments-home-next.js: {}
+  dependencies:
+    - core/jquery
+
+mec2018.tournaments-home-last-results:
+  version: 1.x
+  js:
+    components/tournaments-home-last-results/tournaments-home-last-results.js: {}
+  dependencies:
+    - core/jquery
+
+mec2018.slideshow:
+  version: 1.X
+  js:
+    components/slideshow/slideshow.js: {}
+  dependencies:
+    - mec2018/loopslider
+
+mec2018.sponsors-banner:
+  version: 1.X
+  js:
+    components/sponsors-banner/sponsors-banner.js: {}
+  dependencies:
+    - mec2018/loopslider
+
+mec2018.schedule:
+  version: 1.X
+  js:
+    components/schedule/schedule.js: {}
+  dependencies:
+    - core/underscore
+    - core/jquery
+    - mec2018/moment
+    - mec2018/visjs
+
+tmi:
+  version: 1.X
+  js:
+    libraries/chat/tmi.min.js: {minified: true}
+    libraries/chat/chat.js : {}
+  dependencies:
+    - core/jquery
+
+twitter:
+  version: 1.X
+  js:
+    libraries/twitter/widgets.js: {}
+
+bootstrap:
+  remote: http://getbootstrap.com/
+  license:
+    name: MIT
+    gpl-compatible: false
+  js:
+    libraries/bootstrap/js/bootstrap.min.js: { minified: true }
+  css:
+    theme:
+      libraries/bootstrap/css/bootstrap.min.css: {}
+  dependencies:
+    - core/jquery
+
+font-awesome:
+  version: 4.6.3
+  css:
+    theme:
+      libraries/font-awesome/css/font-awesome.min.css: { minified: true }
+
+
+loopslider:
+  version: 0.1
+  js:
+    libraries/slideshow/jquery.loopslider.min.js: { minified: true }
+  css:
+    theme:
+      libraries/slideshow/loopslider.css : {}
+  dependencies:
+    - core/jquery
+
+google_charts:
+  version: 0.1
+  js:
+    https://www.gstatic.com/charts/loader.js: {type: external, minified: true}
+
+visjs:
+  version: 4.18.1
+  js:
+    libraries/visjs/vis.min.js: { minified: true}
+  css:
+      theme:
+        libraries/visjs/vis.min.css: { minified: true}
+
+moment:
+  version: 2.8.1
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.1/moment-with-locales.min.js: {type: external, minified: true}

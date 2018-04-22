@@ -1,0 +1,11 @@
+{% for row in rows %}
+	{% if loop.index0 == 0 or loop.index0%4 == 0 %}
+		{% if loop.index0%4 == 0 and loop.index0 != 0 %}
+			</div>
+		{% endif %}
+		<div class="row row-flex row-flex-wrap">
+	{% endif %}
+	    <div class="col-md-3 influencer animated zoomIn">
+	        {{ row.content }}
+	    </div>
+{% endfor %}

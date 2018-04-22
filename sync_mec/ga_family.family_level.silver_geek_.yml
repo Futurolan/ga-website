@@ -1,0 +1,8 @@
+uuid: c507578d-efb8-4d97-8072-ab582d42142e
+langcode: fr
+status: true
+dependencies: {  }
+id: silver_geek_
+label: 'Silver Geek'
+display_front: false
+weight: -4

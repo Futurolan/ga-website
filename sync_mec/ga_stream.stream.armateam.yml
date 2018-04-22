@@ -1,0 +1,9 @@
+uuid: c358189e-1fb7-4598-8d50-5f9ea5abaeea
+langcode: fr
+status: true
+dependencies: {  }
+id: armateam
+label: 'HS ArmaTeam'
+key: armatvhs
+type: twitch
+weight: -4

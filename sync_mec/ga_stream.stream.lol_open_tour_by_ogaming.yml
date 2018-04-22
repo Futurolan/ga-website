@@ -1,0 +1,9 @@
+uuid: 7879de57-6033-4b6d-a50d-a9bbca091f8a
+langcode: fr
+status: true
+dependencies: {  }
+id: lol_open_tour_by_ogaming
+label: 'LOL OpenTour oGaming'
+key: ogaminglol2
+type: twitch
+weight: -7

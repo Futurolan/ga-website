@@ -1,0 +1,27 @@
+{% set classes = [
+dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+<div class="views-tournaments">
+    <div {{ attributes.addClass(classes) }}>
+        <div class="grey-area-title">
+            {% include directory ~ "/components/title-line/title-line.html.twig" with {
+            title:"Tournaments"|t
+            } only %}
+        </div>
+        <div class="white-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            {{ rows }}
+                        </div>
+                    </div>
+                    {#<div class="col-md-4">#}
+                        {#{{ exposed }}#}
+                    {#</div>#}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

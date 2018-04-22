@@ -1,0 +1,21 @@
+uuid: 062fb133-d36f-43fd-be58-e76d37669c3f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_memory_short_description
+    - node.type.memory
+  module:
+    - text
+id: node.memory.field_memory_short_description
+field_name: field_memory_short_description
+entity_type: node
+bundle: memory
+label: 'Description courte'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

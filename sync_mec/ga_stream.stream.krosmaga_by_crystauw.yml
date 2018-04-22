@@ -1,0 +1,9 @@
+uuid: 5d6f2c47-1628-4ef6-adeb-639cefc3e046
+langcode: fr
+status: true
+dependencies: {  }
+id: krosmaga_by_crystauw
+label: 'Krosmaga Crystauw'
+key: crystauw
+type: twitch
+weight: 1

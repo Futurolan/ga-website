@@ -1,0 +1,9 @@
+uuid: a66820de-ce19-406e-8caf-979b25ae6c8c
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Type de jeu'
+vid: game_type
+description: ''
+hierarchy: 0
+weight: 0

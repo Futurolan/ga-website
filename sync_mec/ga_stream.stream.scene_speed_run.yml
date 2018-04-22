@@ -1,0 +1,9 @@
+uuid: 8f70cc98-8dc8-4de0-89ca-fffabae062c6
+langcode: fr
+status: true
+dependencies: {  }
+id: scene_speed_run
+label: 'Scène Speed Run'
+key: lefrenchrestream
+type: twitch
+weight: -9

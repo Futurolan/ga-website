@@ -1,0 +1,34 @@
+<div class="news">
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+
+        <img class="img-responsive" src="{{ file_url(cropped_image) }}"/>
+
+
+    </a>
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+        <div class="news-tags"
+             {% if (node.field_game.entity.getColor()) %}style="background-color:{{ node.field_game.entity.getColor() }}"{% endif %}>
+            {% if(node.field_news_tournament.target_id) %}
+                {{ node.field_news_tournament.entity.getTitle() }}
+            {% elseif(node.field_game.entity.getImageUri()) %}
+                {{ node.field_game.entity.label() }}
+            {% elseif(node.field_news_edition.target_id) %}
+                {{ node.field_news_edition.entity.getName() }}
+            {% else %}
+                Futurolan
+            {% endif %}
+        </div>
+    </a>
+    <h2>
+        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+            {{ node.getTitle() }}
+        </a>
+    </h2>
+    <div class="news-date">{{ node.getCreatedTime()|date("d.m.Y") }}</div>
+    <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">
+        <div class="news-content">{{ node.get('field_news_content').summary }}</div>
+    </a>
+    <div class="news-more">
+        <a href=" {{ path('entity.node.canonical', {'node': node.id()}) }}">{{ "More..."|t }}</a>
+    </div>
+</div>

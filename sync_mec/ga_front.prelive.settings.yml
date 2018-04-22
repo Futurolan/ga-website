@@ -1,0 +1,32 @@
+edition_name: 'Edition 2018'
+event_title: 'L''évenement'
+event_text: "<p>L'édition 2017 de la Gamers Assembly aura lieu du 26 au 28 Mars, et se déroulera au Parc des Expositions de Poitiers.</p>\r\n"
+event_cta: '+ d''infos'
+planning_text: "<p>Découvrez l'intégralité du programme, les conférences, les événements de cette édition 2017 de la Gamers Assembly.</p>\r\n"
+planning_cta: Programme
+ticket_text: "<p>La billetterie ouvrira mi-décembre, suivez nous sur les réseaux sociaux pour être tenu informés !</p>\r\n"
+ticket_cta: Twitter
+langcode: fr
+b1_reverse: 1
+b1_title: Dates
+b1_text: "<p>La Gamers Assembly 2018 est de retour du 31 mars au 2 avril 2018 au Parc des Expositions de Poitiers !</p>\r\n"
+b1_cta: 'Plus d''infos'
+b1_link: visitors
+b2_reverse: 0
+b2_title: Inscriptions
+b2_text: "<p>Les inscriptions pour la Gamers Assembly 2018 sont ouvertes !</p>\r\n"
+b2_cta: Billetterie
+b2_link: ticket
+b3_reverse: 0
+b3_title: 'Poitiers E-sports Meetings'
+b3_text: "<p>Participez au forum d’affaires le 30 mars : 150 acteurs majeurs de l’esport&nbsp;pour développer de nouveaux partenariats !</p>\r\n"
+b3_cta: 'Plus d''infos'
+b3_link: 'https://www.poitiers-esports-meetings.com/'
+b1_image:
+  - '886'
+b2_image: {  }
+b3_image:
+  - '885'
+show_sponsors: 1
+slide_time: '5000'
+title: GA2018

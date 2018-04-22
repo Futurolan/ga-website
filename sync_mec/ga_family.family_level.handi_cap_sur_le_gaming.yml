@@ -1,0 +1,8 @@
+uuid: 682a9f4e-58bc-4911-aeb5-a690ed890977
+langcode: fr
+status: true
+dependencies: {  }
+id: handi_cap_sur_le_gaming
+label: 'Handi''Cap sur le gaming'
+display_front: false
+weight: -9

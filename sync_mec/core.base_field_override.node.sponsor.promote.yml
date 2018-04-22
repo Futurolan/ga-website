@@ -1,0 +1,24 @@
+uuid: 50eeff75-195d-498b-b042-30dc2899ff8d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sponsor
+_core:
+  default_config_hash: kZhqtBchFWTPBQCGdjD1wVTH3pt5qChemoTz-mwEFBA
+id: node.sponsor.promote
+field_name: promote
+entity_type: node
+bundle: sponsor
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

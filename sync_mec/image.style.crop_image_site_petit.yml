@@ -1,0 +1,23 @@
+uuid: e28de5a0-c3ed-44aa-8263-0335aec9ab0c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: crop_image_site_petit
+label: 'Crop image site petit'
+effects:
+  f963c703-08bb-4f5e-9d57-b5c92afbb929:
+    uuid: f963c703-08bb-4f5e-9d57-b5c92afbb929
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: ratio_site
+  06735cd3-7c91-4585-b1a4-c0eb28d3cd92:
+    uuid: 06735cd3-7c91-4585-b1a4-c0eb28d3cd92
+    id: image_scale
+    weight: -9
+    data:
+      width: 100
+      height: 30
+      upscale: true

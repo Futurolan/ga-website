@@ -1,0 +1,9 @@
+uuid: cfc87899-fa87-4aa9-97b3-036e424d081d
+langcode: fr
+status: true
+dependencies: {  }
+id: ga
+label: 'Scène principale GA'
+key: gamers_assembly
+type: twitch
+weight: -11

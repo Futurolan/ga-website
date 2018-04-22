@@ -1,0 +1,9 @@
+uuid: b4772a41-5ce7-4d6b-a51f-668744d1377e
+langcode: fr
+status: true
+dependencies: {  }
+id: lol_solary
+label: 'LOL Solary'
+key: solary
+type: twitch
+weight: -5

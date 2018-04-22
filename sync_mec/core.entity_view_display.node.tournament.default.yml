@@ -1,0 +1,203 @@
+uuid: 88e5f3e5-9922-49d6-8fd3-096b0a7c2706
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.tournament.field_pegi
+    - field.field.node.tournament.field_platform
+    - field.field.node.tournament.field_tournament_cashprize
+    - field.field.node.tournament.field_tournament_cashprize2
+    - field.field.node.tournament.field_tournament_description
+    - field.field.node.tournament.field_tournament_format
+    - field.field.node.tournament.field_tournament_game
+    - field.field.node.tournament.field_tournament_image
+    - field.field.node.tournament.field_tournament_image_sponsor
+    - field.field.node.tournament.field_tournament_planning
+    - field.field.node.tournament.field_tournament_reserved_slot
+    - field.field.node.tournament.field_tournament_rules
+    - field.field.node.tournament.field_tournament_show_toornament
+    - field.field.node.tournament.field_tournament_size
+    - field.field.node.tournament.field_tournament_sub_count
+    - field.field.node.tournament.field_tournament_subscribers
+    - field.field.node.tournament.field_tournament_toornament_id
+    - field.field.node.tournament.field_tournament_type
+    - field.field.node.tournament.field_tournament_weezevent_id
+    - field.field.node.tournament.field_tournament_weight
+    - node.type.tournament
+  module:
+    - entity_reference_revisions
+    - field_collection
+    - file
+    - image
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: 53chbSVh8hcTrR-W6glYU3XnBbMe_tg_Op2Lp0sMSvQ
+id: node.tournament.default
+targetEntityType: node
+bundle: tournament
+mode: default
+content:
+  field_pegi:
+    weight: 127
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_platform:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tournament_cashprize:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_tournament_cashprize2:
+    type: entity_reference_revisions_entity_view
+    weight: 124
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tournament_description:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tournament_format:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tournament_game:
+    weight: 123
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tournament_image_sponsor:
+    weight: 122
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tournament_planning:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tournament_reserved_slot:
+    weight: 115
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tournament_rules:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_tournament_show_toornament:
+    weight: 126
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_tournament_size:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tournament_sub_count:
+    weight: 120
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tournament_subscribers:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tournament_toornament_id:
+    weight: 125
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tournament_type:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tournament_weezevent_id:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tournament_weight:
+    weight: 121
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_tournament_image: true
+  langcode: true

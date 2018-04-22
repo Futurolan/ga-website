@@ -1,0 +1,9 @@
+<div class="thumbnail">
+    <a class="div-link" href="{{ node.field_influencer_link.value }}" target="_blank"></a>
+    <img src="{{ file_url(cropped_image) }}" class="">
+    <div class="caption">
+         <h4 class="">{{ node.getTitle() }}</h4>
+
+        {{ node.field_influencer_description.value|raw }}
+    </div>
+</div>

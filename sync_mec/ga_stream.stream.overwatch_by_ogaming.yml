@@ -1,0 +1,9 @@
+uuid: 39dab727-200c-4b19-88b3-b87c849339da
+langcode: fr
+status: true
+dependencies: {  }
+id: overwatch_by_ogaming
+label: 'Overwatch oGaming'
+key: omenbyhpeurope
+type: twitch
+weight: 2

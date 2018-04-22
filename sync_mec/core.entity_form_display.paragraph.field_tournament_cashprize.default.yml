@@ -1,0 +1,24 @@
+uuid: 9181294d-238c-4115-904c-e793b86d4974
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.field_tournament_cashprize.field_cashprize_lines
+    - paragraphs.paragraphs_type.field_tournament_cashprize
+id: paragraph.field_tournament_cashprize.default
+targetEntityType: paragraph
+bundle: field_tournament_cashprize
+mode: default
+content:
+  field_cashprize_lines:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

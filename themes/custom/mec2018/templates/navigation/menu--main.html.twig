@@ -1,0 +1,27 @@
+{% import _self as menus %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+        <ul{{ attributes }} class="nav navbar-nav">
+            {% for item in items %}
+                {% set classes = [
+                'nav-item',
+                item.in_active_trail ? 'nav-item--active-trail',
+                ] %}
+                <li{{ item.attributes.addClass(classes) }}>
+                    {{ link(item.title, item.url,{ 'class':["nav-link"]}) }}
+                    {% if menu_level == 0 %}<span class="active-mesh"></span>{% endif %}
+                    {% if item.below %}
+                        {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,26 @@
+<div class="ticket-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:node.getTitle()|t
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            {% if (node.get("field_page_image").entity.uri.value) %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="{{ cropped_image }}" class="img-responsive"/>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-12">
+                    {{ node.get('field_page_content').value | raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

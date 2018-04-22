@@ -1,0 +1,28 @@
+uuid: 123aa87b-ece9-49cf-a2e4-42a85b4785d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toornament_tournament
+    - node.type.toornament_result
+    - node.type.tournament
+id: node.toornament_result.field_toornament_tournament
+field_name: field_toornament_tournament
+entity_type: node
+bundle: toornament_result
+label: Tournament
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tournament: tournament
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

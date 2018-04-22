@@ -1,0 +1,9 @@
+uuid: 5a89024f-d567-4679-81cc-b529ab4a6c9e
+langcode: fr
+status: true
+dependencies: {  }
+id: scok
+label: 'R6 Scok'
+key: scoksc2
+type: twitch
+weight: 6

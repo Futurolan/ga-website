@@ -1,0 +1,30 @@
+<div class="home-block"
+     style="background-image: url({% if(image) %}{{ file_url(image) }}{% else %}{{ directory }}/images/tampon-GA.png{% endif %});">
+    {% if(title and title!="") %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    {{ title }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text">
+                {{ text|raw }}
+            </div>
+        </div>
+    </div>
+    {% if(cta and cta!="" and link and link!="") %}
+        <div class="row btn-bottom">
+            <div class="col-md-7 col-md-offset-5">
+                <a href="{{ link }}" class="btn-progress {% if(reverse) %}reverse{% endif %}">
+                    <div class="cta btn-motion btn-1c">
+                        {{ cta }}
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+</div>

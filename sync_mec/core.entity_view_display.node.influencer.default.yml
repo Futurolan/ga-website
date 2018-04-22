@@ -1,0 +1,57 @@
+uuid: f4e3ce3f-e22f-495d-9797-095bd89e69bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.influencer.field_influencer_description
+    - field.field.node.influencer.field_influencer_image
+    - field.field.node.influencer.field_influencer_link
+    - field.field.node.influencer.field_influencer_weight
+    - node.type.influencer
+  module:
+    - image
+    - text
+    - user
+id: node.influencer.default
+targetEntityType: node
+bundle: influencer
+mode: default
+content:
+  field_influencer_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_influencer_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_influencer_link:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_influencer_weight:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

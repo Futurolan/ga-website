@@ -1,0 +1,9 @@
+uuid: 48584534-83c9-4dbd-8e1a-8e898a892a67
+langcode: fr
+status: true
+dependencies: {  }
+id: fortnite_solary
+label: 'Fortnite Solary'
+key: solaryfortnite
+type: twitch
+weight: 0

@@ -1,0 +1,74 @@
+<div class="medias-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:config.title
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            {% for memory in memories %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-collapse">
+                            <div class="row">
+                                <a role="button" data-toggle="collapse" href="#medias-{{ memory.id() }}"
+                                   aria-expanded="true"
+                                   aria-controls="info-shcedule-content">
+                                    <div class="col-md-12">
+                                        <div class="col-md-12 info-block-head" style="background-color: #0058A2">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ memory.getTitle() }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div id="medias-{{ memory.id() }}" class="col-md-12 collapse in" aria-expanded="true">
+                                    <div class="info-block-body">
+                                        <div class="row">
+                                            <div class="col-md-9 hack-height border-style">
+                                                <div class="info-block-left">
+                                                    {{ memory.field_memory_short_description.value|raw }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 hack-height">
+                                                <div class="info-block-right">
+                                                    <div class="flickr-img">
+                                                        {% if(memory.field_memory_external_url.value ) %}
+                                                        <a target="_blank"
+                                                           href="{{ memory.field_memory_external_url.value }}">
+                                                            {% endif %}
+                                                            <img src="{{ file_url(memory.field_memory_image.entity.uri.value) }}"
+                                                                 class="img-responsive center-block"/>
+                                                            {% if(memory.field_memory_external_url.value ) %}
+                                                        </a>
+                                                        {% endif %}
+                                                    </div>
+                                                    <a href="{{ path('entity.node.canonical', {'node': memory.id()}) }}">
+                                                        <div class="btn-white cta btn-motion btn-1c">
+                                                            {{ "Tournaments results"|t }}
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

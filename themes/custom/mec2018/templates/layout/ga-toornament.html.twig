@@ -1,0 +1,64 @@
+<div class="toornament-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:'toornament'
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+var timer, nbr;
+var id = "0";
+var active = "#iframe_tv2";
+var inactive = "#iframe_tv1";
+
+function switchiframe() {
+  $(inactive).css({left:1920+"px"});
+  $(inactive).attr('src',"https://tv.toornament.com/"+id);
+}
+
+function preloadiframe() {
+  if (active == "#iframe_tv1") {
+    inactive = "#iframe_tv1";
+    active = "#iframe_tv2";
+  } else {
+    inactive = "#iframe_tv2";
+    active = "#iframe_tv1";
+  }
+  $(inactive).css({zIndex:888});
+  $(active).css({zIndex:999});
+  
+  $(active).css({left:0+"px"});
+  setTimeout(switchiframe,2000);
+  console.log(active + ".." + id);
+  $.ajax({
+    url: "/toornament/nextid/"+id,
+    type: 'GET',
+    cache:false,
+    success: function (data) { // data is the html text returned
+      id = data;
+    }
+  });
+}
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+<iframe id="iframe_tv1" width="1920" height="1080" frameBorder="0" scrolling="no" style="position:absolute;top:0px;left:0px;z-index:999;overflow:hidden;background-color:black;transition: left 1s 
+ease-in-out;-webkit-transition: left 1s ease-in-out;"></iframe>
+<iframe id="iframe_tv2" width="1920" height="1080" frameBorder="0" scrolling="no" style="position:absolute;top:0px;left:0px;z-index:888;overflow:hidden;transition: left 1s 
+ease-in-out;-webkit-transition: left 1s ease-in-out;"></iframe>
+<script>
+preloadiframe();
+timer = setInterval(preloadiframe, 30000);
+</script>
+<style>
+.js {
+background-color:black !important;
+overflow:hidden !important;
+}
+</style>

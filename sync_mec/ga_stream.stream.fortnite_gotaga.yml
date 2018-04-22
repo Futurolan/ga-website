@@ -1,0 +1,9 @@
+uuid: 2e9d4b6c-1bd3-429b-b2c7-8bbd9f6219dd
+langcode: fr
+status: true
+dependencies: {  }
+id: fortnite_gotaga
+label: 'Fortnite Gotaga'
+key: gotaga
+type: twitch
+weight: -3

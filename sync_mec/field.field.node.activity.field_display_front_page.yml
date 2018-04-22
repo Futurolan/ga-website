@@ -1,0 +1,23 @@
+uuid: a9ba3572-cb6f-4f48-a07a-535d5981ea1f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_front_page
+    - node.type.activity
+id: node.activity.field_display_front_page
+field_name: field_display_front_page
+entity_type: node
+bundle: activity
+label: 'Ne pas afficher sur la page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

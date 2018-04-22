@@ -1,0 +1,261 @@
+<div class="node-tournament">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:node.getTitle()|t
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="center-block img-responsive" src="{{ file_url(cropped_image) }}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 tournament-tag-info">
+                    <span class="tournament-tag">{{ node.field_tournament_game.entity.field_game_editor.value }}</span>
+                    <span class="tournament-tag">{{ node.field_tournament_game.entity.field_game_type.entity.getTranslation(language).getName() }}</span>
+                    <span class="tournament-tag">{{ node.field_tournament_type.value }}</span>
+                    <span class="tournament-tag">{{ node.field_platform.entity.label }}</span>
+{% if (node.field_pegi.value !=NULL) %}
+                    <a target="blank" href="http://www.pegi.info"><img class="img-responsive" style="float:right;width:32px;" 
+src="/themes/custom/mec2018/images/pegi/pegi_{{node.field_pegi.value}}.png" /></a>
+{% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+
+
+                    <div class="tournament-game-description">
+                        {{ node.field_tournament_game.entity.getDescription()|raw }}
+                    </div>
+
+                    {% if(node.field_tournament_show_toornament.value) %}
+                        <div class="tournament-toornament">
+                            <iframe width="100%" height="450"
+                                    src="https://widget.toornament.com/tournaments/{{ node.field_tournament_toornament_id.value }}/navigator?_locale=fr_FR&theme=discipline"
+                                    frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+                        </div>
+                    {% endif %}
+
+                    <div class="tournament-game-description">
+                        {{ node.field_tournament_description.value|raw }}
+                    </div>
+                    <div class="tournament-planning">
+                        <h3>{{ "Schedule"|t }}</h3>
+                        <div class="content">
+                            {{ node.get('field_tournament_planning').value | raw }}
+                        </div>
+                    </div>
+                    {% if(node.field_tournament_weezevent_id.value!=NULL) %}
+                        <div class="tournament-subscribers">
+                            <div class="info-collapse" id="info-collapse">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a role="button" data-toggle="collapse" href="#tournament-team-content"
+                                           aria-expanded="true" aria-controls="tournament-team-content">
+                                            <div class="col-md-12 info-block-head tournament-team">
+                                                <div class="info-block-padding">
+                                                    {% if(node.field_tournament_type.value =="Solo") %}
+                                                        <span class="info-icon">
+                                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                                </span> {{ "Gamers"|t }}
+                                                    {% else %}
+                                                        <span class="info-icon">
+                                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                                </span> {{ "Teams"|t }}
+                                                    {% endif %}
+                                                </div>
+                                                <div class="info-carret info-block-head">
+                                                    <div class="info-block-table">
+                                                        <div class="info-block-cell">
+                                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    {% set sub_count = node.field_tournament_sub_count.value!=NULL ? node.field_tournament_sub_count.value : 0 %}
+                                    {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count %}
+
+                                    <div id="tournament-team-content" class="col-md-12 collapse in"
+                                         aria-expanded="true">
+                                        <div class="">
+                                            <table class="table table-striped table-condensed table-hover table-bordered">
+                                                {% if(node.field_tournament_reserved_slot.value >=1) %}
+                                                    {% for i in 1..node.field_tournament_reserved_slot.value %}
+                                                        <tr>
+                                                            <td>#{{ i }}</td>
+                                                            <td><i class="fa fa-lock"
+                                                                   aria-hidden="true"></i> {{ "Reserved slot"|t }}</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% endif %}
+
+                                                {% set i = node.field_tournament_reserved_slot.value + 1 %}
+                                                {% for id, teams in subscribers %}
+                                                    {% for team, players in teams %}
+                                                        <tr>
+                                                            <td>#{{ i }}</td>
+                                                            {% set i = i + 1 %}
+                                                            <td><strong>{{ team }}</strong></td>
+                                                            <td>
+                                                                {% for player in players %}
+                                                                    {{ player }}{% if not loop.last %}, {% endif %}
+                                                                {% endfor %}
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% endfor %}
+
+
+                                                {% if(free_slot >=1) %}
+                                                    {% for i in 1..free_slot %}
+                                                        <tr>
+                                                            <td>
+                                                                #{{ i+sub_count+node.field_tournament_reserved_slot.value }}</td>
+                                                            <td><i class="fa fa-unlock"
+                                                                   aria-hidden="true"></i> {{ "Free slot"|t }}
+                                                            </td>
+                                                            <td></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                {% endif %}
+
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+                <div class="col-md-4">
+                    {% if(node.field_tournament_weezevent_id.value!=NULL) %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tournament-cta">
+                                    <a class="btn-motion"
+                                       href="{{ path('ga_ticket') }}">{{ "S'inscrire au tournoi" }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tournament-format">
+                                <h3>{{ "Format"|t }}</h3>
+                                {% for format in node.field_tournament_format %}
+                                    <div class="line {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                        {{ format.value }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tournament-cashprize">
+                                <h3>
+                                    {{ node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_total.value }}
+                                </h3>
+                                {% for line in node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_lines %}
+                                    <div class="line {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                        {{ line.value }}
+                                    </div>
+                                {% endfor %}
+                                <div class="note">
+                                    {{ node.field_tournament_cashprize.0.getFieldCollectionItem().field_cashprize_note.value }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tournament-rules">
+                                <h3>
+                                    {{ "Rules" |t }}
+                                </h3>
+                                {% for rule in node.field_tournament_rules %}
+                                    <div class="rule {% if (loop.index%2==0) %}light-grey{% endif %}">
+                                        <a target="_blank" href="{{ file_url(rule.entity.uri.value) }}">
+                                            {{ rule.description }} <i class="fa fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+{% if user.hasPermission('create tournament content') %}
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="tournament-cta">
+                          <a id="copyButton" class="btn-motion">Export Participants</a>
+                        </div>
+                      </div>
+                    </div>
+
+{% endif %}
+<textarea style="position:absolute;top:-9999px" id="copyTarget">{% if(node.field_tournament_type.value =="Solo") %}
+{% for id, teams in subscribers %}
+{% for team, players in teams %}
+{% for player in players %}
+{{ player }}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% else %}
+{% for id, teams in subscribers %}
+{% for team, players in teams %}
+{{ team }}
+{% endfor %}
+{% endfor %}
+{% endif %}</textarea>
+
+<script>
+  function copyToClipboard(elem){
+    var origSelectionStart, origSelectionEnd;
+    target = elem;
+    origSelectionStart = elem.selectionStart;
+    origSelectionEnd = elem.selectionEnd;
+    var currentFocus = document.activeElement;
+    target.focus();
+    target.setSelectionRange(0, target.value.length);
+    var succeed;
+    try {
+          succeed = document.execCommand("copy");
+    } catch(e) {
+        succeed = false;
+    }
+    if (currentFocus && typeof currentFocus.focus === "function") {
+        currentFocus.focus();
+    }
+    elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+    return succeed;
+  }
+{% if user.hasPermission('create tournament content') %}
+  document.getElementById("copyButton").addEventListener("click", function() {
+    copyToClipboard(document.getElementById("copyTarget"));
+  });
+{% endif %}
+  document.getElementById("info-collapse").addEventListener("click", function(event) {
+    if(event.ctrlKey) {
+      copyToClipboard(document.getElementById("copyTarget"));
+    }
+  });
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

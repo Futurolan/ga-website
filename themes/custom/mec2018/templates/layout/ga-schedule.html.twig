@@ -1,0 +1,32 @@
+<div class="schedule-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:config.title
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 info">Ces horaires sont donnés à titre indicatif, ils peuvent évoluer en fonction de l'avancement des différents tournois</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    {% for key in activities|keys %}
+                        <div class="filter cta btn-motion btn-1c{% if(loop.first) %} active{% endif %}" x-data="{{ key }}">{{ key|date("d/m/Y") }}</div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-6 text-right">
+                    {% for game in games %}
+                         <div class="filterCat cta btn-motion btn-1c" x-data="{{game.tid}}">{{ game.name }}</div>
+                    {% endfor %}
+ 		</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {% include directory ~ '/components/schedule/schedule.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

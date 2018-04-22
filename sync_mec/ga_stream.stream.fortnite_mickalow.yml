@@ -1,0 +1,9 @@
+uuid: c0a56b35-4fe3-421a-9eb8-71029ab23e0b
+langcode: fr
+status: true
+dependencies: {  }
+id: fortnite_mickalow
+label: 'Fortnite Mickalow'
+key: mickalow
+type: twitch
+weight: -1

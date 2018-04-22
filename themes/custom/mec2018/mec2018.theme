@@ -1,0 +1,99 @@
+<?php
+
+
+function mec2018_preprocess_html(&$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->getType() == "tournament") {
+    if ($node->field_tournament_image_sponsor->entity) {
+      $variables['attributes']['style'] = "background:url(".file_create_url($node->field_tournament_image_sponsor->entity->uri->value).") center top;background-attachment: fixed";
+      $variables['attributes']['class'][] = "tournament-sponsor";
+
+    }
+
+  }
+
+
+}
+
+function mec2018_preprocess_block(&$variables) {
+  $variables['config'] = \Drupal\ga_config\ConfigUtils::getConfiguration();
+}
+
+function mec2018_preprocess_node(&$variables) {
+
+
+  $variables['host'] = \Drupal::request()->getHost();
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+  $node = $variables['node'];
+  if ($node->getType() == "news") {
+    $variables['lastNews'] = \Drupal\ga_news\NewsUtils::getLastNews();
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_news");
+
+    if ($node->field_news_image->entity) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_news_image->entity->uri->value);
+    } // Generates file url.
+    else {
+      if ($node->field_news_tournament->target_id && $node->field_news_tournament->entity->field_tournament_image->entity) {
+        $variables['cropped_image'] = $style->buildUrl($node->field_news_tournament->entity->field_tournament_image->entity->uri->value);
+      } // Generates file url.
+      else {
+        if ($node->field_news_game->entity) {
+          $variables['cropped_image'] = $style->buildUrl($node->field_news_game->entity->field_game_image->entity->uri->value);
+        } // Generates file url.
+        else {
+          if ($node->field_news_edition->target_id) {
+            $variables['cropped_image'] = $style->buildUrl($node->field_news_edition->entity->field_edition_image->entity->uri->value);
+          } // Generates file url.
+          else {
+            \Drupal\ga_news\NewsUtils::getImageUri($node, "field_news_image");
+          }
+        }
+      }
+    }
+  }
+
+
+  if ($node->getType() == "tournament") {
+    $variables['subscribers'] = json_decode($node->field_tournament_subscribers->value, TRUE);
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if (isset($node->field_tournament_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_tournament_image->entity->uri->value);
+    }
+    else {
+      $variables['cropped_image'] = $style->buildUrl($node->field_tournament_game->entity->field_game_image->entity->uri->value);
+    }
+  }
+  if ($node->getType() == "page") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if (isset($node->field_page_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_page_image->entity->uri->value);
+    }
+  }
+  if ($node->getType() == "memory") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_image_site");
+    if (isset($node->field_memory_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_memory_image->entity->uri->value);
+    }
+  }
+  if ($node->getType() == "animation") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_animation");
+    if (isset($node->field_animation_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_animation_image->entity->uri->value);
+    }
+  }
+  if ($node->getType() == "influencer") {
+    $style = \Drupal\image\Entity\ImageStyle::load("crop_influencer");
+    if (isset($node->field_influencer_image->entity)) {
+      $variables['cropped_image'] = $style->buildUrl($node->field_influencer_image->entity->uri->value);
+    }
+  }
+  return $variables;
+}
+
+/*function mec2018_preprocess_views_view(&$variables)
+{
+    if ($variables['view']->id() == "news") {
+    }
+}*/

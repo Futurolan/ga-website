@@ -1,0 +1,9 @@
+uuid: 20f1905a-b449-4759-b5d4-f390e5df10e3
+langcode: fr
+status: true
+dependencies: {  }
+id: sf5_dbz_lorddvd
+label: 'SF5/DBZ LordDVD'
+key: lorddvd
+type: twitch
+weight: 9

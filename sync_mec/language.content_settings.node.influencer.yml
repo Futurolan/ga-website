@@ -1,0 +1,16 @@
+uuid: 08fc66ed-6897-49d9-acb9-14b879f32609
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.influencer
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.influencer
+target_entity_type_id: node
+target_bundle: influencer
+default_langcode: site_default
+language_alterable: true

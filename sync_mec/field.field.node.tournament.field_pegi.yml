@@ -1,0 +1,19 @@
+uuid: ec970916-14f2-459b-9c0a-4cc3b80b23ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pegi
+    - node.type.tournament
+id: node.tournament.field_pegi
+field_name: field_pegi
+entity_type: node
+bundle: tournament
+label: pegi
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

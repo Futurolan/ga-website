@@ -1,0 +1,23 @@
+uuid: 169deb36-7b91-4733-898c-b453c527fea4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_platform
+    - node.type.tournament
+id: node.tournament.field_platform
+field_name: field_platform
+entity_type: node
+bundle: tournament
+label: Plateforme
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:platform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

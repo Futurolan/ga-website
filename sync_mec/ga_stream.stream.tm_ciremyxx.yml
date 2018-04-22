@@ -1,0 +1,9 @@
+uuid: 2fe57cc9-ffa1-4bbe-a063-823c7befdc6d
+langcode: fr
+status: true
+dependencies: {  }
+id: tm_ciremyxx
+label: 'TM CiremyxX'
+key: ciremyxx
+type: twitch
+weight: 5

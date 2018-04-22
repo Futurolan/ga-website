@@ -1,0 +1,11 @@
+uuid: 456ed5a4-6e6d-4bb3-899c-c2ebb5f0dc6b
+langcode: fr
+status: true
+dependencies: {  }
+id: ga2018cosplay
+label: ga2018cosplay
+image:
+  - '921'
+video: {  }
+link: 'https://festival.gamers-assembly.net/news/le-cosplay-fait-son-grand-retour-la-ga2018'
+weight: null

@@ -1,0 +1,50 @@
+<div class="grey-area" style="padding-top: 25px;">
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title: "LiveStream"|t
+    } only %}
+    <div class="container">
+        <div class="row">
+                    <div class="col-md-12">
+                        {% include directory ~ '/components/streams/streams.html.twig' %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        {% include directory ~ '/components/tournaments-home-last-results/tournaments-home-last-results.html.twig' %}
+                    </div>
+                    <div class="col-md-6">
+                        {% include directory ~ '/components/tournaments-home-next/tournaments-home-next.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blue-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% include directory ~ '/components/news-home2/news-home2.html.twig' %}
+                    </div>
+                    <div class="col-md-4">
+                        {% include directory ~ '/components/twitter-home/twitter-home.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TODO: Move to footer -->
+{% if(config.show_sponsors) %}
+    <div class="white-area">
+        {% include directory ~ '/components/title-line/title-line.html.twig' with {
+        title:"Partners"|t,
+        icon:"space-invader black"
+        } only %}
+        {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
+    </div>
+{% endif %}

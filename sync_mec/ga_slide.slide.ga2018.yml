@@ -1,0 +1,11 @@
+uuid: 80621853-be73-4e8b-85cf-a0a3527ed59a
+langcode: fr
+status: true
+dependencies: {  }
+id: ga2018
+label: ga2018
+image:
+  - '918'
+video: {  }
+link: 'https://festival.gamers-assembly.net/tournament'
+weight: null

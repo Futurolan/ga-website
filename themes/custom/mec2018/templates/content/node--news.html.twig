@@ -1,0 +1,98 @@
+<div class="node-news">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:node.getTitle(),
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 content-left">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-10">
+                            <div class="news-title">{{ node.getTitle() }}</div>
+                            <div class="news-info"><strong>{{ "From"|t }}</strong> <span
+                                        class="news-author">{{ author_name }}</span> <span
+                                        class="news-date">{{ ","|t }} {{ node.getCreatedTime()|date("d.m.Y") }}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-2 news-share">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ host  ~ url }}"
+                               target="_blank" class="news-facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/home?status=http://{{ host  ~ url }}" target="_blank"
+                               class="news-twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% if(node.field_news_show_image.value) %}
+                            <div class="col-md-12 ">
+                                <img class="img-responsive" src="{{ file_url(cropped_image) }}"/>
+
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="news-content">{{ node.get('field_news_content').value | raw }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 content-right blue-area">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% include directory ~ '/components/title-line/title-line.html.twig' with {
+                            title:"Last news"|t,
+                            } only %}
+                        </div>
+                    </div>
+
+                    {% for new in lastNews %}
+                        <div class="row">
+                            <div class="col-md-12 news-main">
+                                <a href="{{ new.url }}">
+                                    <div class="row">
+                                        <div class="col-xs-4 news-left">
+                                            <div class="news-image"
+                                                 style="background-image:url('{{ file_url(new.image) }}')">
+                                            </div>
+                                            <div class="news-type"
+                                                 {% if(new.color) %}style="background-color:{{ new.color }}" {% endif %}>
+                                                {{ new.subtitle }}
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8 news-right">
+                                            <div class="news-background">
+                                                <div class="news-title">
+                                                    {{ new.title }}
+                                                </div>
+                                                <div class="news-date">{{ new.date|date("d/m/Y") }}</div>
+                                                <div class="news-more">
+                                                    <span class="cta btn-motion btn-1c">{{ "More..." |t }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="row ">
+                        <div class="col-md-12 text-center">
+                            <a href="{{ path('view.news.page_1') }}">
+                                <div class="more-news cta btn-motion btn-1c">
+                                    {{ "+ d'actualités"|t }}
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

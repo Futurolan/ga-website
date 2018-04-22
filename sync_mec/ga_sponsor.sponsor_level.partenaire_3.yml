@@ -1,0 +1,8 @@
+uuid: 44e62d88-c03b-4830-8970-4ff6d4244d53
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaire_3
+label: 'Partenaires techniques'
+display_front: true
+weight: -8

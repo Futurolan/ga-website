@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   config_prefix = "sponsor_level",
- *   admin_permission = "administer sponsor_level",
+ *   admin_permission = "administer sponsor_levels",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",

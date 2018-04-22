@@ -1,0 +1,9 @@
+uuid: 262fa7ab-6b31-4d79-96f5-84d77637baa4
+langcode: fr
+status: true
+dependencies: {  }
+id: esl
+label: 'CSGO ESL'
+key: esl_csgo_fr
+type: twitch
+weight: -8

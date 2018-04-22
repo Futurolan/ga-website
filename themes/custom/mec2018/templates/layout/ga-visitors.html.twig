@@ -1,0 +1,213 @@
+<div class="information-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:"Event info"|t
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row google-map">
+                <div class="col-md-12">
+                    <div class="content-right">
+                        <iframe width="100%" height="250" frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ config.map_place_id }}&key={{ config.map_api_key }}"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-header">
+                                {{ config.description|raw }}
+                            </div>
+                        </div>
+                    </div>
+                    {% if(config.planning_text) %}
+                        <div class="info-collapse">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-shcedule-content"
+                                       aria-expanded="true" aria-controls="info-shcedule-content">
+                                        <div class="col-md-12 info-block-head info-schedule">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon"><i class="fa fa-calendar"
+                                                                           aria-hidden="true"></i></span> {{ "Schedule"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="info-shcedule-content" class="col-md-12 collapse in"
+                                     aria-expanded="true">
+                                    <div class="info-block-body">
+                                        {{ config.planning_text|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if(config.price_text) %}
+                        <div class="info-collapse">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-pricing-content"
+                                       aria-expanded="false" aria-controls="info-pricing-content">
+                                        <div class="col-md-12 info-block-head info-pricing">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon">
+                                                    <i class="fa fa-eur" aria-hidden="true"></i>
+                                                </span> {{ "Pricing"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="info-pricing-content" class="col-md-12 collapse"
+                                     aria-expanded="false">
+                                    <div class="info-block-body">
+                                        {{ config.price_text|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if(config.access_text) %}
+                        <div class="info-collapse">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-access-content"
+                                       aria-expanded="false" aria-controls="info-access-content">
+                                        <div class="col-md-12 info-block-head info-access">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon">
+                                                    <i class="fa fa-car" aria-hidden="true"></i>
+                                                </span> {{ "Travel"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="info-access-content" class="col-md-12 collapse" aria-expanded="false">
+                                    <div class="info-block-body">
+                                        {{ config.access_text|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if(config.accommodation_text) %}
+                        <div class="info-collapse">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a role="button" data-toggle="collapse" href="#info-accommodation-content"
+                                       aria-expanded="false" aria-controls="info-accommodation-content">
+                                        <div class="col-md-12 info-block-head info-accommodation">
+                                            <div class="info-block-padding">
+                                                <span class="info-icon">
+                                                    <i class="fa fa-bed" aria-hidden="true"></i>
+                                                </span> {{ "Accommodation"|t }}
+                                            </div>
+                                            <div class="info-carret info-block-head">
+                                                <div class="info-block-table">
+                                                    <div class="info-block-cell">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="info-accommodation-content" class="col-md-12 collapse" aria-expanded="false">
+                                    <div class="info-block-body">
+                                        {{ config.accommodation_text|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    {% if(config.show_ticketing) %}
+                        <div class="row">
+                            <a href="{{ path("ga_ticket") }}">
+                                <div class="col-md-12">
+                                    <div class="info-block-head info-ticketing">
+                                        <div class="info-block-padding">
+                                            {{ "Ticketing"|t }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                    {% if(config.equipment_text) %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="info-block-head info-equipment">
+                                    <div class="info-block-padding">
+                                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                                        &nbsp;{{ "Pack list"|t }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="info-block-body">
+                                    {{ config.equipment_text|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if(config.food_service_text) %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="info-block-head info-restoration">
+                                    <div class="info-block-padding">
+                                        <i class="fa fa-cutlery" aria-hidden="true"></i> &nbsp;{{ "Catering"|t }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="info-block-body">
+                                    {{ config.food_service_text|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

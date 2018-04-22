@@ -1,0 +1,22 @@
+<div class="animation-teaser bs-calltoaction bs-calltoaction-default">
+    <div class="row">
+        <div class="col-md-2 cta-contents">
+            <h1 class="cta-title"><img src="{{ file_url(cropped_image) }}" class="img-responsive"></h1>
+            {% if(node.field_animation_url.value) %}
+                <div class="cta-desc">
+                    <a href="{{ node.field_animation_url.value }}" target="_blank" class="btn btn-primary btn-block">Site
+                        web</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-10 cta-button">
+            <h3>{{ node.getTitle() }}</h3>
+            {% if(node.field_animation_localisation.value) %}
+              <i class="text-muted fa fa-map-marker"></i>
+              <span class="text-muted">{{ node.field_animation_localisation.value }}</span>
+            {% endif %}
+             {{ node.field_animation_content.value | raw }}
+        </div>
+    </div>
+</div>
+

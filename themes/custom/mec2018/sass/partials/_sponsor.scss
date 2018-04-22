@@ -1,0 +1,35 @@
+.sponsor-page {
+  .sponsor-container:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .sponsor-container {
+    .row{
+      text-align:center;
+    }
+    .col-md-2 {
+      display:inline-block;
+      float:none;
+      margin-bottom: 30px;
+    }
+  }
+
+  .logo-sponsor {
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+
+    opacity: 1;
+    transition: 0.2s;
+    display: block;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.8;
+      transition: 0.2s;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+}

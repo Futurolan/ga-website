@@ -1,0 +1,29 @@
+<div class="ticket-page">
+    <div class="grey-area-title">
+        {% include directory ~ "/components/title-line/title-line.html.twig" with {
+        title:"Ticketing"|t
+        } only %}
+    </div>
+    <div class="white-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row info-header">
+                        <h3>{{ "Age requirements"|t }}</h3>
+                        <p>{{ "If you are under 18, you have to download the document below, fill it and bring it to enter the event area."|t }}<br><br>
+                        <a class="col-md-4 col-md-offset-4 btn btn-primary" href="/sites/ga/files/pdf/autorisation_parentale.pdf">{{"Download document (pdf format)"|t }}</a>
+                        </p>
+                    </div>
+                    {{ config.weezevent_code|raw }}
+                    <div class="row info-header">
+                        <h3>{{"Rules of Procedure"|t}}</h3>
+                        <p>{{"The purchase of a ticket for the Gamers Assembly event implies full acceptance of the terms of the Rules of Procedure below."|t}}<br><br>
+                        <a class="col-md-4 col-md-offset-4 btn btn-primary" href="/sites/ga/files/pdf/reglement_interieur.pdf">{{"Download Rules of Procedure (pdt format)"|t}}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

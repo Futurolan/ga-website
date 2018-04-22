@@ -1,0 +1,9 @@
+uuid: bd63d6f3-c354-491f-8960-695d63555722
+langcode: fr
+status: true
+dependencies: {  }
+id: solimeo
+label: 'R6 SFPD'
+key: teamsfpd
+type: twitch
+weight: 7

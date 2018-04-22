@@ -1,0 +1,29 @@
+uuid: ba09f00a-0465-41da-a8bc-81bb76f8e6a6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Toornament Result'
+type: toornament_result
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

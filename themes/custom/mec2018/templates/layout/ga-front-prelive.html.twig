@@ -1,0 +1,72 @@
+{% include directory ~'/components/slideshow/slideshow.html.twig' %}
+
+
+<div class="grey-area">
+    {% include directory ~ '/components/title-line/title-line.html.twig' with {
+    title: config.edition_name
+    } only %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                title:config.b1_title,
+                text:config.b1_text,
+                cta:config.b1_cta,
+                reverse:config.b1_reverse,
+                link:config.b1_link,
+                image:config.b1_image,
+                directory:directory
+                } only %}
+            </div>
+            <div class="col-md-4">
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                title:config.b2_title,
+                text:config.b2_text,
+                cta:config.b2_cta,
+                reverse:config.b2_reverse,
+                link:config.b2_link,
+                image:config.b2_image,
+                directory:directory
+                } only %}
+            </div>
+            <div class="col-md-4">
+                {% include directory ~ '/components/home-block/home-block.html.twig' with {
+                title:config.b3_title,
+                text:config.b3_text,
+                cta:config.b3_cta,
+                reverse:config.b3_reverse,
+                link:config.b3_link,
+                image:config.b3_image,
+                directory:directory
+                } only %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blue-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% include directory ~ '/components/news-home2/news-home2.html.twig' %}
+                    </div>
+                    <div class="col-md-4">
+                        {% include directory ~ '/components/twitter-home/twitter-home.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TODO: Move to footer -->
+{% if(config.show_sponsors) %}
+    <div class="white-area">
+        {% include directory ~ '/components/title-line/title-line.html.twig' with {
+        title:"Partners"|t
+        } only %}
+        {% include directory ~ '/components/sponsors-banner/sponsors-banner.html.twig' %}
+    </div>
+{% endif %}

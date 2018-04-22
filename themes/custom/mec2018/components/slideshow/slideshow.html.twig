@@ -1,0 +1,25 @@
+
+{% if slides|length > 1 %}
+    <script type="application/javascript">
+        var slideTime = {{ config.slide_time}};
+    </script>
+    {{ attach_library('mec2018/mec2018.slideshow') }}
+{% endif %}
+
+<div class="slideshow">
+    <div class="home-slider-container">
+        {% for slide in slides %}
+            <figure {% if(slide.video) %}class="video-container"{% endif %}>
+                <a href="{{ slide.link }}">
+                    {% if(slide.video) %}
+                        <video muted autoplay loop>
+                            <source src="{{ file_url(slide.video) }}" type="video/mp4" />
+                        </video>
+                    {% else %}
+                        <img src="{{ file_url(slide.image) }}" alt="{{ slide.name }}" class="img-responsive">
+                    {% endif %}
+                </a>
+            </figure>
+        {% endfor %}
+    </div>
+</div>

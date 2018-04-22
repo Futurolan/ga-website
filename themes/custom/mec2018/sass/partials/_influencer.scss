@@ -1,0 +1,131 @@
+.influencer {
+  padding-bottom: 15px;
+
+  .thumbnail {
+    display: table !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .div-link {  
+      position:absolute;  
+      top:0;  
+      left: 0;  
+      width:100%;  
+      height:100%;  
+      z-index: 1;  
+      background-color:#ffffff;   
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  
+      filter: alpha(opacity=0);  
+      opacity:0;  
+  }
+
+  .flip-container {
+    perspective: 1000px;
+  }
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container, .front, .back {
+    width: 250px;
+    height: 250px;
+  }
+
+  .front, .back {
+    box-shadow: 0px 0px 5px 0px #888888;
+  }
+
+  .flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    position: relative;
+    .mask{
+      position:absolute;
+      display:block;
+      width:250px;
+      height:250px;
+      opacity: 0.9;
+      top:0px;
+      left:0px;
+      background-color: $black;
+      z-index:1;
+    }
+
+    .content{
+      padding:10px;
+      z-index:2;
+      position:absolute;
+      width:250px;
+      height:250px;
+      top:0px;
+      left:0px;
+
+      h3 {
+        text-align: center;
+        padding: 5px;
+        margin: 5px 0;
+        color: $black;
+        font-size: 18px;
+        background-color:$white;
+      }
+      .description{
+        margin:10px 0;
+        color:$white;
+      }
+    }
+  }
+
+  .flip-resume {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 11px;
+    color: #cccccc;
+    font-style: italic;
+    hyphens: auto;
+    text-align: justify;
+  }
+
+  p.flip-day {
+    margin-top: 15px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  ul.flip-day {
+    list-style: none;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+
+  ul.flip-day li {
+    font-size: 12px;
+    color: #eee;
+  }
+
+}
+
+.influencer:hover, .influencer:focus {
+  text-decoration: none;
+}

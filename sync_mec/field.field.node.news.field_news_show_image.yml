@@ -1,0 +1,23 @@
+uuid: 2faac7e4-3d03-4ee5-8dbf-1bf56f50c17c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_show_image
+    - node.type.news
+id: node.news.field_news_show_image
+field_name: field_news_show_image
+entity_type: node
+bundle: news
+label: 'Afficher l''image sur la page news'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

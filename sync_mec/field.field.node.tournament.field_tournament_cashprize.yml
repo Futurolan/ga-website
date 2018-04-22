@@ -1,0 +1,22 @@
+uuid: 91638e00-f699-4c6d-b1b7-e26f0fd109ac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tournament_cashprize
+    - node.type.tournament
+  module:
+    - field_collection
+id: node.tournament.field_tournament_cashprize
+field_name: field_tournament_cashprize
+entity_type: node
+bundle: tournament
+label: Cashprize
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

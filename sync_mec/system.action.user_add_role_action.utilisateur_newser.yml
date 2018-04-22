@@ -1,0 +1,14 @@
+uuid: a56f5e95-175c-4196-8556-48eda6c08536
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.utilisateur_newser
+  module:
+    - user
+id: user_add_role_action.utilisateur_newser
+label: 'Ajouter le rôle Utilisateur newser aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: utilisateur_newser

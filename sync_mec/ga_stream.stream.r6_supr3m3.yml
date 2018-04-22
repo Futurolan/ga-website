@@ -1,0 +1,9 @@
+uuid: 44a72ea1-2998-4831-aa1b-84ba1cbe73f1
+langcode: fr
+status: true
+dependencies: {  }
+id: r6_supr3m3
+label: 'R6 Supr3m3'
+key: supr3m3_85
+type: twitch
+weight: 8

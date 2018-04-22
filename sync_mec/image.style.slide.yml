@@ -1,0 +1,14 @@
+uuid: a74bdb73-ff10-4356-abf3-a4d069dff157
+langcode: fr
+status: true
+dependencies: {  }
+name: slide
+label: Slide
+effects:
+  c8e030ac-fc70-409b-803c-71f58b0bc12a:
+    uuid: c8e030ac-fc70-409b-803c-71f58b0bc12a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 518

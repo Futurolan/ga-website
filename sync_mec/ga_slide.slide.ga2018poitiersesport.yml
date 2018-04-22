@@ -1,0 +1,11 @@
+uuid: 1b59800c-8b55-4aff-a7da-5b9ad3cfecc1
+langcode: fr
+status: true
+dependencies: {  }
+id: ga2018poitiersesport
+label: ga2018poitiersesport
+image:
+  - '920'
+video: {  }
+link: 'https://www.poitiers-esports-meetings.com/'
+weight: null

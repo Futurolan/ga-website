@@ -1,0 +1,42 @@
+uuid: e331c2f4-738c-4286-a3b1-c447a375032d
+langcode: fr
+status: true
+dependencies: {  }
+id: utilisateur_newser
+label: 'Utilisateur newser'
+weight: -8
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create content translations'
+  - 'create news content'
+  - 'delete any news content'
+  - 'delete content translations'
+  - 'delete news revisions'
+  - 'delete own news content'
+  - 'edit any news content'
+  - 'edit own news content'
+  - 'override news authored on option'
+  - 'override news published option'
+  - 'publish any node type news'
+  - 'revert news revisions'
+  - 'schedule publishing of nodes'
+  - 'translate activity node'
+  - 'translate any entity'
+  - 'translate edition taxonomy_term'
+  - 'translate game taxonomy_term'
+  - 'translate game_type taxonomy_term'
+  - 'translate influencer node'
+  - 'translate memory node'
+  - 'translate news node'
+  - 'translate page node'
+  - 'translate sponsor node'
+  - 'translate tags taxonomy_term'
+  - 'translate tournament node'
+  - 'unpublish any node type news'
+  - 'update content translations'
+  - 'use text format formatted_text'
+  - 'view moderator in toolbar'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

@@ -1,0 +1,88 @@
+uuid: eb131f84-848c-4a87-8a4c-22321f3a0700
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game.field_game_color
+    - field.field.taxonomy_term.game.field_game_editor
+    - field.field.taxonomy_term.game.field_game_image
+    - field.field.taxonomy_term.game.field_game_short_name
+    - field.field.taxonomy_term.game.field_game_type
+    - image.style.thumbnail
+    - taxonomy.vocabulary.game
+  module:
+    - image_widget_crop
+    - text
+id: taxonomy_term.game.default
+targetEntityType: taxonomy_term
+bundle: game
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 0
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+    region: content
+  field_game_color:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_editor:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_image:
+    weight: 35
+    settings:
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - news_format
+        - ratio_site
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_widget_crop
+    region: content
+  field_game_short_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_type:
+    weight: 34
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  path: true
+  translation: true

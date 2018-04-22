@@ -1,0 +1,9 @@
+uuid: cfe93d21-f722-466c-971a-f5129f801573
+langcode: fr
+status: true
+dependencies: {  }
+id: pubg_ogbattleroyale
+label: 'PUBG OGBattleRoyale'
+key: ogbattleroyale
+type: twitch
+weight: -6

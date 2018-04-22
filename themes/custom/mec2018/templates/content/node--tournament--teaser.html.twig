@@ -1,0 +1,61 @@
+<div class="tournament">
+    <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
+        <div class="tournament-image">
+            <img class="center-block img-responsive" src="{{ file_url(cropped_image) }}"/>
+{% if (node.field_pegi.value !=NULL) %}
+<img class="img-responsive" style="position:absolute;width:32px;top:0px;left:0px" 
+src="/themes/custom/mec2018/images/pegi/pegi_{{node.field_pegi.value}}.png" 
+/>
+{% endif %}
+            <span>{{ node.field_platform.entity.label }}</span>
+        </div>
+        <div class="tournament-game"
+             style="background-color:{{ node.field_tournament_game.entity.field_game_color.value }}">
+            <h2>
+                {{ node.getTitle() }}
+            </h2>
+        </div>
+
+    </a>
+    {% set sub_count = node.field_tournament_sub_count.value!=NULL ? node.field_tournament_sub_count.value : 0 %}
+    {% set free_slot = node.field_tournament_size.value - node.field_tournament_reserved_slot.value - sub_count %}
+    {% set free_slot_percent = (node.field_tournament_reserved_slot.value + sub_count )/node.field_tournament_size.value*100 %}
+
+    {% if (free_slot_percent>66 ) %}
+        {% set free_slot_class="high" %}
+    {% elseif(free_slot_percent>33) %}
+        {% set free_slot_class="medium" %}
+    {% else %}
+        {% set free_slot_class="low" %}
+    {% endif %}
+    {% if (free_slot==0 ) %}
+      <div class="tournament-status text-center">Tournoi complet</div>
+    {% else %}
+    <div class="tournament-status">{{ "Remaining slots:"|t }} <span
+                class="{{ free_slot_class }}">{{ free_slot }}</span> / {{ node.field_tournament_size.value }}</div>
+    {% endif %}
+ 
+    <div class="tournament-bar">
+        <div class="progress-current {{ free_slot_class }}" style="width: {{ free_slot_percent }}%"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-7 col-xs-6 text-left">
+            <div class="tournament-more">
+                <a href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
+                    {{ "Show participants"|t }}
+                </a>
+            </div>
+        </div>
+        <div class="col-md-5 col-xs-6 text-right">
+        {% if (free_slot) %}
+            {% if(node.field_tournament_weezevent_id.value!=NULL) %}
+                <div class="tournament-more">
+                    <a href="{{ path('ga_ticket') }}">
+                        {{ "Sign up"|t }}
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+        </div>
+    </div>
+</div>
